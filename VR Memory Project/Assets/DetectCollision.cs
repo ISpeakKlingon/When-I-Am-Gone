@@ -4,29 +4,29 @@ using UnityEngine;
 
 public class DetectCollision : MonoBehaviour
 {
-    [SerializeField, Range(0f, 100f)]
-    float maxSpeed = 10f;
+    public float bottomOffset;
+    public float frontOffset;
+    public float collisionRadius;
+    public LayerMask GroundLayer;
 
-    // Start is called before the first frame update
-    void Start()
+    public bool CheckGround(Vector3 Direction)
     {
-        
+        Vector3 Pos = transform.position + (Direction * bottomOffset);
+        Collider[] hitColliders = Physics.OverlapSphere(Pos, collisionRadius, GroundLayer);
+        if (hitColliders.Length > 0)
+        {
+            //we are on the ground
+            return true;
+        }
+
+        return false;
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnDrawGizmosSelected()
     {
-        Vector2 playerInput;
-        playerInput.x = 0f;
-        playerInput.y = 0f;
-        transform.localPosition = new Vector3(playerInput.x, 0.5f, playerInput.y);
-
-        playerInput.x = Input.GetAxis("Horizontal");
-        playerInput.y = Input.GetAxis("Vertical");
-        playerInput = Vector2.ClampMagnitude(playerInput, 1f);
-
-        Vector3 velocity = new Vector3(playerInput.x, 0f, playerInput.y) * maxSpeed;
-        Vector3 displacement = velocity * Time.deltaTime;
-        transform.localPosition += displacement;
+        // Draw a yellow sphere at the transform's position
+        Gizmos.color = Color.yellow;
+        Vector3 Pos = transform.position + (-transform.up * bottomOffset);
+        Gizmos.DrawSphere(Pos, collisionRadius);
     }
 }
