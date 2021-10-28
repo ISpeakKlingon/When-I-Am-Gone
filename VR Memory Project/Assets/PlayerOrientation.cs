@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class PlayerOrientation : MonoBehaviour
 {
@@ -18,10 +20,18 @@ public class PlayerOrientation : MonoBehaviour
     public float turnSpeed = 2f;
     private Vector3 MovDirection, movepos, targetDir, GroundDir; //where to move to
 
+    public float gravity = -0.5f;
+    public float additionalHeight = 0.2f;
+
+    private float fallingSpeed;
+    private XRRig rig;
+    private CharacterController character;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        character = GetComponent<CharacterController>();
+        rig = GetComponent<XRRig>();
     }
 
     // Update is called once per frame
@@ -32,9 +42,20 @@ public class PlayerOrientation : MonoBehaviour
 
     private void FixedUpdate()
     {
+        CapsuleFollowHeadset();
+
         delta = Time.deltaTime;
         float Spd = Speed;
         MoveSelf(delta, Spd, Acceleration);
+
+        //gravity
+        bool isGrounded = CheckIfGrounded();
+        if (isGrounded)
+            fallingSpeed = 0;
+        else
+            fallingSpeed += gravity * Time.fixedDeltaTime;
+
+        character.Move(Vector3.up * fallingSpeed * Time.fixedDeltaTime);
     }
 
 
@@ -81,7 +102,7 @@ public class PlayerOrientation : MonoBehaviour
         RotateSelf(SetGroundDir, d, GravityRotationSpeed);
         //RotateMesh(d, targetDir, TurnSpd);
     }
-    
+
     //rotate the direction we face down
     void RotateSelf(Vector3 Direction, float d, float GravitySpd)
     {
@@ -96,4 +117,19 @@ public class PlayerOrientation : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, SlerpRot, spd * d);
     }
 
+    void CapsuleFollowHeadset()
+    {
+        character.height = rig.cameraInRigSpaceHeight + additionalHeight;
+        Vector3 capsuleCenter = transform.InverseTransformPoint(rig.cameraGameObject.transform.position);
+        character.center = new Vector3(capsuleCenter.x, character.height/2 + character.skinWidth, capsuleCenter.z);
+    }
+
+    bool CheckIfGrounded()
+    {
+        //tells us if on ground
+        Vector3 rayStart = transform.TransformPoint(character.center);
+        float rayLength = character.center.y + 0.01f;
+        bool hasHit = Physics.SphereCast(rayStart, character.radius, Vector3.down, out RaycastHit hitInfo, rayLength, GroundLayers);
+        return hasHit;
+    }
 }
