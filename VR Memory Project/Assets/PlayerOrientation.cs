@@ -6,6 +6,17 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class PlayerOrientation : MonoBehaviour
 {
+    public enum WorldState
+    {
+        Grounded, //on ground
+        InAir, //in the air
+    }
+
+    [HideInInspector]
+    public WorldState States;
+
+    private DetectCollision Colli;
+
     float delta;
 
     [Header("Physics")]
@@ -35,29 +46,80 @@ public class PlayerOrientation : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+        Colli = GetComponent<DetectCollision>();
+        GroundDir = transform.up;
+        SetGrounded();
     }
 
     private void FixedUpdate()
     {
-        CapsuleFollowHeadset();
+        //CapsuleFollowHeadset();
 
         delta = Time.deltaTime;
-        float Spd = Speed;
-        MoveSelf(delta, Spd, Acceleration);
+
+        if(States == WorldState.Grounded)
+        {
+            Debug.Log("Grounded");
+            float Spd = Speed;
+
+            MoveSelf(delta, Spd, Acceleration);
+
+            //switch to air
+            bool Ground = Colli.CheckGround(-GroundDir);
+
+            if (!Ground)
+            {
+                SetInAir();
+                return;
+            }
+        }
+        
+        else if (States == WorldState.InAir)
+        {
+            //Debug.Log("InAir");
+            FallingCtrl(delta, Speed, Acceleration);
+
+            //check for ground
+            bool Ground = Colli.CheckGround(-GroundDir);
+
+            if (Ground)
+            {
+                SetGrounded();
+                return;
+            }
+        }
+
 
         //gravity
-        bool isGrounded = CheckIfGrounded();
+        /*bool isGrounded = CheckIfGrounded();
         if (isGrounded)
+        {
             fallingSpeed = 0;
+            Debug.Log("Grounded");
+        }
         else
+        {
             fallingSpeed += gravity * Time.fixedDeltaTime;
-
-        character.Move(Vector3.up * fallingSpeed * Time.fixedDeltaTime);
+            character.Move(GroundDir * fallingSpeed * Time.fixedDeltaTime);
+            Debug.Log("NotGrounded");
+        }*/
+            
     }
 
+    //transition to ground
+    public void SetGrounded()
+    {
+        States = WorldState.Grounded;
+        fallingSpeed = 0;
+    }
+
+    //transition to air
+    public void SetInAir()
+    {
+        States = WorldState.InAir;
+    }
 
     //check the angle of the floor we are stood on
     Vector3 FloorAngleCheck()
@@ -117,6 +179,21 @@ public class PlayerOrientation : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, SlerpRot, spd * d);
     }
 
+    void FallingCtrl(float d, float Speed, float Accel)
+    {
+        Debug.Log("Falling");
+        Vector3 SetGroundDir = FloorAngleCheck();
+        GroundDir = Vector3.Lerp(GroundDir, SetGroundDir, d * GravityRotationSpeed);
+
+        //lerp mesh slower when not on ground
+        RotateSelf(GroundDir, d, GravityRotationSpeed);
+        //RotateMesh(d, transform.forward, turnSpeed);
+
+        //move character down with gravity
+        fallingSpeed += gravity * Time.fixedDeltaTime;
+        character.Move(transform.up * fallingSpeed * Time.deltaTime);
+    }
+
     void CapsuleFollowHeadset()
     {
         character.height = rig.cameraInRigSpaceHeight + additionalHeight;
@@ -130,6 +207,7 @@ public class PlayerOrientation : MonoBehaviour
         Vector3 rayStart = transform.TransformPoint(character.center);
         float rayLength = character.center.y + 0.01f;
         bool hasHit = Physics.SphereCast(rayStart, character.radius, Vector3.down, out RaycastHit hitInfo, rayLength, GroundLayers);
+        Debug.DrawRay(rayStart, -transform.up, Color.red);
         return hasHit;
     }
 }
