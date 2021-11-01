@@ -173,11 +173,11 @@ public class PlayerOrientation : MonoBehaviour
     }
     
     //rotate the direction we face forwards
-    void RotateMesh(float d, Vector3 LookDir, float spd)
+    /*void RotateMesh(float d, Vector3 LookDir, float spd)
     {
         Quaternion SlerpRot = Quaternion.LookRotation(LookDir, transform.up);
         transform.rotation = Quaternion.Slerp(transform.rotation, SlerpRot, spd * d);
-    }
+    }*/
 
     void FallingCtrl(float d, float Speed, float Accel)
     {
@@ -194,7 +194,7 @@ public class PlayerOrientation : MonoBehaviour
         character.Move(transform.up * fallingSpeed * Time.deltaTime);
     }
 
-    void CapsuleFollowHeadset()
+    /*void CapsuleFollowHeadset()
     {
         character.height = rig.cameraInRigSpaceHeight + additionalHeight;
         Vector3 capsuleCenter = transform.InverseTransformPoint(rig.cameraGameObject.transform.position);
@@ -209,5 +209,5 @@ public class PlayerOrientation : MonoBehaviour
         bool hasHit = Physics.SphereCast(rayStart, character.radius, Vector3.down, out RaycastHit hitInfo, rayLength, GroundLayers);
         Debug.DrawRay(rayStart, -transform.up, Color.red);
         return hasHit;
-    }
+    }*/
 }

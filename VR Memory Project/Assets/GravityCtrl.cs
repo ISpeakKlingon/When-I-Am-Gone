@@ -18,7 +18,6 @@ public class GravityCtrl : MonoBehaviour
     }
 
     // Update is called once per frame
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (Gravity) //if there is a set planet to orbit
