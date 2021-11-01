@@ -36,9 +36,9 @@ public class GravityCtrl : MonoBehaviour
 
             Vector3 localUp = transform.up;
 
-            Quaternion targetrotation = Quaternion.FromToRotation(localUp, gravityUp) * transform.rotation;
+            //Quaternion targetrotation = Quaternion.FromToRotation(localUp, gravityUp) * transform.rotation;
 
-            transform.up = Vector3.Lerp(transform.up, gravityUp, RotationSpeed * Time.deltaTime);
+            //transform.up = Vector3.Lerp(transform.up, gravityUp, RotationSpeed * Time.deltaTime);
 
             //push down for gravity
             Rb.AddForce((-gravityUp * Gravity.Gravity) * Rb.mass);
