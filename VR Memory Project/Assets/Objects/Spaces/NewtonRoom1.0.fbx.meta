@@ -19,6 +19,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Cream
     second: {fileID: 2100000, guid: 564f914bec98cd040a15552d74f189f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Daylight
+    second: {fileID: 2100000, guid: 914d973269a1ee04b84d5d8728e67131, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
