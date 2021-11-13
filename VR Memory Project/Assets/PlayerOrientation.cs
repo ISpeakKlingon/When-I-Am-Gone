@@ -61,7 +61,7 @@ public class PlayerOrientation : MonoBehaviour
 
         if(States == WorldState.Grounded)
         {
-            Debug.Log("Grounded");
+            //Debug.Log("Grounded");
             float Spd = Speed;
 
             MoveSelf(delta, Spd, Acceleration);
