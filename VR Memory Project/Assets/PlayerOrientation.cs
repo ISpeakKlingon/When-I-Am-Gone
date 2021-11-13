@@ -90,21 +90,6 @@ public class PlayerOrientation : MonoBehaviour
                 return;
             }
         }
-
-
-        //gravity
-        /*bool isGrounded = CheckIfGrounded();
-        if (isGrounded)
-        {
-            fallingSpeed = 0;
-            Debug.Log("Grounded");
-        }
-        else
-        {
-            fallingSpeed += gravity * Time.fixedDeltaTime;
-            character.Move(GroundDir * fallingSpeed * Time.fixedDeltaTime);
-            Debug.Log("NotGrounded");
-        }*/
             
     }
 
@@ -162,7 +147,6 @@ public class PlayerOrientation : MonoBehaviour
 
         //lerp mesh slower when not on ground
         RotateSelf(SetGroundDir, d, GravityRotationSpeed);
-        //RotateMesh(d, targetDir, TurnSpd);
     }
 
     //rotate the direction we face down
@@ -171,13 +155,6 @@ public class PlayerOrientation : MonoBehaviour
         Vector3 LerpDir = Vector3.Lerp(transform.up, Direction, d * GravitySpd);
         transform.rotation = Quaternion.FromToRotation(transform.up, LerpDir) * transform.rotation;
     }
-    
-    //rotate the direction we face forwards
-    /*void RotateMesh(float d, Vector3 LookDir, float spd)
-    {
-        Quaternion SlerpRot = Quaternion.LookRotation(LookDir, transform.up);
-        transform.rotation = Quaternion.Slerp(transform.rotation, SlerpRot, spd * d);
-    }*/
 
     void FallingCtrl(float d, float Speed, float Accel)
     {
@@ -187,27 +164,9 @@ public class PlayerOrientation : MonoBehaviour
 
         //lerp mesh slower when not on ground
         RotateSelf(GroundDir, d, GravityRotationSpeed);
-        //RotateMesh(d, transform.forward, turnSpeed);
 
         //move character down with gravity
         fallingSpeed += gravity * Time.fixedDeltaTime;
         character.Move(transform.up * fallingSpeed * Time.deltaTime);
     }
-
-    /*void CapsuleFollowHeadset()
-    {
-        character.height = rig.cameraInRigSpaceHeight + additionalHeight;
-        Vector3 capsuleCenter = transform.InverseTransformPoint(rig.cameraGameObject.transform.position);
-        character.center = new Vector3(capsuleCenter.x, character.height/2 + character.skinWidth, capsuleCenter.z);
-    }
-
-    bool CheckIfGrounded()
-    {
-        //tells us if on ground
-        Vector3 rayStart = transform.TransformPoint(character.center);
-        float rayLength = character.center.y + 0.01f;
-        bool hasHit = Physics.SphereCast(rayStart, character.radius, Vector3.down, out RaycastHit hitInfo, rayLength, GroundLayers);
-        Debug.DrawRay(rayStart, -transform.up, Color.red);
-        return hasHit;
-    }*/
 }
