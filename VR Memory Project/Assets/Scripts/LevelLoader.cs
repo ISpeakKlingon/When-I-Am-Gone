@@ -11,15 +11,29 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
+        Debug.Log("Successfully called LoadNextLevel");
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+    public void LoadPreviousLevel()
+    {
+        Debug.Log("Successfully called LoadNextLevel");
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
     }
 
     IEnumerator LoadLevel(int levelIndex)
     {
         //Play animation
+        Debug.Log("IEnumerator LoadLevel successfully started.");
+        Debug.Log("About to start transition.");
+
         transition.SetTrigger("Start");
+        Debug.Log("SetTrigger for transition Animator to Start was successful.");
+
         //Wait
         yield return new WaitForSeconds(transitionTime);
+        Debug.Log("Successfully waited for transitionTime.");
+
         //Load scene
         SceneManager.LoadScene(levelIndex);
     }
@@ -34,5 +48,10 @@ public class LevelLoader : MonoBehaviour
     public void LoadTitleScreen()
     {
         StartCoroutine(LoadLevel(0));
+    }
+
+    public void LoadLevelOne()
+    {
+        StartCoroutine(LoadLevel(1));
     }
 }
