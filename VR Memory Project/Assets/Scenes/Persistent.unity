@@ -812,7 +812,7 @@ Camera:
   m_GameObject: {fileID: 667928394}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -831,7 +831,7 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4096
@@ -1834,7 +1834,7 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: 1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294963199
@@ -1866,7 +1866,7 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
-  m_RendererIndex: 0
+  m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
@@ -2567,7 +2567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002694508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1391578188}
@@ -3383,21 +3383,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 493929845670297810, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 493929845670297811, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 493929845670297811, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.035118
+      value: 4.29
       objectReference: {fileID: 0}
     - target: {fileID: 493929845670297811, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.078472
+      value: -15.77
       objectReference: {fileID: 0}
     - target: {fileID: 493929845670297811, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 23.128746
+      value: 25.72
       objectReference: {fileID: 0}
     - target: {fileID: 493929845670297811, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3487,6 +3491,10 @@ PrefabInstance:
       propertyPath: OnLoadBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 493929846141384725, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 493929846141384726, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.38
@@ -3499,5 +3507,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -23.62
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 493929846141384808, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
