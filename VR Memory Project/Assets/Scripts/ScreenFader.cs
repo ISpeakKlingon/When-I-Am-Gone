@@ -45,7 +45,7 @@ public class ScreenFader : MonoBehaviour
     private IEnumerator FadeOut()
     {
         // trigger animation
-        //transition.SetTrigger("Start");
+        transition.SetTrigger("Start");
 
         while(_intensity >= 0.0f)
         {
