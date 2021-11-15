@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class NeedleObject : MonoBehaviour
 {
+    public string sceneToLink;
+
     public void LoadGame()
     {
-        SceneLoader.Instance.LoadNewScene("Menu");
+        SceneLoader.Instance.LoadNewScene(sceneToLink);
     }
 
     public void TurnOnLeftHandSocket()
