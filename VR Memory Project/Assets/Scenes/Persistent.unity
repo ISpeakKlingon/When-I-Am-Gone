@@ -3394,15 +3394,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 493929845670297811, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.29
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 493929845670297811, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.77
+      value: 0.47
       objectReference: {fileID: 0}
     - target: {fileID: 493929845670297811, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 25.72
+      value: 2.74
       objectReference: {fileID: 0}
     - target: {fileID: 493929845670297811, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3432,6 +3432,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 493929845670297812, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
+      propertyPath: xrRig
+      value: 
+      objectReference: {fileID: 2002694508}
     - target: {fileID: 493929845670297812, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
       propertyPath: screenFader
       value: 
@@ -3498,15 +3502,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 493929846141384726, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.38
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 493929846141384726, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.23
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 493929846141384726, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -23.62
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 493929846141384808, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}

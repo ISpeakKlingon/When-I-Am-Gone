@@ -11,9 +11,13 @@ public class SceneLoader : Singleton<SceneLoader>
 
     private bool isLoading = false;
 
+    public GameObject xrRig;
+    private PlayerOrientation playerOrientation;
+
     private void Awake()
     {
         SceneManager.sceneLoaded += SetActiveScene;
+        playerOrientation = xrRig.GetComponent<PlayerOrientation>();
     }
 
     private void OnDestroy()
@@ -33,6 +37,11 @@ public class SceneLoader : Singleton<SceneLoader>
 
         OnLoadBegin?.Invoke();
         yield return screenFader.StartFadeIn();
+
+        // Turn off gravity so player doesn't fall
+        // Disable Player Orientation script in XR Rig?
+        playerOrientation.enabled = false;
+
         yield return StartCoroutine(UnloadCurrent());
 
         // For testing
@@ -42,7 +51,10 @@ public class SceneLoader : Singleton<SceneLoader>
         yield return screenFader.StartFadeOut();
         OnLoadEnd?.Invoke();
 
-        isLoading = false;        
+        isLoading = false;
+
+        // Turn on gravity so player can fall
+        playerOrientation.enabled = true;
     }
 
     private IEnumerator UnloadCurrent()
