@@ -9,6 +9,8 @@ public class ScreenFader : MonoBehaviour
     [SerializeField] private Color _color = Color.black;
     [SerializeField] private Material _fadeMaterial = null;
 
+    public Animator transition;
+
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
         _fadeMaterial.SetFloat("_Intensity", _intensity);
@@ -24,7 +26,10 @@ public class ScreenFader : MonoBehaviour
 
     private IEnumerator FadeIn()
     {
-        while(_intensity <= 1.0f)
+        // trigger animation
+        transition.SetTrigger("Start");
+
+        while (_intensity <= 1.0f)
         {
             _intensity += _speed = Time.deltaTime;
             yield return null;
@@ -39,6 +44,9 @@ public class ScreenFader : MonoBehaviour
 
     private IEnumerator FadeOut()
     {
+        // trigger animation
+        //transition.SetTrigger("Start");
+
         while(_intensity >= 0.0f)
         {
             _intensity -= _speed = Time.deltaTime;
