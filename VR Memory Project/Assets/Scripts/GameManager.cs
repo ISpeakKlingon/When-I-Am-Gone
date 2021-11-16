@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public GameObject needleSocketInteractorOnHand;
     private XRSocketInteractor socket;
 
+    //editable string to name next scene to load
+    public string sceneName;
+
     public static GameManager Instance
     {
         get
@@ -42,5 +45,11 @@ public class GameManager : MonoBehaviour
     public void TurnOffLeftHandSocket()
     {
         socket.socketActive = false;
+    }
+
+    //load a specifically named scene in the SceneLoader
+    public void LoadScene()
+    {
+        SceneLoader.Instance.LoadNewScene(sceneName);
     }
 }

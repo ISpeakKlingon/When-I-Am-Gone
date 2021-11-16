@@ -4,9 +4,9 @@ public class NeedleObject : MonoBehaviour
 {
     public string sceneToLink;
 
-    public void LoadGame()
+    public void NameSceneToLoadInGameManager()
     {
-        SceneLoader.Instance.LoadNewScene(sceneToLink);
+        GameManager.Instance.sceneName = sceneToLink;
     }
 
     public void TurnOnLeftHandSocket()

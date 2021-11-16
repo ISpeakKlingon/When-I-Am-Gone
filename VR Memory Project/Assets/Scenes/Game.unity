@@ -354,11 +354,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 770100327355772154, guid: 65be5cc7238ba144f9e30f9009bb9c9e, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 770100327355772154, guid: 65be5cc7238ba144f9e30f9009bb9c9e, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 770100327355772154, guid: 65be5cc7238ba144f9e30f9009bb9c9e, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 525654072}
+    - target: {fileID: 770100327355772154, guid: 65be5cc7238ba144f9e30f9009bb9c9e, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 525654072}
     - target: {fileID: 770100327355772154, guid: 65be5cc7238ba144f9e30f9009bb9c9e, type: 3}
@@ -370,11 +378,19 @@ PrefabInstance:
       value: TurnOnLeftHandSocket
       objectReference: {fileID: 0}
     - target: {fileID: 770100327355772154, guid: 65be5cc7238ba144f9e30f9009bb9c9e, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: NameSceneToLoadInGameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 770100327355772154, guid: 65be5cc7238ba144f9e30f9009bb9c9e, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.Renderer, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 770100327355772154, guid: 65be5cc7238ba144f9e30f9009bb9c9e, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NeedleObject, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 770100327355772154, guid: 65be5cc7238ba144f9e30f9009bb9c9e, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: NeedleObject, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 770100327355772154, guid: 65be5cc7238ba144f9e30f9009bb9c9e, type: 3}
