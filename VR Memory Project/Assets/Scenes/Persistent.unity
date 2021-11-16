@@ -995,6 +995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96425a716eb3346469b9623d99fe9413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  memoryNeedle: {fileID: 0}
   needleSocketInteractorOnHand: {fileID: 1505402702}
   sceneName: 
 --- !u!4 &695340883
@@ -2422,18 +2423,6 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2081343853}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 695340882}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: LoadScene
@@ -2648,7 +2637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 770100327355772152, guid: 65be5cc7238ba144f9e30f9009bb9c9e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 770100327355772154, guid: 65be5cc7238ba144f9e30f9009bb9c9e, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size

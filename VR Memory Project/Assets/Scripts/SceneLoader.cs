@@ -48,6 +48,15 @@ public class SceneLoader : Singleton<SceneLoader>
         yield return new WaitForSeconds(1.0f);
 
         yield return StartCoroutine(LoadNew(sceneName));
+
+        //turn on memory needle object if entering memory
+        if (sceneName == "Menu")
+        {
+            GameManager.Instance.ActivateMemoryNeedle();
+        }
+        else
+            GameManager.Instance.DeactivateMemoryNeedle();
+
         yield return screenFader.StartFadeOut();
         OnLoadEnd?.Invoke();
 

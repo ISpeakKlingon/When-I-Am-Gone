@@ -8,11 +8,13 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
 
     //get reference to NeedleSocketInteractorOnHand
+    public GameObject memoryNeedle;
     public GameObject needleSocketInteractorOnHand;
     private XRSocketInteractor socket;
 
-    //editable string to name next scene to load
+    //editable string to name next scene to load. The Needle objects do this in their component.
     public string sceneName;
+
 
     public static GameManager Instance
     {
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
         socket = needleSocketInteractorOnHand.GetComponent<XRSocketInteractor>();
     }
 
+    //Did the player unlock the first puzzle? Yes or No?
     public bool GotFirstCode { get; set; }
 
     //turn left hand socket interactor active
@@ -51,5 +54,17 @@ public class GameManager : MonoBehaviour
     public void LoadScene()
     {
         SceneLoader.Instance.LoadNewScene(sceneName);
+    }
+
+    //activate memory needle object
+    public void ActivateMemoryNeedle()
+    {
+        memoryNeedle.SetActive(true);
+    }
+
+    //deactive memory needle object
+    public void DeactivateMemoryNeedle()
+    {
+        memoryNeedle.SetActive(false);
     }
 }
