@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class NeedleObject : MonoBehaviour
@@ -17,5 +18,18 @@ public class NeedleObject : MonoBehaviour
     public void TurnOffLeftHandSocket()
     {
         GameManager.Instance.TurnOffLeftHandSocket();
+    }
+
+    public void StartSceneChange()
+    {
+        StopAllCoroutines();
+        StartCoroutine(SceneChange());
+    }
+
+    private IEnumerator SceneChange()
+    {
+        yield return new WaitForSeconds(1.0f);
+        NameSceneToLoadInGameManager();
+        GameManager.Instance.LoadScene();
     }
 }
