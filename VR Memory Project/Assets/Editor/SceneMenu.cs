@@ -15,6 +15,12 @@ public static class SceneMenu
         OpenScene("Game");
     }
 
+    [MenuItem("Scenes/Memory2020")]
+    public static void OpenMemory2020()
+    {
+        OpenScene("Memory2020");
+    }
+
     private static void OpenScene(string sceneName)
     {
         EditorSceneManager.OpenScene("Assets/Scenes/Persistent.unity", OpenSceneMode.Single);
