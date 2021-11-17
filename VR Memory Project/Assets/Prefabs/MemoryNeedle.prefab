@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 770100327355772033}
   - component: {fileID: 1509754949}
   m_Layer: 10
-  m_Name: Needle
+  m_Name: MemoryNeedle
   m_TagString: MemoryNeedle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1509754949}
         m_TargetAssemblyTypeName: NeedleObject, Assembly-CSharp
-        m_MethodName: TurnOnLeftHandSocket
+        m_MethodName: StartSceneChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -273,4 +273,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca27a680f2fcec489f05bc5bacd073e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLink: Menu
+  sceneToLink: Game

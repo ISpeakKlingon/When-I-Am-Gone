@@ -47,15 +47,29 @@ public class SceneLoader : Singleton<SceneLoader>
         // For testing
         yield return new WaitForSeconds(1.0f);
 
-        yield return StartCoroutine(LoadNew(sceneName));
+        //yield return StartCoroutine(LoadNew(sceneName));
 
         //turn on memory needle object if entering memory
         if (sceneName == "Menu")
         {
+            //deactivate needle socket "is active"
+            GameManager.Instance.TurnOffLeftHandSocket();
             GameManager.Instance.ActivateMemoryNeedle();
+
+            //or better yet, maybe I can instantiate the Needle_Memory prefab as a child?
+            //GameManager.Instance.InstantiateMemoryNeedle();
         }
         else
+        {
             GameManager.Instance.DeactivateMemoryNeedle();
+            //reset the memory needle transform too (do this in Game Manager)
+            
+
+            // destroy Neelde_Memory object instead?
+            //GameManager.Instance.DestoryMemoryNeedle();
+        }
+
+        yield return StartCoroutine(LoadNew(sceneName));
 
         yield return screenFader.StartFadeOut();
         OnLoadEnd?.Invoke();
@@ -86,5 +100,4 @@ public class SceneLoader : Singleton<SceneLoader>
     {
         SceneManager.SetActiveScene(scene);
     }
-
 }

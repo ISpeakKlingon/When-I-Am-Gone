@@ -9,8 +9,15 @@ public class GameManager : MonoBehaviour
 
     //get reference to NeedleSocketInteractorOnHand
     public GameObject memoryNeedle;
+    //public GameObject memoryNeedlePrefab;
     public GameObject needleSocketInteractorOnHand;
+    public Transform needleSocketTransform;
+    private Vector3 memoryNeedleStartingPos;
+    private Quaternion memoryNeedleStartingRot;
     private XRSocketInteractor socket;
+    public Transform needleSocketVisual;
+
+    private Rigidbody memoryNeedleRb;
 
     //editable string to name next scene to load. The Needle objects do this in their component.
     public string sceneName;
@@ -33,6 +40,16 @@ public class GameManager : MonoBehaviour
 
         //get reference to xr socket interactor
         socket = needleSocketInteractorOnHand.GetComponent<XRSocketInteractor>();
+    }
+
+    private void Start()
+    {
+        memoryNeedleStartingPos = needleSocketVisual.transform.localPosition;
+        memoryNeedleStartingRot = needleSocketVisual.transform.localRotation;
+
+        memoryNeedleRb = memoryNeedle.GetComponent<Rigidbody>();
+
+        //InstantiateMemoryNeedle();
     }
 
     //Did the player unlock the first puzzle? Yes or No?
@@ -60,11 +77,45 @@ public class GameManager : MonoBehaviour
     public void ActivateMemoryNeedle()
     {
         memoryNeedle.SetActive(true);
+        Debug.Log("Reseting memory needle position.");
+        //reset memory needle so that it appears on hand next time it is activated
+
+        memoryNeedleRb.velocity = Vector3.zero;
+        memoryNeedleRb.angularVelocity = Vector3.zero;
+
+        memoryNeedle.transform.localPosition = new Vector3(0, 0, 0);
+        //memoryNeedle.transform.localRotation = new Quaternion(-90, 0, 0, 0);
+
+        memoryNeedle.transform.localEulerAngles = new Vector3(-90, 0, 0);
+
+        //memoryNeedle.transform.position = memoryNeedleStartingPos;
+        //memoryNeedle.transform.rotation = memoryNeedleStartingRot;
     }
 
     //deactive memory needle object
     public void DeactivateMemoryNeedle()
     {
         memoryNeedle.SetActive(false);
+        Debug.Log("Reseting memory needle position.");
+        //reset memory needle transform so that it appears on hand next time it is activated
+        //memoryNeedle.transform.position = memoryNeedleStartingPos;
+        //memoryNeedle.transform.rotation = memoryNeedleStartingRot;
     }
+
+    /*
+    //instantiate memory needle as child of left hand
+    public void InstantiateMemoryNeedle()
+    {
+        needleSocketTransform = needleSocketTransform.GetComponent<Transform>();
+        memoryNeedle = Instantiate(memoryNeedlePrefab);
+        memoryNeedle.transform.parent = needleSocketInteractorOnHand.transform;
+    }
+
+    //destroy memory needle
+    public void DestoryMemoryNeedle()
+    {
+        Destroy(GameObject.FindWithTag("MemoryNeedle"));
+    }
+    */
+
 }

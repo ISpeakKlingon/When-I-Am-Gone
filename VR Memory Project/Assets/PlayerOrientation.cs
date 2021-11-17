@@ -78,7 +78,7 @@ public class PlayerOrientation : MonoBehaviour
         
         else if (States == WorldState.InAir)
         {
-            Debug.Log("InAir");
+            //Debug.Log("InAir");
             FallingCtrl(delta, Speed, Acceleration);
 
             //check for ground
@@ -158,7 +158,7 @@ public class PlayerOrientation : MonoBehaviour
 
     void FallingCtrl(float d, float Speed, float Accel)
     {
-        Debug.Log("Falling");
+        //Debug.Log("Falling");
         Vector3 SetGroundDir = FloorAngleCheck();
         GroundDir = Vector3.Lerp(GroundDir, SetGroundDir, d * GravityRotationSpeed);
 
