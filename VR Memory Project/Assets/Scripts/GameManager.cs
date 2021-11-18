@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     //editable string to name next scene to load. The Needle objects do this in their component.
     public string sceneName;
 
+    public GameObject player;
+    private Player playerScript;
+
 
     public static GameManager Instance
     {
@@ -50,6 +53,12 @@ public class GameManager : MonoBehaviour
         memoryNeedleRb = memoryNeedle.GetComponent<Rigidbody>();
 
         //InstantiateMemoryNeedle();
+
+        //get reference to script on XR Rig called Player
+        playerScript = player.GetComponent<Player>();
+
+        //save the Player pos to reset all data
+        SavePlayer();
     }
 
     //Did the player unlock the first puzzle? Yes or No?
@@ -118,4 +127,24 @@ public class GameManager : MonoBehaviour
     }
     */
 
+    
+    public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(playerScript);
+    }
+
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        playerScript.level = data.level;
+        playerScript.health = data.health;
+
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        player.transform.position = position;
+    }
+    
 }

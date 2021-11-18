@@ -20,6 +20,12 @@ public class SceneLoader : Singleton<SceneLoader>
         playerOrientation = xrRig.GetComponent<PlayerOrientation>();
     }
 
+    private void Start()
+    {
+        //save the Player pos to reset all data
+        //GameManager.Instance.SavePlayer();
+    }
+
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= SetActiveScene;
@@ -38,7 +44,7 @@ public class SceneLoader : Singleton<SceneLoader>
         OnLoadBegin?.Invoke();
         yield return screenFader.StartFadeIn();
 
-        // Turn off gravity so player doesn't fall
+        // Turn off gravity so player doesn't fall or...
         // Disable Player Orientation script in XR Rig?
         playerOrientation.enabled = false;
 
@@ -53,12 +59,14 @@ public class SceneLoader : Singleton<SceneLoader>
         if (sceneName == "Game")
         {
             GameManager.Instance.DeactivateMemoryNeedle();
+            GameManager.Instance.LoadPlayer(); //load the player's position they were in when they entered memory
         }
         else
         {
             //deactivate needle socket "is active"
             GameManager.Instance.TurnOffLeftHandSocket();
             GameManager.Instance.ActivateMemoryNeedle();
+            GameManager.Instance.SavePlayer(); //remember player pos before entering memory
         }
 
         yield return StartCoroutine(LoadNew(sceneName));
