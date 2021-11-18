@@ -20,12 +20,6 @@ public class SceneLoader : Singleton<SceneLoader>
         playerOrientation = xrRig.GetComponent<PlayerOrientation>();
     }
 
-    private void Start()
-    {
-        //save the Player pos to reset all data
-        //GameManager.Instance.SavePlayer();
-    }
-
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= SetActiveScene;
@@ -53,8 +47,6 @@ public class SceneLoader : Singleton<SceneLoader>
         // For testing
         yield return new WaitForSeconds(1.0f);
 
-        //yield return StartCoroutine(LoadNew(sceneName));
-
         //turn on memory needle object if entering memory
         if (sceneName == "Game")
         {
@@ -67,6 +59,7 @@ public class SceneLoader : Singleton<SceneLoader>
             GameManager.Instance.TurnOffLeftHandSocket();
             GameManager.Instance.ActivateMemoryNeedle();
             GameManager.Instance.SavePlayer(); //remember player pos before entering memory
+            GameManager.Instance.PlayerToZero();
         }
 
         yield return StartCoroutine(LoadNew(sceneName));

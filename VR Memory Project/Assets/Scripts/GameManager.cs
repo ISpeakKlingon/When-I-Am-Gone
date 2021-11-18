@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     private Player playerScript;
 
-
     public static GameManager Instance
     {
         get
@@ -52,12 +51,10 @@ public class GameManager : MonoBehaviour
 
         memoryNeedleRb = memoryNeedle.GetComponent<Rigidbody>();
 
-        //InstantiateMemoryNeedle();
-
         //get reference to script on XR Rig called Player
         playerScript = player.GetComponent<Player>();
 
-        //save the Player pos to reset all data
+        //save the Player pos to reset all pos data
         SavePlayer();
     }
 
@@ -86,47 +83,22 @@ public class GameManager : MonoBehaviour
     public void ActivateMemoryNeedle()
     {
         memoryNeedle.SetActive(true);
-        Debug.Log("Reseting memory needle position.");
+        //Debug.Log("Reseting memory needle position.");
+        
         //reset memory needle so that it appears on hand next time it is activated
-
         memoryNeedleRb.velocity = Vector3.zero;
         memoryNeedleRb.angularVelocity = Vector3.zero;
 
         memoryNeedle.transform.localPosition = new Vector3(0, 0, 0);
-        //memoryNeedle.transform.localRotation = new Quaternion(-90, 0, 0, 0);
-
         memoryNeedle.transform.localEulerAngles = new Vector3(-90, 0, 0);
-
-        //memoryNeedle.transform.position = memoryNeedleStartingPos;
-        //memoryNeedle.transform.rotation = memoryNeedleStartingRot;
     }
 
     //deactive memory needle object
     public void DeactivateMemoryNeedle()
     {
         memoryNeedle.SetActive(false);
-        Debug.Log("Reseting memory needle position.");
-        //reset memory needle transform so that it appears on hand next time it is activated
-        //memoryNeedle.transform.position = memoryNeedleStartingPos;
-        //memoryNeedle.transform.rotation = memoryNeedleStartingRot;
+        //Debug.Log("Reseting memory needle position.");
     }
-
-    /*
-    //instantiate memory needle as child of left hand
-    public void InstantiateMemoryNeedle()
-    {
-        needleSocketTransform = needleSocketTransform.GetComponent<Transform>();
-        memoryNeedle = Instantiate(memoryNeedlePrefab);
-        memoryNeedle.transform.parent = needleSocketInteractorOnHand.transform;
-    }
-
-    //destroy memory needle
-    public void DestoryMemoryNeedle()
-    {
-        Destroy(GameObject.FindWithTag("MemoryNeedle"));
-    }
-    */
-
     
     public void SavePlayer()
     {
@@ -147,4 +119,10 @@ public class GameManager : MonoBehaviour
         player.transform.position = position;
     }
     
+    //reset player pos to 0
+    public void PlayerToZero()
+    {
+        player.transform.localPosition = new Vector3(0, 0, 0);
+        player.transform.localEulerAngles = new Vector3(0, 0, 0);
+    }
 }

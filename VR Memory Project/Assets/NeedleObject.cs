@@ -9,7 +9,7 @@ public class NeedleObject : MonoBehaviour
     public void NameSceneToLoadInGameManager()
     {
         GameManager.Instance.sceneName = sceneToLink;
-        Debug.Log("Passed " + sceneToLink + " scene to Game Manager for loading.");
+        //Debug.Log("Passed " + sceneToLink + " scene to Game Manager for loading.");
     }
     
 
@@ -32,7 +32,7 @@ public class NeedleObject : MonoBehaviour
     private IEnumerator SceneChange()
     {
         //NameSceneToLoadInGameManager();
-        Debug.Log("Passing " + sceneToLink + " scene name to Game Manager for loading.");
+        //Debug.Log("Passing " + sceneToLink + " scene name to Game Manager for loading.");
         yield return new WaitForSeconds(1.0f);
         GameManager.Instance.LoadScene();
     }
