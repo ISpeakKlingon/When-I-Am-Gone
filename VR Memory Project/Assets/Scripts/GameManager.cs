@@ -29,6 +29,10 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     private Player playerScript;
 
+    public float gameTime;
+
+    public bool isGameStarted = false;
+
     public static GameManager Instance
     {
         get
@@ -106,7 +110,9 @@ public class GameManager : MonoBehaviour
     
     public void SavePlayer()
     {
+        UpdatePlayerTime();
         SaveSystem.SavePlayer(playerScript);
+        Debug.Log("Saved " + gameTime + " in PlayerData.");
     }
 
     public void LoadPlayer()
@@ -121,6 +127,10 @@ public class GameManager : MonoBehaviour
         position.y = data.position[1];
         position.z = data.position[2];
         player.transform.position = position;
+
+        playerScript.timeRemaining = data.timeRemaining;
+
+        Debug.Log("Loaded " + gameTime + " from PlayerData.");
     }
     
     //reset player pos to 0
@@ -130,15 +140,12 @@ public class GameManager : MonoBehaviour
         player.transform.localEulerAngles = new Vector3(0, 0, 0);
     }
 
-    /*
     public void GameStart()
     {
-        Debug.Log("Game started!");
-        //fire the start game event (used by ActivateTarget.cs) -- from Daniel Stringer Make A VR Game
-        //StartGame();
-
+        Debug.Log("GameManager has changed isGameStarted bool to true.");
+        isGameStarted = true;
     }
-    */
+    
 
     public void GameOver()
     {
@@ -148,5 +155,11 @@ public class GameManager : MonoBehaviour
         LoadScene();
         //disable hands or needle
         //memoryNeedle.SetActive(false);
+    }
+
+    public void UpdatePlayerTime()
+    {
+        playerScript.timeRemaining = gameTime;
+        Debug.Log("GameManager passed gameTime of " + gameTime + " to Player script.");
     }
 }

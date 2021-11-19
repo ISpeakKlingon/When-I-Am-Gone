@@ -51,7 +51,7 @@ public class SceneLoader : Singleton<SceneLoader>
         if (sceneName == "Game")
         {
             GameManager.Instance.DeactivateMemoryNeedle();
-            GameManager.Instance.LoadPlayer(); //load the player's position they were in when they entered memory
+            GameManager.Instance.LoadPlayer(); //load the player's position and time remaining they were in when they entered memory
             //GameManager.Instance.GameStart(); //start the game
         }
         else
@@ -63,7 +63,7 @@ public class SceneLoader : Singleton<SceneLoader>
             if (sceneName != "GameOver")
             {
                 GameManager.Instance.ActivateMemoryNeedle();
-                GameManager.Instance.SavePlayer(); //remember player pos before entering memory
+                GameManager.Instance.SavePlayer(); //remember player pos and time remaining before entering memory
             }
 
             GameManager.Instance.PlayerToZero();
