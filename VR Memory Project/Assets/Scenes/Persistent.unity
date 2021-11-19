@@ -1031,6 +1031,8 @@ MonoBehaviour:
   needleSocketVisual: {fileID: 2081343854}
   sceneName: 
   player: {fileID: 2002694508}
+  gameTime: 0
+  isGameStarted: 0
 --- !u!4 &695340883
 Transform:
   m_ObjectHideFlags: 0
@@ -3283,6 +3285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   health: 0
+  timeRemaining: 0
 --- !u!114 &2002694519
 MonoBehaviour:
   m_ObjectHideFlags: 0

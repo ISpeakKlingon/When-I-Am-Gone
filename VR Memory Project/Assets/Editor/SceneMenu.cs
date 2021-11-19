@@ -21,6 +21,12 @@ public static class SceneMenu
         OpenScene("Memory2020");
     }
 
+    [MenuItem("Scenes/GameOver")]
+    public static void OpenGameOver()
+    {
+        OpenScene("GameOver");
+    }
+
     private static void OpenScene(string sceneName)
     {
         EditorSceneManager.OpenScene("Assets/Scenes/Persistent.unity", OpenSceneMode.Single);
