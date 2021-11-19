@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
 
+    //events
+    //public delegate void OnGameStart();
+    //public static event OnGameStart StartGame;
+
     //get reference to NeedleSocketInteractorOnHand
     public GameObject memoryNeedle;
     //public GameObject memoryNeedlePrefab;
@@ -124,5 +128,25 @@ public class GameManager : MonoBehaviour
     {
         player.transform.localPosition = new Vector3(0, 0, 0);
         player.transform.localEulerAngles = new Vector3(0, 0, 0);
+    }
+
+    /*
+    public void GameStart()
+    {
+        Debug.Log("Game started!");
+        //fire the start game event (used by ActivateTarget.cs) -- from Daniel Stringer Make A VR Game
+        //StartGame();
+
+    }
+    */
+
+    public void GameOver()
+    {
+        Debug.Log("Game over.");
+        //load Game Over scene
+        sceneName = "GameOver";
+        LoadScene();
+        //disable hands or needle
+        //memoryNeedle.SetActive(false);
     }
 }

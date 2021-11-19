@@ -52,13 +52,20 @@ public class SceneLoader : Singleton<SceneLoader>
         {
             GameManager.Instance.DeactivateMemoryNeedle();
             GameManager.Instance.LoadPlayer(); //load the player's position they were in when they entered memory
+            //GameManager.Instance.GameStart(); //start the game
         }
         else
         {
             //deactivate needle socket "is active"
             GameManager.Instance.TurnOffLeftHandSocket();
-            GameManager.Instance.ActivateMemoryNeedle();
-            GameManager.Instance.SavePlayer(); //remember player pos before entering memory
+
+            //turn off needle if game over
+            if (sceneName != "GameOver")
+            {
+                GameManager.Instance.ActivateMemoryNeedle();
+                GameManager.Instance.SavePlayer(); //remember player pos before entering memory
+            }
+
             GameManager.Instance.PlayerToZero();
         }
 
