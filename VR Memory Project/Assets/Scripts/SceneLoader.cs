@@ -67,6 +67,7 @@ public class SceneLoader : Singleton<SceneLoader>
             }
 
             GameManager.Instance.PlayerToZero();
+            GameManager.Instance.TurnOnRightHandDirectInteractor();
         }
 
         yield return StartCoroutine(LoadNew(sceneName));

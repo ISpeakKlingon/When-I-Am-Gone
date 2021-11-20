@@ -16,6 +16,7 @@ public class TimerController : MonoBehaviour
     {
         if (!GameManager.Instance.isGameStarted)
         {
+            GameManager.Instance.PlayerToZero();
             maxgameTime = gameTime;
             Debug.Log("TimerController script reset gameTime to maxgameTime;");
             GameManager.Instance.GameStart();

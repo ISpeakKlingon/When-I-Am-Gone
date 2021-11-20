@@ -33,6 +33,11 @@ public class GameManager : MonoBehaviour
 
     public bool isGameStarted = false;
 
+    public GameObject leftHandBaseController;
+    private XRDirectInteractor leftDirectInteractor;
+    public GameObject rightHandBaseController;
+    private XRDirectInteractor rightDirectInteractor;
+
     public static GameManager Instance
     {
         get
@@ -62,6 +67,11 @@ public class GameManager : MonoBehaviour
         //get reference to script on XR Rig called Player
         playerScript = player.GetComponent<Player>();
 
+        //get reference to hand direct interactors
+        leftDirectInteractor = leftHandBaseController.GetComponent<XRDirectInteractor>();
+        leftDirectInteractor.enabled = false;
+        rightDirectInteractor = rightHandBaseController.GetComponent<XRDirectInteractor>();
+
         //save the Player pos to reset all pos data
         SavePlayer();
     }
@@ -81,6 +91,18 @@ public class GameManager : MonoBehaviour
         socket.socketActive = false;
     }
 
+    //turn right hand direct interactor on
+    public void TurnOnRightHandDirectInteractor()
+    {
+        rightDirectInteractor.enabled = true;
+    }
+
+    //turn right hand direct interactor off
+    public void TurnOffRightHandDirectInteractor()
+    {
+        rightDirectInteractor.enabled = false;
+    }
+
     //load a specifically named scene in the SceneLoader
     public void LoadScene()
     {
@@ -90,12 +112,18 @@ public class GameManager : MonoBehaviour
     //activate memory needle object
     public void ActivateMemoryNeedle()
     {
+        //turn off left hand xr direct interactor until I can figure out why layer masking the needle isn't working
+        leftDirectInteractor.enabled = false;
+
         memoryNeedle.SetActive(true);
         //Debug.Log("Reseting memory needle position.");
         
         //reset memory needle so that it appears on hand next time it is activated
         memoryNeedleRb.velocity = Vector3.zero;
         memoryNeedleRb.angularVelocity = Vector3.zero;
+
+        //make needle child of correct of NeedleSocketInteractorOnHand
+        memoryNeedle.transform.SetParent(needleSocketTransform);
 
         memoryNeedle.transform.localPosition = new Vector3(0, 0, 0);
         memoryNeedle.transform.localEulerAngles = new Vector3(-90, 0, 0);
@@ -106,6 +134,9 @@ public class GameManager : MonoBehaviour
     {
         memoryNeedle.SetActive(false);
         //Debug.Log("Reseting memory needle position.");
+
+        //turn on left hand xr direct interactor
+        //leftDirectInteractor.enabled = true;
     }
     
     public void SavePlayer()
