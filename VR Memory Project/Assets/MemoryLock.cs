@@ -13,6 +13,8 @@ public class MemoryLock : MonoBehaviour
 
     private int globalIndex = -1;
 
+    public bool canPress = true;
+
     private void Start()
     {
         //show or hide objects?
@@ -64,5 +66,10 @@ public class MemoryLock : MonoBehaviour
         //play sound
         //show objects
         //load new memory
+    }
+
+    public bool getCanPress()
+    {
+        return canPress;
     }
 }

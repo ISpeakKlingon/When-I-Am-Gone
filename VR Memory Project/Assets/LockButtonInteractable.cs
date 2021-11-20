@@ -16,9 +16,12 @@ public class LockButtonInteractable : MonoBehaviour
     private int[] lockSequence;
     private int globalIndex;
 
+    private bool canPress;
+
     private void Update()
     {
         lockSequence = memoryLock.GetComponent<MemoryLock>().getLockSequence();
+        canPress = memoryLock.GetComponent<MemoryLock>().getCanPress();
         globalIndex = memoryLock.GetComponent<MemoryLock>().getGlobalIndex();
     }
 
@@ -27,77 +30,86 @@ public class LockButtonInteractable : MonoBehaviour
      */
     public void Pressed()
     {
-        globalIndex++;
-        //Get the lock sequence
-        memoryLock.GetComponent<MemoryLock>().setGlobalIndex(globalIndex);
-
-        switch (lockSequence[globalIndex])
+        if (canPress)
         {
-            case 0:
-                if(gameObject.name == "D_Sphere")
-                {
-                    correctPress();
-                    Debug.Log("Correct!");
-                }
-                else
-                {
-                    incorrectPress();
-                    Debug.Log("Incorrect! :(");
-                }
-                break;
-            case 1:
-                if (gameObject.name == "Y_Sphere")
-                {
-                    correctPress();
-                }
-                else
-                {
-                    incorrectPress();
-                }
-                break;
-            case 2:
-                if (gameObject.name == "Z_Sphere")
-                {
-                    correctPress();
-                }
-                else
-                {
-                    incorrectPress();
-                }
-                break;
-            case 3:
-                if (gameObject.name == "A_Sphere")
-                {
-                    correctPress();
-                }
-                else
-                {
-                    incorrectPress();
-                }
-                break;
-            case 4:
-                if (gameObject.name == "4_Sphere")
-                {
-                    correctPress();
-                }
-                else
-                {
-                    incorrectPress();
-                }
-                break;
-            case 5:
-                if (gameObject.name == "H_Sphere")
-                {
-                    correctPress();
-                }
-                else
-                {
-                    incorrectPress();
-                }
-                break;
-            default:
-                Debug.Log("Default whaaaat");
-                break;
+            Debug.Log("Button was pressed. globalIndex is currently " + globalIndex + " but we are going to bump that up now.");
+            globalIndex++;
+            Debug.Log("globalIndex increased by 1. globalIndex is now " + globalIndex);
+            //Get the lock sequence
+            memoryLock.GetComponent<MemoryLock>().setGlobalIndex(globalIndex);
+
+            switch (lockSequence[globalIndex])
+            {
+                case 0:
+                    if (gameObject.name == "D_Sphere")
+                    {
+                        correctPress();
+                        Debug.Log("Correct! " + gameObject + " was pressed and correctPress method was called!");
+                    }
+                    else
+                    {
+                        incorrectPress();
+                        Debug.Log("Incorrect! :( You pressed " + gameObject + " but you should have pressed D_Sphere.");
+                    }
+                    break;
+                case 1:
+                    if (gameObject.name == "Y_Sphere")
+                    {
+                        correctPress();
+                        Debug.Log("Correct! " + gameObject + " was pressed and correctPress method was called!");
+                    }
+                    else
+                    {
+                        incorrectPress();
+                        Debug.Log("Incorrect! :( You pressed " + gameObject + " but you should have pressed Y_Sphere.");
+                    }
+                    break;
+                case 2:
+                    if (gameObject.name == "Z_Sphere")
+                    {
+                        correctPress();
+                        Debug.Log("Correct! " + gameObject + " was pressed and correctPress method was called!");
+                    }
+                    else
+                    {
+                        incorrectPress();
+                        Debug.Log("Incorrect! :( You pressed " + gameObject + " but you should have pressed Z_Sphere.");
+                    }
+                    break;
+                case 3:
+                    if (gameObject.name == "A_Sphere")
+                    {
+                        correctPress();
+                    }
+                    else
+                    {
+                        incorrectPress();
+                    }
+                    break;
+                case 4:
+                    if (gameObject.name == "4_Sphere")
+                    {
+                        correctPress();
+                    }
+                    else
+                    {
+                        incorrectPress();
+                    }
+                    break;
+                case 5:
+                    if (gameObject.name == "H_Sphere")
+                    {
+                        correctPress();
+                    }
+                    else
+                    {
+                        incorrectPress();
+                    }
+                    break;
+                default:
+                    Debug.Log("Default whaaaat");
+                    break;
+            }
         }
     }
 
@@ -107,9 +119,12 @@ public class LockButtonInteractable : MonoBehaviour
      */
     private void correctPress()
     {
+        Debug.Log("The correctPress method was called.");
         //haptic event
         //update sign or visual
-        
+
+        Debug.Log("globalIndex is currently " + globalIndex + " and lockSequence.length is currently " + lockSequence.Length);
+
         //If at the end of the lock sequence
         if(globalIndex == lockSequence.Length - 1)
         {
@@ -127,6 +142,7 @@ public class LockButtonInteractable : MonoBehaviour
         //incorrect haptic
         //update sign
         StartCoroutine(resetGlobalIndex(1));
+        Debug.Log("Incorrect button was pressed. Reseting globalIndex.");
     }
 
     private IEnumerator resetGlobalIndex( int i)
@@ -134,5 +150,6 @@ public class LockButtonInteractable : MonoBehaviour
         yield return new WaitForSeconds(i);
         globalIndex = -1;
         memoryLock.GetComponent<MemoryLock>().setGlobalIndex(globalIndex);
+        Debug.Log("globalIndex was reset to " + globalIndex);
     }
 }
