@@ -50,7 +50,7 @@ public class TimerController : MonoBehaviour
 
     private void updateTimer()
     {
-        Debug.Log("gameTime is " + gameTime);
+        //Debug.Log("gameTime is " + gameTime);
         gameTime -= Time.deltaTime;
 
         var updateTimerGraphicValue = gameTime / maxgameTime;
