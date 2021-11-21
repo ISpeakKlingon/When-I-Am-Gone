@@ -28,7 +28,7 @@ public class MemoryLock : MonoBehaviour
 
         //just go ahead and set values for array until I can figure out a better way
         lockSequence = new int[6] { 0, 1, 2, 3, 4, 5 };
-        Debug.Log("The first lockSequence integer is " + lockSequence[0]);
+        //Debug.Log("The first lockSequence integer is " + lockSequence[0]);
     }
 
     private void SetUpLockSequence()

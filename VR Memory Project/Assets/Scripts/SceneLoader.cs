@@ -35,7 +35,12 @@ public class SceneLoader : Singleton<SceneLoader>
     {
         isLoading = true;
 
-        OnLoadBegin?.Invoke();
+        //only invoke indicator event if game is not over
+        if(sceneName != "GameOver")
+        {
+            OnLoadBegin?.Invoke();
+        }
+
         yield return screenFader.StartFadeIn();
 
         // Turn off gravity so player doesn't fall or...
@@ -62,8 +67,6 @@ public class SceneLoader : Singleton<SceneLoader>
             //turn off needle if game over
             if (sceneName != "GameOver")
             {
-                //turn on scene change indicator
-                GameManager.Instance.TurnOnIndicator();
                 GameManager.Instance.ActivateMemoryNeedle();
                 GameManager.Instance.SavePlayer(); //remember player pos and time remaining before entering memory
             }
@@ -75,7 +78,12 @@ public class SceneLoader : Singleton<SceneLoader>
         yield return StartCoroutine(LoadNew(sceneName));
 
         yield return screenFader.StartFadeOut();
-        OnLoadEnd?.Invoke();
+
+        //only invoke indicator if scene is not game over
+        if(sceneName != "GameOver")
+        {
+            OnLoadEnd?.Invoke();
+        }
 
         isLoading = false;
 

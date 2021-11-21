@@ -9,11 +9,15 @@ public class GameStartManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("GameStartManager has Started.");
+        //Debug.Log("GameStartManager has Started.");
+
         timerController = timer.GetComponent<TimerController>();
-        Debug.Log("Asking TimerController script to ActivateTimer().");
+
+        //Debug.Log("Asking TimerController script to ActivateTimer().");
+
         timerController.ActivateTimer();
-        Debug.Log("Successfully asked TimerController script to ActivateTimer().");
+
+        //Debug.Log("Successfully asked TimerController script to ActivateTimer().");
     }
 
 }

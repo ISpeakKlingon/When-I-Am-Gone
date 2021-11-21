@@ -145,7 +145,7 @@ public class GameManager : MonoBehaviour
     {
         UpdatePlayerTime();
         SaveSystem.SavePlayer(playerScript);
-        Debug.Log("Saved " + gameTime + " in PlayerData.");
+        //Debug.Log("Saved " + gameTime + " in PlayerData.");
     }
 
     public void LoadPlayer()
@@ -163,7 +163,7 @@ public class GameManager : MonoBehaviour
 
         playerScript.timeRemaining = data.timeRemaining;
 
-        Debug.Log("Loaded " + gameTime + " from PlayerData.");
+        //Debug.Log("Loaded " + gameTime + " from PlayerData.");
     }
     
     //reset player pos to 0
@@ -182,11 +182,15 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("Game over.");
+
         //turn off scene change indicator
-        TurnOffIndicator();
+        //TurnOffIndicator();
+
         //load Game Over scene
         sceneName = "GameOver";
+
         LoadScene();
+
         //disable hands or needle
         //memoryNeedle.SetActive(false);
     }
