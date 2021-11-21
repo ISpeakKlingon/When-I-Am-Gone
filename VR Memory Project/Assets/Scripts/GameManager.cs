@@ -16,8 +16,8 @@ public class GameManager : MonoBehaviour
     //public GameObject memoryNeedlePrefab;
     public GameObject needleSocketInteractorOnHand;
     public Transform needleSocketTransform;
-    private Vector3 memoryNeedleStartingPos;
-    private Quaternion memoryNeedleStartingRot;
+    //private Vector3 memoryNeedleStartingPos; //not needed?
+    //private Quaternion memoryNeedleStartingRot; //not needed?
     private XRSocketInteractor socket;
     public Transform needleSocketVisual;
 
@@ -61,8 +61,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        memoryNeedleStartingPos = needleSocketVisual.transform.localPosition;
-        memoryNeedleStartingRot = needleSocketVisual.transform.localRotation;
+        //memoryNeedleStartingPos = needleSocketVisual.transform.localPosition; //not needed?
+        //memoryNeedleStartingRot = needleSocketVisual.transform.localRotation; //not needed?
 
         memoryNeedleRb = memoryNeedle.GetComponent<Rigidbody>();
 
