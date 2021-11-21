@@ -72,7 +72,7 @@ public class LockButtonInteractable : MonoBehaviour
                     if (gameObject.name == "Z_Sphere")
                     {
                         correctPress();
-                        Debug.Log("Correct! " + gameObject + " was pressed and correctPress method was called!");
+                        Debug.Log("3 in a row correct! " + gameObject + " was pressed and correctPress method was called!");
                     }
                     else
                     {
@@ -84,6 +84,7 @@ public class LockButtonInteractable : MonoBehaviour
                     if (gameObject.name == "A_Sphere")
                     {
                         correctPress();
+                        Debug.Log("That's 4 correct! " + gameObject + " was pressed and correctPress method was called!");
                     }
                     else
                     {
@@ -94,6 +95,7 @@ public class LockButtonInteractable : MonoBehaviour
                     if (gameObject.name == "4_Sphere")
                     {
                         correctPress();
+                        Debug.Log("That's 5 correct! " + gameObject + " was pressed and correctPress method was called!");
                     }
                     else
                     {
@@ -104,6 +106,7 @@ public class LockButtonInteractable : MonoBehaviour
                     if (gameObject.name == "H_Sphere")
                     {
                         correctPress();
+                        Debug.Log("That's 6 correct! " + gameObject + " was pressed and correctPress method was called!");
                     }
                     else
                     {
@@ -130,7 +133,7 @@ public class LockButtonInteractable : MonoBehaviour
         Debug.Log("globalIndex is currently " + globalIndex + " and lockSequence.length is currently " + lockSequence.Length);
 
         //If at the end of the lock sequence
-        if(globalIndex == lockSequence.Length)
+        if(globalIndex == lockSequence.Length - 1)
         {
             // Unlocked memory
             memoryLock.GetComponent<MemoryLock>().MemoryUnlocked();

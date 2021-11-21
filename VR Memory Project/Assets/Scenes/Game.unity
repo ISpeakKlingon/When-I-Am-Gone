@@ -689,7 +689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 770100327355772154, guid: 65be5cc7238ba144f9e30f9009bb9c9e, type: 3}
       propertyPath: m_InteractionLayerMask.m_Bits
-      value: 4294960767
+      value: 4294952575
       objectReference: {fileID: 0}
     - target: {fileID: 770100327355772154, guid: 65be5cc7238ba144f9e30f9009bb9c9e, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
@@ -770,7 +770,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1509754949, guid: 65be5cc7238ba144f9e30f9009bb9c9e, type: 3}
   m_PrefabInstance: {fileID: 392611378}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 682422532}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fca27a680f2fcec489f05bc5bacd073e, type: 3}
@@ -1224,6 +1224,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &682422532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 770100327355772152, guid: 65be5cc7238ba144f9e30f9009bb9c9e, type: 3}
+  m_PrefabInstance: {fileID: 392611378}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &697089891
 GameObject:
   m_ObjectHideFlags: 0
@@ -3803,7 +3808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerComponents: {fileID: 2026861946}
   timerGraphic: {fileID: 1679813184}
-  gameTime: 30
+  gameTime: 60
 --- !u!4 &2026861948
 Transform:
   m_ObjectHideFlags: 0
@@ -3877,6 +3882,7 @@ MonoBehaviour:
   - {fileID: 1662925828}
   lockSequence: 
   canPress: 1
+  needle: {fileID: 682422532}
 --- !u!1001 &2079267534
 PrefabInstance:
   m_ObjectHideFlags: 0

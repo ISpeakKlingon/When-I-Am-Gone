@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class MemoryLock : MonoBehaviour
 {
@@ -14,6 +16,8 @@ public class MemoryLock : MonoBehaviour
     private int globalIndex = -1;
 
     public bool canPress = true;
+
+    public GameObject needle;
 
     private void Start()
     {
@@ -63,9 +67,12 @@ public class MemoryLock : MonoBehaviour
 
     public void MemoryUnlocked()
     {
+        Debug.Log("Memory unlocked! Nice job!");
         //play sound
         //show objects
-        //load new memory
+        //change interaction layer mask of needle to "needle"
+        int layerMaskNeedle = 1 << LayerMask.NameToLayer("Needle");
+        needle.GetComponent<XRGrabInteractable>().interactionLayerMask = layerMaskNeedle;
     }
 
     public bool getCanPress()
