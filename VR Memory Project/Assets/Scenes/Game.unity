@@ -3808,7 +3808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerComponents: {fileID: 2026861946}
   timerGraphic: {fileID: 1679813184}
-  gameTime: 60
+  gameTime: 10
 --- !u!4 &2026861948
 Transform:
   m_ObjectHideFlags: 0

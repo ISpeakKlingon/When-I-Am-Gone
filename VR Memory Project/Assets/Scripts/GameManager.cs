@@ -38,6 +38,8 @@ public class GameManager : MonoBehaviour
     public GameObject rightHandBaseController;
     private XRDirectInteractor rightDirectInteractor;
 
+    public GameObject indicator;
+
     public static GameManager Instance
     {
         get
@@ -177,10 +179,11 @@ public class GameManager : MonoBehaviour
         isGameStarted = true;
     }
     
-
     public void GameOver()
     {
         Debug.Log("Game over.");
+        //turn off scene change indicator
+        TurnOffIndicator();
         //load Game Over scene
         sceneName = "GameOver";
         LoadScene();
@@ -192,5 +195,16 @@ public class GameManager : MonoBehaviour
     {
         playerScript.timeRemaining = gameTime;
         Debug.Log("GameManager passed gameTime of " + gameTime + " to Player script.");
+    }
+
+    public void TurnOnIndicator()
+    {
+        indicator.SetActive(true);
+    }
+
+    public void TurnOffIndicator()
+    {
+        Debug.Log("Turning off the scene change indicator.");
+        indicator.SetActive(false);
     }
 }

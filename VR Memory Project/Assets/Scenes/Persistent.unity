@@ -1035,6 +1035,7 @@ MonoBehaviour:
   isGameStarted: 0
   leftHandBaseController: {fileID: 1152801093}
   rightHandBaseController: {fileID: 1793505070}
+  indicator: {fileID: 493929844280221353}
 --- !u!4 &695340883
 Transform:
   m_ObjectHideFlags: 0
@@ -3020,7 +3021,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 493929846141384727, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
   m_PrefabInstance: {fileID: 493929844280221352}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 493929844280221353}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37eb0b306567fe94bb5b987295c9a99d, type: 3}
@@ -4054,3 +4055,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 493929846141384808, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
+--- !u!1 &493929844280221353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 493929846141384725, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
+  m_PrefabInstance: {fileID: 493929844280221352}
+  m_PrefabAsset: {fileID: 0}

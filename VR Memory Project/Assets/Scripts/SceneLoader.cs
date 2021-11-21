@@ -62,6 +62,8 @@ public class SceneLoader : Singleton<SceneLoader>
             //turn off needle if game over
             if (sceneName != "GameOver")
             {
+                //turn on scene change indicator
+                GameManager.Instance.TurnOnIndicator();
                 GameManager.Instance.ActivateMemoryNeedle();
                 GameManager.Instance.SavePlayer(); //remember player pos and time remaining before entering memory
             }
