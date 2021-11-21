@@ -76,6 +76,9 @@ public class GameManager : MonoBehaviour
 
         //save the Player pos to reset all pos data
         SavePlayer();
+
+        //reset memory needle
+        ActivateMemoryNeedle();
     }
 
     //Did the player unlock the first puzzle? Yes or No?
