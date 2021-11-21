@@ -32,6 +32,10 @@ public class LockButtonInteractable : MonoBehaviour
     {
         if (canPress)
         {
+            //turn off canPress so other buttons cannot accidentally be pressed
+            //turn canPress back on after a moment
+            pauseButton();
+
             Debug.Log("Button was pressed. globalIndex is currently " + globalIndex + " but we are going to bump that up now.");
             globalIndex++;
             Debug.Log("globalIndex increased by 1. globalIndex is now " + globalIndex);
@@ -126,7 +130,7 @@ public class LockButtonInteractable : MonoBehaviour
         Debug.Log("globalIndex is currently " + globalIndex + " and lockSequence.length is currently " + lockSequence.Length);
 
         //If at the end of the lock sequence
-        if(globalIndex == lockSequence.Length - 1)
+        if(globalIndex == lockSequence.Length)
         {
             // Unlocked memory
             memoryLock.GetComponent<MemoryLock>().MemoryUnlocked();
@@ -151,5 +155,22 @@ public class LockButtonInteractable : MonoBehaviour
         globalIndex = -1;
         memoryLock.GetComponent<MemoryLock>().setGlobalIndex(globalIndex);
         Debug.Log("globalIndex was reset to " + globalIndex);
+    }
+
+    private void pauseButton()
+    {
+        memoryLock.GetComponent<MemoryLock>().canPress = false;
+        //visual cue of some kind?
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+
+        StartCoroutine(resetCanPress(1));
+    }
+
+    private IEnumerator resetCanPress( int i)
+    {
+        yield return new WaitForSeconds(i);
+        memoryLock.GetComponent<MemoryLock>().canPress = true;
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
+        Debug.Log("Reset canPress to " + canPress);
     }
 }

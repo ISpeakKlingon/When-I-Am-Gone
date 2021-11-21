@@ -688,6 +688,10 @@ PrefabInstance:
       value: Needle_GameWin
       objectReference: {fileID: 0}
     - target: {fileID: 770100327355772154, guid: 65be5cc7238ba144f9e30f9009bb9c9e, type: 3}
+      propertyPath: m_InteractionLayerMask.m_Bits
+      value: 4294960767
+      objectReference: {fileID: 0}
+    - target: {fileID: 770100327355772154, guid: 65be5cc7238ba144f9e30f9009bb9c9e, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -3872,6 +3876,7 @@ MonoBehaviour:
   - {fileID: 143250589}
   - {fileID: 1662925828}
   lockSequence: 
+  canPress: 1
 --- !u!1001 &2079267534
 PrefabInstance:
   m_ObjectHideFlags: 0
