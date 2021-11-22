@@ -18,12 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Memory2020.unity
     guid: 998ce629ac459dd429b7ebdd8e31c047
   - enabled: 1
+    path: Assets/Scenes/Memory1945.unity
+    guid: 9a8779811f899ba4fa1991a57ee78146
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: fa99ea8d3fabfe3489971f9ae816a244
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Playground.unity
     guid: 4a22ad63bed92894bbd2e6cd2f777e69
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Memory Playground.unity
     guid: b906b705a628e014c97206b17d7047e0
   m_configObjects:

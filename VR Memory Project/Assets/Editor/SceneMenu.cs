@@ -21,6 +21,12 @@ public static class SceneMenu
         OpenScene("Memory2020");
     }
 
+    [MenuItem("Scenes/Memory1945")]
+    public static void OpenMemory1945()
+    {
+        OpenScene("Memory1945");
+    }
+
     [MenuItem("Scenes/GameOver")]
     public static void OpenGameOver()
     {
