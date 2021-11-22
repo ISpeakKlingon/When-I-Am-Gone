@@ -248,10 +248,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 897727573935979970, guid: f8031573a0c10964b8e5ccdfc8fefb52, type: 3}
       propertyPath: m_text
-      value: '*DEV NOTE: Tentative title...
+      value: '*DEV NOTE: Tentative titles...
 
 
-        SCAVENGER HUNT'
+        SCAVENGER HUNT
+
+        or
+
+        THE
+        LAST 5 MINUTES'
       objectReference: {fileID: 0}
     - target: {fileID: 897727573958193291, guid: f8031573a0c10964b8e5ccdfc8fefb52, type: 3}
       propertyPath: m_Name
