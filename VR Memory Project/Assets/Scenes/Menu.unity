@@ -258,6 +258,46 @@ PrefabInstance:
         THE
         LAST 5 MINUTES'
       objectReference: {fileID: 0}
+    - target: {fileID: 897727573935979970, guid: f8031573a0c10964b8e5ccdfc8fefb52, type: 3}
+      propertyPath: m_fontSize
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 897727573935979970, guid: f8031573a0c10964b8e5ccdfc8fefb52, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 897727573935979971, guid: f8031573a0c10964b8e5ccdfc8fefb52, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 897727573935979971, guid: f8031573a0c10964b8e5ccdfc8fefb52, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9971669
+      objectReference: {fileID: 0}
+    - target: {fileID: 897727573935979971, guid: f8031573a0c10964b8e5ccdfc8fefb52, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.075221464
+      objectReference: {fileID: 0}
+    - target: {fileID: 897727573935979971, guid: f8031573a0c10964b8e5ccdfc8fefb52, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 897727573935979971, guid: f8031573a0c10964b8e5ccdfc8fefb52, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 897727573935979971, guid: f8031573a0c10964b8e5ccdfc8fefb52, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 897727573935979971, guid: f8031573a0c10964b8e5ccdfc8fefb52, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 897727573935979971, guid: f8031573a0c10964b8e5ccdfc8fefb52, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -8.628
+      objectReference: {fileID: 0}
     - target: {fileID: 897727573958193291, guid: f8031573a0c10964b8e5ccdfc8fefb52, type: 3}
       propertyPath: m_Name
       value: DevNotes (3)
@@ -1047,10 +1087,10 @@ PrefabInstance:
         Whenever you''re ready to "wake up" from this
 
         (broken)
-        memory yours, feel free to remove the
+        memory of yours, feel free to remove the
 
-        memory needle interface from
-        your left hand.'
+        memory needle interface
+        from your left hand.'
       objectReference: {fileID: 0}
     - target: {fileID: 897727573958193291, guid: f8031573a0c10964b8e5ccdfc8fefb52, type: 3}
       propertyPath: m_Name
