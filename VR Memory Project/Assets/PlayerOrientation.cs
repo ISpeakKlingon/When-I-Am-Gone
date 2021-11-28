@@ -132,7 +132,7 @@ public class PlayerOrientation : MonoBehaviour
             HitDir += HitBack.normal;
         }
 
-        Debug.DrawLine(transform.position, transform.position + (HitDir.normalized * 5f), Color.red);
+        //Debug.DrawLine(transform.position, transform.position + (HitDir.normalized * 5f), Color.red);
 
         return HitDir.normalized;
     }
