@@ -535,7 +535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8635712148585375813, guid: 10c9c9ee9121b774b96c5593746339ca, type: 3}
       propertyPath: m_RootOrder
-      value: 56
+      value: 57
       objectReference: {fileID: 0}
     - target: {fileID: 8741354709284435927, guid: 10c9c9ee9121b774b96c5593746339ca, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3063,7 +3063,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a2af55dffc6dc04b83c67eb07fc9180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movePositionTransform: {fileID: 817586360}
 --- !u!4 &644462278
 Transform:
   m_ObjectHideFlags: 0
@@ -3072,7 +3071,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644462275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.77, y: 1.96, z: -6.686507}
+  m_LocalPosition: {x: 0, y: 0, z: -7.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6023215259561808790}
@@ -3324,6 +3323,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 2026861946}
+  robot: {fileID: 644462275}
+  windowView: {x: -17.45188, y: -5.72, z: -15.24}
 --- !u!4 &739923569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: da4541aee73ffaf46b35886e46f2cf0d, type: 3}
@@ -3347,7 +3348,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &817586357
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8536,8 +8537,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerComponents: {fileID: 2026861946}
+  gameStartObject: {fileID: 724927972}
   timerGraphic: {fileID: 1679813184}
-  gameTime: 300
+  gameTime: 75
 --- !u!4 &2026861948
 Transform:
   m_ObjectHideFlags: 0

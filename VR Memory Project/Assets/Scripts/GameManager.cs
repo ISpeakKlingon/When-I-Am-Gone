@@ -201,7 +201,7 @@ public class GameManager : MonoBehaviour
     public void UpdatePlayerTime()
     {
         playerScript.timeRemaining = gameTime;
-        Debug.Log("GameManager passed gameTime of " + gameTime + " to Player script.");
+        //Debug.Log("GameManager passed gameTime of " + gameTime + " to Player script.");
     }
 
     public void TurnOnIndicator()
@@ -211,7 +211,8 @@ public class GameManager : MonoBehaviour
 
     public void TurnOffIndicator()
     {
-        Debug.Log("Turning off the scene change indicator.");
+        //Debug.Log("Turning off the scene change indicator.");
         indicator.SetActive(false);
     }
+
 }

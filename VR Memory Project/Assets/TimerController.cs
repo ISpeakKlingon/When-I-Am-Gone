@@ -3,14 +3,14 @@ using UnityEngine.UI;
 
 public class TimerController : MonoBehaviour
 {
-    [SerializeField] GameObject timerComponents;
+    [SerializeField] GameObject timerComponents, gameStartObject;
     [SerializeField] Image timerGraphic;
     [SerializeField] float gameTime;
 
     float maxgameTime;
     bool canTimerCountdown = false;
 
-    
+    private GameStartManager gameStartManager;
 
     private void Awake()
     {
@@ -29,14 +29,19 @@ public class TimerController : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        gameStartManager = gameStartObject.GetComponent<GameStartManager>();
+    }
+
     public void ActivateTimer()
     {
-        Debug.Log("TimerController script is now going to turn on timer component objects.");
+        //Debug.Log("TimerController script is now going to turn on timer component objects.");
         timerComponents.SetActive(true);
-        Debug.Log("Successfullly turned on timer component objects.");
-        Debug.Log("TimerController script is now going to switch canTimerCountdown bool to true.");
+        //Debug.Log("Successfullly turned on timer component objects.");
+        //Debug.Log("TimerController script is now going to switch canTimerCountdown bool to true.");
         canTimerCountdown = true;
-        Debug.Log("canTimerCountdown is now set to " + canTimerCountdown);
+        //Debug.Log("canTimerCountdown is now set to " + canTimerCountdown);
     }
 
     private void Update()
@@ -72,6 +77,12 @@ public class TimerController : MonoBehaviour
             gameTime = maxgameTime;
 
             timerComponents.SetActive(false);
+        }
+
+        else if(gameTime <= 60f)
+        {
+            Debug.Log("Final Minute!");
+            gameStartManager.FinalMinute();
         }
     }
 }
