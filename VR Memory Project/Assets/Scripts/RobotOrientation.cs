@@ -135,6 +135,6 @@ public class RobotOrientation : MonoBehaviour
         RotateSelf(GroundDir, d, GravityRotationSpeed);
 
         fallingSpeed += gravity * Time.fixedDeltaTime;
-        robot.Move(transform.up * fallingSpeed * Time.deltaTime);
+        //robot.Move(transform.up * fallingSpeed * Time.deltaTime);
     }
 }

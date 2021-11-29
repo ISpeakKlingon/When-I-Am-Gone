@@ -39,12 +39,16 @@ public class GameStartManager : MonoBehaviour
     {
         //if robot has not already spoken this dialogue
         //then robot talks about what the player saw in 2020
+
+        //move robot to 1945 memory
     }
 
     public void Memory1945Complete()
     {
         //if robot has not already spoken this dialogue
         //then robot talks about what the player saw in 1945
+
+        //move robot to lower hallway
     }
 
     public void FinalMinute()
