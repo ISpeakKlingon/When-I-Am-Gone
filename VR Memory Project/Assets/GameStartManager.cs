@@ -23,6 +23,28 @@ public class GameStartManager : MonoBehaviour
         timerController.ActivateTimer();
 
         //Debug.Log("Successfully asked TimerController script to ActivateTimer().");
+
+        if (GameManager.Instance.isMemory2020Complete)
+        {
+            Memory2020Complete();
+        }
+
+        if (GameManager.Instance.isMemory1945Complete)
+        {
+            Memory1945Complete();
+        }
+    }
+
+    public void Memory2020Complete()
+    {
+        //if robot has not already spoken this dialogue
+        //then robot talks about what the player saw in 2020
+    }
+
+    public void Memory1945Complete()
+    {
+        //if robot has not already spoken this dialogue
+        //then robot talks about what the player saw in 1945
     }
 
     public void FinalMinute()

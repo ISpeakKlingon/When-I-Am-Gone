@@ -596,6 +596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoryLength: 30
   sceneToLink: Game
+  nameOfThisScene: Memory2020
 --- !u!1 &1920266542
 GameObject:
   m_ObjectHideFlags: 0

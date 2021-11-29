@@ -8539,7 +8539,7 @@ MonoBehaviour:
   timerComponents: {fileID: 2026861946}
   gameStartObject: {fileID: 724927972}
   timerGraphic: {fileID: 1679813184}
-  gameTime: 75
+  gameTime: 300
 --- !u!4 &2026861948
 Transform:
   m_ObjectHideFlags: 0

@@ -12,6 +12,8 @@ public class TimerController : MonoBehaviour
 
     private GameStartManager gameStartManager;
 
+    bool isFinalMinute = false;
+
     private void Awake()
     {
         if (!GameManager.Instance.isGameStarted)
@@ -81,8 +83,13 @@ public class TimerController : MonoBehaviour
 
         else if(gameTime <= 60f)
         {
-            Debug.Log("Final Minute!");
-            gameStartManager.FinalMinute();
+            if (!isFinalMinute)
+            {
+                Debug.Log("Final Minute!");
+                gameStartManager.FinalMinute();
+                isFinalMinute = true;
+            }
+
         }
     }
 }

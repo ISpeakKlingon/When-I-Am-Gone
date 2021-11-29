@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
     public float gameTime;
 
     public bool isGameStarted = false;
+    public bool isMemory1945Complete = false;
+    public bool isMemory2020Complete = false;
 
     public GameObject leftHandBaseController;
     private XRDirectInteractor leftDirectInteractor;
@@ -215,4 +217,12 @@ public class GameManager : MonoBehaviour
         indicator.SetActive(false);
     }
 
+    public void Complete1945Memory()
+    {
+        isMemory1945Complete = true;
+    }
+    public void Complete2020Memory()
+    {
+        isMemory2020Complete = true;
+    }
 }
