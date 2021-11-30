@@ -201,6 +201,46 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 58
       objectReference: {fileID: 0}
+    - target: {fileID: 406762603490262491, guid: 10c9c9ee9121b774b96c5593746339ca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.374
+      objectReference: {fileID: 0}
+    - target: {fileID: 406762603490262491, guid: 10c9c9ee9121b774b96c5593746339ca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.815
+      objectReference: {fileID: 0}
+    - target: {fileID: 406762603490262491, guid: 10c9c9ee9121b774b96c5593746339ca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.646
+      objectReference: {fileID: 0}
+    - target: {fileID: 406762603490262491, guid: 10c9c9ee9121b774b96c5593746339ca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.69201505
+      objectReference: {fileID: 0}
+    - target: {fileID: 406762603490262491, guid: 10c9c9ee9121b774b96c5593746339ca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.062694624
+      objectReference: {fileID: 0}
+    - target: {fileID: 406762603490262491, guid: 10c9c9ee9121b774b96c5593746339ca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.71660244
+      objectReference: {fileID: 0}
+    - target: {fileID: 406762603490262491, guid: 10c9c9ee9121b774b96c5593746339ca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0605435
+      objectReference: {fileID: 0}
+    - target: {fileID: 406762603490262491, guid: 10c9c9ee9121b774b96c5593746339ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 406762603490262491, guid: 10c9c9ee9121b774b96c5593746339ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -92
+      objectReference: {fileID: 0}
+    - target: {fileID: 406762603490262491, guid: 10c9c9ee9121b774b96c5593746339ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 406762604225282655, guid: 10c9c9ee9121b774b96c5593746339ca, type: 3}
       propertyPath: m_RootOrder
       value: 17
