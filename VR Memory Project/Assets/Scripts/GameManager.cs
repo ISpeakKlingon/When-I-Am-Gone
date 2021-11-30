@@ -180,7 +180,7 @@ public class GameManager : MonoBehaviour
 
     public void GameStart()
     {
-        Debug.Log("GameManager has changed isGameStarted bool to true.");
+        //Debug.Log("GameManager has changed isGameStarted bool to true.");
         isGameStarted = true;
     }
     
