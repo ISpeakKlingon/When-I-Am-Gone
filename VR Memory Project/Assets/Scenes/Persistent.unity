@@ -123,6 +123,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 6c0c985dfb277ff44b53bd72a4569eb0, type: 2}
+--- !u!1 &115235384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 115235385}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &115235385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115235384}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &286040973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1106,7 +1136,11 @@ MonoBehaviour:
   sceneName: 
   player: {fileID: 2002694508}
   gameTime: 0
+  robotPos: {fileID: 0}
   isGameStarted: 0
+  isExitedStartingRoom: 0
+  isMemory1945Complete: 0
+  isMemory2020Complete: 0
   leftHandBaseController: {fileID: 1152801093}
   rightHandBaseController: {fileID: 1793505070}
   indicator: {fileID: 493929844280221353}
@@ -3706,6 +3740,7 @@ MonoBehaviour:
   level: 0
   health: 0
   timeRemaining: 0
+  robotPosition: {fileID: 0}
 --- !u!114 &2002694519
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -30,8 +30,10 @@ public class GameManager : MonoBehaviour
     private Player playerScript;
 
     public float gameTime;
+    public Vector3 robotPos;
 
     public bool isGameStarted = false;
+    public bool isExitedStartingRoom = false;
     public bool isMemory1945Complete = false;
     public bool isMemory2020Complete = false;
 
@@ -149,6 +151,7 @@ public class GameManager : MonoBehaviour
     public void SavePlayer()
     {
         UpdatePlayerTime();
+        UpdateRobotLocation();
         SaveSystem.SavePlayer(playerScript);
         //Debug.Log("Saved " + gameTime + " in PlayerData.");
     }
@@ -167,6 +170,12 @@ public class GameManager : MonoBehaviour
         player.transform.position = position;
 
         playerScript.timeRemaining = data.timeRemaining;
+
+        Vector3 robotPosition;
+        robotPosition.x = data.robotPosition[0];
+        robotPosition.y = data.robotPosition[1];
+        robotPosition.z = data.robotPosition[2];
+        robotPos = robotPosition;
 
         //Debug.Log("Loaded " + gameTime + " from PlayerData.");
     }
@@ -206,6 +215,11 @@ public class GameManager : MonoBehaviour
         //Debug.Log("GameManager passed gameTime of " + gameTime + " to Player script.");
     }
 
+    public void UpdateRobotLocation()
+    {
+        playerScript.robotPosition = robotPos;
+    }
+
     public void TurnOnIndicator()
     {
         indicator.SetActive(true);
@@ -224,5 +238,16 @@ public class GameManager : MonoBehaviour
     public void Complete2020Memory()
     {
         isMemory2020Complete = true;
+    }
+
+    public void ExitedStartingRoom()
+    {
+        isExitedStartingRoom = true;
+    }
+
+    public void SetRobotLocationToPlayer()
+    {
+        //send robot info to player class
+
     }
 }

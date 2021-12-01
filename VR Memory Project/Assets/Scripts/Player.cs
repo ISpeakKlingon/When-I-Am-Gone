@@ -9,5 +9,5 @@ public class Player : MonoBehaviour
 
     public float timeRemaining;
 
-
+    public Vector3 robotPosition;
 }

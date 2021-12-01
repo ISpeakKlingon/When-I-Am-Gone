@@ -9,6 +9,7 @@ public class PlayerData
     public int level;
     public int health;
     public float[] position;
+    public float[] robotPosition;
 
     public float timeRemaining;
 
@@ -23,5 +24,11 @@ public class PlayerData
         position[2] = player.transform.position.z;
 
         timeRemaining = player.timeRemaining;
+
+        robotPosition = new float[3];
+        robotPosition[0] = player.robotPosition.x;
+        robotPosition[1] = player.robotPosition.y;
+        robotPosition[2] = player.robotPosition.z;
+
     }
 }

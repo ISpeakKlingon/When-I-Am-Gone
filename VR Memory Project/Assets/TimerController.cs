@@ -21,7 +21,7 @@ public class TimerController : MonoBehaviour
             GameManager.Instance.PlayerToZero();
             maxgameTime = gameTime;
             //Debug.Log("TimerController script reset gameTime to maxgameTime;");
-            GameManager.Instance.GameStart();
+            //GameManager.Instance.GameStart();
             //Debug.Log("TimerController script asked GameManager to GameStart().");
         }
         else
@@ -34,6 +34,11 @@ public class TimerController : MonoBehaviour
     private void Start()
     {
         gameStartManager = gameStartObject.GetComponent<GameStartManager>();
+
+        if (!GameManager.Instance.isGameStarted)
+        {
+            GameManager.Instance.GameStart();
+        }
     }
 
     public void ActivateTimer()
