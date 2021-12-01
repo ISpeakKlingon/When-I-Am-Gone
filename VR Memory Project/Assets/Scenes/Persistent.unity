@@ -1136,7 +1136,7 @@ MonoBehaviour:
   sceneName: 
   player: {fileID: 2002694508}
   gameTime: 0
-  robotPos: {fileID: 0}
+  robotPos: {x: 0, y: 0, z: 0}
   isGameStarted: 0
   isExitedStartingRoom: 0
   isMemory1945Complete: 0
@@ -3514,7 +3514,7 @@ GameObject:
   - component: {fileID: 2002694518}
   m_Layer: 8
   m_Name: XR Rig (Artificial Gravity)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3740,7 +3740,7 @@ MonoBehaviour:
   level: 0
   health: 0
   timeRemaining: 0
-  robotPosition: {fileID: 0}
+  robotPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &2002694519
 MonoBehaviour:
   m_ObjectHideFlags: 0
