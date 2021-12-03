@@ -1,0 +1,19 @@
+{
+
+	"lines":
+	[
+		{
+			"key": "LobbyAI_WelcomeToTheOrbitalMuseumOfCivilization",
+			"line": "Welcome to the Obital Museum Of Civilization."
+		},
+		{
+			"key": "",
+			"line": ""
+		},
+		{
+			"key": "",
+			"line": ""
+		}
+	
+	]
+}
