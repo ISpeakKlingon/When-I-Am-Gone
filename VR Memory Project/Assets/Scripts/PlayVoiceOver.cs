@@ -4,6 +4,8 @@ using UnityEngine;
 public class PlayVoiceOver : MonoBehaviour
 {
     private AudioSource audioSource;
+    //private bool isAlreadyTriggered;
+    //public string nameOfVoiceOver;
 
     private void Awake()
     {
@@ -14,7 +16,14 @@ public class PlayVoiceOver : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            audioSource.Play();
+            if (!ScriptManager.Instance.isThisVOAlreadyPlayed)
+            {
+                audioSource.Play();
+
+                //set bool to true
+                //isAlreadyTriggered = true;
+                ScriptManager.Instance.MarkVOPlayed(this.name);
+            }
         }
     }
 }
