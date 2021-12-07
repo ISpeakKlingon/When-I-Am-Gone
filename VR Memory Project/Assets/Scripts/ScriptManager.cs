@@ -6,7 +6,7 @@ public class ScriptManager : MonoBehaviour
 {
     private static ScriptManager _instance;
 
-    private Dictionary<string, string> lines = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+    private Dictionary<string, string[]> lines = new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase);
 
     public string resourceFile = "script";
 
@@ -21,13 +21,13 @@ public class ScriptManager : MonoBehaviour
         }
     }
 
-    public string GetText(string textKey)
+    public string[] GetText(string textKey)
     {
-        string tmp = "";
+        string[] tmp = new string[] { };
         if (lines.TryGetValue(textKey, out tmp))
             return tmp;
 
-        return "<color=#ff00ff>MISSING TEXT FOR '" + textKey + "'</color>";
+        return new string[] { "<color=#ff00ff>MISSING TEXT FOR '" + textKey + "'</color>" };
     }
 
     private void Awake()

@@ -4,15 +4,15 @@
 	[
 		{
 			"key": "LobbyAI_WelcomeToTheOrbitalMuseumOfCivilization",
-			"line": "Welcome to the Obital Museum Of Civilization."
+			"line": [ "Welcome to the Obital Museum Of Civilization." ]
+		},
+		{
+			"key": "Robot_CanYouMakeSureItsWorkingMaybeTryHittingItWithYourFistJustKiddingThatWouldProbablyHurtYourFistISayProbablyBecauseIWouldntKnowBecauseIDontHaveHands",
+			"line": [ "Can you make sure it’s working?", "Maybe try hitting it with your fist?", "Just kidding. That would probably hurt your fist.", "I say ‘probably’ because I wouldn’t know.", "Because I don’t have hands." ]
 		},
 		{
 			"key": "",
-			"line": ""
-		},
-		{
-			"key": "",
-			"line": ""
+			"line": [ "" ]
 		}
 	
 	]

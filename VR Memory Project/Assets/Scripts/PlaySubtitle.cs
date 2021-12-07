@@ -24,9 +24,14 @@ public class PlaySubtitle : MonoBehaviour
     private IEnumerator DoSubtitle()
     {
         var script = ScriptManager.Instance.GetText(audioSource.clip.name);
-        guiManager.SetText(script);
+        var lineDuration = audioSource.clip.length / script.Length;
 
-        yield return new WaitForSeconds(audioSource.clip.length);
+        foreach(var line in script)
+        {
+            guiManager.SetText(line);
+            yield return new WaitForSeconds(lineDuration);
+        }
+
         guiManager.SetText(string.Empty);
     }
 }

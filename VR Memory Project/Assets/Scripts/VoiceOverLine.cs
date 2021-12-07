@@ -4,5 +4,5 @@ using System;
 public class VoiceOverLine
 {
     public string key;
-    public string line;
+    public string[] line;
 }
