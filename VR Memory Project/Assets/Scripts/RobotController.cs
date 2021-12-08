@@ -62,6 +62,7 @@ public class RobotController : MonoBehaviour
         //play audio
         Debug.Log("Robot is speaking about the 2020 Memory Pod.");
         this.GetComponent<PlayVoiceOvers>().SpeakLine(0);
+        this.GetComponent<PlaySubtitles>().ShowSubtitle(0);
 
     }
 

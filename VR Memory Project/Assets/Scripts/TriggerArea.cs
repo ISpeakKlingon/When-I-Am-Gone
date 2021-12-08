@@ -10,9 +10,7 @@ public class TriggerArea : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //GameEvents.current.Memory2020TriggerEnter();
-
-            //instead pass name of event to trigger to Game Events?
+            //pass name of event to trigger to Game Events?
             GameEvents.current.TriggerEvent(eventToTrigger);
         }
 

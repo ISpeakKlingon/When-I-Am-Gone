@@ -33,5 +33,6 @@ public class PlaySubtitle : MonoBehaviour
         }
 
         guiManager.SetText(string.Empty);
+        Debug.Log("Subtitle text should be set to empty now.");
     }
 }

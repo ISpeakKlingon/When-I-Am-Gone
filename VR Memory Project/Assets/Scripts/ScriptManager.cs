@@ -10,10 +10,6 @@ public class ScriptManager : MonoBehaviour
 
     public string resourceFile = "script";
 
-    //public bool isThisVOAlreadyPlayed;
-
-    public bool Memory2020_Collider = false;
-
     public static ScriptManager Instance
     {
         get
@@ -45,18 +41,6 @@ public class ScriptManager : MonoBehaviour
         {
             lines[t.key] = t.line;
         }
-    }
-
-    public void MarkVOPlayed(string nameOfVO, bool value)
-    {
-        //if(nameOfVO == "Memory2020_Collider")
-        //{
-        //    Memory2020_Collider = true;
-        //}
-
-        this.GetType().GetField(nameOfVO).SetValue(this, value);
-
-
     }
 
 }
