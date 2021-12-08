@@ -11,19 +11,21 @@ public class PlayVoiceOver : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
-
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            if (!ScriptManager.Instance.CheckIfVOPlayed())
+            if (!ScriptManager.Instance.MarkVOPlayed(this.name, true)
             {
                 audioSource.Play();
 
                 //set bool to true
                 //isAlreadyTriggered = true;
-                ScriptManager.Instance.MarkVOPlayed(this.name);
+                //ScriptManager.Instance.MarkVOPlayed(this.name);
+                ScriptManager.Instance.MarkVOPlayed(this.name, true);
             }
         }
     }
+    */
 }

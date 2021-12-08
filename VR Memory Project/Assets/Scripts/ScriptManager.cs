@@ -47,18 +47,16 @@ public class ScriptManager : MonoBehaviour
         }
     }
 
-    public void MarkVOPlayed(string nameOfVO)
+    public void MarkVOPlayed(string nameOfVO, bool value)
     {
-        if(nameOfVO == "Memory2020_Collider")
-        {
-            Memory2020_Collider = true;
-        }
+        //if(nameOfVO == "Memory2020_Collider")
+        //{
+        //    Memory2020_Collider = true;
+        //}
+
+        this.GetType().GetField(nameOfVO).SetValue(this, value);
 
 
     }
 
-    public bool CheckIfVOPlayed(string nameOfVO)
-    {
-        return nameOfVO == 
-    }
 }

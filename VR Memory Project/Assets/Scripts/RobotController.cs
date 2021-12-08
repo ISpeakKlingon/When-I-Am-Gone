@@ -10,6 +10,8 @@ public class RobotController : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     public GameObject robot;
 
+
+
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -23,7 +25,13 @@ public class RobotController : MonoBehaviour
             RobotToPrevious();
     }
 
-    
+    private void Start()
+    {
+        GameEvents.current.onMemory2020TriggerEnter += OnMemory2020Proximity;
+
+        //get reference to Speak Line method in teh PlayVoiceOvers class
+
+    }
 
     void Update()
     {
@@ -47,5 +55,13 @@ public class RobotController : MonoBehaviour
     public void RobotToPrevious()
     {
         robot.transform.position = GameManager.Instance.robotPos;
+    }
+
+    private void OnMemory2020Proximity()
+    {
+        //play audio
+        Debug.Log("Robot is speaking about the 2020 Memory Pod.");
+        this.GetComponent<PlayVoiceOvers>().SpeakLine(0);
+
     }
 }
