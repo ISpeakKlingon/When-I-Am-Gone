@@ -16,7 +16,7 @@ public class PlayVoiceOver : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (!ScriptManager.Instance.isThisVOAlreadyPlayed)
+            if (!ScriptManager.Instance.CheckIfVOPlayed())
             {
                 audioSource.Play();
 
