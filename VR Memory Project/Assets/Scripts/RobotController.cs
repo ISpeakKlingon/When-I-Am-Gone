@@ -64,4 +64,9 @@ public class RobotController : MonoBehaviour
         this.GetComponent<PlayVoiceOvers>().SpeakLine(0);
 
     }
+
+    private void OnDestroy()
+    {
+        GameEvents.current.onMemory2020TriggerEnter -= OnMemory2020Proximity;
+    }
 }
