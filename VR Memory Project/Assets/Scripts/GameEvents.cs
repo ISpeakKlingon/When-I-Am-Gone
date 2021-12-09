@@ -7,6 +7,7 @@ public class GameEvents : MonoBehaviour
 {
     public static GameEvents current;
     private bool memory2020TriggerEventOccurred = false;
+    private bool lobbyBridgeTriggerEventOccurred = false;
 
     private void Awake()
     {
@@ -20,6 +21,16 @@ public class GameEvents : MonoBehaviour
         {
             onMemory2020TriggerEnter();
             memory2020TriggerEventOccurred = true;
+        }
+    }
+
+    public event Action onLobbyBridgeTiggerEnter;
+    public void LobbyBridgeTriggerEnter()
+    {
+        if(onLobbyBridgeTiggerEnter != null)
+        {
+            onLobbyBridgeTiggerEnter();
+            lobbyBridgeTriggerEventOccurred = true;
         }
     }
 
