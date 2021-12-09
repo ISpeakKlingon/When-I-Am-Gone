@@ -1581,8 +1581,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1617,7 +1617,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -27.848251, y: 38.88159, z: -23.296906, w: -82.39292}
+  m_margin: {x: 37.226364, y: 24.596947, z: 35.42897, w: -52.236412}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3783,7 +3783,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceFile: script
-  Memory2020_Collider: 0
 --- !u!4 &1975694975
 Transform:
   m_ObjectHideFlags: 0
