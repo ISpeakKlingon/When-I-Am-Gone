@@ -11,8 +11,8 @@ public class LobbyController : MonoBehaviour
 
     private void OnLobbyBridgeProximity()
     {
-        this.GetComponent<PlayVoiceOvers>().SpeakLine(0);
-        this.GetComponent<PlaySubtitles>().ShowSubtitle(0);
+        //this.GetComponent<PlayVoiceOvers>().SpeakLine(0);
+        //this.GetComponent<PlaySubtitles>().ShowSubtitle(0);
     }
 
     private void OnDestroy()

@@ -17,27 +17,32 @@ public class PlaySubtitles : MonoBehaviour
 
         playVoiceOversScript = GetComponent<PlayVoiceOvers>();
     }
-
-    public void ShowSubtitle(int lineNumber)
+    /*
+    public void ShowSubtitle(AudioClip[] convo, int lineNumber)
     {
-        StartCoroutine(DoSubtitle(lineNumber));
+        StartCoroutine(DoSubtitle(convo, lineNumber));
     }
 
-    private IEnumerator DoSubtitle(int lineNumber)
+    private IEnumerator DoSubtitle(AudioClip[] convo, int lineNumber)
     {
         //var script = ScriptManager.Instance.GetText(audioSource.clip.name);
-        var script = ScriptManager.Instance.GetText(playVoiceOversScript.audioClips[lineNumber].name);
+        
+        convo = playVoiceOversScript.convoOne;
+
+        var script = ScriptManager.Instance.GetText(playVoiceOversScript.);
 
         //var lineDuration = audioSource.clip.length / script.Length;
-        var lineDuration = playVoiceOversScript.audioClips[lineNumber].length / script.Length;
+        var lineDuration = playVoiceOversScript.convo[lineNumber].length / script.Length;
 
         foreach (var line in script)
         {
             guiManager.SetText(line);
             yield return new WaitForSeconds(lineDuration);
         }
-
+        
         guiManager.SetText(string.Empty);
         Debug.Log("Subtitle text should be set to empty now.");
+        
     }
+    */
 }

@@ -10,7 +10,9 @@ public class RobotController : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     public GameObject robot;
 
+    private float timeBeforeFirstLine = 3f;
 
+    private AudioClip[] convoOne, convoTwo;
 
     private void Awake()
     {
@@ -27,10 +29,11 @@ public class RobotController : MonoBehaviour
 
     private void Start()
     {
+        GameEvents.current.onStartGame += OnPlayerWakesUp;
         GameEvents.current.onMemory2020TriggerEnter += OnMemory2020Proximity;
 
-        //get reference to Speak Line method in teh PlayVoiceOvers class
-
+        convoOne = robot.GetComponent<PlayVoiceOvers>().convoOne;
+        convoTwo = robot.GetComponent<PlayVoiceOvers>().convoTwo;
     }
 
     void Update()
@@ -57,17 +60,23 @@ public class RobotController : MonoBehaviour
         robot.transform.position = GameManager.Instance.robotPos;
     }
 
+    private void OnPlayerWakesUp()
+    {
+        this.GetComponent<PlayVoiceOvers>().SpeakLines(convoOne);
+        //this.GetComponent<PlaySubtitles>().ShowSubtitle(0);
+
+
+    }
+
     private void OnMemory2020Proximity()
     {
-        //play audio
-        Debug.Log("Robot is speaking about the 2020 Memory Pod.");
-        this.GetComponent<PlayVoiceOvers>().SpeakLine(0);
-        this.GetComponent<PlaySubtitles>().ShowSubtitle(0);
-
+        this.GetComponent<PlayVoiceOvers>().SpeakLine(convoTwo,0);
+        //this.GetComponent<PlaySubtitles>().ShowSubtitle(convoTwo, 0);
     }
 
     private void OnDestroy()
     {
         GameEvents.current.onMemory2020TriggerEnter -= OnMemory2020Proximity;
+        GameEvents.current.onStartGame -= OnPlayerWakesUp;
     }
 }

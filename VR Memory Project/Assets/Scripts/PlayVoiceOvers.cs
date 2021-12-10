@@ -8,15 +8,42 @@ public class PlayVoiceOvers : MonoBehaviour
 {
     private AudioSource audioSource;
 
-    public AudioClip[] audioClips;
+    public AudioClip[] convoOne;
+
+    //public List<AudioClip[]> listOfLineChunks = new List<AudioClip[]>();
+
+    //public AudioClip[][] audioChunks = new AudioClip[3][];
+
+    //public int[][] numberList = new int[3][];
+
+    public AudioClip[] convoTwo;
 
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
     }
 
-    public void SpeakLine(int lineNumber)
+    public void SpeakLine(AudioClip[] convo, int lineNumber)
     {
-        audioSource.PlayOneShot(audioClips[lineNumber], 1);
+        
+        audioSource.PlayOneShot(convo[lineNumber], 1);
     }
+
+    public void SpeakLines(AudioClip[] convo)
+    {
+        StartCoroutine(SpeakMultipleLines(convo));
+    }
+    
+    IEnumerator SpeakMultipleLines(AudioClip[] convo)
+    {
+        for(int i = 0; i < convo.Length; i++)
+        {
+            audioSource.PlayOneShot(convo[i]);
+            while (audioSource.isPlaying)
+            {
+                yield return null;
+            }
+        }
+    }
+    
 }

@@ -8,10 +8,21 @@ public class GameEvents : MonoBehaviour
     public static GameEvents current;
     private bool memory2020TriggerEventOccurred = false;
     private bool lobbyBridgeTriggerEventOccurred = false;
+    private bool startGameEventOccurred = false;
 
     private void Awake()
     {
         current = this;
+    }
+
+    public event Action onStartGame;
+    public void StartGame()
+    {
+        if(onStartGame!=null && !startGameEventOccurred)
+        {
+            onStartGame();
+            startGameEventOccurred = true;
+        }
     }
 
     public event Action onMemory2020TriggerEnter;
