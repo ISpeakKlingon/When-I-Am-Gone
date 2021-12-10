@@ -3330,7 +3330,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 0
   MinDistance: 1
-  MaxDistance: 12
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -3418,12 +3418,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   convoOne:
+  - {fileID: 8300000, guid: 0d53f6dfce1b039419800edaf87b5ed7, type: 3}
   - {fileID: 8300000, guid: f83660a1ba56a374999667b1bce5d36b, type: 3}
-  - {fileID: 8300000, guid: cab5095babfec7a49952cfe2bc7de6f5, type: 3}
+  - {fileID: 8300000, guid: 60723129c7755da489011cc50b6ea8fc, type: 3}
+  - {fileID: 8300000, guid: 58df29d1578122c4eaf10bf1a81e1b04, type: 3}
   - {fileID: 8300000, guid: 0ec824e6e2b3585458970774177b4c60, type: 3}
+  - {fileID: 8300000, guid: b6d72e7b1a88acb47aaff7b798c0d496, type: 3}
+  - {fileID: 8300000, guid: cab5095babfec7a49952cfe2bc7de6f5, type: 3}
+  - {fileID: 8300000, guid: 65b9b1e4b3def9a40a529d04da76287b, type: 3}
   - {fileID: 8300000, guid: d94247950e16b614595a87dfacf3d542, type: 3}
   convoTwo:
   - {fileID: 8300000, guid: 9256fdd785407a54c96b397866a8c256, type: 3}
+  currentConvo: []
 --- !u!114 &644462281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3890,6 +3896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   convoOne: []
   convoTwo: []
+  currentConvo: []
 --- !u!82 &852415303
 AudioSource:
   m_ObjectHideFlags: 0

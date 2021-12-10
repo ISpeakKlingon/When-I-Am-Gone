@@ -11,9 +11,40 @@
 			"line": [ "Can you make sure it’s working?", "Maybe try hitting it with your fist?", "Just kidding. That would probably hurt your fist.", "I say ‘probably’ because I wouldn’t know.", "Because I don’t have hands." ]
 		},
 		{
-			"key": "",
-			"line": [ "" ]
+			"key": "Robot_AreYouOkayCanYouOhThereYourAre",
+			"line": [ "Are you okay? Can you...","Oh. There you are." ]
+		},
+		{
+			"key": "Robot_IfYouWereUnableToFindAContactForDoctorDalquestThenWeMayBeTooLate",
+			"line": [ "If you were unable to find a contact for Doctor Daquest, then we may be too late." ]
+		},
+		{
+			"key": "Robot_LetsCheckTheMemoryExhibitPerhapsSomeOfTheOthersAreStillWorking",
+			"line": [ "Let us check the Memory Exhibit.", "Perhaps some of the others are still working." ]
+		},
+		{
+			"key": "Robot_PerhapsYoudLikeToTryLookingForTheCodeInOneOfTheOtherMemories",
+			"line": [ "Perhaps you would like to try looking for the code in one of the other memories." ]
+		},
+		{
+			"key": "Robot_PleaseCanYouHearMeTheresOnlyAboutFiveMinutesLeft",
+			"line": [ "Please. Can you hear me?", "There is only about five minutes left." ]
+		},
+		{
+			"key": "Robot_ThisWay",
+			"line": [ "This way." ]
+		},
+		{
+			"key": "Robot_ThoughImNotCertainTheOtherMemoriesWereSourcedFromTheInformationEra",
+			"line": [ "Though I am not certain the other memories were sourced from the Information Era." ]
+		},
+		{
+			"key": "Robot_WeHaveLessThanFiveMinuesRemaining",
+			"line": [ "We have less than five minutes remaining." ]
+		},
+		{
+			"key": "Robot_YouWerentAbleToDoItWereYou",
+			"line": [ "You were not able to do it. Were you?" ]
 		}
-	
 	]
 }

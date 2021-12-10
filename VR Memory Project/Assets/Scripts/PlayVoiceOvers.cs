@@ -18,6 +18,16 @@ public class PlayVoiceOvers : MonoBehaviour
 
     public AudioClip[] convoTwo;
 
+    public string[][] lineChunks = new string[][] { };
+
+    //create public
+    public AudioClip[] currentConvo;
+
+    public void SetCurrentConvo(AudioClip[] convo)
+    {
+        currentConvo = convo;
+    }
+
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -36,6 +46,7 @@ public class PlayVoiceOvers : MonoBehaviour
     
     IEnumerator SpeakMultipleLines(AudioClip[] convo)
     {
+        //StopAllCoroutines();
         for(int i = 0; i < convo.Length; i++)
         {
             audioSource.PlayOneShot(convo[i]);

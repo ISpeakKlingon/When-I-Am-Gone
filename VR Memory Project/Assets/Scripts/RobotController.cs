@@ -63,7 +63,7 @@ public class RobotController : MonoBehaviour
     private void OnPlayerWakesUp()
     {
         this.GetComponent<PlayVoiceOvers>().SpeakLines(convoOne);
-        //this.GetComponent<PlaySubtitles>().ShowSubtitle(0);
+        this.GetComponent<PlaySubtitles>().ShowSubtitles(convoOne);
 
 
     }
@@ -71,7 +71,7 @@ public class RobotController : MonoBehaviour
     private void OnMemory2020Proximity()
     {
         this.GetComponent<PlayVoiceOvers>().SpeakLine(convoTwo,0);
-        //this.GetComponent<PlaySubtitles>().ShowSubtitle(convoTwo, 0);
+        this.GetComponent<PlaySubtitles>().ShowSubtitle(convoTwo, 0);
     }
 
     private void OnDestroy()
