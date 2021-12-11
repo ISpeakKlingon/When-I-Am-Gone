@@ -13,6 +13,7 @@ public class RobotController : MonoBehaviour
     private float timeBeforeFirstLine = 3f;
 
     private AudioClip[] convoOne, convoTwo;
+    private PlayVoiceOvers playVoiceOversScript;
 
     private void Awake()
     {
@@ -31,9 +32,9 @@ public class RobotController : MonoBehaviour
     {
         GameEvents.current.onStartGame += OnPlayerWakesUp;
         GameEvents.current.onMemory2020TriggerEnter += OnMemory2020Proximity;
-
-        convoOne = robot.GetComponent<PlayVoiceOvers>().convoOne;
-        convoTwo = robot.GetComponent<PlayVoiceOvers>().convoTwo;
+        playVoiceOversScript = GetComponent<PlayVoiceOvers>();
+        convoOne = playVoiceOversScript.convoOne;
+        convoTwo = playVoiceOversScript.convoTwo;
     }
 
     void Update()
@@ -62,7 +63,7 @@ public class RobotController : MonoBehaviour
 
     private void OnPlayerWakesUp()
     {
-        this.GetComponent<PlayVoiceOvers>().SpeakLines(convoOne);
+        playVoiceOversScript.SpeakLines(convoOne);
         this.GetComponent<PlaySubtitles>().ShowSubtitles(convoOne);
 
 

@@ -47,6 +47,6 @@ public class GameEvents : MonoBehaviour
 
     public void TriggerEvent(string passedEvent)
     {
-        Invoke(passedEvent,0);
+        Invoke(passedEvent,1);
     }
 }
