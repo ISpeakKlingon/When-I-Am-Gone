@@ -8,7 +8,7 @@
 		},
 		{
 			"key": "Robot_CanYouMakeSureItsWorkingMaybeTryHittingItWithYourFistJustKiddingThatWouldProbablyHurtYourFistISayProbablyBecauseIWouldntKnowBecauseIDontHaveHands",
-			"line": [ "Can you make sure it’s working?", "Maybe try hitting it with your fist?", "Just kidding. That would probably hurt your fist.", "I say ‘probably’ because I wouldn’t know.", "Because I don’t have hands." ]
+			"line": [ "Can you make sure it is working?", "Maybe try hitting it with your fist?", "Just kidding. That would probably hurt your fist.", "I say probably because I would not know.", "Because I do not have hands." ]
 		},
 		{
 			"key": "Robot_AreYouOkayCanYouOhThereYourAre",
@@ -45,6 +45,18 @@
 		{
 			"key": "Robot_YouWerentAbleToDoItWereYou",
 			"line": [ "You were not able to do it. Were you?" ]
+		},
+		{
+			"key": "Robot_FourMinutesLeftAnyRegrets",
+			"line": [ "Four minutes left. Any regrets?" ]
+		},
+		{
+			"key": "Robot_IForOneWishIHadFollowedMyPassionForDance",
+			"line": [ "I for one wish I had followed my passion for dance." ]
+		},
+		{
+			"key": "Robot_AhWellCestLaVieDunRobot",
+			"line": [ "Ah well. Cest la vie dun robot." ]
 		}
 	]
 }

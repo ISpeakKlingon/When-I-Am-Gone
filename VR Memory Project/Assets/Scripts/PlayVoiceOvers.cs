@@ -7,20 +7,7 @@ using UnityEngine;
 public class PlayVoiceOvers : MonoBehaviour
 {
     private AudioSource audioSource;
-
-    public AudioClip[] convoOne;
-
-    //public List<AudioClip[]> listOfLineChunks = new List<AudioClip[]>();
-
-    //public AudioClip[][] audioChunks = new AudioClip[3][];
-
-    //public int[][] numberList = new int[3][];
-
-    public AudioClip[] convoTwo;
-
-    //public string[][] lineChunks = new string[][] { };
-
-    //create public
+    public AudioClip[] convoOne, convoTwo, convoThree, convoFour, convoFive;
     public AudioClip[] currentConvo;
 
     public void SetCurrentConvo(AudioClip[] convo)

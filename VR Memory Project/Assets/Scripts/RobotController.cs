@@ -12,8 +12,9 @@ public class RobotController : MonoBehaviour
 
     private float timeBeforeFirstLine = 3f;
 
-    private AudioClip[] convoOne, convoTwo;
+    private AudioClip[] convoOne, convoTwo, convoThree;
     private PlayVoiceOvers playVoiceOversScript;
+    private PlaySubtitles playSubtitlesScript;
 
     private void Awake()
     {
@@ -32,9 +33,12 @@ public class RobotController : MonoBehaviour
     {
         GameEvents.current.onStartGame += OnPlayerWakesUp;
         GameEvents.current.onMemory2020TriggerEnter += OnMemory2020Proximity;
+        GameEvents.current.onSmallTalk += OnSmallTalk;
         playVoiceOversScript = GetComponent<PlayVoiceOvers>();
         convoOne = playVoiceOversScript.convoOne;
         convoTwo = playVoiceOversScript.convoTwo;
+        convoThree = playVoiceOversScript.convoThree;
+        playSubtitlesScript = GetComponent<PlaySubtitles>();
     }
 
     void Update()
@@ -64,20 +68,26 @@ public class RobotController : MonoBehaviour
     private void OnPlayerWakesUp()
     {
         playVoiceOversScript.SpeakLines(convoOne);
-        this.GetComponent<PlaySubtitles>().ShowSubtitles(convoOne);
+        playSubtitlesScript.ShowSubtitles(convoOne);
+    }
 
+    private void OnSmallTalk()
+    {
+        playVoiceOversScript.SpeakLines(convoTwo);
+        playSubtitlesScript.ShowSubtitles(convoTwo);
 
     }
 
     private void OnMemory2020Proximity()
     {
-        this.GetComponent<PlayVoiceOvers>().SpeakLine(convoTwo,0);
-        this.GetComponent<PlaySubtitles>().ShowSubtitle(convoTwo, 0);
+        playVoiceOversScript.SpeakLine(convoThree,0);
+        playSubtitlesScript.ShowSubtitle(convoThree, 0);
     }
 
     private void OnDestroy()
     {
         GameEvents.current.onMemory2020TriggerEnter -= OnMemory2020Proximity;
         GameEvents.current.onStartGame -= OnPlayerWakesUp;
+        GameEvents.current.onSmallTalk -= OnSmallTalk;
     }
 }

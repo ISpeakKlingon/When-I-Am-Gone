@@ -9,6 +9,7 @@ public class GameEvents : MonoBehaviour
     private bool memory2020TriggerEventOccurred = false;
     private bool lobbyBridgeTriggerEventOccurred = false;
     private bool startGameEventOccurred = false;
+    private bool smallTalkEventOccurred = false;
 
     private void Awake()
     {
@@ -42,6 +43,16 @@ public class GameEvents : MonoBehaviour
         {
             onLobbyBridgeTiggerEnter();
             lobbyBridgeTriggerEventOccurred = true;
+        }
+    }
+
+    public event Action onSmallTalk;
+    public void SmallTalk()
+    {
+        if(onSmallTalk != null && !smallTalkEventOccurred)
+        {
+            onSmallTalk();
+            smallTalkEventOccurred = true;
         }
     }
 
