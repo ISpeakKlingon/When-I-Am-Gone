@@ -38,7 +38,7 @@ public class GameEvents : MonoBehaviour
     public event Action onLobbyBridgeTiggerEnter;
     public void LobbyBridgeTriggerEnter()
     {
-        if(onLobbyBridgeTiggerEnter != null)
+        if(onLobbyBridgeTiggerEnter != null && !lobbyBridgeTriggerEventOccurred)
         {
             onLobbyBridgeTiggerEnter();
             lobbyBridgeTriggerEventOccurred = true;

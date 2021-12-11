@@ -18,7 +18,7 @@ public class PlayVoiceOvers : MonoBehaviour
 
     public AudioClip[] convoTwo;
 
-    public string[][] lineChunks = new string[][] { };
+    //public string[][] lineChunks = new string[][] { };
 
     //create public
     public AudioClip[] currentConvo;
