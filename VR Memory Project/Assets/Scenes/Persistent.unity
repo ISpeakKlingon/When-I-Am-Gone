@@ -3783,6 +3783,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceFile: script
+  defaultLanguage: en
+  overrideLanguage: 
 --- !u!4 &1975694975
 Transform:
   m_ObjectHideFlags: 0

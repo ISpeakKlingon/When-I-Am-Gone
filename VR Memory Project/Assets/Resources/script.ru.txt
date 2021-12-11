@@ -1,0 +1,50 @@
+﻿{
+
+	"lines":
+	[
+		{
+			"key": "LobbyAI_WelcomeToTheOrbitalMuseumOfCivilization",
+			"line": [ "Добро пожаловать в Орбитальный музей цивилизации." ]
+		},
+		{
+			"key": "Robot_CanYouMakeSureItsWorkingMaybeTryHittingItWithYourFistJustKiddingThatWouldProbablyHurtYourFistISayProbablyBecauseIWouldntKnowBecauseIDontHaveHands",
+			"line": [ "Вы можете убедиться, что он работает?", "Может, попробовать ударить кулаком?", "Просто шучу. Вероятно, это повредит тебе кулак.", "Я говорю 'наверное', потому что не знаю.", "Потому что у меня нет рук." ]
+		},
+		{
+			"key": "Robot_AreYouOkayCanYouOhThereYourAre",
+			"line": [ "Ты в порядке? Не могли бы вы...","Ой. Вот ты где." ]
+		},
+		{
+			"key": "Robot_IfYouWereUnableToFindAContactForDoctorDalquestThenWeMayBeTooLate",
+			"line": [ "Если вам не удалось найти контакт для доктора Далквест, возможно, мы опоздали." ]
+		},
+		{
+			"key": "Robot_LetsCheckTheMemoryExhibitPerhapsSomeOfTheOthersAreStillWorking",
+			"line": [ "Давайте проверим экспонат памяти.", "Возможно, некоторые из других все еще работают." ]
+		},
+		{
+			"key": "Robot_PerhapsYoudLikeToTryLookingForTheCodeInOneOfTheOtherMemories",
+			"line": [ "Возможно, вы захотите попробовать найти код в одном из других воспоминаний." ]
+		},
+		{
+			"key": "Robot_PleaseCanYouHearMeTheresOnlyAboutFiveMinutesLeft",
+			"line": [ "Пожалуйста. Ты слышишь меня?", "Осталось минут пять." ]
+		},
+		{
+			"key": "Robot_ThisWay",
+			"line": [ "Сюда." ]
+		},
+		{
+			"key": "Robot_ThoughImNotCertainTheOtherMemoriesWereSourcedFromTheInformationEra",
+			"line": [ "Хотя я не уверен, что другие воспоминания произошли из информационной эры." ]
+		},
+		{
+			"key": "Robot_WeHaveLessThanFiveMinuesRemaining",
+			"line": [ "У нас осталось меньше пяти минут." ]
+		},
+		{
+			"key": "Robot_YouWerentAbleToDoItWereYou",
+			"line": [ "Вы не смогли этого сделать. Были ли вы?" ]
+		}
+	]
+}

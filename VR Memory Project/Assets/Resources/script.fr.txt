@@ -1,0 +1,50 @@
+{
+
+	"lines":
+	[
+		{
+			"key": "LobbyAI_WelcomeToTheOrbitalMuseumOfCivilization",
+			"line": [ "Bienvenue au Musée Obital de la Civilisation." ]
+		},
+		{
+			"key": "Robot_CanYouMakeSureItsWorkingMaybeTryHittingItWithYourFistJustKiddingThatWouldProbablyHurtYourFistISayProbablyBecauseIWouldntKnowBecauseIDontHaveHands",
+			"line": [ "Pouvez-vous vous assurer que cela fonctionne?", "Essayez peut-être de le frapper avec votre poing ?", "Je rigole. Cela vous ferait probablement mal au poing.", "Je dis 'probablement' parce que je ne sais pas.", "Parce que je n'ai pas de mains." ]
+		},
+		{
+			"key": "Robot_AreYouOkayCanYouOhThereYourAre",
+			"line": [ "Est-ce que ça va? Peut tu...","Oh. Te voilà." ]
+		},
+		{
+			"key": "Robot_IfYouWereUnableToFindAContactForDoctorDalquestThenWeMayBeTooLate",
+			"line": [ "Si vous n'avez pas trouvé de contact pour le docteur Dalquest, il est peut-être trop tard." ]
+		},
+		{
+			"key": "Robot_LetsCheckTheMemoryExhibitPerhapsSomeOfTheOthersAreStillWorking",
+			"line": [ "Vérifions l'Exposition de la Mémoire.", "Peut-être que certains des autres fonctionnent encore." ]
+		},
+		{
+			"key": "Robot_PerhapsYoudLikeToTryLookingForTheCodeInOneOfTheOtherMemories",
+			"line": [ "Peut-être voudriez-vous essayer de chercher le code dans l'une des autres mémoires." ]
+		},
+		{
+			"key": "Robot_PleaseCanYouHearMeTheresOnlyAboutFiveMinutesLeft",
+			"line": [ "S'il te plaît. Pouvez-vous m'entendre?", "Il ne reste que cinq minutes environ." ]
+		},
+		{
+			"key": "Robot_ThisWay",
+			"line": [ "Par ici." ]
+		},
+		{
+			"key": "Robot_ThoughImNotCertainTheOtherMemoriesWereSourcedFromTheInformationEra",
+			"line": [ "Bien que je ne sois pas certain que les autres souvenirs proviennent de l'ère de l'information." ]
+		},
+		{
+			"key": "Robot_WeHaveLessThanFiveMinuesRemaining",
+			"line": [ "Il nous reste moins de cinq minutes." ]
+		},
+		{
+			"key": "Robot_YouWerentAbleToDoItWereYou",
+			"line": [ "Vous n'avez pas pu le faire. L'étais-tu ?" ]
+		}
+	]
+}

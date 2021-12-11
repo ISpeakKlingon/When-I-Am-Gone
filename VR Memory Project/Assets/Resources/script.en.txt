@@ -16,7 +16,7 @@
 		},
 		{
 			"key": "Robot_IfYouWereUnableToFindAContactForDoctorDalquestThenWeMayBeTooLate",
-			"line": [ "If you were unable to find a contact for Doctor Daquest, then we may be too late." ]
+			"line": [ "If you were unable to find a contact for Doctor Dalquest, then we may be too late." ]
 		},
 		{
 			"key": "Robot_LetsCheckTheMemoryExhibitPerhapsSomeOfTheOthersAreStillWorking",
