@@ -81,6 +81,50 @@
 		{
 			"key": "Robot_Hurry",
 			"line": [ "Hurry." ]
+		},
+		{
+			"key": "Robot_WereYouAbleToAlterTheMemory",
+			"line": [ "Were you able to alter the memory?" ]
+		},
+		{
+			"key": "Robot_DidYouFindTheInterNetAndContactTheHumanMemoryProject",
+			"line": [ "Did you find the Inter Net", "and contact the Human Memory Project?" ]
+		},
+		{
+			"key": "Robot_AhWell",
+			"line": [ "Ah well." ]
+		},
+		{
+			"key": "Robot_ItsAllRight",
+			"line": [ "It is all right." ]
+		},
+		{
+			"key": "Robot_OnlyAfewMinutesLeftNow",
+			"line": [ "Only a few minutes left now." ]
+		},
+		{
+			"key": "",
+			"line": [ "" ]
+		},
+		{
+			"key": "",
+			"line": [ "" ]
+		},
+		{
+			"key": "",
+			"line": [ "" ]
+		},
+		{
+			"key": "",
+			"line": [ "" ]
+		},
+		{
+			"key": "",
+			"line": [ "" ]
+		},
+		{
+			"key": "",
+			"line": [ "" ]
 		}
 	]
 }

@@ -9,7 +9,7 @@ public class GameStartManager : MonoBehaviour
     private RobotController robotController;
 
     public Vector3 windowView;
-    public Vector3 lowerLobby;
+    //public Vector3 lowerLobby;
     //public Vector3 memory1945;
     public Vector3 memory2020;
 

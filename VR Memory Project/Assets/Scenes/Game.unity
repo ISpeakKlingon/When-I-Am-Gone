@@ -3442,6 +3442,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 30467d46073de7541af388e407cf4ec8, type: 3}
   - {fileID: 8300000, guid: 67d4286dd2ec9404f9b05f2dfda6790a, type: 3}
   - {fileID: 8300000, guid: 245c3aa3e23cbac4cad41cb94dd99530, type: 3}
+  convoSix:
+  - {fileID: 8300000, guid: 4af90492e022ec245a18e8373932594a, type: 3}
+  - {fileID: 8300000, guid: c2f7ed179dbeb8c41a20fd04c4f5a95a, type: 3}
+  - {fileID: 8300000, guid: 43aae6852c3957344811115121442798, type: 3}
+  - {fileID: 8300000, guid: 804e48ebf8135a14393b88da08ea6e74, type: 3}
+  - {fileID: 8300000, guid: 24d2053fd5a640b4c9d3f84eb80a33b1, type: 3}
+  convoSeven: []
   currentConvo: []
 --- !u!114 &644462281
 MonoBehaviour:
@@ -3702,7 +3709,6 @@ MonoBehaviour:
   timer: {fileID: 2026861946}
   robot: {fileID: 644462275}
   windowView: {x: -17.45188, y: -5.72, z: -15.24}
-  lowerLobby: {x: -20.65, y: -5.472931, z: -1.181621}
   memory2020: {x: -31.62, y: -0.55, z: -5.19}
 --- !u!4 &739923569 stripped
 Transform:
@@ -3948,6 +3954,8 @@ MonoBehaviour:
   convoThree: []
   convoFour: []
   convoFive: []
+  convoSix: []
+  convoSeven: []
   currentConvo: []
 --- !u!82 &852415303
 AudioSource:

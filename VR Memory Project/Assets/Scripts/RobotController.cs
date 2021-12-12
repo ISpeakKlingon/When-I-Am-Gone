@@ -12,11 +12,12 @@ public class RobotController : MonoBehaviour
 
     private float timeBeforeFirstLine = 3f;
 
-    private AudioClip[] convoOne, convoTwo, convoThree, convoFour, convoFive;
+    private AudioClip[] convoOne, convoTwo, convoThree, convoFour, convoFive, convoSix, convoSeven;
     private PlayVoiceOvers playVoiceOversScript;
     private PlaySubtitles playSubtitlesScript;
 
     private Vector3 memory1945 = new Vector3(-43.84f,-0.62f,-13.93f);
+    private Vector3 lowerLobby = new Vector3(-20.65f, -5.472931f, -1.181621f);
 
     private void Awake()
     {
@@ -38,6 +39,8 @@ public class RobotController : MonoBehaviour
         GameEvents.current.onSmallTalk += OnSmallTalk;
         GameEvents.current.onMemory2020Awaken += OnMemory2020Awaken;
         GameEvents.current.onMemory1945TriggerEnter += OnMemory1945Proximity;
+        GameEvents.current.onMemory1945Awaken += OnMemory1945Awaken;
+
 
         playVoiceOversScript = GetComponent<PlayVoiceOvers>();
         convoOne = playVoiceOversScript.convoOne;
@@ -45,6 +48,8 @@ public class RobotController : MonoBehaviour
         convoThree = playVoiceOversScript.convoThree;
         convoFour = playVoiceOversScript.convoFour;
         convoFive = playVoiceOversScript.convoFive;
+        convoSix = playVoiceOversScript.convoSix;
+        convoSeven = playVoiceOversScript.convoSeven;
         playSubtitlesScript = GetComponent<PlaySubtitles>();
     }
 
@@ -97,6 +102,13 @@ public class RobotController : MonoBehaviour
         playSubtitlesScript.ShowSubtitles(convoFive);
     }
 
+    private void OnMemory1945Awaken()
+    {
+        playVoiceOversScript.SpeakLines(convoSix);
+        playSubtitlesScript.ShowSubtitles(convoSix);
+        StartCoroutine(NewRobotDestination(SumArray(convoSix), lowerLobby));
+    }
+
     public float SumArray(AudioClip[] audioClipArray)
     {
         float sum = 0;
@@ -126,5 +138,6 @@ public class RobotController : MonoBehaviour
         GameEvents.current.onSmallTalk -= OnSmallTalk;
         GameEvents.current.onMemory2020Awaken -= OnMemory2020Awaken;
         GameEvents.current.onMemory1945TriggerEnter -= OnMemory1945Proximity;
+        GameEvents.current.onMemory1945Awaken -= OnMemory1945Awaken;
     }
 }

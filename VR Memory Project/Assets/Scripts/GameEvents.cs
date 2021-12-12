@@ -12,6 +12,7 @@ public class GameEvents : MonoBehaviour
     private bool startGameEventOccurred = false;
     private bool smallTalkEventOccurred = false;
     private bool memory2020AwakenEventOccurred = false;
+    private bool memory1945AwakenEventOccurred = false;
     private bool isMemory2020Complete = false;
     private bool isMemory1945Complete = false;
 
@@ -55,12 +56,18 @@ public class GameEvents : MonoBehaviour
     }
 
     public event Action onMemory1945TriggerEnter;
+    public event Action onMemory1945Awaken;
     public void Memory1945TriggerEnter()
     {
         if(onMemory1945TriggerEnter !=null && !memory1945TriggerEventOccurred)
         {
             onMemory1945TriggerEnter();
             memory1945TriggerEventOccurred = true;
+        }
+        else if (onMemory1945TriggerEnter != null && !memory1945AwakenEventOccurred && isMemory1945Complete)
+        {
+            onMemory1945Awaken();
+            memory1945AwakenEventOccurred = true;
         }
     }
 
