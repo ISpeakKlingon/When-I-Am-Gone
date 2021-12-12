@@ -3700,7 +3700,6 @@ MonoBehaviour:
   robot: {fileID: 644462275}
   windowView: {x: -17.45188, y: -5.72, z: -15.24}
   lowerLobby: {x: -20.65, y: -5.472931, z: -1.181621}
-  memory1945: {x: -43.84, y: -0.62, z: -13.93}
   memory2020: {x: -31.62, y: -0.55, z: -5.19}
 --- !u!4 &739923569 stripped
 Transform:

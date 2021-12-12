@@ -85,7 +85,17 @@ public class RobotController : MonoBehaviour
     {
         playVoiceOversScript.SpeakLines(convoFour);
         playSubtitlesScript.ShowSubtitles(convoFour);
-        StartCoroutine(NewRobotDestination(convoFour.Length, memory1945));
+        StartCoroutine(NewRobotDestination(SumArray(convoFour), memory1945));
+    }
+
+    public float SumArray(AudioClip[] audioClipArray)
+    {
+        float sum = 0;
+        foreach (AudioClip item in audioClipArray)
+        {
+            sum += item.length;
+        }
+        return sum;
     }
 
     IEnumerator NewRobotDestination(float waitTime, Vector3 destination)
