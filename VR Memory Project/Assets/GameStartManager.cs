@@ -10,7 +10,7 @@ public class GameStartManager : MonoBehaviour
 
     public Vector3 windowView;
     public Vector3 lowerLobby;
-    public Vector3 memory1945;
+    //public Vector3 memory1945;
     public Vector3 memory2020;
 
     private void Start()
@@ -28,7 +28,7 @@ public class GameStartManager : MonoBehaviour
         //Debug.Log("Successfully asked TimerController script to ActivateTimer().");
 
 
-
+        /*
         if (GameManager.Instance.isMemory2020Complete && !GameManager.Instance.isMemory1945Complete)
         {
             Memory2020Complete();
@@ -38,6 +38,7 @@ public class GameStartManager : MonoBehaviour
         {
             BothMemoriesComplete();
         }
+        */
     }
 
     public void ExitedStartingRoom()
@@ -50,7 +51,7 @@ public class GameStartManager : MonoBehaviour
 
         robotController.SetDestination(memory2020);
     }
-
+    /*
     public void Memory2020Complete()
     {
         //if robot has not already spoken this dialogue
@@ -68,7 +69,7 @@ public class GameStartManager : MonoBehaviour
         //move robot to lower hallway
         robotController.SetDestination(lowerLobby);
     }
-
+    */
     public void FinalMinute()
     {
         //move robot to window

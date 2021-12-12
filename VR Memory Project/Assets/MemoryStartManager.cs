@@ -25,6 +25,7 @@ public class MemoryStartManager : MonoBehaviour
 
     private void OnDestroy()
     {
+        /*
         if(nameOfThisScene == "Memory1945")
         {
             GameManager.Instance.isMemory1945Complete = true;
@@ -33,5 +34,9 @@ public class MemoryStartManager : MonoBehaviour
         {
             GameManager.Instance.isMemory2020Complete = true;
         }
+        */
+
+        //pass name of this memory to Game Events to switch bool as complete
+        GameEvents.current.MarkMemoryComplete(nameOfThisScene);
     }
 }

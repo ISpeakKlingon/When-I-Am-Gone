@@ -34,8 +34,8 @@ public class GameManager : MonoBehaviour
 
     public bool isGameStarted = false;
     public bool isExitedStartingRoom = false;
-    public bool isMemory1945Complete = false;
-    public bool isMemory2020Complete = false;
+    //public bool isMemory1945Complete = false;
+    //public bool isMemory2020Complete = false;
 
     public GameObject leftHandBaseController;
     private XRDirectInteractor leftDirectInteractor;
@@ -230,7 +230,7 @@ public class GameManager : MonoBehaviour
         //Debug.Log("Turning off the scene change indicator.");
         indicator.SetActive(false);
     }
-
+    /*
     public void Complete1945Memory()
     {
         isMemory1945Complete = true;
@@ -239,7 +239,7 @@ public class GameManager : MonoBehaviour
     {
         isMemory2020Complete = true;
     }
-
+    */
     public void ExitedStartingRoom()
     {
         isExitedStartingRoom = true;

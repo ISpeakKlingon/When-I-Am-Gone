@@ -12,9 +12,11 @@ public class RobotController : MonoBehaviour
 
     private float timeBeforeFirstLine = 3f;
 
-    private AudioClip[] convoOne, convoTwo, convoThree;
+    private AudioClip[] convoOne, convoTwo, convoThree, convoFour;
     private PlayVoiceOvers playVoiceOversScript;
     private PlaySubtitles playSubtitlesScript;
+
+    private Vector3 memory1945 = new Vector3(-43.84f,-0.62f,-13.93f);
 
     private void Awake()
     {
@@ -34,10 +36,12 @@ public class RobotController : MonoBehaviour
         GameEvents.current.onStartGame += OnPlayerWakesUp;
         GameEvents.current.onMemory2020TriggerEnter += OnMemory2020Proximity;
         GameEvents.current.onSmallTalk += OnSmallTalk;
+        GameEvents.current.onMemory2020Awaken += OnMemory2020Awaken;
         playVoiceOversScript = GetComponent<PlayVoiceOvers>();
         convoOne = playVoiceOversScript.convoOne;
         convoTwo = playVoiceOversScript.convoTwo;
         convoThree = playVoiceOversScript.convoThree;
+        convoFour = playVoiceOversScript.convoFour;
         playSubtitlesScript = GetComponent<PlaySubtitles>();
     }
 
@@ -46,12 +50,6 @@ public class RobotController : MonoBehaviour
         //navMeshAgent.destination = movePositionTransform.position;
         robotPos = robot.transform.position;
         GameManager.Instance.robotPos = robotPos;
-    }
-
-    public void SetDestination(Vector3 newDestination)
-    {
-        Debug.Log("New robot destination set.");
-        navMeshAgent.destination = newDestination;
     }
 
     public void RobotToZero()
@@ -75,7 +73,6 @@ public class RobotController : MonoBehaviour
     {
         playVoiceOversScript.SpeakLines(convoTwo);
         playSubtitlesScript.ShowSubtitles(convoTwo);
-
     }
 
     private void OnMemory2020Proximity()
@@ -84,10 +81,30 @@ public class RobotController : MonoBehaviour
         playSubtitlesScript.ShowSubtitle(convoThree, 0);
     }
 
+    private void OnMemory2020Awaken()
+    {
+        playVoiceOversScript.SpeakLines(convoFour);
+        playSubtitlesScript.ShowSubtitles(convoFour);
+        StartCoroutine(NewRobotDestination(convoFour.Length, memory1945));
+    }
+
+    IEnumerator NewRobotDestination(float waitTime, Vector3 destination)
+    {
+        yield return new WaitForSeconds(waitTime);
+        SetDestination(destination);
+    }
+
+    public void SetDestination(Vector3 newDestination)
+    {
+        //Debug.Log("New robot destination set.");
+        navMeshAgent.destination = newDestination;
+    }
+
     private void OnDestroy()
     {
         GameEvents.current.onMemory2020TriggerEnter -= OnMemory2020Proximity;
         GameEvents.current.onStartGame -= OnPlayerWakesUp;
         GameEvents.current.onSmallTalk -= OnSmallTalk;
+        GameEvents.current.onMemory2020Awaken -= OnMemory2020Awaken;
     }
 }

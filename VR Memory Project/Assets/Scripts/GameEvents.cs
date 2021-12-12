@@ -10,10 +10,21 @@ public class GameEvents : MonoBehaviour
     private bool lobbyBridgeTriggerEventOccurred = false;
     private bool startGameEventOccurred = false;
     private bool smallTalkEventOccurred = false;
+    private bool memory2020AwakenEventOccurred = false;
+    private bool isMemory2020Complete = false;
+    private bool isMemory1945Complete = false;
 
     private void Awake()
     {
         current = this;
+    }
+
+    public void MarkMemoryComplete(string nameOfMemory)
+    {
+        if (nameOfMemory == "Memory2020")
+            isMemory2020Complete = true;
+        else if (nameOfMemory == "Memory1945")
+            isMemory1945Complete = true;
     }
 
     public event Action onStartGame;
@@ -27,12 +38,18 @@ public class GameEvents : MonoBehaviour
     }
 
     public event Action onMemory2020TriggerEnter;
+    public event Action onMemory2020Awaken;
     public void Memory2020TriggerEnter()
     {
         if (onMemory2020TriggerEnter != null && !memory2020TriggerEventOccurred)
         {
             onMemory2020TriggerEnter();
             memory2020TriggerEventOccurred = true;
+        }
+        else if (onMemory2020TriggerEnter != null && !memory2020AwakenEventOccurred && isMemory2020Complete)
+        {
+            onMemory2020Awaken();
+            memory2020AwakenEventOccurred = true;
         }
     }
 
@@ -55,7 +72,17 @@ public class GameEvents : MonoBehaviour
             smallTalkEventOccurred = true;
         }
     }
-
+    /*
+    public event Action onMemory2020Awaken;
+    public void Memory2020Awaken()
+    {
+        if(onMemory2020Awaken !=null && !memory2020AwakenEventOccurred)
+        {
+            onMemory2020Awaken();
+            memory2020AwakenEventOccurred = true;
+        }
+    }
+    */
     public void TriggerEvent(string passedEvent)
     {
         Invoke(passedEvent,1);

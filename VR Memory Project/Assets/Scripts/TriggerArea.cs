@@ -13,6 +13,5 @@ public class TriggerArea : MonoBehaviour
             //pass name of event to trigger to Game Events?
             GameEvents.current.TriggerEvent(eventToTrigger);
         }
-
     }
 }

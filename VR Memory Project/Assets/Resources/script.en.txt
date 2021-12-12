@@ -57,6 +57,22 @@
 		{
 			"key": "Robot_AhWellCestLaVieDunRobot",
 			"line": [ "Ah well. Cest la vie dun robot." ]
+		},
+		{
+			"key": "Robot_OhYoureOutAlreadyImAssumingThereWasNotEnoughTimeToContactDrDalquestAtTheHumanMemoryProjectAndRetrieveTheCode",
+			"line": [ "Oh you are out already.", "I am assuming there was not enough time to contact Doctor Dalquest", "at the Human Memory Project and retrieve the code." ]
+		},
+		{
+			"key": "Robot_RememberYouHaveToFindSomethingCalledTheInterNetThatsWhereDrDalquestAndTheMemoryProjectExist",
+			"line": [ "Remember... you have have to find something called the Inter Net", "That is where Doctor Dalquest and the Memory Project exist." ]
+		},
+		{
+			"key": "Robto_LetsTryAnother",
+			"line": [ "Let us try another." ]
+		},
+		{
+			"key": "",
+			"line": [ "" ]
 		}
 	]
 }
