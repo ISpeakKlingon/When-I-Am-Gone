@@ -71,8 +71,16 @@
 			"line": [ "Let us try another." ]
 		},
 		{
-			"key": "",
-			"line": [ "" ]
+			"key": "Robot_WeDontHaveMuchTime",
+			"line": [ "We do not have much time." ]
+		},
+		{
+			"key": "Robot_InsertTheInterfaceNeedleIntoYourHand",
+			"line": [ "Insert the interface needle into your hand." ]
+		},
+		{
+			"key": "Robot_Hurry",
+			"line": [ "Hurry." ]
 		}
 	]
 }

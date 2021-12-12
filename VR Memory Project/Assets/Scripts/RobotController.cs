@@ -12,7 +12,7 @@ public class RobotController : MonoBehaviour
 
     private float timeBeforeFirstLine = 3f;
 
-    private AudioClip[] convoOne, convoTwo, convoThree, convoFour;
+    private AudioClip[] convoOne, convoTwo, convoThree, convoFour, convoFive;
     private PlayVoiceOvers playVoiceOversScript;
     private PlaySubtitles playSubtitlesScript;
 
@@ -37,11 +37,14 @@ public class RobotController : MonoBehaviour
         GameEvents.current.onMemory2020TriggerEnter += OnMemory2020Proximity;
         GameEvents.current.onSmallTalk += OnSmallTalk;
         GameEvents.current.onMemory2020Awaken += OnMemory2020Awaken;
+        GameEvents.current.onMemory1945TriggerEnter += OnMemory1945Proximity;
+
         playVoiceOversScript = GetComponent<PlayVoiceOvers>();
         convoOne = playVoiceOversScript.convoOne;
         convoTwo = playVoiceOversScript.convoTwo;
         convoThree = playVoiceOversScript.convoThree;
         convoFour = playVoiceOversScript.convoFour;
+        convoFive = playVoiceOversScript.convoFive;
         playSubtitlesScript = GetComponent<PlaySubtitles>();
     }
 
@@ -88,6 +91,12 @@ public class RobotController : MonoBehaviour
         StartCoroutine(NewRobotDestination(SumArray(convoFour), memory1945));
     }
 
+    private void OnMemory1945Proximity()
+    {
+        playVoiceOversScript.SpeakLines(convoFive);
+        playSubtitlesScript.ShowSubtitles(convoFive);
+    }
+
     public float SumArray(AudioClip[] audioClipArray)
     {
         float sum = 0;
@@ -116,5 +125,6 @@ public class RobotController : MonoBehaviour
         GameEvents.current.onStartGame -= OnPlayerWakesUp;
         GameEvents.current.onSmallTalk -= OnSmallTalk;
         GameEvents.current.onMemory2020Awaken -= OnMemory2020Awaken;
+        GameEvents.current.onMemory1945TriggerEnter -= OnMemory1945Proximity;
     }
 }

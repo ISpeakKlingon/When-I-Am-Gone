@@ -7,6 +7,7 @@ public class GameEvents : MonoBehaviour
 {
     public static GameEvents current;
     private bool memory2020TriggerEventOccurred = false;
+    private bool memory1945TriggerEventOccurred = false;
     private bool lobbyBridgeTriggerEventOccurred = false;
     private bool startGameEventOccurred = false;
     private bool smallTalkEventOccurred = false;
@@ -50,6 +51,16 @@ public class GameEvents : MonoBehaviour
         {
             onMemory2020Awaken();
             memory2020AwakenEventOccurred = true;
+        }
+    }
+
+    public event Action onMemory1945TriggerEnter;
+    public void Memory1945TriggerEnter()
+    {
+        if(onMemory1945TriggerEnter !=null && !memory1945TriggerEventOccurred)
+        {
+            onMemory1945TriggerEnter();
+            memory1945TriggerEventOccurred = true;
         }
     }
 
