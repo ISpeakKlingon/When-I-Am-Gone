@@ -8,7 +8,7 @@ public class GameStartManager : MonoBehaviour
     private TimerController timerController;
     private RobotController robotController;
 
-    public Vector3 windowView;
+    //public Vector3 windowView;
     //public Vector3 lowerLobby;
     //public Vector3 memory1945;
     public Vector3 memory2020;
@@ -69,11 +69,11 @@ public class GameStartManager : MonoBehaviour
         //move robot to lower hallway
         robotController.SetDestination(lowerLobby);
     }
-    */
+    
     public void FinalMinute()
     {
         //move robot to window
         robotController.SetDestination(windowView);
     }
-
+    */
 }

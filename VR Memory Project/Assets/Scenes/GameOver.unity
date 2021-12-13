@@ -420,6 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoryLength: 30
   sceneToLink: Menu
+  nameOfThisScene: 
 --- !u!114 &478418664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,7 +657,7 @@ PrefabInstance:
         Stanton Nash (me)
 
         Clark
-        Crawfore
+        Crawford
 
         Jonas Goslow'
       objectReference: {fileID: 0}

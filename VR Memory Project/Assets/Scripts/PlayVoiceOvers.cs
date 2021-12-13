@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayVoiceOvers : MonoBehaviour
 {
     private AudioSource audioSource;
-    public AudioClip[] convoOne, convoTwo, convoThree, convoFour, convoFive, convoSix, convoSeven;
+    public AudioClip[] convoOne, convoTwo, convoThree, convoFour, convoFive, convoSix, convoSeven, convoEight;
     public AudioClip[] currentConvo;
 
     public void SetCurrentConvo(AudioClip[] convo)

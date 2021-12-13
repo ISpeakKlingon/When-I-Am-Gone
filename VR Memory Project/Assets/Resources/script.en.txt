@@ -103,24 +103,72 @@
 			"line": [ "Only a few minutes left now." ]
 		},
 		{
-			"key": "",
-			"line": [ "" ]
+			"key": "Robot_DoYouMindIfIOpenTheWindows",
+			"line": [ "Do you mind if I open the windows?" ]
 		},
 		{
-			"key": "",
-			"line": [ "" ]
+			"key": "Robot_IWantToSeeItHappen",
+			"line": [ "I want to see it happen." ]
 		},
 		{
-			"key": "",
-			"line": [ "" ]
+			"key": "Robot_WhatAView",
+			"line": [ "What a view." ]
 		},
 		{
-			"key": "",
-			"line": [ "" ]
+			"key": "Robot_ISupposeItsNoMartianSunset",
+			"line": [ "I suppose it is no Martian sunset." ]
 		},
 		{
-			"key": "",
-			"line": [ "" ]
+			"key": "Robot_ButYouMustAdmitItsPrettyNice",
+			"line": [ "But you must admit... it is pretty nice." ]
+		},
+		{
+			"key": "Robot_IWishICouldHaveSeenItWhenItWasWhole",
+			"line": [ "I wish I could have seen it when it was whole." ]
+		},
+		{
+			"key": "Robot_MaybeInAnotherLife",
+			"line": [ "Maybe in another life." ]
+		},
+		{
+			"key": "Robot_OverInTheScienceExhibitTheresAnInstallationAboutTheUniverse",
+			"line": [ "Over in the Science Exhibit there is an installation about the universe." ]
+		},
+		{
+			"key": "Robot_ItSaysThatEverythingYouMeAllOfThisItsAllPartOfAConnectedModel",
+			"line": [ "It says that everything...", "you... me... all of this...", "it is all part of a connected model." ]
+		},
+		{
+			"key": "Robot_AndEvenJustTheSlightestChangeInSomethingCanAlterThePastTheFutureAndNow",
+			"line": [ "And even just the slightest change in something", "can alter the past... the future... and now." ]
+		},
+		{
+			"key": "Robot_ItSureWouldBeNiceToGoBackNow",
+			"line": [ "It sure would be nice to go back now." ]
+		},
+		{
+			"key": "Robot_BackToWhereItAllStarted",
+			"line": [ "Back to where it all started." ]
+		},
+		{
+			"key": "Robot_ToTryAndFindAWayToChangeAllThis",
+			"line": [ "To try and find a way to change all this." ]
+		},
+		{
+			"key": "Robot_ButThatMemoryIsBrokenNowIsntIt",
+			"line": [ "But that memory is broken now is it not?" ]
+		},
+		{
+			"key": "Robot_IveEnjoyedWorkingHere",
+			"line": [ "I have enjoyed working here." ]
+		},
+		{
+			"key": "Robot_AndImGladYouShowedUp",
+			"line": [ "And I am glad you showed up." ]
+		},
+		{
+			"key": "Robot_ItWasLonelyHereBeforeYouArrived",
+			"line": [ "It was lonely here before you arrived." ]
 		},
 		{
 			"key": "",

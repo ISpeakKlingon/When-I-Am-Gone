@@ -90,8 +90,8 @@ public class TimerController : MonoBehaviour
         {
             if (!isFinalMinute)
             {
-                Debug.Log("Final Minute!");
-                gameStartManager.FinalMinute();
+                //Debug.Log("Final Minute!");
+                GameEvents.current.FinalMinute();
                 isFinalMinute = true;
             }
 

@@ -12,12 +12,13 @@ public class RobotController : MonoBehaviour
 
     private float timeBeforeFirstLine = 3f;
 
-    private AudioClip[] convoOne, convoTwo, convoThree, convoFour, convoFive, convoSix, convoSeven;
+    private AudioClip[] convoOne, convoTwo, convoThree, convoFour, convoFive, convoSix, convoSeven, convoEight;
     private PlayVoiceOvers playVoiceOversScript;
     private PlaySubtitles playSubtitlesScript;
 
     private Vector3 memory1945 = new Vector3(-43.84f,-0.62f,-13.93f);
     private Vector3 lowerLobby = new Vector3(-20.65f, -5.472931f, -1.181621f);
+    private Vector3 windowView = new Vector3(-17.45188f, -5.72f, -15.24f);
 
     private void Awake()
     {
@@ -40,7 +41,8 @@ public class RobotController : MonoBehaviour
         GameEvents.current.onMemory2020Awaken += OnMemory2020Awaken;
         GameEvents.current.onMemory1945TriggerEnter += OnMemory1945Proximity;
         GameEvents.current.onMemory1945Awaken += OnMemory1945Awaken;
-
+        GameEvents.current.onFinalMinute += OnFinalMinute;
+        GameEvents.current.onWindowOpen += OnWindowOpen;
 
         playVoiceOversScript = GetComponent<PlayVoiceOvers>();
         convoOne = playVoiceOversScript.convoOne;
@@ -50,6 +52,7 @@ public class RobotController : MonoBehaviour
         convoFive = playVoiceOversScript.convoFive;
         convoSix = playVoiceOversScript.convoSix;
         convoSeven = playVoiceOversScript.convoSeven;
+        convoEight = playVoiceOversScript.convoEight;
         playSubtitlesScript = GetComponent<PlaySubtitles>();
     }
 
@@ -109,6 +112,19 @@ public class RobotController : MonoBehaviour
         StartCoroutine(NewRobotDestination(SumArray(convoSix), lowerLobby));
     }
 
+    private void OnFinalMinute()
+    {
+        playVoiceOversScript.SpeakLines(convoSeven);
+        playSubtitlesScript.ShowSubtitles(convoSeven);
+        StartCoroutine(NewRobotDestination(SumArray(convoSeven), windowView));
+    }
+
+    private void OnWindowOpen()
+    {
+        playVoiceOversScript.SpeakLines(convoEight);
+        playSubtitlesScript.ShowSubtitles(convoEight);
+    }
+
     public float SumArray(AudioClip[] audioClipArray)
     {
         float sum = 0;
@@ -139,5 +155,7 @@ public class RobotController : MonoBehaviour
         GameEvents.current.onMemory2020Awaken -= OnMemory2020Awaken;
         GameEvents.current.onMemory1945TriggerEnter -= OnMemory1945Proximity;
         GameEvents.current.onMemory1945Awaken -= OnMemory1945Awaken;
+        GameEvents.current.onFinalMinute -= OnFinalMinute;
+        GameEvents.current.onWindowOpen -= OnWindowOpen;
     }
 }

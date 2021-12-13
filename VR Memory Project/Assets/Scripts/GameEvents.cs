@@ -13,6 +13,8 @@ public class GameEvents : MonoBehaviour
     private bool smallTalkEventOccurred = false;
     private bool memory2020AwakenEventOccurred = false;
     private bool memory1945AwakenEventOccurred = false;
+    private bool finalMinuteEventOccurred = false;
+    private bool windowOpenEventOccurred = false;
     private bool isMemory2020Complete = false;
     private bool isMemory1945Complete = false;
 
@@ -90,17 +92,27 @@ public class GameEvents : MonoBehaviour
             smallTalkEventOccurred = true;
         }
     }
-    /*
-    public event Action onMemory2020Awaken;
-    public void Memory2020Awaken()
+
+    public event Action onFinalMinute;
+    public void FinalMinute()
     {
-        if(onMemory2020Awaken !=null && !memory2020AwakenEventOccurred)
+        if(onFinalMinute != null && !finalMinuteEventOccurred)
         {
-            onMemory2020Awaken();
-            memory2020AwakenEventOccurred = true;
+            onFinalMinute();
+            finalMinuteEventOccurred = true;
         }
     }
-    */
+
+    public event Action onWindowOpen;
+    public void WindowOpen()
+    {
+        if(onWindowOpen != null && !windowOpenEventOccurred)
+        {
+            onWindowOpen();
+            windowOpenEventOccurred = true;
+        }
+    }
+
     public void TriggerEvent(string passedEvent)
     {
         Invoke(passedEvent,1);
