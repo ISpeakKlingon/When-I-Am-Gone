@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276807, g: 0.21589197, b: 0.29782572, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -318,7 +318,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &326688342
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1251,9 +1251,6 @@ MonoBehaviour:
   gameTime: 0
   robotPos: {x: 0, y: 0, z: 0}
   isGameStarted: 0
-  isExitedStartingRoom: 0
-  isMemory1945Complete: 0
-  isMemory2020Complete: 0
   leftHandBaseController: {fileID: 1152801093}
   rightHandBaseController: {fileID: 1793505070}
   indicator: {fileID: 493929844280221353}
