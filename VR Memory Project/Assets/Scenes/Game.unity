@@ -2505,8 +2505,9 @@ GameObject:
   - component: {fileID: 460923137}
   - component: {fileID: 460923136}
   - component: {fileID: 460923140}
+  - component: {fileID: 460923141}
   m_Layer: 0
-  m_Name: ExitStartingRoomTrigger
+  m_Name: ExitStartingRoom_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2587,7 +2588,7 @@ Transform:
   m_LocalScale: {x: 12.194012, y: 2.6172, z: 8.241457}
   m_Children: []
   m_Father: {fileID: 794770076}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 11.003}
 --- !u!114 &460923140
 MonoBehaviour:
@@ -2596,12 +2597,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460923135}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c95d6f16672a3654995696e012edf2b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameStartManagerObject: {fileID: 724927972}
+--- !u!114 &460923141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460923135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df83174e4c5aeea4cbc6f58652365b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToTrigger: ExitedStartingRoom
 --- !u!1 &474857065
 GameObject:
   m_ObjectHideFlags: 0
@@ -3761,10 +3775,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 166681157}
+  - {fileID: 460923139}
   - {fileID: 1999642754}
   - {fileID: 1059743012}
   - {fileID: 950004452}
-  - {fileID: 460923139}
   - {fileID: 2069371609}
   - {fileID: 1799280303}
   m_Father: {fileID: 0}
@@ -3860,7 +3874,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817586356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.19, y: 0.73, z: -7.69}
+  m_LocalPosition: {x: -9.86, y: 0.14, z: -6.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4908,7 +4922,7 @@ Transform:
   m_LocalScale: {x: 3.6234004, y: 0.8060544, z: 3.6234}
   m_Children: []
   m_Father: {fileID: 794770076}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &950004453
 CapsuleCollider:
@@ -5588,7 +5602,7 @@ Transform:
   m_LocalScale: {x: 3.15832, y: 3.8151827, z: 3.6378126}
   m_Children: []
   m_Father: {fileID: 794770076}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &1059743013
 MonoBehaviour:
@@ -9231,7 +9245,7 @@ Transform:
   m_LocalScale: {x: 3.15832, y: 5.7693186, z: 3.6378126}
   m_Children: []
   m_Father: {fileID: 794770076}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &2009566083
 GameObject:

@@ -10,6 +10,7 @@ public class GameEvents : MonoBehaviour
     private bool memory1945TriggerEventOccurred = false;
     private bool lobbyBridgeTriggerEventOccurred = false;
     private bool startGameEventOccurred = false;
+    private bool playerExitedStartingRoom = false;
     private bool smallTalkEventOccurred = false;
     private bool memory2020AwakenEventOccurred = false;
     private bool memory1945AwakenEventOccurred = false;
@@ -38,6 +39,16 @@ public class GameEvents : MonoBehaviour
         {
             onStartGame();
             startGameEventOccurred = true;
+        }
+    }
+
+    public event Action onExitedStartingRoom;
+    public void ExitedStartingRoom()
+    {
+        if(onExitedStartingRoom !=null && !playerExitedStartingRoom)
+        {
+            onExitedStartingRoom();
+            playerExitedStartingRoom = true;
         }
     }
 

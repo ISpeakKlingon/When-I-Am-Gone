@@ -12,7 +12,7 @@ public class ExitStartingRoom : MonoBehaviour
     {
         gameStartManager = gameStartManagerObject.GetComponent<GameStartManager>();
     }
-
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -25,4 +25,5 @@ public class ExitStartingRoom : MonoBehaviour
             }
 
     }
+    */
 }

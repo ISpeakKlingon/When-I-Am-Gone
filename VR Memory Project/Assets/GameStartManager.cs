@@ -11,7 +11,7 @@ public class GameStartManager : MonoBehaviour
     //public Vector3 windowView;
     //public Vector3 lowerLobby;
     //public Vector3 memory1945;
-    public Vector3 memory2020;
+    //public Vector3 memory2020;
 
     private void Start()
     {
@@ -40,7 +40,7 @@ public class GameStartManager : MonoBehaviour
         }
         */
     }
-
+    /*
     public void ExitedStartingRoom()
     {
         //move robot to 2020 memory
@@ -50,7 +50,7 @@ public class GameStartManager : MonoBehaviour
         //
 
         robotController.SetDestination(memory2020);
-    }
+    }*/
     /*
     public void Memory2020Complete()
     {

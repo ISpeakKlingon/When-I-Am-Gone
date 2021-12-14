@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     public Vector3 robotPos;
 
     public bool isGameStarted = false;
-    public bool isExitedStartingRoom = false;
+    //public bool isExitedStartingRoom = false;
     //public bool isMemory1945Complete = false;
     //public bool isMemory2020Complete = false;
 
@@ -240,11 +240,12 @@ public class GameManager : MonoBehaviour
         isMemory2020Complete = true;
     }
     */
+    /*
     public void ExitedStartingRoom()
     {
         isExitedStartingRoom = true;
     }
-
+    */
     public void SetRobotLocationToPlayer()
     {
         //send robot info to player class

@@ -16,9 +16,12 @@ public class RobotController : MonoBehaviour
     private PlayVoiceOvers playVoiceOversScript;
     private PlaySubtitles playSubtitlesScript;
 
+    private Vector3 lobbyBridge = new Vector3(-9.86f, 0.14f, -6.33f);
+    private Vector3 memory2020 = new Vector3(-31.62f, -0.55f, -5.19f);
     private Vector3 memory1945 = new Vector3(-43.84f,-0.62f,-13.93f);
     private Vector3 lowerLobby = new Vector3(-20.65f, -5.472931f, -1.181621f);
     private Vector3 windowView = new Vector3(-17.45188f, -5.72f, -15.24f);
+    private Vector3 outsideNewtonRoom = new Vector3(-3.69f, 0.55f, -5.1f);
 
     private void Awake()
     {
@@ -37,6 +40,7 @@ public class RobotController : MonoBehaviour
     {
         GameEvents.current.onStartGame += OnPlayerWakesUp;
         GameEvents.current.onMemory2020TriggerEnter += OnMemory2020Proximity;
+        GameEvents.current.onExitedStartingRoom += OnPlayerExitStartingRoom;
         GameEvents.current.onSmallTalk += OnSmallTalk;
         GameEvents.current.onMemory2020Awaken += OnMemory2020Awaken;
         GameEvents.current.onMemory1945TriggerEnter += OnMemory1945Proximity;
@@ -78,10 +82,19 @@ public class RobotController : MonoBehaviour
     {
         playVoiceOversScript.SpeakLines(convoOne);
         playSubtitlesScript.ShowSubtitles(convoOne);
+        StartCoroutine(NewRobotDestination(SumArray(convoOne), outsideNewtonRoom));
+    }
+
+    private void OnPlayerExitStartingRoom()
+    {
+        playVoiceOversScript.SpeakLine(convoFive, 2);
+        playSubtitlesScript.ShowSubtitle(convoFive, 2);
+        StartCoroutine(NewRobotDestination(convoFive[2].length, lobbyBridge));
     }
 
     private void OnSmallTalk()
     {
+        StartCoroutine(NewRobotDestination(0, memory2020));
         playVoiceOversScript.SpeakLines(convoTwo);
         playSubtitlesScript.ShowSubtitles(convoTwo);
     }
@@ -151,6 +164,7 @@ public class RobotController : MonoBehaviour
     {
         GameEvents.current.onMemory2020TriggerEnter -= OnMemory2020Proximity;
         GameEvents.current.onStartGame -= OnPlayerWakesUp;
+        GameEvents.current.onExitedStartingRoom -= OnPlayerExitStartingRoom;
         GameEvents.current.onSmallTalk -= OnSmallTalk;
         GameEvents.current.onMemory2020Awaken -= OnMemory2020Awaken;
         GameEvents.current.onMemory1945TriggerEnter -= OnMemory1945Proximity;
