@@ -24,6 +24,7 @@ public class PlaySubtitles : MonoBehaviour
     
     public void ShowSubtitle(AudioClip[] convo, int lineNumber)
     {
+        StopAllCoroutines();
         StartCoroutine(DoSubtitle(convo, lineNumber));
     }
 
@@ -55,6 +56,7 @@ public class PlaySubtitles : MonoBehaviour
     
     public void ShowSubtitles(AudioClip[] convo)
     {
+        StopAllCoroutines();
         StartCoroutine(DoSubtitles(convo));
     }
 

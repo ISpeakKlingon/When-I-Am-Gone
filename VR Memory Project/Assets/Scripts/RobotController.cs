@@ -80,6 +80,7 @@ public class RobotController : MonoBehaviour
 
     private void OnPlayerWakesUp()
     {
+        StopAllCoroutines();
         playVoiceOversScript.SpeakLines(convoOne);
         playSubtitlesScript.ShowSubtitles(convoOne);
         StartCoroutine(NewRobotDestination(SumArray(convoOne), outsideNewtonRoom));
@@ -87,6 +88,7 @@ public class RobotController : MonoBehaviour
 
     private void OnPlayerExitStartingRoom()
     {
+        StopAllCoroutines();
         playVoiceOversScript.SpeakLine(convoFive, 2);
         playSubtitlesScript.ShowSubtitle(convoFive, 2);
         StartCoroutine(NewRobotDestination(convoFive[2].length, lobbyBridge));
@@ -94,6 +96,7 @@ public class RobotController : MonoBehaviour
 
     private void OnSmallTalk()
     {
+        StopAllCoroutines();
         StartCoroutine(NewRobotDestination(0, memory2020));
         playVoiceOversScript.SpeakLines(convoTwo);
         playSubtitlesScript.ShowSubtitles(convoTwo);
@@ -101,12 +104,14 @@ public class RobotController : MonoBehaviour
 
     private void OnMemory2020Proximity()
     {
+        StopAllCoroutines();
         playVoiceOversScript.SpeakLine(convoThree,0);
         playSubtitlesScript.ShowSubtitle(convoThree, 0);
     }
 
     private void OnMemory2020Awaken()
     {
+        StopAllCoroutines();
         playVoiceOversScript.SpeakLines(convoFour);
         playSubtitlesScript.ShowSubtitles(convoFour);
         StartCoroutine(NewRobotDestination(SumArray(convoFour), memory1945));
@@ -114,12 +119,14 @@ public class RobotController : MonoBehaviour
 
     private void OnMemory1945Proximity()
     {
+        StopAllCoroutines();
         playVoiceOversScript.SpeakLines(convoFive);
         playSubtitlesScript.ShowSubtitles(convoFive);
     }
 
     private void OnMemory1945Awaken()
     {
+        StopAllCoroutines();
         playVoiceOversScript.SpeakLines(convoSix);
         playSubtitlesScript.ShowSubtitles(convoSix);
         StartCoroutine(NewRobotDestination(SumArray(convoSix), lowerLobby));
@@ -127,6 +134,7 @@ public class RobotController : MonoBehaviour
 
     private void OnFinalMinute()
     {
+        StopAllCoroutines();
         playVoiceOversScript.SpeakLines(convoSeven);
         playSubtitlesScript.ShowSubtitles(convoSeven);
         StartCoroutine(NewRobotDestination(SumArray(convoSeven), windowView));
@@ -134,6 +142,7 @@ public class RobotController : MonoBehaviour
 
     private void OnWindowOpen()
     {
+        StopAllCoroutines();
         playVoiceOversScript.SpeakLines(convoEight);
         playSubtitlesScript.ShowSubtitles(convoEight);
     }
@@ -162,6 +171,7 @@ public class RobotController : MonoBehaviour
 
     private void OnDestroy()
     {
+        StopAllCoroutines();
         GameEvents.current.onMemory2020TriggerEnter -= OnMemory2020Proximity;
         GameEvents.current.onStartGame -= OnPlayerWakesUp;
         GameEvents.current.onExitedStartingRoom -= OnPlayerExitStartingRoom;

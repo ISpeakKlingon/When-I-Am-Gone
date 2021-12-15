@@ -22,12 +22,13 @@ public class PlayVoiceOvers : MonoBehaviour
 
     public void SpeakLine(AudioClip[] convo, int lineNumber)
     {
-        
+        StopAllCoroutines();
         audioSource.PlayOneShot(convo[lineNumber], 1);
     }
 
     public void SpeakLines(AudioClip[] convo)
     {
+        StopAllCoroutines();
         StartCoroutine(SpeakMultipleLines(convo));
     }
     
