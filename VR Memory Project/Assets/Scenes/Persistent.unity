@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276807, g: 0.21589197, b: 0.29782572, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1965,7 +1965,7 @@ MonoBehaviour:
   m_Acceleration: 9.8
   m_AdditionalGroundHeight: 0.1
   m_AdditionalFlightTime: 0.5
-  m_EndPointDistance: 30
+  m_EndPointDistance: 20
   m_EndPointHeight: -10
   m_ControlPointDistance: 10
   m_ControlPointHeight: 5
@@ -2625,7 +2625,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 782538609}
         m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRBaseController,
@@ -3063,7 +3063,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 464495574}
         m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRBaseController,
@@ -3810,7 +3810,7 @@ GameObject:
   - component: {fileID: 2002694513}
   - component: {fileID: 2002694512}
   - component: {fileID: 2002694511}
-  - component: {fileID: 2002694510}
+  - component: {fileID: 2002694521}
   - component: {fileID: 2002694516}
   - component: {fileID: 2002694517}
   - component: {fileID: 2002694520}
@@ -3843,19 +3843,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2002694510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2002694508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_System: {fileID: 2002694514}
 --- !u!143 &2002694511
 CharacterController:
   m_ObjectHideFlags: 0
@@ -4073,6 +4060,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4caa0c406b8da484db5047103d3b289a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2002694521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002694508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03877e799eafd9e48ac4732aae3d3433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 2002694514}
+  screenFader: {fileID: 1364895798}
+  fadeDuration: 0.5
 --- !u!1 &2036706150
 GameObject:
   m_ObjectHideFlags: 0

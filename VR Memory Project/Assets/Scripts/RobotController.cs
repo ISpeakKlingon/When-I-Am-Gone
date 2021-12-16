@@ -48,6 +48,8 @@ public class RobotController : MonoBehaviour
         GameEvents.current.onFinalMinute += OnFinalMinute;
         GameEvents.current.onWindowOpen += OnWindowOpen;
 
+        //do I need to subscribe to events that have already occurred?
+
         playVoiceOversScript = GetComponent<PlayVoiceOvers>();
         convoOne = playVoiceOversScript.convoOne;
         convoTwo = playVoiceOversScript.convoTwo;
