@@ -44,6 +44,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject indicator;
 
+    public bool subtitles = false;
+
     public static GameManager Instance
     {
         get

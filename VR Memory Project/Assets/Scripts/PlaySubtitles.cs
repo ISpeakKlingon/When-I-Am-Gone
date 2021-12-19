@@ -12,6 +12,8 @@ public class PlaySubtitles : MonoBehaviour
 
     private AudioSource audioSource;
 
+    private bool subtitles = false;
+
     private void Awake()
     {
         //audioSource = GetComponent<AudioSource>();
@@ -21,11 +23,19 @@ public class PlaySubtitles : MonoBehaviour
 
         audioSource = this.GetComponent<AudioSource>();
     }
-    
+
+    private void Start()
+    {
+        subtitles = GameManager.Instance.subtitles;
+    }
+
     public void ShowSubtitle(AudioClip[] convo, int lineNumber)
     {
-        StopAllCoroutines();
-        StartCoroutine(DoSubtitle(convo, lineNumber));
+        if (subtitles)
+        {
+            StopAllCoroutines();
+            StartCoroutine(DoSubtitle(convo, lineNumber));
+        }
     }
 
     private IEnumerator DoSubtitle(AudioClip[] convo, int lineNumber)
@@ -56,8 +66,11 @@ public class PlaySubtitles : MonoBehaviour
     
     public void ShowSubtitles(AudioClip[] convo)
     {
-        StopAllCoroutines();
-        StartCoroutine(DoSubtitles(convo));
+        if (subtitles)
+        {
+            StopAllCoroutines();
+            StartCoroutine(DoSubtitles(convo));
+        }
     }
 
     private IEnumerator DoSubtitles(AudioClip[] convo)
