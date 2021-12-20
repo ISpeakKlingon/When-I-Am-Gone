@@ -16,12 +16,12 @@ public class TeleportWithFade : TeleportationProvider
         if (!validRequest || !BeginLocomotion())
             return;
 
-        Debug.Log("Got through the first if statement.");
+        //Debug.Log("Got through the first if statement.");
 
         var xrRig = system.xrRig;
         if (xrRig != null)
         {
-            Debug.Log("Starting the fade sequence coroutine. Prepare thyself.");
+            //Debug.Log("Starting the fade sequence coroutine. Prepare thyself.");
             //startCoroutine
             StartCoroutine(FadeSequence(xrRig));
         }
@@ -33,7 +33,7 @@ public class TeleportWithFade : TeleportationProvider
 
     IEnumerator FadeSequence(XRRig xrRig)
     {
-        Debug.Log("Starting fade sequence now.");
+        //Debug.Log("Starting fade sequence now.");
         // Fade to black
         screenFader.StartFadeIn();
 
@@ -67,6 +67,6 @@ public class TeleportWithFade : TeleportationProvider
 
         // Fade to clear
         screenFader.StartFadeOut();
-        Debug.Log("done with fade sequence.");
+        //Debug.Log("done with fade sequence.");
     }
 }

@@ -27,6 +27,8 @@ public class PlaySubtitles : MonoBehaviour
     private void Start()
     {
         subtitles = GameManager.Instance.subtitles;
+        GameEvents.current.onSubtitlesOff += OnSubtitlesOff;
+        GameEvents.current.onSubtitlesOn += OnSubtitlesOn;
     }
 
     public void ShowSubtitle(AudioClip[] convo, int lineNumber)
@@ -60,7 +62,7 @@ public class PlaySubtitles : MonoBehaviour
         }
         
         guiManager.SetText(string.Empty);
-        Debug.Log("Subtitle text should be set to empty now.");
+        //Debug.Log("Subtitle text should be set to empty now.");
         
     }
     
@@ -85,8 +87,11 @@ public class PlaySubtitles : MonoBehaviour
 
             foreach (var line in script)
             {
-                guiManager.SetText(line);
-                yield return new WaitForSeconds(lineDuration);
+                if (subtitles)
+                {
+                    guiManager.SetText(line);
+                    yield return new WaitForSeconds(lineDuration);
+                }
             }
 
             guiManager.SetText(string.Empty);
@@ -97,5 +102,21 @@ public class PlaySubtitles : MonoBehaviour
             }
             */
         }
+    }
+
+    private void OnSubtitlesOff()
+    {
+        subtitles = false;
+    }
+
+    private void OnSubtitlesOn()
+    {
+        subtitles = true;
+    }
+
+    private void OnDestroy()
+    {
+        GameEvents.current.onSubtitlesOff -= OnSubtitlesOff;
+        GameEvents.current.onSubtitlesOn -= OnSubtitlesOn;
     }
 }

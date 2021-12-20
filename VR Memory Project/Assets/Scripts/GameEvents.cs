@@ -32,6 +32,24 @@ public class GameEvents : MonoBehaviour
             isMemory1945Complete = true;
     }
 
+    public event Action onSubtitlesOn;
+    public void SubtitlesOn()
+    {
+        if (onSubtitlesOn != null)
+        {
+            onSubtitlesOn();
+        }
+    }
+
+    public event Action onSubtitlesOff;
+    public void SubtitlesOff()
+    {
+        if (onSubtitlesOff != null)
+        {
+            onSubtitlesOff();
+        }
+    }
+
     public event Action onStartGame;
     public void StartGame()
     {
