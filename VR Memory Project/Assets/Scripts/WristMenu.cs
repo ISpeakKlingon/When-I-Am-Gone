@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class WristMenu : MonoBehaviour
 {
@@ -11,10 +13,16 @@ public class WristMenu : MonoBehaviour
     public bool activeWristUI = true;
     public bool uIRaycast = true;
 
+    public XRNode uIRayCastHandNode;
+
+    public XRBaseController uIRaycastController;
+
     private void Start()
     {
         DisplayWristUI();
         EnableUIRaycast();
+
+
     }
 
     public void MenuPressed(InputAction.CallbackContext context)
@@ -58,11 +66,15 @@ public class WristMenu : MonoBehaviour
     {
         GameManager.Instance.subtitles = true;
         GameEvents.current.SubtitlesOn();
+
+        uIRaycastController.SendHapticImpulse(0.5f, 0.2f);
     }
 
     public void SubtitlesOff()
     {
         GameManager.Instance.subtitles = false;
         GameEvents.current.SubtitlesOff();
+
+        uIRaycastController.SendHapticImpulse(0.5f, 0.2f);
     }
 }

@@ -1496,7 +1496,19 @@ MonoBehaviour:
       m_Calls: []
   m_HoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
       m_Calls: []
@@ -3551,6 +3563,8 @@ MonoBehaviour:
   rayController: {fileID: 2036706150}
   activeWristUI: 1
   uIRaycast: 1
+  uIRayCastHandNode: 5
+  uIRaycastController: {fileID: 2036706156}
 --- !u!4 &1450408213 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 493929845670297811, guid: fabccc1c5654bd14e963de2eb6d4c5f6, type: 3}
