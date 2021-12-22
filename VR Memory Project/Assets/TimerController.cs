@@ -39,6 +39,8 @@ public class TimerController : MonoBehaviour
         {
             GameManager.Instance.GameStart();
         }
+
+        ActivateTimer();
     }
 
     public void ActivateTimer()

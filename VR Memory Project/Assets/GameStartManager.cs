@@ -23,7 +23,7 @@ public class GameStartManager : MonoBehaviour
 
         //Debug.Log("Asking TimerController script to ActivateTimer().");
 
-        timerController.ActivateTimer();
+        //timerController.ActivateTimer();
 
         //Debug.Log("Successfully asked TimerController script to ActivateTimer().");
 

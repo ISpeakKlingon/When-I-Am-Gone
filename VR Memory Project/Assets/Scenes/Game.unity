@@ -9988,7 +9988,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2026861947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10004,7 +10004,7 @@ MonoBehaviour:
   timerComponents: {fileID: 2026861946}
   gameStartObject: {fileID: 724927972}
   timerGraphic: {fileID: 1679813184}
-  gameTime: 300
+  gameTime: 240
 --- !u!4 &2026861948
 Transform:
   m_ObjectHideFlags: 0
