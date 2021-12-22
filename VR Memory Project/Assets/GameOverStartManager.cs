@@ -10,4 +10,9 @@ public class GameOverStartManager : MonoBehaviour
     }
 
     //turn on GameOver text and other info like credits
+
+    private void Start()
+    {
+        GameEvents.current.ResetAllEvents();
+    }
 }

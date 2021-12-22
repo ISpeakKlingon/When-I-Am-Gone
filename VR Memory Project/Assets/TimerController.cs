@@ -9,9 +9,6 @@ public class TimerController : MonoBehaviour
 
     float maxgameTime;
     bool canTimerCountdown = false;
-
-    private GameStartManager gameStartManager;
-
     bool isFinalMinute = false;
 
     private void Awake()
@@ -33,8 +30,6 @@ public class TimerController : MonoBehaviour
 
     private void Start()
     {
-        gameStartManager = gameStartObject.GetComponent<GameStartManager>();
-
         if (!GameManager.Instance.isGameStarted)
         {
             GameManager.Instance.GameStart();

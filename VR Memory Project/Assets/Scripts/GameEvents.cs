@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameEvents : MonoBehaviour
 {
     public static GameEvents current;
+
     private bool memory2020TriggerEventOccurred = false;
     private bool memory1945TriggerEventOccurred = false;
     private bool lobbyBridgeTriggerEventOccurred = false;
@@ -141,6 +142,22 @@ public class GameEvents : MonoBehaviour
             windowOpenEventOccurred = true;
         }
     }
+
+    public void ResetAllEvents()
+    {
+        memory2020TriggerEventOccurred = false;
+        memory1945TriggerEventOccurred = false;
+        lobbyBridgeTriggerEventOccurred = false;
+        startGameEventOccurred = false;
+        playerExitedStartingRoom = false;
+        smallTalkEventOccurred = false;
+        memory2020AwakenEventOccurred = false;
+        memory1945AwakenEventOccurred = false;
+        finalMinuteEventOccurred = false;
+        windowOpenEventOccurred = false;
+        isMemory2020Complete = false;
+        isMemory1945Complete = false;
+}
 
     public void TriggerEvent(string passedEvent)
     {
