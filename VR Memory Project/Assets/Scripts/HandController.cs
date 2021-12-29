@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+//Thanks to Justin P Barnett vid "How to ANIMATE Hands in VR - Unity XR Beginner Tutorial (New Input System)"
+
 [RequireComponent(typeof(ActionBasedController))]
 public class HandController : MonoBehaviour
 {
     ActionBasedController controller;
-    Hand hand;
+    public HandAlternate hand;
     
-    // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<ActionBasedController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         hand.SetGrip(controller.selectAction.action.ReadValue<float>());

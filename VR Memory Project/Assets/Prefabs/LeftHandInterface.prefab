@@ -1101,7 +1101,7 @@ GameObject:
   - component: {fileID: 5980287698521639301}
   - component: {fileID: 5980287698521639300}
   m_Layer: 8
-  m_Name: DockingDoor (1)
+  m_Name: DockingDoorLeft_Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1460,7 +1460,7 @@ GameObject:
   - component: {fileID: 5980287699953244850}
   - component: {fileID: 5980287699953244845}
   m_Layer: 8
-  m_Name: DockingDoor
+  m_Name: DockingDoorRight_Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1824,6 +1824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6157694505584869469}
   - component: {fileID: 3864016487319753832}
+  - component: {fileID: 7734754785049658849}
   m_Layer: 0
   m_Name: LeftHandInterface
   m_TagString: Untagged
@@ -1838,7 +1839,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6791241508775434983}
-  m_LocalRotation: {x: 0.02309206, y: 0.12391784, z: 0.6428376, w: 0.7555601}
+  m_LocalRotation: {x: 0.02309334, y: 0.1239132, z: 0.64283776, w: 0.75556064}
   m_LocalPosition: {x: 0.0052, y: -0.0122, z: -0.0315}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1857,8 +1858,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6791241508775434983}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 7a08d338bad092048b8a658790b5a22c, type: 3}
+  m_Controller: {fileID: 9100000, guid: dd8d0898a4acd334882921404bf615e8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1867,6 +1868,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7734754785049658849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6791241508775434983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd7da5628c1ebb4b996778f4a8f04bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
 --- !u!1 &7181787538446424646
 GameObject:
   m_ObjectHideFlags: 0
