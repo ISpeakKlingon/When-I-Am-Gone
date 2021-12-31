@@ -14,12 +14,12 @@ public class HandAnimationControl : MonoBehaviour
         pinchAction.action.performed += PinchAnimation;
     }
 
-    private void PinchAnimation(InputAction.CallbackContext obj)
+    public virtual void PinchAnimation(InputAction.CallbackContext obj)
     {
         handAnimator.SetFloat("Trigger", obj.ReadValue<float>());
     }
 
-    private void GripAnimation(InputAction.CallbackContext obj)
+    public virtual void GripAnimation(InputAction.CallbackContext obj)
     {
         handAnimator.SetFloat("Grip", obj.ReadValue<float>());
     }

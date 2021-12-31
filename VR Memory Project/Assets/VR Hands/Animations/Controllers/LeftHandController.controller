@@ -182,18 +182,10 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 68af2d953c5fe054bb793f862ef9be61, type: 2}
-    m_Threshold: 0.75
-    m_Position: {x: 1, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: Grip
-    m_Mirror: 0
   m_BlendParameter: Grip
   m_BlendParameterY: Trigger
   m_MinThreshold: 0
-  m_MaxThreshold: 0.75
+  m_MaxThreshold: 0.5625
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 3
@@ -211,7 +203,7 @@ AnimatorStateMachine:
     m_Position: {x: 360, y: 190, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5969345003886711484}
-    m_Position: {x: 395.48224, y: 253.92099, z: 0}
+    m_Position: {x: 390, y: 250, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3674836333833478282}
     m_Position: {x: 440, y: 100, z: 0}
