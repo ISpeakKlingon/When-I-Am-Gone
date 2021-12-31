@@ -22,5 +22,12 @@ public class InterfaceAnimControls : HandAnimationControl
                 indicatorLight.material = indicatorRed;
             }
         }
+        else if (obj.ReadValue<float>() < indicatorLightThreshhold)
+        {
+            if(indicatorLight.material != indicatorOff)
+            {
+                indicatorLight.material = indicatorOff;
+            }
+        }
     }
 }

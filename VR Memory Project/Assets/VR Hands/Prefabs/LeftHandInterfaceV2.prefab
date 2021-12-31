@@ -387,7 +387,6 @@ GameObject:
   - component: {fileID: 1952067597134428893}
   - component: {fileID: 8429169924366902297}
   - component: {fileID: 7252658991707875309}
-  - component: {fileID: 8429169923468904334}
   m_Layer: 0
   m_Name: LeftHandInterfaceV2
   m_TagString: Untagged
@@ -451,18 +450,6 @@ MonoBehaviour:
   indicatorOff: {fileID: 2100000, guid: 2346a7f14d89c2c499b507c4bea3648d, type: 2}
   indicatorRed: {fileID: 2100000, guid: be0b879c326674d488026a0e2f65558f, type: 2}
   indicatorGreen: {fileID: 2100000, guid: d0f669f72d5e21b4dbbde2d15f5f95c7, type: 2}
---- !u!114 &8429169923468904334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179085000152129639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa702c56d6ab1564fb58b672496675b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1344277568646253203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,7 +994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8429169922650764456
 Transform:
   m_ObjectHideFlags: 0
@@ -1575,7 +1562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8429169923774439633
 Transform:
   m_ObjectHideFlags: 0
@@ -2016,7 +2003,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8429169923999989431
 Transform:
   m_ObjectHideFlags: 0
