@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5381611257312013257}
   - component: {fileID: 6633925405926311641}
   - component: {fileID: 2988726785688786399}
-  - component: {fileID: 2988726785688786396}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861765}
+  m_Layer: 6
   m_Name: F27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.053909667, y: 0, z: 0.024288198}
   m_Center: {x: 5.8048227e-20, y: 0.00000000844011, z: -0.000000028871}
---- !u!114 &2988726785688786396
+--- !u!114 &2988726786516861765
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 101795934040932331}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -167,10 +167,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &184015657608722533
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,8 +181,8 @@ GameObject:
   - component: {fileID: 2118712010515925587}
   - component: {fileID: 7557933670264308022}
   - component: {fileID: 2988726785688785923}
-  - component: {fileID: 2988726785688785920}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861783}
+  m_Layer: 6
   m_Name: F9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +266,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.17723861, y: 0, z: 0.024339184}
   m_Center: {x: -4.8472784e-22, y: -0.00000028964132, z: -0.000000014901159}
---- !u!114 &2988726785688785920
+--- !u!114 &2988726786516861783
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -277,7 +275,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 184015657608722533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -285,7 +283,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -338,10 +336,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &244608080334173907
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,8 +350,8 @@ GameObject:
   - component: {fileID: 5813772948470179190}
   - component: {fileID: 1227046948133228373}
   - component: {fileID: 2988726785688786365}
-  - component: {fileID: 2988726785688786362}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861748}
+  m_Layer: 6
   m_Name: F44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -439,7 +435,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.197894, y: 0, z: 0.02445968}
   m_Center: {x: -0.015601775, y: -0.0000222791, z: 0.000009735116}
---- !u!114 &2988726785688786362
+--- !u!114 &2988726786516861748
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -448,7 +444,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 244608080334173907}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -456,7 +452,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -509,10 +505,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &463992215262989608
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,8 +519,8 @@ GameObject:
   - component: {fileID: 1458973186891594120}
   - component: {fileID: 5408180742972230279}
   - component: {fileID: 2988726785688785937}
-  - component: {fileID: 2988726785688785934}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861790}
+  m_Layer: 6
   m_Name: F2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,7 +604,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.30255702, y: 0, z: 0.02422248}
   m_Center: {x: -0.002088741, y: -0.00000023789471, z: -0.0000000013969842}
---- !u!114 &2988726785688785934
+--- !u!114 &2988726786516861790
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -619,7 +613,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 463992215262989608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -627,7 +621,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -680,10 +674,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &472546618966083814
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,8 +688,8 @@ GameObject:
   - component: {fileID: 1978613547664354758}
   - component: {fileID: 6043066351334161932}
   - component: {fileID: 2988726785688785927}
-  - component: {fileID: 2988726785688785924}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861785}
+  m_Layer: 6
   m_Name: F7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -781,7 +773,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.23572038, y: 0, z: 0.024317585}
   m_Center: {x: -0.019792749, y: 0.00000022538003, z: -0.00000006752089}
---- !u!114 &2988726785688785924
+--- !u!114 &2988726786516861785
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -790,7 +782,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 472546618966083814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -798,7 +790,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -851,10 +843,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &552741334705401762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,8 +1107,8 @@ GameObject:
   - component: {fileID: 6236747114927296438}
   - component: {fileID: 8471577432793009891}
   - component: {fileID: 2988726785688786413}
-  - component: {fileID: 2988726785688786410}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861772}
+  m_Layer: 6
   m_Name: F20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1202,7 +1192,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.302557, y: 0, z: 0.024254797}
   m_Center: {x: -0.0020886515, y: 0.00000011874362, z: 0.000000060070306}
---- !u!114 &2988726785688786410
+--- !u!114 &2988726786516861772
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1211,7 +1201,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1099795967446571752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -1219,7 +1209,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1272,10 +1262,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &1110897037838152366
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,8 +1276,8 @@ GameObject:
   - component: {fileID: 120477205328978500}
   - component: {fileID: 7965227336366211972}
   - component: {fileID: 2988726785688786397}
-  - component: {fileID: 2988726785688786394}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861764}
+  m_Layer: 6
   m_Name: F28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1373,7 +1361,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.17724985, y: 0, z: 0.024350408}
   m_Center: {x: 0.0011048169, y: 0.00017344378, z: -0.0014413769}
---- !u!114 &2988726785688786394
+--- !u!114 &2988726786516861764
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1382,7 +1370,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1110897037838152366}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -1390,7 +1378,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1443,10 +1431,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &1475685076852627340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,8 +1445,8 @@ GameObject:
   - component: {fileID: 4395018306760244852}
   - component: {fileID: 8691769576256862789}
   - component: {fileID: 2988726785688786389}
-  - component: {fileID: 2988726785688786386}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861760}
+  m_Layer: 6
   m_Name: F32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1544,7 +1530,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.22911432, y: 0, z: 0.02447848}
   m_Center: {x: -0.020896377, y: 0.000030367642, z: 0.000012736769}
---- !u!114 &2988726785688786386
+--- !u!114 &2988726786516861760
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1553,7 +1539,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1475685076852627340}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -1561,7 +1547,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1614,10 +1600,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &1849923525418935760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1630,8 +1614,8 @@ GameObject:
   - component: {fileID: 673029088607498534}
   - component: {fileID: 7534859342567985227}
   - component: {fileID: 2988726785688786423}
-  - component: {fileID: 2988726785688786420}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861777}
+  m_Layer: 6
   m_Name: F15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1715,7 +1699,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2580508, y: 0, z: 0.024314694}
   m_Center: {x: -0.016071018, y: -0.00000058859587, z: -0.0000000745058}
---- !u!114 &2988726785688786420
+--- !u!114 &2988726786516861777
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1724,7 +1708,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1849923525418935760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -1732,7 +1716,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1785,10 +1769,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &1929445483926129576
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,8 +1783,8 @@ GameObject:
   - component: {fileID: 5590026152231235637}
   - component: {fileID: 7479357395563758382}
   - component: {fileID: 2988726785688786363}
-  - component: {fileID: 2988726785688786360}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861747}
+  m_Layer: 6
   m_Name: F45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1886,7 +1868,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.19775277, y: 0, z: 0.024463264}
   m_Center: {x: -0.020031923, y: -0.000070295326, z: 0.00014074196}
---- !u!114 &2988726785688786360
+--- !u!114 &2988726786516861747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1895,7 +1877,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1929445483926129576}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -1903,7 +1885,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1956,10 +1938,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &2021937235503898410
 GameObject:
   m_ObjectHideFlags: 0
@@ -1972,8 +1952,8 @@ GameObject:
   - component: {fileID: 8258644764660075160}
   - component: {fileID: 3437656130173592025}
   - component: {fileID: 2988726785688786391}
-  - component: {fileID: 2988726785688786388}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861761}
+  m_Layer: 6
   m_Name: F31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2057,7 +2037,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.22911444, y: 0, z: 0.024471365}
   m_Center: {x: -0.020896362, y: 0.000026192518, z: 0.000012835023}
---- !u!114 &2988726785688786388
+--- !u!114 &2988726786516861761
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2066,7 +2046,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2021937235503898410}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -2074,7 +2054,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -2127,10 +2107,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!54 &9213047378672987156
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2278,8 +2256,8 @@ GameObject:
   - component: {fileID: 5723960721035086213}
   - component: {fileID: 3043774691264940285}
   - component: {fileID: 2988726785688786395}
-  - component: {fileID: 2988726785688786392}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861763}
+  m_Layer: 6
   m_Name: F29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2363,7 +2341,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.17725427, y: 0, z: 0.024409955}
   m_Center: {x: -0.008863554, y: 0.00024125297, z: -0.0024245228}
---- !u!114 &2988726785688786392
+--- !u!114 &2988726786516861763
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2372,7 +2350,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2143268738466394025}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -2380,7 +2358,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -2433,10 +2411,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &2591500381137656209
 GameObject:
   m_ObjectHideFlags: 0
@@ -2449,8 +2425,8 @@ GameObject:
   - component: {fileID: 5702960889949690446}
   - component: {fileID: 8959320905310632473}
   - component: {fileID: 2988726785688786409}
-  - component: {fileID: 2988726785688786406}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861770}
+  m_Layer: 6
   m_Name: F22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2534,7 +2510,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.302557, y: 0, z: 0.024300287}
   m_Center: {x: -0.0020886515, y: -0.0000000102445625, z: 0.000000059604645}
---- !u!114 &2988726785688786406
+--- !u!114 &2988726786516861770
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2543,7 +2519,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2591500381137656209}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -2551,7 +2527,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -2604,10 +2580,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &2718906424395688149
 GameObject:
   m_ObjectHideFlags: 0
@@ -2723,8 +2697,8 @@ GameObject:
   - component: {fileID: 4734387080923948964}
   - component: {fileID: 3254221036323975998}
   - component: {fileID: 2988726785688786393}
-  - component: {fileID: 2988726785688786390}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861762}
+  m_Layer: 6
   m_Name: F30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2808,7 +2782,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.22911456, y: 0, z: 0.024458954}
   m_Center: {x: -0.020896422, y: 0.000021952206, z: 0.000012848992}
---- !u!114 &2988726785688786390
+--- !u!114 &2988726786516861762
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2817,7 +2791,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2770620874777112113}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -2825,7 +2799,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -2878,10 +2852,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &2996866615441555603
 GameObject:
   m_ObjectHideFlags: 0
@@ -2893,7 +2865,9 @@ GameObject:
   - component: {fileID: 2317286068205765107}
   - component: {fileID: 4791263235439335899}
   - component: {fileID: 3357748502131612680}
-  m_Layer: 0
+  - component: {fileID: 2047115190}
+  - component: {fileID: 2047115189}
+  m_Layer: 6
   m_Name: NewtonFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2964,6 +2938,91 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2047115190
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2996866615441555603}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.147221, y: 0.00048626278, z: 2.2699108}
+  m_Center: {x: -0.6624176, y: -0.30868533, z: -0.15006067}
+--- !u!114 &2047115189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2996866615441555603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_TeleportationProvider: {fileID: 0}
+  m_MatchOrientation: 1
+  m_TeleportTrigger: 0
 --- !u!1 &3190265196834074465
 GameObject:
   m_ObjectHideFlags: 0
@@ -2976,8 +3035,8 @@ GameObject:
   - component: {fileID: 7002753316074942083}
   - component: {fileID: 4664605658808919962}
   - component: {fileID: 2988726785688785921}
-  - component: {fileID: 2988726785688786430}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861782}
+  m_Layer: 6
   m_Name: F10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3061,7 +3120,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.17723863, y: 0, z: 0.024343533}
   m_Center: {x: -0.000000014901165, y: -0.00000023841858, z: -0.00000008568168}
---- !u!114 &2988726785688786430
+--- !u!114 &2988726786516861782
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3070,7 +3129,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3190265196834074465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -3078,7 +3137,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -3131,10 +3190,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &3270980347139453389
 GameObject:
   m_ObjectHideFlags: 0
@@ -3261,8 +3318,8 @@ GameObject:
   - component: {fileID: 8382394369556109460}
   - component: {fileID: 722289016862263178}
   - component: {fileID: 2988726785688786427}
-  - component: {fileID: 2988726785688786424}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861779}
+  m_Layer: 6
   m_Name: F13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3346,7 +3403,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.25805077, y: 0, z: 0.024332203}
   m_Center: {x: -0.016071, y: 0.0000000279397, z: -0.00000002421438}
---- !u!114 &2988726785688786424
+--- !u!114 &2988726786516861779
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3355,7 +3412,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3381504181191433209}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -3363,7 +3420,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -3416,10 +3473,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &3385580527172221017
 GameObject:
   m_ObjectHideFlags: 0
@@ -3514,8 +3569,8 @@ GameObject:
   - component: {fileID: 7820641124227116695}
   - component: {fileID: 8402220552722265118}
   - component: {fileID: 2988726785688786359}
-  - component: {fileID: 2988726785688786356}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861745}
+  m_Layer: 6
   m_Name: f47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3599,7 +3654,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1463051, y: 0, z: 0.02104873}
   m_Center: {x: -0.000000044703484, y: -0.00000004656614, z: 0.000000074505806}
---- !u!114 &2988726785688786356
+--- !u!114 &2988726786516861745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3608,7 +3663,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3493360087163394799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -3616,7 +3671,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -3669,10 +3724,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &3544812593176824991
 GameObject:
   m_ObjectHideFlags: 0
@@ -3685,8 +3738,8 @@ GameObject:
   - component: {fileID: 6311683655436679235}
   - component: {fileID: 6155195253437024489}
   - component: {fileID: 2988726785688786419}
-  - component: {fileID: 2988726785688786416}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861775}
+  m_Layer: 6
   m_Name: F17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3770,7 +3823,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.17723861, y: 0, z: 0.0242948}
   m_Center: {x: 0.000000059604645, y: 0.00000011920929, z: -0.00000008940697}
---- !u!114 &2988726785688786416
+--- !u!114 &2988726786516861775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3779,7 +3832,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3544812593176824991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -3787,7 +3840,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -3840,10 +3893,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &3587037907092923347
 GameObject:
   m_ObjectHideFlags: 0
@@ -3856,8 +3907,8 @@ GameObject:
   - component: {fileID: 4264808347036331442}
   - component: {fileID: 8171904483299302533}
   - component: {fileID: 2988726785688785935}
-  - component: {fileID: 2988726785688785932}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861789}
+  m_Layer: 6
   m_Name: F3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3941,7 +3992,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.302557, y: 0, z: 0.02423545}
   m_Center: {x: -0.0020887111, y: -0.00000047683716, z: 0.000000030267984}
---- !u!114 &2988726785688785932
+--- !u!114 &2988726786516861789
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3950,7 +4001,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3587037907092923347}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -3958,7 +4009,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4011,10 +4062,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &4153027423768688465
 GameObject:
   m_ObjectHideFlags: 0
@@ -4027,8 +4076,8 @@ GameObject:
   - component: {fileID: 5085607115428318932}
   - component: {fileID: 1715369665864972941}
   - component: {fileID: 2988726785688786415}
-  - component: {fileID: 2988726785688786412}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861773}
+  m_Layer: 6
   m_Name: F19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4112,7 +4161,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.302557, y: 0, z: 0.024235446}
   m_Center: {x: -0.0020886515, y: -0.0000000023865152, z: 0.0000000027939682}
---- !u!114 &2988726785688786412
+--- !u!114 &2988726786516861773
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4121,7 +4170,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4153027423768688465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -4129,7 +4178,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4182,10 +4231,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &4580441966207538628
 GameObject:
   m_ObjectHideFlags: 0
@@ -4198,8 +4245,8 @@ GameObject:
   - component: {fileID: 8475445567065379923}
   - component: {fileID: 4113003514888346273}
   - component: {fileID: 2988726785688786371}
-  - component: {fileID: 2988726785688786368}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861751}
+  m_Layer: 6
   m_Name: F40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4283,7 +4330,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.14704491, y: 0, z: 0.024391497}
   m_Center: {x: -0.005839423, y: 0.00019230638, z: 0.002433653}
---- !u!114 &2988726785688786368
+--- !u!114 &2988726786516861751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4292,7 +4339,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4580441966207538628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -4300,7 +4347,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4353,10 +4400,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &4604944424829219803
 GameObject:
   m_ObjectHideFlags: 0
@@ -4369,8 +4414,8 @@ GameObject:
   - component: {fileID: 631805946248375040}
   - component: {fileID: 2667406582677428349}
   - component: {fileID: 2988726785688786373}
-  - component: {fileID: 2988726785688786370}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861752}
+  m_Layer: 6
   m_Name: F39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4454,7 +4499,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.17724986, y: 0, z: 0.02433189}
   m_Center: {x: -0.0019098523, y: 0.00015186789, z: 0.0014325051}
---- !u!114 &2988726785688786370
+--- !u!114 &2988726786516861752
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4463,7 +4508,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4604944424829219803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -4471,7 +4516,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4524,10 +4569,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &4631164561952647871
 GameObject:
   m_ObjectHideFlags: 0
@@ -4540,8 +4583,8 @@ GameObject:
   - component: {fileID: 4270841167106863849}
   - component: {fileID: 9073764857897391990}
   - component: {fileID: 2988726785688786417}
-  - component: {fileID: 2988726785688786414}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861774}
+  m_Layer: 6
   m_Name: F18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4625,7 +4668,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.302557, y: 0, z: 0.02422247}
   m_Center: {x: -0.0020886515, y: -0.00000035762787, z: 0.00000003306195}
---- !u!114 &2988726785688786414
+--- !u!114 &2988726786516861774
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4634,7 +4677,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4631164561952647871}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -4642,7 +4685,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4695,10 +4738,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &4658378062493852478
 GameObject:
   m_ObjectHideFlags: 0
@@ -4812,8 +4853,8 @@ GameObject:
   - component: {fileID: 7367736392667565383}
   - component: {fileID: 979564196877275575}
   - component: {fileID: 2988726785688786381}
-  - component: {fileID: 2988726785688786378}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861756}
+  m_Layer: 6
   m_Name: F35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4897,7 +4938,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.17064776, y: 0.00088663615, z: 0.021063372}
   m_Center: {x: -0.0033020382, y: 0.000005851907, z: 0.000001930632}
---- !u!114 &2988726785688786378
+--- !u!114 &2988726786516861756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4906,7 +4947,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4798710412694843459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -4914,7 +4955,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4967,10 +5008,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &4830433742131370043
 GameObject:
   m_ObjectHideFlags: 0
@@ -4983,8 +5022,8 @@ GameObject:
   - component: {fileID: 1238096578137916724}
   - component: {fileID: 8871425127589007239}
   - component: {fileID: 2988726785688785929}
-  - component: {fileID: 2988726785688785926}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861786}
+  m_Layer: 6
   m_Name: F6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5068,7 +5107,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.302557, y: 0, z: 0.024300287}
   m_Center: {x: -0.0020887111, y: -0.000000010244548, z: -0.000000053085387}
---- !u!114 &2988726785688785926
+--- !u!114 &2988726786516861786
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5077,7 +5116,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4830433742131370043}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -5085,7 +5124,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -5138,10 +5177,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &4831835673557187457
 GameObject:
   m_ObjectHideFlags: 0
@@ -5236,8 +5273,8 @@ GameObject:
   - component: {fileID: 6441959037052605346}
   - component: {fileID: 8814617095390504612}
   - component: {fileID: 2988726785688786379}
-  - component: {fileID: 2988726785688786376}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861755}
+  m_Layer: 6
   m_Name: F36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5321,7 +5358,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.053909738, y: 0, z: 0.024256285}
   m_Center: {x: -0.000000059604645, y: 2.910383e-10, z: -9.313227e-10}
---- !u!114 &2988726785688786376
+--- !u!114 &2988726786516861755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5330,7 +5367,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5173355711084916356}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -5338,7 +5375,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -5391,10 +5428,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &5188272588225657382
 GameObject:
   m_ObjectHideFlags: 0
@@ -5407,8 +5442,8 @@ GameObject:
   - component: {fileID: 6209306960643084475}
   - component: {fileID: 7427993106663840497}
   - component: {fileID: 2988726785688786377}
-  - component: {fileID: 2988726785688786374}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861754}
+  m_Layer: 6
   m_Name: F37
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5492,7 +5527,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.053909786, y: 0, z: 0.024269203}
   m_Center: {x: -0.000000045634806, y: 0.0000000020954758, z: -0.0000000018626456}
---- !u!114 &2988726785688786374
+--- !u!114 &2988726786516861754
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5501,7 +5536,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5188272588225657382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -5509,7 +5544,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -5562,10 +5597,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &5792816300841635873
 GameObject:
   m_ObjectHideFlags: 0
@@ -5578,8 +5611,8 @@ GameObject:
   - component: {fileID: 7036313862255901216}
   - component: {fileID: 5731003314124849466}
   - component: {fileID: 2988726785688786385}
-  - component: {fileID: 2988726785688786382}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861758}
+  m_Layer: 6
   m_Name: F33.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5663,7 +5696,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.060447253, y: 0, z: 0.015010411}
   m_Center: {x: 0.058765657, y: -0.002748357, z: 0.0037323404}
---- !u!114 &2988726785688786382
+--- !u!114 &2988726786516861758
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5672,7 +5705,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5792816300841635873}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -5680,7 +5713,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -5733,10 +5766,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &5893589564713740866
 GameObject:
   m_ObjectHideFlags: 0
@@ -5749,8 +5780,8 @@ GameObject:
   - component: {fileID: 1004043283551420398}
   - component: {fileID: 733704533719479294}
   - component: {fileID: 2988726785688786431}
-  - component: {fileID: 2988726785688786428}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861781}
+  m_Layer: 6
   m_Name: F11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5834,7 +5865,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.17723863, y: 0, z: 0.024343656}
   m_Center: {x: -0.000000014901165, y: -0.00000047683716, z: -0.000000066822395}
---- !u!114 &2988726785688786428
+--- !u!114 &2988726786516861781
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5843,7 +5874,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5893589564713740866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -5851,7 +5882,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -5904,10 +5935,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &5927685525662274378
 GameObject:
   m_ObjectHideFlags: 0
@@ -5920,8 +5949,8 @@ GameObject:
   - component: {fileID: 7185239107579966556}
   - component: {fileID: 537270294282661294}
   - component: {fileID: 2988726785688785931}
-  - component: {fileID: 2988726785688785928}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861787}
+  m_Layer: 6
   m_Name: F5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6005,7 +6034,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.302557, y: 0, z: 0.02427874}
   m_Center: {x: -0.0020887111, y: -0.000000016763808, z: -0.000000022351742}
---- !u!114 &2988726785688785928
+--- !u!114 &2988726786516861787
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6014,7 +6043,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5927685525662274378}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -6022,7 +6051,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -6075,10 +6104,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &6011645411464050378
 GameObject:
   m_ObjectHideFlags: 0
@@ -6091,8 +6118,8 @@ GameObject:
   - component: {fileID: 5245686207641784541}
   - component: {fileID: 5201434419364909087}
   - component: {fileID: 2988726785688786411}
-  - component: {fileID: 2988726785688786408}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861771}
+  m_Layer: 6
   m_Name: F21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6176,7 +6203,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.302557, y: 0, z: 0.024278758}
   m_Center: {x: -0.0020886515, y: -0.0000007240451, z: 0.000000037252907}
---- !u!114 &2988726785688786408
+--- !u!114 &2988726786516861771
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6185,7 +6212,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6011645411464050378}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -6193,7 +6220,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -6246,10 +6273,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &6084981936086504532
 GameObject:
   m_ObjectHideFlags: 0
@@ -6262,8 +6287,8 @@ GameObject:
   - component: {fileID: 3880697359343221364}
   - component: {fileID: 4057838550914209116}
   - component: {fileID: 2988726785688786401}
-  - component: {fileID: 2988726785688786398}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861766}
+  m_Layer: 6
   m_Name: F26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6347,7 +6372,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.053909726, y: 0, z: 0.024268875}
   m_Center: {x: 0.000000015832486, y: 0.0000004611793, z: 0.00000002561137}
---- !u!114 &2988726785688786398
+--- !u!114 &2988726786516861766
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6356,7 +6381,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6084981936086504532}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -6364,7 +6389,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -6417,10 +6442,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &6226694841468979716
 GameObject:
   m_ObjectHideFlags: 0
@@ -6433,8 +6456,8 @@ GameObject:
   - component: {fileID: 3272284029479263}
   - component: {fileID: 7417112633895453842}
   - component: {fileID: 2988726785688786361}
-  - component: {fileID: 2988726785688786358}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861746}
+  m_Layer: 6
   m_Name: F46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6518,7 +6541,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.14630742, y: 0, z: 0.02443219}
   m_Center: {x: -0.000000059604645, y: -0.0000003222376, z: 0.00000016298145}
---- !u!114 &2988726785688786358
+--- !u!114 &2988726786516861746
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6527,7 +6550,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6226694841468979716}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -6535,7 +6558,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -6588,10 +6611,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &6376057425256839466
 GameObject:
   m_ObjectHideFlags: 0
@@ -6604,8 +6625,8 @@ GameObject:
   - component: {fileID: 6521127136466006060}
   - component: {fileID: 5276244422370934282}
   - component: {fileID: 2988726785688786369}
-  - component: {fileID: 2988726785688786366}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861750}
+  m_Layer: 6
   m_Name: F41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6689,7 +6710,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.19890508, y: 0, z: 0.024440488}
   m_Center: {x: -0.015862076, y: 0.0017621941, z: -0.0010107185}
---- !u!114 &2988726785688786366
+--- !u!114 &2988726786516861750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6698,7 +6719,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6376057425256839466}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -6706,7 +6727,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -6759,10 +6780,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &6442640482246248040
 GameObject:
   m_ObjectHideFlags: 0
@@ -6775,8 +6794,8 @@ GameObject:
   - component: {fileID: 2697647847459103048}
   - component: {fileID: 7577664517341988469}
   - component: {fileID: 2988726785688786405}
-  - component: {fileID: 2988726785688786402}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861768}
+  m_Layer: 6
   m_Name: F24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6860,7 +6879,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.053925816, y: 0, z: 0.04873263}
   m_Center: {x: -1.2581616e-18, y: -0.00047218797, z: 0.00000006332995}
---- !u!114 &2988726785688786402
+--- !u!114 &2988726786516861768
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6869,7 +6888,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6442640482246248040}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -6877,7 +6896,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -6930,10 +6949,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &6553231271578560033
 GameObject:
   m_ObjectHideFlags: 0
@@ -6946,8 +6963,8 @@ GameObject:
   - component: {fileID: 663643082708831843}
   - component: {fileID: 7662417829793661558}
   - component: {fileID: 2988726785688786407}
-  - component: {fileID: 2988726785688786404}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861769}
+  m_Layer: 6
   m_Name: F23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7031,7 +7048,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.23572038, y: 0, z: 0.02431758}
   m_Center: {x: -0.019792749, y: -0.00000010617077, z: -0.0000000079162445}
---- !u!114 &2988726785688786404
+--- !u!114 &2988726786516861769
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7040,7 +7057,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6553231271578560033}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -7048,7 +7065,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -7101,10 +7118,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &7241326880419605755
 GameObject:
   m_ObjectHideFlags: 0
@@ -7203,8 +7218,8 @@ GameObject:
   - component: {fileID: 6404232873594533581}
   - component: {fileID: 3411748869739080939}
   - component: {fileID: 2988726785688786403}
-  - component: {fileID: 2988726785688786400}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861767}
+  m_Layer: 6
   m_Name: F25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7288,7 +7303,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.053909726, y: 0, z: 0.024255928}
   m_Center: {x: -5.421011e-20, y: 0.00000047544017, z: 4.6566134e-10}
---- !u!114 &2988726785688786400
+--- !u!114 &2988726786516861767
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7297,7 +7312,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7260828535199057601}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -7305,7 +7320,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -7358,10 +7373,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &7317702584870968060
 GameObject:
   m_ObjectHideFlags: 0
@@ -7374,8 +7387,8 @@ GameObject:
   - component: {fileID: 1439824786670545667}
   - component: {fileID: 4706185321020994360}
   - component: {fileID: 2988726785688786375}
-  - component: {fileID: 2988726785688786372}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861753}
+  m_Layer: 6
   m_Name: F38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7459,7 +7472,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.053909726, y: 0, z: 0.024288502}
   m_Center: {x: -0.000000015832486, y: -0.00000001391163, z: 0.000000059604645}
---- !u!114 &2988726785688786372
+--- !u!114 &2988726786516861753
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7468,7 +7481,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7317702584870968060}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -7476,7 +7489,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -7529,10 +7542,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &7393129894334288381
 GameObject:
   m_ObjectHideFlags: 0
@@ -7545,8 +7556,8 @@ GameObject:
   - component: {fileID: 4730655424698300550}
   - component: {fileID: 4037845302471704326}
   - component: {fileID: 2988726785688786383}
-  - component: {fileID: 2988726785688786380}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861757}
+  m_Layer: 6
   m_Name: F34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7630,7 +7641,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.17064996, y: 0, z: 0.024446877}
   m_Center: {x: -0.0033019637, y: 0.0000058774026, z: 0.0000019413424}
---- !u!114 &2988726785688786380
+--- !u!114 &2988726786516861757
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7639,7 +7650,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7393129894334288381}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -7647,7 +7658,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -7700,10 +7711,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &7521458181001010622
 GameObject:
   m_ObjectHideFlags: 0
@@ -7716,8 +7725,8 @@ GameObject:
   - component: {fileID: 8078202960786599792}
   - component: {fileID: 8412542404498546407}
   - component: {fileID: 2988726785688786387}
-  - component: {fileID: 2988726785688786384}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861759}
+  m_Layer: 6
   m_Name: F33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7801,7 +7810,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.17065014, y: 0, z: 0.024446404}
   m_Center: {x: -0.056099493, y: -0.0019729484, z: -0.00087816804}
---- !u!114 &2988726785688786384
+--- !u!114 &2988726786516861759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7810,7 +7819,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7521458181001010622}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -7818,7 +7827,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -7871,10 +7880,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &7535839523076264617
 GameObject:
   m_ObjectHideFlags: 0
@@ -8071,8 +8078,8 @@ GameObject:
   - component: {fileID: 8046330430434056920}
   - component: {fileID: 3682621423569596643}
   - component: {fileID: 2988726785688786425}
-  - component: {fileID: 2988726785688786422}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861778}
+  m_Layer: 6
   m_Name: F14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8156,7 +8163,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.25805077, y: 0, z: 0.024323782}
   m_Center: {x: -0.016071, y: -0.000000018626451, z: -0.000000103376806}
---- !u!114 &2988726785688786422
+--- !u!114 &2988726786516861778
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8165,7 +8172,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7890112771748792553}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -8173,7 +8180,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -8226,10 +8233,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &8039371339148926599
 GameObject:
   m_ObjectHideFlags: 0
@@ -8242,8 +8247,8 @@ GameObject:
   - component: {fileID: 760931400830144847}
   - component: {fileID: 6018515328424691646}
   - component: {fileID: 2988726785688786421}
-  - component: {fileID: 2988726785688786418}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861776}
+  m_Layer: 6
   m_Name: F16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8327,7 +8332,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.23113668, y: 0, z: 0.024305178}
   m_Center: {x: 0.026949087, y: -0.00000016720149, z: -0.00000010617077}
---- !u!114 &2988726785688786418
+--- !u!114 &2988726786516861776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8336,7 +8341,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8039371339148926599}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -8344,7 +8349,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -8397,10 +8402,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &8305486963233135905
 GameObject:
   m_ObjectHideFlags: 0
@@ -8413,8 +8416,8 @@ GameObject:
   - component: {fileID: 2154982512178221848}
   - component: {fileID: 404467718717618667}
   - component: {fileID: 2988726785688785925}
-  - component: {fileID: 2988726785688785922}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861784}
+  m_Layer: 6
   m_Name: F8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8498,7 +8501,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.17723861, y: 0, z: 0.024330579}
   m_Center: {x: -1.3631936e-21, y: -0.000000430271, z: -0.000000028871}
---- !u!114 &2988726785688785922
+--- !u!114 &2988726786516861784
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8507,7 +8510,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8305486963233135905}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -8515,7 +8518,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -8568,10 +8571,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &8338662413588966159
 GameObject:
   m_ObjectHideFlags: 0
@@ -8584,8 +8585,8 @@ GameObject:
   - component: {fileID: 3065955338840790189}
   - component: {fileID: 8385112623711454451}
   - component: {fileID: 2988726785688786367}
-  - component: {fileID: 2988726785688786364}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861749}
+  m_Layer: 6
   m_Name: F42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8669,7 +8670,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1989057, y: 0, z: 0.025450725}
   m_Center: {x: -0.015984671, y: 0.00041527106, z: -0.000489391}
---- !u!114 &2988726785688786364
+--- !u!114 &2988726786516861749
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8678,7 +8679,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8338662413588966159}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -8686,7 +8687,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -8739,10 +8740,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &8745679791847190586
 GameObject:
   m_ObjectHideFlags: 0
@@ -8755,8 +8754,8 @@ GameObject:
   - component: {fileID: 7316650730261566930}
   - component: {fileID: 2782636626331707739}
   - component: {fileID: 2988726785688786429}
-  - component: {fileID: 2988726785688786426}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861780}
+  m_Layer: 6
   m_Name: F12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8840,7 +8839,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.17723861, y: 0, z: 0.024339667}
   m_Center: {x: 1.1249656e-21, y: -0.00000029057264, z: -0.00000008381903}
---- !u!114 &2988726785688786426
+--- !u!114 &2988726786516861780
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8849,7 +8848,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8745679791847190586}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -8857,7 +8856,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -8910,10 +8909,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &8798179639398147618
 GameObject:
   m_ObjectHideFlags: 0
@@ -9008,8 +9005,8 @@ GameObject:
   - component: {fileID: 8853948542430357838}
   - component: {fileID: 2259469912557127080}
   - component: {fileID: 2988726785688785939}
-  - component: {fileID: 2988726785688785936}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861791}
+  m_Layer: 6
   m_Name: F1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9093,7 +9090,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.30255708, y: 0, z: 0.048699006}
   m_Center: {x: -0.002088726, y: -1.4299665e-15, z: -0.000000003725291}
---- !u!114 &2988726785688785936
+--- !u!114 &2988726786516861791
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9102,7 +9099,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9115872142208483190}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -9110,7 +9107,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -9163,10 +9160,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1 &9208027177756357733
 GameObject:
   m_ObjectHideFlags: 0
@@ -9179,8 +9174,8 @@ GameObject:
   - component: {fileID: 9043647799343313289}
   - component: {fileID: 5483360193821091227}
   - component: {fileID: 2988726785688785933}
-  - component: {fileID: 2988726785688785930}
-  m_Layer: 0
+  - component: {fileID: 2988726786516861788}
+  m_Layer: 6
   m_Name: F4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9264,7 +9259,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.302557, y: 0, z: 0.0242548}
   m_Center: {x: -0.0020887111, y: -0.00000036280835, z: -0.00000007310882}
---- !u!114 &2988726785688785930
+--- !u!114 &2988726786516861788
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9273,7 +9268,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9208027177756357733}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e4941de32c70240a7bd4c6ddd67323, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -9281,7 +9276,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 5224325473352419713, guid: bfb8c79f6cc613e4789006e5c3d5b5b0, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -9334,10 +9329,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
+  m_MatchOrientation: 1
   m_TeleportTrigger: 0
-  screenFader: {fileID: 0}
-  fadeDuration: 0.5
 --- !u!1001 &1269524612023279960
 PrefabInstance:
   m_ObjectHideFlags: 0
