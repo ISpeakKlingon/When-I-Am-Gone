@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,21 +16,27 @@ public class InterfaceAnimControls : HandAnimationControl
     public override void GripAnimation(InputAction.CallbackContext obj)
     {
         base.GripAnimation(obj);
+        AnimateInterface(obj);
+    }
+
+    private void AnimateInterface(InputAction.CallbackContext obj)
+    {
         interfaceAnimator.SetFloat("Grip", obj.ReadValue<float>());
-        if(obj.ReadValue<float>() > indicatorLightThreshhold)
+        if (obj.ReadValue<float>() > indicatorLightThreshhold)
         {
             //turn indicator light on
-            if(indicatorLight.material != indicatorRed)
+            if (indicatorLight.material != indicatorRed)
             {
                 indicatorLight.material = indicatorRed;
             }
         }
         else if (obj.ReadValue<float>() < indicatorLightThreshhold)
         {
-            if(indicatorLight.material != indicatorOff)
+            if (indicatorLight.material != indicatorOff)
             {
                 indicatorLight.material = indicatorOff;
             }
         }
+
     }
 }

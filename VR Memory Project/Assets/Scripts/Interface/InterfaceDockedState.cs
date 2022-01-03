@@ -3,10 +3,14 @@ using UnityEngine;
 //Thanks to Nicky B from I Heart Gamedev YouTube "How to Program in Unity: State Machines Explained" video
 public class InterfaceDockedState : InterfaceBaseState
 {
+    private InterfaceAnimControls animControls;
+
+    
     public override void EnterState(InterfaceStateManager _interface)
     {
         Debug.Log("Hello from the Docked State!");
         //turn off InterfaceAnimControls
+        
         //turn off InterfaceAudioController
         //turn off InterfaceHapticController
     }

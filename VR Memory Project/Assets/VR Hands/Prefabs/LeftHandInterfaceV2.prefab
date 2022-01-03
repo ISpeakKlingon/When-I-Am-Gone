@@ -386,7 +386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952067597134428893}
   - component: {fileID: 8429169924366902297}
-  - component: {fileID: 7252658991707875309}
+  - component: {fileID: 6385628933569427855}
   m_Layer: 0
   m_Name: LeftHandInterfaceV2
   m_TagString: Untagged
@@ -430,7 +430,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7252658991707875309
+--- !u!114 &6385628933569427855
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -439,17 +439,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1179085000152129639}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83e990c78db68414c994af11e0bef4ce, type: 3}
+  m_Script: {fileID: 11500000, guid: f9a57278fd6feb34885acf3119ef7ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   handAnimator: {fileID: 8429169924366902297}
   gripAction: {fileID: -2024674455125305686, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   pinchAction: {fileID: -2939087647594393519, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  interfaceAnimator: {fileID: 8429169923952871654}
-  indicatorLight: {fileID: 1781496130}
-  indicatorOff: {fileID: 2100000, guid: 2346a7f14d89c2c499b507c4bea3648d, type: 2}
-  indicatorRed: {fileID: 2100000, guid: be0b879c326674d488026a0e2f65558f, type: 2}
-  indicatorGreen: {fileID: 2100000, guid: d0f669f72d5e21b4dbbde2d15f5f95c7, type: 2}
 --- !u!1 &1344277568646253203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,8 +1704,8 @@ GameObject:
   - component: {fileID: 3128546871579540514}
   - component: {fileID: 8361737074400926978}
   - component: {fileID: 1552997316574992988}
-  - component: {fileID: 317086500897509814}
   - component: {fileID: 4892893754124822192}
+  - component: {fileID: 5189724670374295251}
   m_Layer: 14
   m_Name: Interface_Parent
   m_TagString: Untagged
@@ -1883,18 +1878,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interfaceHandNode: 4
   interfaceController: {fileID: 0}
---- !u!114 &317086500897509814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8429169923952871648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac082f878d5442d459d56d7b946a7647, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &4892893754124822192
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1908,6 +1891,24 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.09994624
   m_Center: {x: 0.030497909, y: 0.012125742, z: 0.026809959}
+--- !u!114 &5189724670374295251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8429169923952871648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3356e00549524b94d96f9463455a8010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gripAction: {fileID: -2024674455125305686, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _interfaceAnimator: {fileID: 8429169923952871654}
+  _indicatorLight: {fileID: 1781496130}
+  _indicatorOff: {fileID: 2100000, guid: 2346a7f14d89c2c499b507c4bea3648d, type: 2}
+  _indicatorRed: {fileID: 2100000, guid: be0b879c326674d488026a0e2f65558f, type: 2}
+  _indicatorGreen: {fileID: 2100000, guid: d0f669f72d5e21b4dbbde2d15f5f95c7, type: 2}
 --- !u!1 &8429169923997990857
 GameObject:
   m_ObjectHideFlags: 0
