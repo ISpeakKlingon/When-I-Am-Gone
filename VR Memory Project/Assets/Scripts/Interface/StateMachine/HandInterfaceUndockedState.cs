@@ -38,21 +38,22 @@ public class HandInterfaceUndockedState : HandInterfaceBaseState
     private void InterfaceAnimation(InputAction.CallbackContext obj)
     {
         _ctx.InterfaceAnimator.SetFloat("Grip", obj.ReadValue<float>());
+        /*
         if (obj.ReadValue<float>() > _ctx.IndicatorLightThreshhold)
         {
             //turn indicator light on
-            if (_ctx.IndicatorLight.material != _ctx.IndicatorRed)
+            if (_ctx.SocketLight.material[4] != _ctx.IndicatorRed)
             {
-                _ctx.IndicatorLight.material = _ctx.IndicatorRed;
+                _ctx.SocketLight.material = _ctx.IndicatorRed;
             }
         }
         else if (obj.ReadValue<float>() < _ctx.IndicatorLightThreshhold)
         {
-            if (_ctx.IndicatorLight.material != _ctx.IndicatorOff)
+            if (_ctx.SocketLight.material != _ctx.IndicatorOff)
             {
-                _ctx.IndicatorLight.material = _ctx.IndicatorOff;
+                _ctx.SocketLight.material = _ctx.IndicatorOff;
             }
         }
-
+        */
     }
 }

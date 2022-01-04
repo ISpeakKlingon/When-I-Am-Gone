@@ -39,8 +39,11 @@ AnimatorStateMachine:
     m_State: {fileID: -8183188487865197616}
     m_Position: {x: 400, y: 70, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 969338781837766090}
-    m_Position: {x: 490, y: 240, z: 0}
+    m_State: {fileID: 4758359958290624657}
+    m_Position: {x: 525, y: 305, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -2749598681998292145}
+    m_Position: {x: 584.3106, y: 168.92511, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -50,7 +53,33 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 969338781837766090}
+  m_DefaultState: {fileID: -2749598681998292145}
+--- !u!1102 &-2749598681998292145
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HandInterfaceAnimation 0
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 1
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 1
+  m_Motion: {fileID: 7400000, guid: 0f07758969d5b8844bdb07bb204883c9, type: 2}
+  m_Tag: 
+  m_SpeedParameter: Grip
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: Grip
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -79,14 +108,14 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &969338781837766090
+--- !u!1102 &4758359958290624657
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Interface
+  m_Name: HandInterfaceAnimation
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -95,16 +124,16 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_SpeedParameterActive: 1
+  m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 1
-  m_Motion: {fileID: 7400000, guid: acad851419132a047b16efc9e727c36b, type: 2}
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 0f07758969d5b8844bdb07bb204883c9, type: 2}
   m_Tag: 
-  m_SpeedParameter: Grip
+  m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
-  m_TimeParameter: Grip
+  m_TimeParameter: 
 --- !u!1109 &7085139558772271290
 AnimatorTransition:
   m_ObjectHideFlags: 1
@@ -114,7 +143,7 @@ AnimatorTransition:
   m_Name: 
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 969338781837766090}
+  m_DstState: {fileID: 0}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
