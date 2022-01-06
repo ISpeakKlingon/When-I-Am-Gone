@@ -6,6 +6,7 @@ using System;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
+//Thanks to Linkira Studios' YouTube video "UnityXR Tutorial - Creating a Wrist Menu with new Input System"
 public class WristMenu : MonoBehaviour
 {
     public GameObject wristUI;
@@ -21,8 +22,6 @@ public class WristMenu : MonoBehaviour
     {
         DisplayWristUI();
         EnableUIRaycast();
-
-
     }
 
     public void MenuPressed(InputAction.CallbackContext context)
