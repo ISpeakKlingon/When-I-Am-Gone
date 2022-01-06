@@ -8,7 +8,15 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class NeedleObject : MonoBehaviour
 {
     public string sceneToLink;
+    public GameObject needleCollider;
     private bool _injectorGrabbed;
+    private bool _activeNeedle;
+    private Animator _animator;
+
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
 
     public void PrimaryPressed(InputAction.CallbackContext context)
     {
@@ -51,6 +59,19 @@ public class NeedleObject : MonoBehaviour
     public void ToggleInjectorNeedle()
     {
         Debug.Log("Injector Needle toggled.");
+
+        if (_activeNeedle)
+        {
+            needleCollider.SetActive(false);
+            _animator.SetTrigger("InjectorToggle");
+            _activeNeedle = false;
+        }
+        else if (!_activeNeedle)
+        {
+            needleCollider.SetActive(true);
+            _animator.SetTrigger("InjectorToggle");
+            _activeNeedle = true;
+        }
     }
 
     public void InjectorGrabbed()
