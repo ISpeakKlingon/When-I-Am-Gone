@@ -10,8 +10,11 @@ public class NeedleObject : MonoBehaviour
     public string sceneToLink;
     public GameObject needleCollider;
     private bool _injectorGrabbed;
-    private bool _activeNeedle;
+    private bool _activeNeedle = true;
     private Animator _animator;
+
+    //used for debugging vector lines
+    [SerializeField] float hitDist = 1000;
 
     private void Awake()
     {
