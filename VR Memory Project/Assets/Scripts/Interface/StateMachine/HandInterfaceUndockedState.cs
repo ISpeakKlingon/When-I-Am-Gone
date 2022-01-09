@@ -8,10 +8,28 @@ public class HandInterfaceUndockedState : HandInterfaceBaseState
 {
     public HandInterfaceUndockedState(HandInterfaceStateMachine currentContext, HandInterfaceStateFactory handInterfaceStateFactory): base (currentContext, handInterfaceStateFactory) { }
 
+    private bool _doneWaitingForInterface = false;
+
     public override void EnterState()
     {
         Debug.Log("HELLO FROM THE UNDOCKED STATE");
+
         _ctx.GripAction.action.performed += InterfaceAnimation;
+        
+        while (!_doneWaitingForInterface)
+        {
+            var anim = _ctx.InterfaceAnimator.GetFloat("Grip");
+            var grip = _ctx.HandAnimator.GetFloat("Grip");
+
+            if (anim >= grip)
+            {
+                _ctx.InterfaceAnimator.SetFloat("Grip", anim - 0.01f);
+            }
+            else
+            {
+                _doneWaitingForInterface = true;
+            }
+        }
     }
 
     public override void UpdateState()
@@ -37,7 +55,12 @@ public class HandInterfaceUndockedState : HandInterfaceBaseState
 
     private void InterfaceAnimation(InputAction.CallbackContext obj)
     {
-        _ctx.InterfaceAnimator.SetFloat("Grip", obj.ReadValue<float>());
+        //add bool here: if we are done waiting for interface anim to decrease to grip value...
+        if (_doneWaitingForInterface)
+        {
+            _ctx.InterfaceAnimator.SetFloat("Grip", obj.ReadValue<float>());
+        }
+
         /*
         if (obj.ReadValue<float>() > _ctx.IndicatorLightThreshhold)
         {

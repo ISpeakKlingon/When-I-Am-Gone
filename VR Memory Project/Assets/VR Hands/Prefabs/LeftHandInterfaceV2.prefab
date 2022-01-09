@@ -2161,6 +2161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gripAction: {fileID: -2024674455125305686, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   _interfaceAnimator: {fileID: 8429169923952871654}
+  _handAnimator: {fileID: 8429169924366902297}
   InterfaceDock: {fileID: 4508869622514179623}
 --- !u!54 &4979764480361891516
 Rigidbody:

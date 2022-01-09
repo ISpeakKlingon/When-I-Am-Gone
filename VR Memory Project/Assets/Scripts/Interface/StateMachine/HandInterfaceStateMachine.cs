@@ -9,6 +9,7 @@ public class HandInterfaceStateMachine : MonoBehaviour
     [SerializeField] InputActionReference _gripAction;
 
     [SerializeField] Animator _interfaceAnimator;
+    [SerializeField] Animator _handAnimator;
     private float _indicatorLightThreshhold = 0.99f;
     //public Renderer _socketLight;
     //public Material _indicatorOff, _indicatorRed, _indicatorGreen;
@@ -26,6 +27,7 @@ public class HandInterfaceStateMachine : MonoBehaviour
     public bool IsNeedleDocked { get { return _isNeedleDocked; } }
     public InputActionReference GripAction { get { return _gripAction; } }
     public Animator InterfaceAnimator { get { return _interfaceAnimator; } }
+    public Animator HandAnimator { get { return _handAnimator; } }
     public float IndicatorLightThreshhold { get { return _indicatorLightThreshhold; } }
     //public Renderer SocketLight { get { return _socketLight; } }
     //public Material IndicatorOff { get { return _indicatorOff; } }
