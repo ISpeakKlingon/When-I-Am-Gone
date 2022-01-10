@@ -11,6 +11,7 @@ public class HandInterfaceDockedState : HandInterfaceBaseState
     {
         Debug.Log("HELLO FROM THE DOCKED STATE");
         _ctx.InterfaceAnimator.SetFloat("Grip", 1.0f);
+        _ctx.InterfaceAnimator.SetBool("Docked", true);
     }
 
     public override void UpdateState()
@@ -20,7 +21,7 @@ public class HandInterfaceDockedState : HandInterfaceBaseState
 
     public override void ExitState()
     {
-
+        _ctx.InterfaceAnimator.SetBool("Docked", false);
     }
 
     public override void InitializeSubState() { }

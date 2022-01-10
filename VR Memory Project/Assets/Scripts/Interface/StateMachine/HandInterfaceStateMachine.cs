@@ -13,6 +13,9 @@ public class HandInterfaceStateMachine : MonoBehaviour
     private float _indicatorLightThreshhold = 0.99f;
     //public Renderer _socketLight;
     //public Material _indicatorOff, _indicatorRed, _indicatorGreen;
+    [SerializeField] Renderer _dockingSocket;
+    [SerializeField] Material[] _socketMaterials;
+    [SerializeField] Material _greenLight;
 
     //docking variables
     bool _isNeedleDocked = false;
@@ -32,7 +35,8 @@ public class HandInterfaceStateMachine : MonoBehaviour
     //public Renderer SocketLight { get { return _socketLight; } }
     //public Material IndicatorOff { get { return _indicatorOff; } }
     //public Material IndicatorRed { get { return _indicatorRed; } }
-    //public Material IndicatorGreen { get { return _indicatorGreen; } }
+    public Material[] SocketMaterials { get { return _socketMaterials; } set { _socketMaterials = value; } }
+    public Material GreenLight { get { return _greenLight; } }
 
 
     private void Awake()
@@ -41,6 +45,8 @@ public class HandInterfaceStateMachine : MonoBehaviour
         _states = new HandInterfaceStateFactory(this);
         _currentState = _states.Docked();
         _currentState.EnterState();
+
+        _socketMaterials = _dockingSocket.materials;
     }
 
     private void Update()
@@ -62,7 +68,7 @@ public class HandInterfaceStateMachine : MonoBehaviour
             var Dot = Vector3.Dot(needle.forward, dirToTarget);
 
             //.707 = 45 degrees
-            bool InFront = Dot > 0.707;
+            bool InFront = Dot > 0.95;
 
             Debug.Log("Needle entered Interface dock collider. Are we aligned? " + InFront + ". That is because the Dot value is currently " + Dot);
 
@@ -72,6 +78,8 @@ public class HandInterfaceStateMachine : MonoBehaviour
             if (InFront)
             {
                 _isNeedleDocked = true;
+                // StartCoroutine(RingsGreen());
+                //Debug.Log("Called Rings Green Coroutine.");
             }
         }
     }
@@ -83,4 +91,41 @@ public class HandInterfaceStateMachine : MonoBehaviour
             _isNeedleDocked = false;
         }
     }
+    /*
+    public IEnumerator RingsGreen()
+    {
+        Debug.Log("Received call to start Rings Green coroutine.");
+        yield return new WaitForSeconds(0.5f);
+
+        //change ring 1
+        //var mats = SocketMaterials;
+        //mats[1] = GreenLight;
+        //SocketMaterials = mats;
+        _socketMaterials[1] = _greenLight;
+        _dockingSocket.materials = _socketMaterials;
+        Debug.Log("Changed first ring to green.");
+
+        //wait
+        yield return new WaitForSeconds(0.3f);
+
+        //change ring 2
+        //mats[2] = GreenLight;
+        //SocketMaterials = mats;
+        _socketMaterials[2] = _greenLight;
+        _dockingSocket.materials = _socketMaterials;
+        Debug.Log("Changed second ring to green.");
+
+
+        //wait
+        yield return new WaitForSeconds(0.3f);
+
+        //change ring 3
+        //mats[3] = GreenLight;
+        //SocketMaterials = mats;
+        _socketMaterials[3] = _greenLight;
+        _dockingSocket.materials = _socketMaterials;
+        Debug.Log("Changed third ring to green.");
+
+    }
+    */
 }

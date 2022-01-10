@@ -14,7 +14,7 @@ public class NeedleObject : MonoBehaviour
     private Animator _animator;
 
     //used for debugging vector lines
-    [SerializeField] float hitDist = 1000;
+    //[SerializeField] float hitDist = 1000;
 
     private void Awake()
     {

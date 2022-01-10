@@ -23,7 +23,7 @@ public class HandInterfaceUndockedState : HandInterfaceBaseState
 
             if (anim >= grip)
             {
-                _ctx.InterfaceAnimator.SetFloat("Grip", anim - 0.01f);
+                _ctx.InterfaceAnimator.SetFloat("Grip", anim - 0.001f);
             }
             else
             {
