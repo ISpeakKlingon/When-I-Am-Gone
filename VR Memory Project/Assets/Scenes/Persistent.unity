@@ -1532,9 +1532,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96425a716eb3346469b9623d99fe9413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  memoryNeedle: {fileID: 717750529}
+  memoryNeedle: {fileID: 8184775492432993788}
   needleSocketInteractorOnHand: {fileID: 1505402702}
-  needleSocketTransform: {fileID: 1505402703}
+  BaseControllerTransform: {fileID: 1152801094}
   needleSocketVisual: {fileID: 1709049955}
   sceneName: 
   player: {fileID: 2002694508}
@@ -1589,11 +1589,6 @@ Transform:
   m_Father: {fileID: 1152801094}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -7.147, y: 12.629, z: 79.991}
---- !u!1 &717750529 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5980287698235819235, guid: a09fee12409b23b4a83a9d34395c4b9d, type: 3}
-  m_PrefabInstance: {fileID: 5980287698860246498}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &729341495
 GameObject:
   m_ObjectHideFlags: 0
@@ -4002,11 +3997,6 @@ Transform:
 --- !u!1 &1505402702 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5980287700057365164, guid: a09fee12409b23b4a83a9d34395c4b9d, type: 3}
-  m_PrefabInstance: {fileID: 5980287698860246498}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1505402703 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5980287700057365165, guid: a09fee12409b23b4a83a9d34395c4b9d, type: 3}
   m_PrefabInstance: {fileID: 5980287698860246498}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1550320342
@@ -7008,6 +6998,7 @@ MonoBehaviour:
   _socketMaterials: []
   _greenLight: {fileID: 0}
   _currentInjector: {fileID: 0}
+  _interfaceAudio: {fileID: 0}
   InterfaceDock: {fileID: 0}
 --- !u!1 &5663226066225258903
 GameObject:
@@ -7657,6 +7648,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 70ba06b94581ee643905f38e275a25f3, type: 3}
   - {fileID: 8300000, guid: b1051ba05773a274b88fc0950b385d2b, type: 3}
   - {fileID: 8300000, guid: cc6404ceab3a96c428694b70d3cab285, type: 3}
+  Docked: 0
 --- !u!23 &8171626045959581587
 MeshRenderer:
   m_ObjectHideFlags: 0

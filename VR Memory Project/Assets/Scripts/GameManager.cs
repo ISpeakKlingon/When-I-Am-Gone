@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject memoryNeedle;
     //public GameObject memoryNeedlePrefab;
     public GameObject needleSocketInteractorOnHand;
-    public Transform needleSocketTransform;
+    public Transform BaseControllerTransform;
     //private Vector3 memoryNeedleStartingPos; //not needed?
     //private Quaternion memoryNeedleStartingRot; //not needed?
     private XRSocketInteractor socket;
@@ -134,10 +134,10 @@ public class GameManager : MonoBehaviour
         memoryNeedleRb.angularVelocity = Vector3.zero;
 
         //make needle child of correct of NeedleSocketInteractorOnHand
-        memoryNeedle.transform.SetParent(needleSocketTransform);
+        memoryNeedle.transform.SetParent(BaseControllerTransform);
 
-        memoryNeedle.transform.localPosition = new Vector3(0, 0, 0);
-        memoryNeedle.transform.localEulerAngles = new Vector3(-90, 0, 0);
+        memoryNeedle.transform.localPosition = new Vector3(-0.07f, -0.03708f, -0.04521001f);
+        memoryNeedle.transform.localEulerAngles = new Vector3(7.6f, -20.5f, -87.497f);
     }
 
     //deactive memory needle object
