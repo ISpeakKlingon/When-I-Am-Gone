@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameEvents : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class GameEvents : MonoBehaviour
     private bool windowOpenEventOccurred = false;
     private bool isMemory2020Complete = false;
     private bool isMemory1945Complete = false;
+    private bool _primaryPressed = false;
 
     private void Awake()
     {
@@ -162,5 +164,22 @@ public class GameEvents : MonoBehaviour
     public void TriggerEvent(string passedEvent)
     {
         Invoke(passedEvent,1);
+    }
+
+    public event Action onPrimaryPressed;
+    public void PrimaryPressed(InputAction.CallbackContext context)
+    {
+        if(context.performed && !_primaryPressed)
+        {
+            _primaryPressed = true;
+            onPrimaryPressed();
+            StartCoroutine(PrimaryCooldown());
+        }
+    }
+
+    private IEnumerator PrimaryCooldown()
+    {
+        yield return new WaitForSeconds(1f);
+        _primaryPressed = false;
     }
 }

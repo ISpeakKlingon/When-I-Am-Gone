@@ -54,6 +54,8 @@ public class HandInterfaceStateMachine : MonoBehaviour
         _socketMaterials = _dockingSocket.materials;
 
         _interfaceAudio = GetComponent<InterfaceAudioController>();
+
+        _interfaceAnimator.SetFloat("Grip", 1.0f);
     }
 
     private void Update()
@@ -75,7 +77,7 @@ public class HandInterfaceStateMachine : MonoBehaviour
             var Dot = Vector3.Dot(needle.forward, dirToTarget);
 
             //.707 = 45 degrees
-            bool InFront = Dot > 0.95;
+            bool InFront = Dot > 0.85;
 
             Debug.Log("Needle entered Interface dock collider. Are we aligned? " + InFront + ". That is because the Dot value is currently " + Dot);
 

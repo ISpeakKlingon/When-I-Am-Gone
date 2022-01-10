@@ -9,11 +9,11 @@ public class NeedleObject : MonoBehaviour
 {
     public string sceneToLink;
     public GameObject needleCollider;
-    private bool _injectorGrabbed;
-    private bool _activeNeedle = true;
+    [SerializeField] private bool _injectorGrabbed;
+    private bool _activeNeedle = false;
     private Animator _animator;
     //private XRBaseInteractable _xRBaseInteractable;
-    public XRInteractionManager XRInteractionManager;
+    //public XRInteractionManager XRInteractionManager;
     private XRGrabInteractable _xRGrabInteractable;
 
     //used for debugging vector lines
@@ -24,11 +24,35 @@ public class NeedleObject : MonoBehaviour
         _animator = GetComponent<Animator>();
         //_xRBaseInteractable = GetComponent<XRBaseInteractable>();
         _xRGrabInteractable = GetComponent<XRGrabInteractable>();
+        
+        if(sceneToLink == "Game")
+        {
+            _activeNeedle = true;
+            _animator.SetTrigger("InjectorToggle");
+            _animator.SetTrigger("InjectorDocking");
+        }
+
+
     }
 
+    private void Start()
+    {
+        GameEvents.current.onPrimaryPressed += OnPrimaryPressed;
+
+    }
+    /*
     public void PrimaryPressed(InputAction.CallbackContext context)
     {
         if (context.performed && _injectorGrabbed)
+        {
+            ToggleInjectorNeedle();
+        }
+    }
+    */
+    //alternative primary press method
+    public void OnPrimaryPressed()
+    {
+        if (_injectorGrabbed)
         {
             ToggleInjectorNeedle();
         }
@@ -109,6 +133,12 @@ public class NeedleObject : MonoBehaviour
         //Debug.Log("Asked XRInteractionManager to CancelInteractableSelection.");
         _xRGrabInteractable.interactionLayerMask = 0;
         _injectorGrabbed = false;
+
+    }
+
+    private void OnDestroy()
+    {
+        GameEvents.current.onPrimaryPressed -= OnPrimaryPressed;
 
     }
 }
