@@ -87,8 +87,17 @@ public class HandInterfaceStateMachine : MonoBehaviour
                 _currentInjector = other.gameObject.GetComponentInParent<NeedleObject>();
                 Debug.Log("Defined the current Injector NeedleObject script.");
 
-                _currentInjector.Drop();
-                Debug.Log("Asked NeedleObject to call Drop method.");
+
+                //only drop if current injector is not Menu Injector
+                //var name = other.gameObject.name;
+                //Debug.Log("NAME OF CURRENT INJECTOR DOCKED IS " + name);
+
+                //only drop is current injector's Scene To Link string is not "Game"
+                if(_currentInjector.sceneToLink != "Game")
+                {
+                    _currentInjector.Drop();
+                    Debug.Log("Asked NeedleObject to call Drop method.");
+                }
 
                 //set position and rotation of Injector to be angled properly.
 
