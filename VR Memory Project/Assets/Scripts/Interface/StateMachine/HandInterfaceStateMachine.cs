@@ -17,6 +17,10 @@ public class HandInterfaceStateMachine : MonoBehaviour
     [SerializeField] Material[] _socketMaterials;
     [SerializeField] Material _greenLight;
 
+    [SerializeField] NeedleObject _currentInjector;
+
+    [SerializeField] InterfaceAudioController _interfaceAudio;
+
     //docking variables
     bool _isNeedleDocked = false;
     public Transform InterfaceDock;
@@ -37,6 +41,7 @@ public class HandInterfaceStateMachine : MonoBehaviour
     //public Material IndicatorRed { get { return _indicatorRed; } }
     public Material[] SocketMaterials { get { return _socketMaterials; } set { _socketMaterials = value; } }
     public Material GreenLight { get { return _greenLight; } }
+    public InterfaceAudioController InterfaceAudio { get { return _interfaceAudio; }  }
 
 
     private void Awake()
@@ -47,6 +52,8 @@ public class HandInterfaceStateMachine : MonoBehaviour
         _currentState.EnterState();
 
         _socketMaterials = _dockingSocket.materials;
+
+        _interfaceAudio = GetComponent<InterfaceAudioController>();
     }
 
     private void Update()
@@ -77,9 +84,21 @@ public class HandInterfaceStateMachine : MonoBehaviour
             
             if (InFront)
             {
+                _currentInjector = other.gameObject.GetComponentInParent<NeedleObject>();
+                Debug.Log("Defined the current Injector NeedleObject script.");
+
+                _currentInjector.Drop();
+                Debug.Log("Asked NeedleObject to call Drop method.");
+
+                //set position and rotation of Injector to be angled properly.
+
+
+                _currentInjector.TriggerDockingAnim();
+                Debug.Log("Triggered Docking animation.");
+
+                _interfaceAudio.Docked = true;
+
                 _isNeedleDocked = true;
-                // StartCoroutine(RingsGreen());
-                //Debug.Log("Called Rings Green Coroutine.");
             }
         }
     }
@@ -88,9 +107,40 @@ public class HandInterfaceStateMachine : MonoBehaviour
     {
         if (other.CompareTag("MemoryNeedle"))
         {
-            _isNeedleDocked = false;
+            Debug.Log("needle exited collider!");
+
+            //define ref to NeedleObject
+            _currentInjector = other.gameObject.GetComponentInParent<NeedleObject>();
+
+            //call method on NeedleObject to PassName and StartSceneChange
+            //StartCoroutine(UndockingProcedure(_currentInjector));
+
+            _currentInjector.NameSceneToLoadInGameManager();
+            _currentInjector.TriggerUndockingAnim();
+            _currentInjector.StartSceneChange();
+
+            _interfaceAudio.Docked = false;
+
+            _isNeedleDocked = false; //moving this to UndockingProcedure
         }
     }
+    /*
+    private IEnumerator UndockingProcedure(NeedleObject _currentInjector)
+    {
+        StopAllCoroutines();
+
+        _currentInjector.NameSceneToLoadInGameManager();
+
+        //trigger animations
+        _currentInjector.TriggerUndockingAnim();
+
+        yield return new WaitForSeconds(0.5f);
+
+        _currentInjector.StartSceneChange();
+
+        _isNeedleDocked = false;
+    }
+    /*
     /*
     public IEnumerator RingsGreen()
     {

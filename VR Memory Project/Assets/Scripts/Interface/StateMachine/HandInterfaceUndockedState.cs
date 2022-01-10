@@ -30,6 +30,8 @@ public class HandInterfaceUndockedState : HandInterfaceBaseState
                 _doneWaitingForInterface = true;
             }
         }
+
+        _ctx.InterfaceAudio.Docked = false;
     }
 
     public override void UpdateState()

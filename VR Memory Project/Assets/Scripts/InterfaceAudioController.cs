@@ -8,6 +8,7 @@ public class InterfaceAudioController : MonoBehaviour
     [SerializeField] InputActionReference gripAction;
     public AudioClip[] servoSounds;
     private AudioSource audioSource;
+    public bool Docked;
 
     private void OnEnable()
     {
@@ -21,13 +22,16 @@ public class InterfaceAudioController : MonoBehaviour
 
     private void GripAnimation(InputAction.CallbackContext obj)
     {
-        if (obj.ReadValue<float>() > 0.1f && obj.ReadValue<float>() < 0.9f)
+        if (!Docked)
         {
-            //play sound
-            if (!audioSource.isPlaying)
+            if (obj.ReadValue<float>() > 0.1f && obj.ReadValue<float>() < 0.9f)
             {
-                //play random servo sound
-                PlaySFX(servoSounds, Random.Range(0, servoSounds.Length));
+                //play sound
+                if (!audioSource.isPlaying)
+                {
+                    //play random servo sound
+                    PlaySFX(servoSounds, Random.Range(0, servoSounds.Length));
+                }
             }
         }
     }
