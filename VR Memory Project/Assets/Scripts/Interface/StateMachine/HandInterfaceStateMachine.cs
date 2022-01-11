@@ -99,13 +99,18 @@ public class HandInterfaceStateMachine : MonoBehaviour
                 {
                     _currentInjector.Drop();
                     Debug.Log("Asked NeedleObject to call Drop method.");
+
+                    //set position and rotation of Injector to be angled properly.
+
+
+                    _currentInjector.TriggerDockingAnim();
+                    Debug.Log("Triggered Docking animation.");
+
+                    _currentInjector.NameSceneToLoadInGameManager();
+                    _currentInjector.StartSceneChange();
                 }
 
-                //set position and rotation of Injector to be angled properly.
-
-
-                _currentInjector.TriggerDockingAnim();
-                Debug.Log("Triggered Docking animation.");
+                
 
                 _interfaceAudio.Docked = true;
 
@@ -123,16 +128,20 @@ public class HandInterfaceStateMachine : MonoBehaviour
             //define ref to NeedleObject
             _currentInjector = other.gameObject.GetComponentInParent<NeedleObject>();
 
-            //call method on NeedleObject to PassName and StartSceneChange
-            //StartCoroutine(UndockingProcedure(_currentInjector));
+            //only if this is bringing us back to the station
+            if(_currentInjector.sceneToLink == "Game")
+            {
+                //call method on NeedleObject to PassName and StartSceneChange
+                //StartCoroutine(UndockingProcedure(_currentInjector));
 
-            _currentInjector.NameSceneToLoadInGameManager();
-            _currentInjector.TriggerUndockingAnim();
-            _currentInjector.StartSceneChange();
+                _currentInjector.NameSceneToLoadInGameManager();
+                _currentInjector.TriggerUndockingAnim();
+                _currentInjector.StartSceneChange();
 
-            _interfaceAudio.Docked = false;
+                _interfaceAudio.Docked = false;
 
-            _isNeedleDocked = false; //moving this to UndockingProcedure
+                _isNeedleDocked = false; //moving this to UndockingProcedure
+            }
         }
     }
     /*

@@ -24,14 +24,6 @@ public class NeedleObject : MonoBehaviour
         _animator = GetComponent<Animator>();
         //_xRBaseInteractable = GetComponent<XRBaseInteractable>();
         _xRGrabInteractable = GetComponent<XRGrabInteractable>();
-        
-        if(sceneToLink == "Game")
-        {
-            _activeNeedle = true;
-            _animator.SetTrigger("InjectorToggle");
-            _animator.SetTrigger("InjectorDocking");
-        }
-
 
     }
 
@@ -40,6 +32,21 @@ public class NeedleObject : MonoBehaviour
         GameEvents.current.onPrimaryPressed += OnPrimaryPressed;
 
     }
+
+    private void OnEnable()
+    {
+
+        if (sceneToLink == "Game")
+        {
+            _xRGrabInteractable.interactionLayerMask = 15;
+
+            _activeNeedle = true;
+            _animator.SetTrigger("InjectorToggle");
+            _animator.SetTrigger("InjectorDocking");
+            //needleCollider.SetActive(true);
+        }
+    }
+
     /*
     public void PrimaryPressed(InputAction.CallbackContext context)
     {
@@ -133,7 +140,6 @@ public class NeedleObject : MonoBehaviour
         //Debug.Log("Asked XRInteractionManager to CancelInteractableSelection.");
         _xRGrabInteractable.interactionLayerMask = 0;
         _injectorGrabbed = false;
-
     }
 
     private void OnDestroy()
