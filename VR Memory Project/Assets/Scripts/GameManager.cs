@@ -253,4 +253,5 @@ public class GameManager : MonoBehaviour
         //send robot info to player class
 
     }
+
 }

@@ -19,6 +19,10 @@ public class NeedleObject : MonoBehaviour
     //used for debugging vector lines
     //[SerializeField] float hitDist = 1000;
 
+    public bool Docked = false;
+
+    [SerializeField] private Renderer _injectorMesh, _needleMesh, _buttonMesh, _lockmesh;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -30,7 +34,10 @@ public class NeedleObject : MonoBehaviour
     private void Start()
     {
         GameEvents.current.onPrimaryPressed += OnPrimaryPressed;
-
+        if(sceneToLink == "Game")
+        {
+            _animator.SetTrigger("InjectorToggle");
+        }
     }
 
     private void OnEnable()
@@ -38,13 +45,19 @@ public class NeedleObject : MonoBehaviour
 
         if (sceneToLink == "Game")
         {
-            _xRGrabInteractable.interactionLayerMask = 15;
-
+            StartCoroutine(ChangeLayerMaskWithDelay());
             _activeNeedle = true;
-            _animator.SetTrigger("InjectorToggle");
+            _animator.SetTrigger("InjectorToggle"); //moving this to happen after deactivation
             _animator.SetTrigger("InjectorDocking");
             //needleCollider.SetActive(true);
         }
+    }
+
+    private IEnumerator ChangeLayerMaskWithDelay()
+    {
+        yield return new WaitForSeconds(5f);
+        _xRGrabInteractable.interactionLayerMask = 15;
+
     }
 
     /*
@@ -83,7 +96,7 @@ public class NeedleObject : MonoBehaviour
 
     public void StartSceneChange()
     {
-        StopAllCoroutines();
+        //StopAllCoroutines();
         StartCoroutine(SceneChange());
     }
 
@@ -146,5 +159,23 @@ public class NeedleObject : MonoBehaviour
     {
         GameEvents.current.onPrimaryPressed -= OnPrimaryPressed;
 
+    }
+
+    public void TurnOffMeshes()
+    {
+        _injectorMesh.enabled = false;
+        _needleMesh.enabled = false;
+        _buttonMesh.enabled = false;
+        _lockmesh.enabled = false;
+    }
+
+    private void OnDisable()
+    {
+        if(sceneToLink == "Game")
+        {
+            _xRGrabInteractable.interactionLayerMask = 0;
+
+            _animator.SetTrigger("InjectorToggle");
+        }
     }
 }

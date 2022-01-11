@@ -101,10 +101,14 @@ public class HandInterfaceStateMachine : MonoBehaviour
                     Debug.Log("Asked NeedleObject to call Drop method.");
 
                     //set position and rotation of Injector to be angled properly.
+                    //or...
+                    //turn mesh off
+                    _currentInjector.TurnOffMeshes();
+                    //and enable the menu Injector instead
+                    GameManager.Instance.ActivateMemoryNeedle();
 
-
-                    _currentInjector.TriggerDockingAnim();
-                    Debug.Log("Triggered Docking animation.");
+                    //_currentInjector.TriggerDockingAnim();
+                    //Debug.Log("Triggered Docking animation.");
 
                     _currentInjector.NameSceneToLoadInGameManager();
                     _currentInjector.StartSceneChange();
