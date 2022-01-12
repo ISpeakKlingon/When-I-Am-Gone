@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 215900486407696728}
   - component: {fileID: 215900486407696729}
   - component: {fileID: 215900486407696733}
+  - component: {fileID: 70251525}
   m_Layer: 7
   m_Name: MemoryInjector_Parent
   m_TagString: MemoryNeedle
@@ -321,9 +322,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca27a680f2fcec489f05bc5bacd073e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLink: Game
+  sceneToLink: Menu
   needleCollider: {fileID: 215900486328294779}
-  XRInteractionManager: {fileID: 0}
+  _injectorGrabbed: 0
+  Docked: 0
+  _injectorMesh: {fileID: 2231311021950082532}
+  _needleMesh: {fileID: 4225338123936643913}
+  _buttonMesh: {fileID: 8979801305722411264}
+  _lockmesh: {fileID: 1500652918996466668}
 --- !u!95 &215900486407696733
 Animator:
   serializedVersion: 3
@@ -343,6 +349,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &70251525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215900486407696735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75835b62cb8fa4a42bdc3d307b747af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InjectorHandNode: 5
+  InjectorController: {fileID: 0}
 --- !u!1 &215900486570560056
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,8 +616,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7657364851464338176, guid: 9ced71f66b3c54442816f1874da31904, type: 3}
   m_PrefabInstance: {fileID: 7275694471394073995}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &2231311021950082532 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8795319101901242479, guid: 9ced71f66b3c54442816f1874da31904, type: 3}
+  m_PrefabInstance: {fileID: 7275694471394073995}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3091798658169389094 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5625053029406399917, guid: 9ced71f66b3c54442816f1874da31904, type: 3}
+  m_PrefabInstance: {fileID: 7275694471394073995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4225338123936643913 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6799062360991409858, guid: 9ced71f66b3c54442816f1874da31904, type: 3}
+  m_PrefabInstance: {fileID: 7275694471394073995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8979801305722411264 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1758334765277889675, guid: 9ced71f66b3c54442816f1874da31904, type: 3}
+  m_PrefabInstance: {fileID: 7275694471394073995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1500652918996466668 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8082578642818328167, guid: 9ced71f66b3c54442816f1874da31904, type: 3}
   m_PrefabInstance: {fileID: 7275694471394073995}
   m_PrefabAsset: {fileID: 0}

@@ -825,30 +825,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 215900486407696729, guid: d4440ea48e64d50428604126aa81765d, type: 3}
-      propertyPath: _lockmesh
-      value: 
-      objectReference: {fileID: 70251520}
-    - target: {fileID: 215900486407696729, guid: d4440ea48e64d50428604126aa81765d, type: 3}
-      propertyPath: _buttonMesh
-      value: 
-      objectReference: {fileID: 70251521}
-    - target: {fileID: 215900486407696729, guid: d4440ea48e64d50428604126aa81765d, type: 3}
-      propertyPath: _needleMesh
-      value: 
-      objectReference: {fileID: 70251522}
-    - target: {fileID: 215900486407696729, guid: d4440ea48e64d50428604126aa81765d, type: 3}
-      propertyPath: sceneToLink
-      value: Menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 215900486407696729, guid: d4440ea48e64d50428604126aa81765d, type: 3}
-      propertyPath: _injectorMesh
-      value: 
-      objectReference: {fileID: 70251523}
-    - target: {fileID: 215900486407696729, guid: d4440ea48e64d50428604126aa81765d, type: 3}
-      propertyPath: _injectorGrabbed
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 215900486407696734, guid: d4440ea48e64d50428604126aa81765d, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -899,26 +875,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4440ea48e64d50428604126aa81765d, type: 3}
---- !u!23 &70251520 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1500652918996466668, guid: d4440ea48e64d50428604126aa81765d, type: 3}
-  m_PrefabInstance: {fileID: 70251519}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &70251521 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8979801305722411264, guid: d4440ea48e64d50428604126aa81765d, type: 3}
-  m_PrefabInstance: {fileID: 70251519}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &70251522 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 4225338123936643913, guid: d4440ea48e64d50428604126aa81765d, type: 3}
-  m_PrefabInstance: {fileID: 70251519}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &70251523 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2231311021950082532, guid: d4440ea48e64d50428604126aa81765d, type: 3}
-  m_PrefabInstance: {fileID: 70251519}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &101868015
 PrefabInstance:
   m_ObjectHideFlags: 0
