@@ -8398,6 +8398,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1152801094}
     m_Modifications:
     - target: {fileID: 215900486407696729, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: sceneToLink
+      value: Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 215900486407696729, guid: d4440ea48e64d50428604126aa81765d, type: 3}
       propertyPath: XRInteractionManager
       value: 
       objectReference: {fileID: 335532919}
