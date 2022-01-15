@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Persistent.unity
     guid: 1938d045055b45f449a9db2a160d4c66
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 5a06c7b7e9ed45f44834ace5daa9c237
-  - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 08fc6abf485080941992b73dea7009d3
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 5a06c7b7e9ed45f44834ace5daa9c237
   - enabled: 1
     path: Assets/Scenes/Memory2020.unity
     guid: 998ce629ac459dd429b7ebdd8e31c047
