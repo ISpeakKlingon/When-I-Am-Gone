@@ -9,7 +9,7 @@ public class PromptCanvasController : MonoBehaviour
     public Color FadedColor;
     public Color NonFadedColor;
 
-    private void Start()
+    protected virtual void Start()
     {
         DisplayedText = GetComponentInChildren<Text>();
         DisplayedText.color = FadedColor;
@@ -21,7 +21,7 @@ public class PromptCanvasController : MonoBehaviour
         StartCoroutine(StartFadeOutText(waitTime, fadeDuration));
     }
 
-    private IEnumerator StartFadeOutText(float waitTime, float fadeDuration)
+    protected IEnumerator StartFadeOutText(float waitTime, float fadeDuration)
     {
         yield return new WaitForSeconds(waitTime);
         float time = 0;
@@ -39,7 +39,7 @@ public class PromptCanvasController : MonoBehaviour
         StartCoroutine(StartFadeInText(waitTime, fadeDuration));
     }
 
-    private IEnumerator StartFadeInText(float waitTime, float fadeDuration)
+    protected virtual IEnumerator StartFadeInText(float waitTime, float fadeDuration)
     {
         yield return new WaitForSeconds(waitTime);
         float time = 0;
