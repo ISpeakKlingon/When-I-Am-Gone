@@ -9,9 +9,12 @@ public class PromptCanvasController : MonoBehaviour
     public Color FadedColor;
     public Color NonFadedColor;
 
-    protected virtual void Start()
+    private void OnEnable()
     {
         DisplayedText = GetComponentInChildren<Text>();
+    }
+    protected virtual void Start()
+    {
         DisplayedText.color = FadedColor;
     }
 

@@ -193,8 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: To exit memory, remove inserted Memory Injector by grabbing with opposite
-    hand.
+  m_Text: 
 --- !u!222 &244440831
 CanvasRenderer:
   m_ObjectHideFlags: 0
