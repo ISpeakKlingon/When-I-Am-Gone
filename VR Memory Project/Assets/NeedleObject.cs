@@ -23,6 +23,8 @@ public class NeedleObject : MonoBehaviour
 
     [SerializeField] private Renderer _injectorMesh, _needleMesh, _buttonMesh, _lockmesh;
 
+    public PromptCanvasController LeftHandDisplayPrompt;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -50,6 +52,11 @@ public class NeedleObject : MonoBehaviour
             _animator.SetTrigger("InjectorToggle"); //moving this to happen after deactivation
             _animator.SetTrigger("InjectorDocking");
             //needleCollider.SetActive(true);
+
+            //display prompt text for how to exit memory
+            var waitTime = 5f;
+            var fadeDuration = 7f;
+            LeftHandDisplayPrompt.FadeInText(waitTime, fadeDuration);
         }
     }
 
@@ -129,6 +136,14 @@ public class NeedleObject : MonoBehaviour
     public void InjectorGrabbed()
     {
         _injectorGrabbed = true;
+
+        //turn off left hand prompt text if this is the menu injector
+        if(sceneToLink == "Game")
+        {
+            var waitTime = 0f;
+            var fadeDuration = 0.5f;
+            LeftHandDisplayPrompt.FadeOutText(waitTime, fadeDuration);
+        }
     }
 
     public void InjectorReleased()
