@@ -50,4 +50,9 @@ public class PromptCanvasController : MonoBehaviour
             yield return null;
         }
     }
+
+    public void SetText(string txt)
+    {
+        DisplayedText.text = txt;
+    }
 }

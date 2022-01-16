@@ -24,6 +24,7 @@ public class NeedleObject : MonoBehaviour
     [SerializeField] private Renderer _injectorMesh, _needleMesh, _buttonMesh, _lockmesh;
 
     public PromptCanvasController LeftHandDisplayPrompt;
+    [SerializeField] private PromptCanvasController _displayPrompt;
 
     private void Awake()
     {
@@ -40,6 +41,8 @@ public class NeedleObject : MonoBehaviour
         {
             _animator.SetTrigger("InjectorToggle");
         }
+
+        _displayPrompt = GetComponentInChildren<PromptCanvasController>();
     }
 
     private void OnEnable()
@@ -58,6 +61,7 @@ public class NeedleObject : MonoBehaviour
             var fadeDuration = 7f;
             LeftHandDisplayPrompt.FadeInText(waitTime, fadeDuration);
         }
+
     }
 
     private IEnumerator ChangeLayerMaskWithDelay()
@@ -124,13 +128,38 @@ public class NeedleObject : MonoBehaviour
             //needleCollider.SetActive(false);
             _animator.SetTrigger("InjectorToggle");
             _activeNeedle = false;
+
+            if(sceneToLink != "Game" && _injectorGrabbed)
+            {
+                StartCoroutine(ChangeInjectorPrompt("To activate Memory Injector, press 'A'."));
+            }
         }
         else if (!_activeNeedle)
         {
             //needleCollider.SetActive(true);
             _animator.SetTrigger("InjectorToggle");
             _activeNeedle = true;
+
+            if(sceneToLink != "Game" && _injectorGrabbed)
+            {
+                StartCoroutine(ChangeInjectorPrompt("Insert Memory Injector into Hand Interface."));
+            }
         }
+    }
+
+    private IEnumerator ChangeInjectorPrompt(string txt)
+    {
+        var waitTime = 0f;
+        var fadeDuration = 0.5f;
+        _displayPrompt.FadeOutText(waitTime, fadeDuration);
+
+        //wait a moment
+        yield return new WaitForSeconds(1);
+
+        // send text to PromptCanvasController to display
+        _displayPrompt.SetText(txt);
+        _displayPrompt.FadeInText(waitTime, fadeDuration);
+
     }
 
     public void InjectorGrabbed()
@@ -144,11 +173,38 @@ public class NeedleObject : MonoBehaviour
             var fadeDuration = 0.5f;
             LeftHandDisplayPrompt.FadeOutText(waitTime, fadeDuration);
         }
+        
+        if (!_activeNeedle && sceneToLink != "Game")
+        {
+            var waitTime = 0f;
+            var fadeDuration = 0.5f;
+            // send text to PromptCanvasController to display
+            _displayPrompt.SetText("To activate Memory Injector, press 'A'.");
+            _displayPrompt.FadeInText(waitTime, fadeDuration);
+        }
+        else if(sceneToLink != "Game")
+        {
+            var waitTime = 0f;
+            var fadeDuration = 0.5f;
+            // send text to PromptCanvasController to display
+            _displayPrompt.SetText("Insert Memory Injector into Hand Interface.");
+            _displayPrompt.FadeInText(waitTime, fadeDuration);
+
+        }
     }
 
     public void InjectorReleased()
     {
         _injectorGrabbed = false;
+
+        if (sceneToLink != "Game")
+        {
+            var waitTime = 0f;
+            var fadeDuration = 0.5f;
+            // send text to PromptCanvasController to display
+            _displayPrompt.FadeOutText(waitTime, fadeDuration);
+        }
+
     }
 
     public void TriggerDockingAnim()
