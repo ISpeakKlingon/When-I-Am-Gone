@@ -23,7 +23,7 @@ public class NeedleObject : MonoBehaviour
 
     [SerializeField] private Renderer _injectorMesh, _needleMesh, _buttonMesh, _lockmesh;
 
-    public PromptCanvasController LeftHandDisplayPrompt;
+    [SerializeField] private PromptCanvasController LeftHandDisplayPrompt;
     [SerializeField] private PromptCanvasController _displayPrompt;
 
     private void Awake()
@@ -36,17 +36,38 @@ public class NeedleObject : MonoBehaviour
 
     private void Start()
     {
+        LeftHandDisplayPrompt = GameManager.Instance.leftHandBaseController.GetComponentInChildren<PromptCanvasController>();
+
+        if (sceneToLink == "Game")
+        {
+            StartCoroutine(ChangeLayerMaskWithDelay());
+            _activeNeedle = true;
+            _animator.SetTrigger("InjectorToggle"); //moving this to happen after deactivation
+            _animator.SetTrigger("InjectorDocking");
+            //needleCollider.SetActive(true);
+
+            //display prompt text for how to exit memory
+            var waitTime = 5f;
+            var fadeDuration = 7f;
+            LeftHandDisplayPrompt.FadeInText(waitTime, fadeDuration);
+        }
+
         GameEvents.current.onPrimaryPressed += OnPrimaryPressed;
         if(sceneToLink == "Game")
         {
             _animator.SetTrigger("InjectorToggle");
         }
 
-        _displayPrompt = GetComponentInChildren<PromptCanvasController>();
-    }
+        else
+        {
+            _displayPrompt = GetComponentInChildren<PromptCanvasController>();
+        }
 
+    }
+    /*
     private void OnEnable()
     {
+        LeftHandDisplayPrompt = GameManager.Instance.leftHandBaseController.GetComponentInChildren<PromptCanvasController>();
 
         if (sceneToLink == "Game")
         {
@@ -63,7 +84,7 @@ public class NeedleObject : MonoBehaviour
         }
 
     }
-
+    */
     private IEnumerator ChangeLayerMaskWithDelay()
     {
         yield return new WaitForSeconds(5f);

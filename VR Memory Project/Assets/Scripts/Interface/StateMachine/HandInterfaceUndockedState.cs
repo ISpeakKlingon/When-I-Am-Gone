@@ -63,6 +63,9 @@ public class HandInterfaceUndockedState : HandInterfaceBaseState
             _ctx.InterfaceAnimator.SetFloat("Grip", obj.ReadValue<float>());
         }
 
+        //interface prompt animation
+
+
         /*
         if (obj.ReadValue<float>() > _ctx.IndicatorLightThreshhold)
         {
