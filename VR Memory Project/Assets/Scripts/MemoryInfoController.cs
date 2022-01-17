@@ -17,6 +17,9 @@ public class MemoryInfoController : MonoBehaviour
     [SerializeField] private DateTime _utcDate = DateTime.UtcNow;
     [SerializeField] private String[] _cultureNames = { "en-US"};
 
+
+    //is this the menu scene?
+    [SerializeField] private bool _error;
     private void OnEnable()
     {
         _displayedText = GetComponentInChildren<Text>();
@@ -29,14 +32,16 @@ public class MemoryInfoController : MonoBehaviour
         //StartCoroutine(DisplayMemoryInfo());
         if(MemoryDate == "[Today's Date]")
         {
+            _error = true;
             SetIRLDate();
+            StartCoroutine(FadeInMemoryInfo(1f));
         }
         else
         {
             SetText(MemoryDate);
+            StartCoroutine(FadeInMemoryInfo(8f));
         }
 
-        StartCoroutine(FadeInMemoryInfo(3f));
     }
 
     private void SetIRLDate()
@@ -45,7 +50,8 @@ public class MemoryInfoController : MonoBehaviour
         {
             var culture = new CultureInfo(_cultureNames);
 
-            string date = culture.NativeName + " , " + _localDate.ToString(culture) + " , " + _localDate.Kind;
+            //string date = culture.NativeName + " , " + _localDate.ToString(culture) + " , " + _localDate.Kind; //this version contains the english (US) info
+            string date = _localDate.ToString(culture) + " , " + _localDate.Kind;
 
             SetText(date);
         }
@@ -53,14 +59,14 @@ public class MemoryInfoController : MonoBehaviour
 
     private IEnumerator DisplayMemoryInfo()
     {
-        Debug.Log("DisplayMemoryInfo coroutine called. Preparing to wait 2 seconds.");
+        //Debug.Log("DisplayMemoryInfo coroutine called. Preparing to wait 2 seconds.");
         yield return new WaitForSeconds(2);
-        Debug.Log("Finished waiting. Now setting vars and calling FadeInMemoryInfo.");
+        //Debug.Log("Finished waiting. Now setting vars and calling FadeInMemoryInfo.");
         var fadeDuration = 1f;
         StartCoroutine(FadeInMemoryInfo(fadeDuration));
-        Debug.Log("Coroutine DisplaymemoryInfo preparing to wait a moment.");
+        //Debug.Log("Coroutine DisplaymemoryInfo preparing to wait a moment.");
         yield return new WaitForSeconds(6);
-        Debug.Log("Finished waiting. Now setting vars and calling FadeOutMemoryInfo.");
+        //Debug.Log("Finished waiting. Now setting vars and calling FadeOutMemoryInfo.");
         fadeDuration = 5f;
         //StartCoroutine(FadeOutMemoryInfo(fadeDuration));
     }
@@ -73,7 +79,7 @@ public class MemoryInfoController : MonoBehaviour
 
     private IEnumerator FadeOutMemoryInfo(float fadeDuration)
     {
-        Debug.Log("FadeOutMemoryInfo successfully called.");
+        //Debug.Log("FadeOutMemoryInfo successfully called.");
 
         float time = 0;
         while(time < fadeDuration)
@@ -82,8 +88,13 @@ public class MemoryInfoController : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
+
+        if (_error)
+        {
+            StartCoroutine(FadeInMemoryInfo(1f));
+        }
        
-        Debug.Log("Done fading out memory info.");
+        //Debug.Log("Done fading out memory info.");
     }
 
     public void StartFadeInMemoryInfo(float fadeDuration)
@@ -94,7 +105,7 @@ public class MemoryInfoController : MonoBehaviour
 
     private IEnumerator FadeInMemoryInfo(float fadeDuration)
     {
-        Debug.Log("FadeInMemoryInfo successfully called.");
+        //Debug.Log("FadeInMemoryInfo successfully called.");
         float time = 0;
         while(time < fadeDuration)
         {
@@ -102,11 +113,28 @@ public class MemoryInfoController : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-        Debug.Log("Done fading in memory info.");
+        //Debug.Log("Done fading in memory info.");
+
+        if (!_error)
+        {
+            StartCoroutine(FadeOutMemoryInfo(10f));
+        }
+        else
+        {
+            yield return new WaitForSeconds(1f);
+            StartCoroutine(FadeOutMemoryInfo(1f));
+        }
     }
 
     public void SetText(string txt)
     {
-        _displayedText.text = txt;
+        if(_error)
+        {
+            _displayedText.text = "CRITICAL ERROR.\nMEMORY FAILURE AT: " + txt + "\nPLEASE REMOVE INJECTOR TO EXIT.";
+        }
+        else
+        {
+            _displayedText.text = "DEBUG MODE SUCCESSFUL.\nMEMORY LOCATION: " + txt;
+        }
     }
 }
