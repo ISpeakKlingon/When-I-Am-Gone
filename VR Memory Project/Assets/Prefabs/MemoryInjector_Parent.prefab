@@ -170,7 +170,7 @@ MonoBehaviour:
   - {fileID: 215900486328294773}
   m_InteractionLayerMask:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 16512
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
     m_PersistentCalls:
@@ -330,6 +330,9 @@ MonoBehaviour:
   _needleMesh: {fileID: 4225338123936643913}
   _buttonMesh: {fileID: 8979801305722411264}
   _lockmesh: {fileID: 1500652918996466668}
+  _leftHandDisplayPrompt: {fileID: 0}
+  _displayPrompt: {fileID: 0}
+  _promptProximity: 0
 --- !u!95 &215900486407696733
 Animator:
   serializedVersion: 3
@@ -363,6 +366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InjectorHandNode: 5
   InjectorController: {fileID: 0}
+  InterfaceController: {fileID: 0}
 --- !u!1 &215900486570560056
 GameObject:
   m_ObjectHideFlags: 0
