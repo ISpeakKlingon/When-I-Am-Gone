@@ -25,6 +25,7 @@ public class NeedleObject : MonoBehaviour
 
     [SerializeField] private PromptCanvasController _leftHandDisplayPrompt;
     [SerializeField] private PromptCanvasController _displayPrompt;
+    [SerializeField] private bool _promptProximity;
 
     private void Awake()
     {
@@ -157,9 +158,12 @@ public class NeedleObject : MonoBehaviour
             {
                 StartCoroutine(ChangeInjectorPrompt("To activate Memory Injector, press 'A'."));
 
-                var waitTime = 0f;
-                var fadeDuration = 0.5f;
-                _leftHandDisplayPrompt.FadeOutText(waitTime, fadeDuration);
+                if (!_promptProximity)
+                {
+                    var waitTime = 0f;
+                    var fadeDuration = 0.5f;
+                    _leftHandDisplayPrompt.FadeOutText(waitTime, fadeDuration);
+                }
             }
         }
         else if (!_activeNeedle)
@@ -173,25 +177,37 @@ public class NeedleObject : MonoBehaviour
                 StartCoroutine(ChangeInjectorPrompt("Insert Memory Injector into Hand Interface."));
 
                 _leftHandDisplayPrompt.SetText("Squeeze fist to activate Hand Interface.");
-                var waitTime = 0f;
-                var fadeDuration = 0.5f;
-                _leftHandDisplayPrompt.FadeInText(waitTime, fadeDuration);
+                if (!_promptProximity)
+                {
+                    var waitTime = 0f;
+                    var fadeDuration = 0.5f;
+                    _leftHandDisplayPrompt.FadeInText(waitTime, fadeDuration);
+                }
             }
         }
     }
 
     private IEnumerator ChangeInjectorPrompt(string txt)
     {
-        var waitTime = 0f;
-        var fadeDuration = 0.5f;
-        _displayPrompt.FadeOutText(waitTime, fadeDuration);
+        if (!_promptProximity)
+        {
+            var waitTime = 0f;
+            var fadeDuration = 0.5f;
+            _displayPrompt.FadeOutText(waitTime, fadeDuration);
+        }
 
         //wait a moment
         yield return new WaitForSeconds(1);
 
         // send text to PromptCanvasController to display
         _displayPrompt.SetText(txt);
-        _displayPrompt.FadeInText(waitTime, fadeDuration);
+
+        if (!_promptProximity)
+        {
+            var waitTime = 0f;
+            var fadeDuration = 0.5f;
+            _displayPrompt.FadeInText(waitTime, fadeDuration);
+        }
 
     }
 
@@ -213,7 +229,10 @@ public class NeedleObject : MonoBehaviour
             var fadeDuration = 0.5f;
             // send text to PromptCanvasController to display
             _displayPrompt.SetText("To activate Memory Injector, press 'A'.");
-            _displayPrompt.FadeInText(waitTime, fadeDuration);
+            if (!_promptProximity)
+            {
+                _displayPrompt.FadeInText(waitTime, fadeDuration);
+            }
         }
         else if(sceneToLink != "Game")
         {
@@ -221,8 +240,11 @@ public class NeedleObject : MonoBehaviour
             var fadeDuration = 0.5f;
             // send text to PromptCanvasController to display
             _displayPrompt.SetText("Insert Memory Injector into Hand Interface.");
-            _displayPrompt.FadeInText(waitTime, fadeDuration);
-            _leftHandDisplayPrompt.FadeInText(waitTime, fadeDuration);
+            if (!_promptProximity)
+            {
+                _displayPrompt.FadeInText(waitTime, fadeDuration);
+                _leftHandDisplayPrompt.FadeInText(waitTime, fadeDuration);
+            }
 
         }
     }
@@ -233,12 +255,15 @@ public class NeedleObject : MonoBehaviour
 
         if (sceneToLink != "Game")
         {
-            var waitTime = 0f;
-            var fadeDuration = 0.5f;
-            // send text to PromptCanvasController to display
-            _displayPrompt.FadeOutText(waitTime, fadeDuration);
+            if (!_promptProximity)
+            {
+                var waitTime = 0f;
+                var fadeDuration = 0.5f;
+                // send text to PromptCanvasController to display
+                _displayPrompt.FadeOutText(waitTime, fadeDuration);
 
-            _leftHandDisplayPrompt.FadeOutText(waitTime, fadeDuration);
+                _leftHandDisplayPrompt.FadeOutText(waitTime, fadeDuration);
+            }
         }
 
     }
@@ -294,11 +319,43 @@ public class NeedleObject : MonoBehaviour
             //needleCollider.SetActive(true);
             */
             //display prompt text for how to exit memory
-            _leftHandDisplayPrompt.SetText("To exit memory, remove inserted Memory Injector by grabbing with opposite hand.");
-            var waitTime = 5f;
-            var fadeDuration = 7f;
-            _leftHandDisplayPrompt.FadeInText(waitTime, fadeDuration);
+            if(_leftHandDisplayPrompt != null)
+            {
+                _leftHandDisplayPrompt.SetText("To exit memory, remove inserted Memory Injector by grabbing with opposite hand.");
+                var waitTime = 5f;
+                var fadeDuration = 7f;
+                _leftHandDisplayPrompt.FadeInText(waitTime, fadeDuration);
+            }
         }
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(sceneToLink != "Game" && other.tag == "HandInterface" && _injectorGrabbed)
+        {
+            _promptProximity = true;
+            var waitTime = 0f;
+            var fadeDuration = 0.5f;
+            _leftHandDisplayPrompt.FadeOutText(waitTime, fadeDuration);
+            _displayPrompt.FadeOutText(waitTime, fadeDuration);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (sceneToLink != "Game" && other.tag == "HandInterface" && _injectorGrabbed )
+        {
+            _promptProximity = false;
+            var waitTime = 0f;
+            var fadeDuration = 0.5f;
+            
+            _displayPrompt.FadeInText(waitTime, fadeDuration);
+
+            if (_activeNeedle)
+            {
+                _leftHandDisplayPrompt.FadeInText(waitTime, fadeDuration);
+            }
+        }
     }
 }

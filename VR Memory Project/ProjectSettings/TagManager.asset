@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MemoryNeedle
   - Whiteboard
+  - HandInterface
   layers:
   - Default
   - TransparentFX

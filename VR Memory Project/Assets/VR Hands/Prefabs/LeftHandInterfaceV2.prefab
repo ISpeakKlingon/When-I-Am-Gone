@@ -1918,9 +1918,10 @@ GameObject:
   - component: {fileID: 1552997316574992988}
   - component: {fileID: 5189724670374295251}
   - component: {fileID: 4979764480361891516}
+  - component: {fileID: 6157227969083477105}
   m_Layer: 14
   m_Name: Interface_Parent
-  m_TagString: Untagged
+  m_TagString: HandInterface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2076,6 +2077,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 70ba06b94581ee643905f38e275a25f3, type: 3}
   - {fileID: 8300000, guid: b1051ba05773a274b88fc0950b385d2b, type: 3}
   - {fileID: 8300000, guid: cc6404ceab3a96c428694b70d3cab285, type: 3}
+  Docked: 0
 --- !u!114 &1552997316574992988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2108,6 +2110,8 @@ MonoBehaviour:
   _dockingSocket: {fileID: 7318794226234145563}
   _socketMaterials: []
   _greenLight: {fileID: 2100000, guid: d0f669f72d5e21b4dbbde2d15f5f95c7, type: 2}
+  _currentInjector: {fileID: 0}
+  _interfaceAudio: {fileID: 0}
   InterfaceDock: {fileID: 8087050069535685186}
 --- !u!54 &4979764480361891516
 Rigidbody:
@@ -2125,6 +2129,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &6157227969083477105
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8429169923952871648}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.1716615
+  m_Height: 2.343324
+  m_Direction: 1
+  m_Center: {x: 5.7875933e-11, y: -4.113378e-11, z: 0.012540088}
 --- !u!1 &8429169923997990857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2340,6 +2358,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLink: Game
   needleCollider: {fileID: 0}
+  _injectorGrabbed: 0
+  Docked: 0
+  _injectorMesh: {fileID: 0}
+  _needleMesh: {fileID: 0}
+  _buttonMesh: {fileID: 0}
+  _lockmesh: {fileID: 0}
+  _leftHandDisplayPrompt: {fileID: 0}
+  _displayPrompt: {fileID: 0}
+  _promptProximity: 0
 --- !u!1 &8429169923999989424
 GameObject:
   m_ObjectHideFlags: 0
