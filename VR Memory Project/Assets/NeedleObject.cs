@@ -23,7 +23,7 @@ public class NeedleObject : MonoBehaviour
 
     [SerializeField] private Renderer _injectorMesh, _needleMesh, _buttonMesh, _lockmesh;
 
-    [SerializeField] private PromptCanvasController _leftHandDisplayPrompt;
+    public PromptCanvasController _leftHandDisplayPrompt;
     [SerializeField] private PromptCanvasController _displayPrompt;
     [SerializeField] private bool _promptProximity;
 
@@ -37,8 +37,12 @@ public class NeedleObject : MonoBehaviour
 
     private void Start()
     {
-        _leftHandDisplayPrompt = GameManager.Instance.leftHandBaseController.GetComponentInChildren<PromptCanvasController>();
-        
+        //this line is causing problems as there are 2 PromptCanvasControllers inside left hand
+        if(sceneToLink != "Game")
+        {
+            _leftHandDisplayPrompt = GameManager.Instance.leftHandBaseController.GetComponentInChildren<PromptCanvasController>();
+        }
+
         if (sceneToLink == "Game")
         {
             /*
@@ -215,7 +219,7 @@ public class NeedleObject : MonoBehaviour
     {
         _injectorGrabbed = true;
 
-        //turn off left hand prompt text if this is the menu injector
+        //turn off left hand prompt text if this is the memory injector
         if(sceneToLink == "Game")
         {
             var waitTime = 0f;
@@ -308,6 +312,7 @@ public class NeedleObject : MonoBehaviour
             _xRGrabInteractable.interactionLayerMask = 0;
 
             _animator.SetTrigger("InjectorToggle");
+
         }
         else
         {
