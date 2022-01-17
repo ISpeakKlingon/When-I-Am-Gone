@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3226405371472812921}
+  - component: {fileID: -3061329158502542079}
   m_Layer: 0
   m_Name: MemoryPodOff2
   m_TagString: Untagged
@@ -32,6 +33,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -13.24}
+--- !u!65 &-3061329158502542079
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2850125711090172355}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1040104, y: 1.4602305, z: 0.10831108}
+  m_Center: {x: -0.014121835, y: 0.8057988, z: -0.44584447}
 --- !u!1 &7483426513317345026
 GameObject:
   m_ObjectHideFlags: 0
