@@ -139,14 +139,27 @@ public class HandInterfaceStateMachine : MonoBehaviour
                 //StartCoroutine(UndockingProcedure(_currentInjector));
 
                 _currentInjector.NameSceneToLoadInGameManager();
-                _currentInjector.TriggerUndockingAnim();
+                _currentInjector.TriggerUndockingAnim(); //this isn't happening when a memory time-out
                 _currentInjector.StartSceneChange();
 
-                _interfaceAudio.Docked = false;
+                _interfaceAudio.Docked = false; //this isn't happening when a memory time-out
 
-                _isNeedleDocked = false; //moving this to UndockingProcedure
+                _isNeedleDocked = false; //moving this to UndockingProcedure //this isn't happening when a memory time-out
             }
         }
+    }
+
+    public void MemoryTimeOutProcedure()
+    {
+        //GameManager.Instance.sceneName = scene;
+        _currentInjector = GameManager.Instance.leftHandBaseController.GetComponentInChildren<NeedleObject>();
+        //Debug.Break();
+        _currentInjector.NameSceneToLoadInGameManager();
+        _currentInjector.InjectorGrabbed();
+        _currentInjector.TriggerUndockingAnim();
+        _currentInjector.StartSceneChange();
+        _interfaceAudio.Docked = false;
+        _isNeedleDocked = false;
     }
     /*
     private IEnumerator UndockingProcedure(NeedleObject _currentInjector)

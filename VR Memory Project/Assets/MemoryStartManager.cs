@@ -12,15 +12,29 @@ public class MemoryStartManager : MonoBehaviour
 
     //load Game scene after ~10 seconds
 
+    [SerializeField] private HandInterfaceStateMachine _handInterface;
+
     private void Awake()
     {
         StartCoroutine(ForceMemoryExit());
     }
+
+    private void Start()
+    {
+        _handInterface = GameManager.Instance.leftHandBaseController.GetComponentInChildren<HandInterfaceStateMachine>();
+    }
+
     public IEnumerator ForceMemoryExit()
     {
         yield return new WaitForSeconds(memoryLength);
-        GameManager.Instance.sceneName = sceneToLink;
-        GameManager.Instance.LoadScene();
+        //GameManager.Instance.sceneName = sceneToLink;
+
+        //trigger undocking anim in HandInterfaceStateMachine
+        //switch _interfaceAudio.Docked bool to false in  HandInterfaceStateMachine
+        //switch _isNeedleDocked bool to false in HandInterfaceStateMachine
+        _handInterface.MemoryTimeOutProcedure();
+
+        //GameManager.Instance.LoadScene();
     }
 
     private void OnDestroy()
