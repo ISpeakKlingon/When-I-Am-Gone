@@ -379,6 +379,8 @@ MonoBehaviour:
   _cultureNames:
   - en-US
   _error: 0
+  _timeBeforeMemoryInfo: 5
+  _errorStarted: 0
 --- !u!4 &480153227
 Transform:
   m_ObjectHideFlags: 0
@@ -706,7 +708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8509804}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -892,7 +894,7 @@ MonoBehaviour:
   FadedColor: {r: 1, g: 1, b: 1, a: 0}
   NonFadedColor: {r: 1, g: 1, b: 1, a: 1}
   TitleDisplayLength: 5
-  WaitTime: 3
+  WaitTime: 2
   FadeDuration: 5
 --- !u!1 &1354440645
 GameObject:
@@ -1223,6 +1225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1689828904}
+  - component: {fileID: 1689828905}
   m_Layer: 0
   m_Name: ControlsDiagram_Parent
   m_TagString: Untagged
@@ -1245,6 +1248,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1689828905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689828903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ef09aae6b46c64f999a56bd8c8c9a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _diagram: {fileID: 0}
+  FadedColor: {r: 1, g: 1, b: 1, a: 0}
+  NonFadedColor: {r: 1, g: 1, b: 1, a: 1}
+  WaitTime: 6
+  FadeDuration: 6
 --- !u!1001 &1693857236
 PrefabInstance:
   m_ObjectHideFlags: 0

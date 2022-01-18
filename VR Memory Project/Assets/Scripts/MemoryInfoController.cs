@@ -20,6 +20,10 @@ public class MemoryInfoController : MonoBehaviour
 
     //is this the menu scene?
     [SerializeField] private bool _error;
+
+    [SerializeField] private float _timeBeforeMemoryInfo = 5f;
+    [SerializeField] private bool _errorStarted = false;
+
     private void OnEnable()
     {
         _displayedText = GetComponentInChildren<Text>();
@@ -105,6 +109,12 @@ public class MemoryInfoController : MonoBehaviour
 
     private IEnumerator FadeInMemoryInfo(float fadeDuration)
     {
+        if (_error && !_errorStarted)
+        {
+            yield return new WaitForSeconds(_timeBeforeMemoryInfo);
+            _errorStarted = true;
+        }
+
         //Debug.Log("FadeInMemoryInfo successfully called.");
         float time = 0;
         while(time < fadeDuration)

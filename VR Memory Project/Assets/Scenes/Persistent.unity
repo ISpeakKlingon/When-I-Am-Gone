@@ -8312,6 +8312,10 @@ PrefabInstance:
       propertyPath: LeftHandDisplayPrompt
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 215900486407696729, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: _leftHandDisplayPrompt
+      value: 
+      objectReference: {fileID: 1245463416}
     - target: {fileID: 215900486407696734, guid: d4440ea48e64d50428604126aa81765d, type: 3}
       propertyPath: m_RootOrder
       value: 3
