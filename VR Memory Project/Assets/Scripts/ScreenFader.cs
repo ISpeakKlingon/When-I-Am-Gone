@@ -28,12 +28,12 @@ public class ScreenFader : MonoBehaviour
 
     private IEnumerator FadeIn()
     {
-        yield return new WaitForSeconds(1f);
+        //yield return new WaitForSeconds(1f);
 
         // trigger animation
         transition.SetTrigger("Start");
 
-        yield return new WaitForSeconds(2f);
+        //yield return new WaitForSeconds(2f);
         /*
         while (_intensity <= 1.0f)
         {
@@ -41,6 +41,7 @@ public class ScreenFader : MonoBehaviour
             yield return null;
         }
         */
+        yield return null;
     }
 
     public Coroutine StartFadeOut()
@@ -51,12 +52,12 @@ public class ScreenFader : MonoBehaviour
 
     private IEnumerator FadeOut()
     {
-        yield return new WaitForSeconds(3f);
+        //yield return new WaitForSeconds(3f);
 
         // trigger animation
         transition.SetTrigger("Start");
 
-        yield return new WaitForSeconds(3f);
+        //yield return new WaitForSeconds(3f);
 
         /*
         while (_intensity >= 0.0f)
@@ -65,5 +66,6 @@ public class ScreenFader : MonoBehaviour
             yield return null;
         }
         */
+        yield return null;
     }
 }

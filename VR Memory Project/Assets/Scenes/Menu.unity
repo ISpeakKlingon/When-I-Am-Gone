@@ -856,7 +856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1272720949}
   - component: {fileID: 1272720950}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Title_Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -907,7 +907,7 @@ GameObject:
   - component: {fileID: 1354440646}
   - component: {fileID: 1354440648}
   - component: {fileID: 1354440647}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: TitleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1483,7 +1483,7 @@ GameObject:
   - component: {fileID: 1760058592}
   - component: {fileID: 1760058591}
   - component: {fileID: 1760058590}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: TitleCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
