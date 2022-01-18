@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14514308, g: 0.16106084, b: 0.16197181, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000004, guid: bc071141d7fb14648b4641fbccd2eb55, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 980d766c047af854eaaa76d06bb4efcf, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1610,6 +1610,7 @@ MonoBehaviour:
   rightHandBaseController: {fileID: 1793505070}
   indicator: {fileID: 493929844280221353}
   subtitles: 0
+  SkyboxController: {fileID: 1364895799}
 --- !u!4 &695340883
 Transform:
   m_ObjectHideFlags: 0
@@ -3481,6 +3482,8 @@ GameObject:
   - component: {fileID: 1364895794}
   - component: {fileID: 1364895797}
   - component: {fileID: 1364895798}
+  - component: {fileID: 1364895800}
+  - component: {fileID: 1364895799}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3565,7 +3568,7 @@ Camera:
   m_GameObject: {fileID: 1364895792}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -3649,6 +3652,31 @@ MonoBehaviour:
   _color: {r: 0, g: 0, b: 0, a: 1}
   _fadeMaterial: {fileID: 2100000, guid: ac66d537b224f014f8684df571a60627, type: 2}
   transition: {fileID: 376895934}
+--- !u!114 &1364895799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364895792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c667a8d84ed67f46a7e66d13dcf8061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlackSkybox: {fileID: 2100000, guid: 09b6902a7fc4f5e45a07b4989016d2df, type: 2}
+  StarfieldSkybox: {fileID: 2100000, guid: 0c14170e0e6204e47b40a2f14a2ddfab, type: 2}
+  DefaultSkybox: {fileID: 2100000, guid: b95594ffeaf238c46a8d575dcd72705a, type: 2}
+  _skybox: {fileID: 0}
+--- !u!45 &1364895800
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364895792}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 09b6902a7fc4f5e45a07b4989016d2df, type: 2}
 --- !u!1 &1391578187
 GameObject:
   m_ObjectHideFlags: 0

@@ -58,9 +58,15 @@ public class SceneLoader : Singleton<SceneLoader>
             GameManager.Instance.DeactivateMemoryNeedle();
             GameManager.Instance.LoadPlayer(); //load the player's position and time remaining they were in when they entered memory
             //GameManager.Instance.GameStart(); //start the game
+
+            //set skybox to stars
+            GameManager.Instance.SetSkyboxToStarfield();
         }
         else
         {
+            //set skybox to black
+            GameManager.Instance.SetSkyboxToBlack();
+
             //deactivate needle socket "is active"
             GameManager.Instance.TurnOffLeftHandSocket();
 

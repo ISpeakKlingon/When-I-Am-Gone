@@ -46,6 +46,8 @@ public class GameManager : MonoBehaviour
 
     public bool subtitles = false;
 
+    public SkyboxController SkyboxController;
+
     public static GameManager Instance
     {
         get
@@ -254,4 +256,18 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void SetSkyboxToBlack()
+    {
+        SkyboxController.SkyboxBlack();
+    }
+
+    public void SetSkyboxToStarfield()
+    {
+        SkyboxController.SkyboxStars();
+    }
+
+    public void SetSkyboxToDefault()
+    {
+        SkyboxController.SkyboxDefault();
+    }
 }
