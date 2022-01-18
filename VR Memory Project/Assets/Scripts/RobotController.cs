@@ -16,12 +16,19 @@ public class RobotController : MonoBehaviour
     private PlayVoiceOvers playVoiceOversScript;
     private PlaySubtitles playSubtitlesScript;
 
-    private Vector3 lobbyBridge = new Vector3(-9.86f, 0.14f, -6.33f);
-    private Vector3 memory2020 = new Vector3(-31.62f, -0.55f, -5.19f);
-    private Vector3 memory1945 = new Vector3(-43.84f,-0.62f,-13.93f);
-    private Vector3 lowerLobby = new Vector3(-20.65f, -5.472931f, -1.181621f);
-    private Vector3 windowView = new Vector3(-17.45188f, -5.72f, -15.24f);
-    private Vector3 outsideNewtonRoom = new Vector3(-3.69f, 0.55f, -5.1f);
+    [SerializeField] private Vector3 lobbyBridge = new Vector3(-9.86f, 0.14f, -6.33f);
+    [SerializeField] private Vector3 memory2020 = new Vector3(-31.62f, -0.55f, -5.19f);
+    [SerializeField] private Vector3 memory1945 = new Vector3(-43.84f,-0.62f,-13.93f);
+    [SerializeField] private Vector3 lowerLobby = new Vector3(-20.65f, -5.472931f, -1.181621f);
+    [SerializeField] private Vector3 windowView = new Vector3(-17.45188f, -5.72f, -15.24f);
+    [SerializeField] private Vector3 outsideNewtonRoom = new Vector3(-3.69f, 0.55f, -5.1f);
+
+    public GameObject LobbyBridge;
+    public GameObject Memory2020;
+    public GameObject Memory1945;
+    public GameObject LowerLobby;
+    public GameObject WindowView;
+    public GameObject OutSideNewtonRoom;
 
     private void Awake()
     {
@@ -34,6 +41,15 @@ public class RobotController : MonoBehaviour
         }
         else
             RobotToPrevious();
+
+        //define locations of navmesh spots
+        lobbyBridge = LobbyBridge.transform.position;
+        memory2020 = Memory2020.transform.position;
+        memory1945 = Memory1945.transform.position;
+        lowerLobby = LowerLobby.transform.position;
+        windowView = WindowView.transform.position;
+        outsideNewtonRoom = OutSideNewtonRoom.transform.position;
+
     }
 
     private void Start()
