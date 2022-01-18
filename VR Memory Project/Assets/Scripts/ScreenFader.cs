@@ -11,12 +11,14 @@ public class ScreenFader : MonoBehaviour
 
     public Animator transition;
 
+    /*
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
         _fadeMaterial.SetFloat("_Intensity", _intensity);
         _fadeMaterial.SetColor("_FadeColor", _color);
         Graphics.Blit(source, destination, _fadeMaterial);
     }
+    */
 
     public Coroutine StartFadeIn()
     {
@@ -26,14 +28,19 @@ public class ScreenFader : MonoBehaviour
 
     private IEnumerator FadeIn()
     {
+        yield return new WaitForSeconds(1f);
+
         // trigger animation
         transition.SetTrigger("Start");
 
+        yield return new WaitForSeconds(2f);
+        /*
         while (_intensity <= 1.0f)
         {
-            _intensity += _speed = Time.deltaTime * 0.25f;
+            _intensity += _speed = Time.deltaTime;
             yield return null;
         }
+        */
     }
 
     public Coroutine StartFadeOut()
@@ -44,13 +51,19 @@ public class ScreenFader : MonoBehaviour
 
     private IEnumerator FadeOut()
     {
+        yield return new WaitForSeconds(3f);
+
         // trigger animation
         transition.SetTrigger("Start");
 
-        while(_intensity >= 0.0f)
+        yield return new WaitForSeconds(3f);
+
+        /*
+        while (_intensity >= 0.0f)
         {
             _intensity -= _speed = Time.deltaTime;
             yield return null;
         }
+        */
     }
 }
