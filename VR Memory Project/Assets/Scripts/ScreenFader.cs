@@ -31,7 +31,7 @@ public class ScreenFader : MonoBehaviour
 
         while (_intensity <= 1.0f)
         {
-            _intensity += _speed = Time.deltaTime;
+            _intensity += _speed = Time.deltaTime * 0.25f;
             yield return null;
         }
     }

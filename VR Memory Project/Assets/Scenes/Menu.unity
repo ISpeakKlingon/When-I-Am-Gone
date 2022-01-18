@@ -353,7 +353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 480153227}
   - component: {fileID: 480153226}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MemoryInfo_Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 644654038}
   - component: {fileID: 644654040}
   - component: {fileID: 644654039}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MemoryDate_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -987,7 +987,7 @@ GameObject:
   - component: {fileID: 1526499619}
   - component: {fileID: 1526499618}
   - component: {fileID: 1526499617}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MemoryInfo_Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

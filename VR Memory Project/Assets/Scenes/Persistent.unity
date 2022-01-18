@@ -7406,6 +7406,17 @@ MonoBehaviour:
   InjectorHandNode: 5
   InjectorController: {fileID: 1793505074}
   InterfaceController: {fileID: 0}
+--- !u!114 &8184775492432993793 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 215900486407696729, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+  m_PrefabInstance: {fileID: 8316215205908491427}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8184775492432993788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca27a680f2fcec489f05bc5bacd073e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &8184775492434926720
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8316,6 +8327,62 @@ PrefabInstance:
       propertyPath: _leftHandDisplayPrompt
       value: 
       objectReference: {fileID: 1245463416}
+    - target: {fileID: 215900486407696731, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 215900486407696731, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 215900486407696731, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 215900486407696731, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 215900486407696731, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8184775492432993793}
+    - target: {fileID: 215900486407696731, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8184775492432993793}
+    - target: {fileID: 215900486407696731, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 215900486407696731, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 215900486407696731, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InjectorReleased
+      objectReference: {fileID: 0}
+    - target: {fileID: 215900486407696731, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InjectorGrabbed
+      objectReference: {fileID: 0}
+    - target: {fileID: 215900486407696731, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NeedleObject, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 215900486407696731, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NeedleObject, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 215900486407696731, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 215900486407696731, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 215900486407696734, guid: d4440ea48e64d50428604126aa81765d, type: 3}
       propertyPath: m_RootOrder
       value: 3
