@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour
 
     public SkyboxController SkyboxController;
 
+    public Animator CrossfadeAnimator;
+
     public static GameManager Instance
     {
         get
