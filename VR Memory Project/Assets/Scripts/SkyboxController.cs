@@ -10,9 +10,14 @@ public class SkyboxController : MonoBehaviour
 
     [SerializeField] private Skybox _skybox;
 
+    private void Awake()
+    {
+        _skybox = this.GetComponent<Skybox>();
+    }
+
     private void Start()
     {
-        _skybox = GetComponent<Skybox>();
+        //_skybox = this.GetComponent<Skybox>();
     }
 
     public void SkyboxStars()

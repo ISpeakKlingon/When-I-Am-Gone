@@ -26,6 +26,7 @@ public class NeedleObject : MonoBehaviour
     public PromptCanvasController _leftHandDisplayPrompt;
     [SerializeField] private PromptCanvasController _displayPrompt;
     [SerializeField] private bool _promptProximity;
+    [SerializeField] private bool _meshesOff = false;
 
     private void Awake()
     {
@@ -193,7 +194,7 @@ public class NeedleObject : MonoBehaviour
 
     private IEnumerator ChangeInjectorPrompt(string txt)
     {
-        if (!_promptProximity)
+        if (!_promptProximity && !_meshesOff)
         {
             var waitTime = 0f;
             var fadeDuration = 0.5f;
@@ -206,7 +207,7 @@ public class NeedleObject : MonoBehaviour
         // send text to PromptCanvasController to display
         _displayPrompt.SetText(txt);
 
-        if (!_promptProximity)
+        if (!_promptProximity && !_meshesOff)
         {
             var waitTime = 0f;
             var fadeDuration = 0.5f;
@@ -261,12 +262,15 @@ public class NeedleObject : MonoBehaviour
         {
             if (!_promptProximity)
             {
-                var waitTime = 0f;
-                var fadeDuration = 0.5f;
-                // send text to PromptCanvasController to display
-                _displayPrompt.FadeOutText(waitTime, fadeDuration);
+                if (!_meshesOff)
+                {
+                    var waitTime = 0f;
+                    var fadeDuration = 0.5f;
+                    // send text to PromptCanvasController to display
+                    //_displayPrompt.FadeOutText(waitTime, fadeDuration);
 
-                _leftHandDisplayPrompt.FadeOutText(waitTime, fadeDuration);
+                    _leftHandDisplayPrompt.FadeOutText(waitTime, fadeDuration);
+                }
             }
         }
 
@@ -299,6 +303,7 @@ public class NeedleObject : MonoBehaviour
 
     public void TurnOffMeshes()
     {
+        _meshesOff = true;
         _injectorMesh.enabled = false;
         _needleMesh.enabled = false;
         _buttonMesh.enabled = false;
