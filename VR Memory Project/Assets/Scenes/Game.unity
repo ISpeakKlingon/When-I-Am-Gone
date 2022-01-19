@@ -2287,7 +2287,7 @@ Transform:
   - {fileID: 589283088}
   - {fileID: 132051015}
   m_Father: {fileID: 3382394980657099583}
-  m_RootOrder: 26
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &265911077
 GameObject:
@@ -6588,7 +6588,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950004451}
   m_LocalRotation: {x: -0, y: -0, z: -0.10865365, w: 0.9940797}
-  m_LocalPosition: {x: -32.26, y: 0, z: -6.99}
+  m_LocalPosition: {x: -30.24, y: -0.45, z: -2.81}
   m_LocalScale: {x: 3.6234004, y: 0.8060544, z: 3.6234}
   m_Children: []
   m_Father: {fileID: 794770076}
@@ -11037,10 +11037,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.43217438
+  m_Height: 7.8765426
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: -0.118844025}
 --- !u!23 &1799280306
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12448,7 +12448,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069371608}
   m_LocalRotation: {x: -0, y: -0, z: -0.18698059, w: 0.9823637}
-  m_LocalPosition: {x: -43.94, y: -0.38, z: -15.66}
+  m_LocalPosition: {x: -33.323, y: -3.508, z: -10.029}
   m_LocalScale: {x: 3.6234004, y: 0.8060544, z: 3.6234}
   m_Children: []
   m_Father: {fileID: 794770076}
@@ -15866,7 +15866,7 @@ Transform:
   m_LocalScale: {x: 2.7987552, y: 2.7987552, z: 2.7987552}
   m_Children: []
   m_Father: {fileID: 3382394980657099583}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2402054212825914636
 MeshRenderer:
@@ -21103,8 +21103,8 @@ Transform:
   - {fileID: 8943497975077062920}
   - {fileID: 1312929679526889975}
   - {fileID: 5316155239257378620}
-  - {fileID: 6251311806597536880}
   - {fileID: 2317286068894630051}
+  - {fileID: 6251311806597536880}
   - {fileID: 1449102940086892433}
   - {fileID: 3574480952127605907}
   - {fileID: 6748814739023335786}
@@ -21115,10 +21115,10 @@ Transform:
   - {fileID: 8038752368493048245}
   - {fileID: 1450337844141898462}
   - {fileID: 3783346408703699591}
+  - {fileID: 248914958}
   - {fileID: 956188291959532720}
   - {fileID: 1662592128290452991}
   - {fileID: 4970693798845455609}
-  - {fileID: 248914958}
   - {fileID: 1332374781}
   - {fileID: 307660303}
   m_Father: {fileID: 0}

@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
 
     public Animator CrossfadeAnimator;
 
+    public MusicManager MusicManager;
+
     public static GameManager Instance
     {
         get
@@ -122,6 +124,10 @@ public class GameManager : MonoBehaviour
     public void LoadScene()
     {
         SceneLoader.Instance.LoadNewScene(sceneName);
+
+        //if music is playing, fade it out
+        float fadeTime = 5f;
+        MusicManager.StartFadeOutMusic(fadeTime);
     }
 
     //activate memory needle object
