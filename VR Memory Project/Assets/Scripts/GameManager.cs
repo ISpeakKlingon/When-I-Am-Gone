@@ -52,6 +52,8 @@ public class GameManager : MonoBehaviour
 
     public MusicManager MusicManager;
 
+    public bool PocketWatchSaved = false;
+
     public static GameManager Instance
     {
         get
