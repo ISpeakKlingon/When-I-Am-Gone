@@ -1216,7 +1216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AtomicBomb: {fileID: 579109193}
-  _timeToDetonation: 10
+  _timeToDetonation: 30
   _audioSource: {fileID: 0}
   Explosion: {fileID: 8300000, guid: f28d63f00c3b175438c6c552429ffecf, type: 3}
   _crossfadeAnim: {fileID: 0}
@@ -2364,7 +2364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a49ecaee6b0a2342928d5dabe8eef93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  memoryLength: 22
+  memoryLength: 40
   sceneToLink: Game
   nameOfThisScene: Memory1945
   _handInterface: {fileID: 0}
