@@ -12,10 +12,10 @@ public class GravityOrbit : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<GravityCtrl>())
+        if (other.GetComponentInParent<GravityCtrl>())
         {
             //if this object has a gravity script, set this as the planet
-            other.GetComponent<GravityCtrl>().Gravity = this.GetComponent<GravityOrbit>();
+            other.GetComponentInParent<GravityCtrl>().Gravity = this.GetComponent<GravityOrbit>();
         }
     }
 }
