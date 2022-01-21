@@ -5223,7 +5223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a8ffdc7786c281418c0518790625e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottomOffset: -0.21
+  bottomOffset: -0.5
   frontOffset: 0
   collisionRadius: 0.5
   GroundLayer:

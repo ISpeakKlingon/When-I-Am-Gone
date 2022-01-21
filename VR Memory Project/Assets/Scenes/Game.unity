@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 36441972}
   - component: {fileID: 36441974}
   - component: {fileID: 36441973}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F34Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1404,7 +1404,7 @@ GameObject:
   - component: {fileID: 203048539}
   - component: {fileID: 203048541}
   - component: {fileID: 203048540}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: NewtonFloorGravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1872,7 +1872,7 @@ GameObject:
   - component: {fileID: 269326857}
   - component: {fileID: 269326859}
   - component: {fileID: 269326858}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F25Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2522,7 +2522,7 @@ GameObject:
   - component: {fileID: 390112541}
   - component: {fileID: 390112543}
   - component: {fileID: 390112542}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F37Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3456,7 +3456,7 @@ GameObject:
   - component: {fileID: 499512585}
   - component: {fileID: 499512587}
   - component: {fileID: 499512586}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F30Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3545,7 +3545,7 @@ GameObject:
   - component: {fileID: 563790763}
   - component: {fileID: 563790765}
   - component: {fileID: 563790764}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F33Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3604,7 +3604,7 @@ GameObject:
   - component: {fileID: 586960632}
   - component: {fileID: 586960634}
   - component: {fileID: 586960633}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F31Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3998,7 +3998,7 @@ GameObject:
   - component: {fileID: 631699620}
   - component: {fileID: 631699621}
   - component: {fileID: 631699622}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F35Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4344,7 +4344,7 @@ GameObject:
   - component: {fileID: 656379024}
   - component: {fileID: 656379026}
   - component: {fileID: 656379025}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F24Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4917,7 +4917,7 @@ GameObject:
   - component: {fileID: 765211696}
   - component: {fileID: 765211697}
   - component: {fileID: 765211698}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F40Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5812,7 +5812,7 @@ GameObject:
   - component: {fileID: 916743813}
   - component: {fileID: 916743815}
   - component: {fileID: 916743814}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F45Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6368,7 +6368,7 @@ GameObject:
   - component: {fileID: 1029227403}
   - component: {fileID: 1029227405}
   - component: {fileID: 1029227404}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F46Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6674,7 +6674,7 @@ GameObject:
   - component: {fileID: 1057628564}
   - component: {fileID: 1057628566}
   - component: {fileID: 1057628565}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F32Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7976,7 +7976,7 @@ GameObject:
   - component: {fileID: 1223945557}
   - component: {fileID: 1223945559}
   - component: {fileID: 1223945558}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F29Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8512,7 +8512,7 @@ GameObject:
   - component: {fileID: 1347338521}
   - component: {fileID: 1347338523}
   - component: {fileID: 1347338522}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F36Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8828,7 +8828,7 @@ GameObject:
   - component: {fileID: 1404898865}
   - component: {fileID: 1404898867}
   - component: {fileID: 1404898866}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: f47Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9139,7 +9139,7 @@ GameObject:
   - component: {fileID: 1500180610}
   - component: {fileID: 1500180612}
   - component: {fileID: 1500180611}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F41Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9198,7 +9198,7 @@ GameObject:
   - component: {fileID: 1557023125}
   - component: {fileID: 1557023127}
   - component: {fileID: 1557023126}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F42Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9287,7 +9287,7 @@ GameObject:
   - component: {fileID: 1570789375}
   - component: {fileID: 1570789377}
   - component: {fileID: 1570789376}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F44Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9964,7 +9964,7 @@ GameObject:
   - component: {fileID: 1673184609}
   - component: {fileID: 1673184611}
   - component: {fileID: 1673184610}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F28Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10964,7 +10964,7 @@ GameObject:
   - component: {fileID: 1859762033}
   - component: {fileID: 1859762035}
   - component: {fileID: 1859762034}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F39Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11157,7 +11157,7 @@ GameObject:
   - component: {fileID: 1877835934}
   - component: {fileID: 1877835936}
   - component: {fileID: 1877835935}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F26Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11889,7 +11889,7 @@ GameObject:
   - component: {fileID: 2013936438}
   - component: {fileID: 2013936440}
   - component: {fileID: 2013936439}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F27Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12431,7 +12431,7 @@ GameObject:
   - component: {fileID: 2142584127}
   - component: {fileID: 2142584128}
   - component: {fileID: 2142584129}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: F38Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15409,6 +15409,7 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 64
+  _hitcolliders: []
 --- !u!143 &2057752445118963052
 CharacterController:
   m_ObjectHideFlags: 0

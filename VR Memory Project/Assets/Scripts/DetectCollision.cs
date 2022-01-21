@@ -9,14 +9,19 @@ public class DetectCollision : MonoBehaviour
     public float collisionRadius;
     public LayerMask GroundLayer;
 
+    [SerializeField] private Collider[] _hitcolliders;
+
     public bool CheckGround(Vector3 Direction)
     {
         Vector3 Pos = transform.position + (Direction * bottomOffset);
         Collider[] hitColliders = Physics.OverlapSphere(Pos, collisionRadius, GroundLayer);
+        _hitcolliders = hitColliders;
+
         if (hitColliders.Length > 0)
         {
             //we are on the ground
             return true;
+
         }
 
         return false;
