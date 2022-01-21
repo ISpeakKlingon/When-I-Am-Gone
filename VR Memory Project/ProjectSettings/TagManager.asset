@@ -8,6 +8,7 @@ TagManager:
   - Whiteboard
   - HandInterface
   - PocketWatch
+  - LeftHandPrompt
   layers:
   - Default
   - TransparentFX

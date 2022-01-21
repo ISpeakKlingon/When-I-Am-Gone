@@ -367,6 +367,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1930721755, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 215900486407696728, guid: d4440ea48e64d50428604126aa81765d, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -434,6 +438,24 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 243830468208294136, guid: d4440ea48e64d50428604126aa81765d, type: 3}
   m_PrefabInstance: {fileID: 70251519}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &70251521 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1930721755, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+  m_PrefabInstance: {fileID: 70251519}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &70251522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70251521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c424d323846ce47a2158b22a748ec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _injector: {fileID: 0}
 --- !u!1001 &101868015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5628,6 +5650,7 @@ MonoBehaviour:
   _promptProximity: 0
   _meshesOff: 0
   _rb: {fileID: 0}
+  _thisJustCollidedWithProxTrigger: {fileID: 0}
 --- !u!114 &886376353
 MonoBehaviour:
   m_ObjectHideFlags: 0

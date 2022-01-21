@@ -29,6 +29,7 @@ public class NeedleObject : MonoBehaviour
     [SerializeField] private bool _meshesOff = false;
 
     [SerializeField] private Rigidbody _rb;
+    [SerializeField] private Collider _thisJustCollidedWithProxTrigger;
 
     private void Awake()
     {
@@ -352,9 +353,11 @@ public class NeedleObject : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void ProxTriggerEnter(Collider other)
     {
-        if(sceneToLink != "Game" && other.tag == "HandInterface" && _injectorGrabbed)
+        _thisJustCollidedWithProxTrigger = other;
+
+        if(sceneToLink != "Game" && other.tag == "LeftHandPrompt" && _injectorGrabbed)
         {
             _promptProximity = true;
             var waitTime = 0f;
@@ -364,9 +367,9 @@ public class NeedleObject : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    public void ProxTriggerExit(Collider other)
     {
-        if (sceneToLink != "Game" && other.tag == "HandInterface" && _injectorGrabbed )
+        if (sceneToLink != "Game" && other.tag == "LeftHandPrompt" && _injectorGrabbed )
         {
             _promptProximity = false;
             var waitTime = 0f;
