@@ -21,7 +21,7 @@ public class NeedleObject : MonoBehaviour
 
     public bool Docked = false;
 
-    [SerializeField] private Renderer _injectorMesh, _needleMesh, _buttonMesh, _lockmesh;
+    [SerializeField] private Renderer _injectorMesh, _needleMesh, _buttonMesh, _lockmesh, _needleTip;
 
     public PromptCanvasController _leftHandDisplayPrompt;
     [SerializeField] private PromptCanvasController _displayPrompt;
@@ -318,6 +318,8 @@ public class NeedleObject : MonoBehaviour
         _needleMesh.enabled = false;
         _buttonMesh.enabled = false;
         _lockmesh.enabled = false;
+        _needleTip.enabled = false;
+        _displayPrompt.SetText("");
     }
 
     private void OnDisable()

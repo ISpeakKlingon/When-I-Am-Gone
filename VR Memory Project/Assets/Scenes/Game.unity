@@ -371,6 +371,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 215900486407696729, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: _needleTip
+      value: 
+      objectReference: {fileID: 70251520}
     - target: {fileID: 215900486407696730, guid: d4440ea48e64d50428604126aa81765d, type: 3}
       propertyPath: m_IsKinematic
       value: 0
@@ -425,6 +429,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+--- !u!23 &70251520 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 243830468208294136, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+  m_PrefabInstance: {fileID: 70251519}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &101868015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5613,6 +5622,7 @@ MonoBehaviour:
   _needleMesh: {fileID: 0}
   _buttonMesh: {fileID: 0}
   _lockmesh: {fileID: 0}
+  _needleTip: {fileID: 0}
   _leftHandDisplayPrompt: {fileID: 0}
   _displayPrompt: {fileID: 0}
   _promptProximity: 0
