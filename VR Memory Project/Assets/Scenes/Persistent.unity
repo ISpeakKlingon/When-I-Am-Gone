@@ -1702,6 +1702,7 @@ MonoBehaviour:
   SkyboxController: {fileID: 1364895799}
   CrossfadeAnimator: {fileID: 376895934}
   MusicManager: {fileID: 2112369842}
+  PocketWatchSaved: 0
 --- !u!4 &695340883
 Transform:
   m_ObjectHideFlags: 0

@@ -108,9 +108,10 @@ GameObject:
   - component: {fileID: 8076037803496127306}
   - component: {fileID: 8076037803496127305}
   - component: {fileID: 8076037803496127308}
+  - component: {fileID: 8076037802333268690}
   m_Layer: 10
   m_Name: PocketWatch_Parent
-  m_TagString: Untagged
+  m_TagString: PocketWatch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,6 +269,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Gravity: {fileID: 0}
   RotationSpeed: 20
+--- !u!114 &8076037802333268690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8076037803496127304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c08a8ed937a4224d90031749b1ecd02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Saved:
+  - {fileID: -1580535799172915004, guid: 7c8a521fcab9a474f831b57070d97dbf, type: 3}
+  - {fileID: 2100000, guid: 756962d23f02c5d45b1d83316c135748, type: 2}
+  - {fileID: 2100000, guid: 2346a7f14d89c2c499b507c4bea3648d, type: 2}
+  - {fileID: 2100000, guid: 9b83e706fd1e5854cb961ecf802d99bd, type: 2}
+  Charred:
+  - {fileID: 2100000, guid: c6a125c76a57b0b489fe528aca31d15f, type: 2}
+  - {fileID: 2100000, guid: c6a125c76a57b0b489fe528aca31d15f, type: 2}
+  - {fileID: 2100000, guid: c6a125c76a57b0b489fe528aca31d15f, type: 2}
+  - {fileID: 2100000, guid: c6a125c76a57b0b489fe528aca31d15f, type: 2}
+  _pocketWatch: {fileID: 0}
 --- !u!1001 &8076037803227350125
 PrefabInstance:
   m_ObjectHideFlags: 0
