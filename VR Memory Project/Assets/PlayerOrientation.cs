@@ -61,7 +61,7 @@ public class PlayerOrientation : MonoBehaviour
 
         if(States == WorldState.Grounded)
         {
-            //Debug.Log("Grounded");
+            Debug.Log("Grounded");
             float Spd = Speed;
 
             MoveSelf(delta, Spd, Acceleration);
@@ -78,7 +78,7 @@ public class PlayerOrientation : MonoBehaviour
         
         else if (States == WorldState.InAir)
         {
-            //Debug.Log("InAir");
+            Debug.Log("InAir");
             FallingCtrl(delta, Speed, Acceleration);
 
             //check for ground
