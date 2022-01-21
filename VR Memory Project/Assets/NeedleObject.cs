@@ -28,11 +28,14 @@ public class NeedleObject : MonoBehaviour
     [SerializeField] private bool _promptProximity;
     [SerializeField] private bool _meshesOff = false;
 
+    [SerializeField] private Rigidbody _rb;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
         //_xRBaseInteractable = GetComponent<XRBaseInteractable>();
         _xRGrabInteractable = GetComponent<XRGrabInteractable>();
+        _rb = GetComponent<Rigidbody>();
 
     }
 
@@ -220,9 +223,14 @@ public class NeedleObject : MonoBehaviour
     {
         _injectorGrabbed = true;
 
+        //turn rb kinematic off
+        //_rb.isKinematic = false;
+
         //turn off left hand prompt text if this is the memory injector
-        if(sceneToLink == "Game")
+        if (sceneToLink == "Game")
         {
+
+
             var waitTime = 0f;
             var fadeDuration = 0.5f;
             _leftHandDisplayPrompt.FadeOutText(waitTime, fadeDuration);
@@ -257,6 +265,8 @@ public class NeedleObject : MonoBehaviour
     public void InjectorReleased()
     {
         _injectorGrabbed = false;
+
+        //_rb.isKinematic = false;
 
         if (sceneToLink != "Game")
         {

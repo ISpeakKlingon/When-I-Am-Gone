@@ -21,6 +21,8 @@ public class HandInterfaceStateMachine : MonoBehaviour
 
     [SerializeField] InterfaceAudioController _interfaceAudio;
 
+    [SerializeField] private Collider _interfaceCollider;
+
     //docking variables
     bool _isNeedleDocked = false;
     public Transform InterfaceDock;
@@ -56,6 +58,8 @@ public class HandInterfaceStateMachine : MonoBehaviour
         _interfaceAudio = GetComponent<InterfaceAudioController>();
 
         _interfaceAnimator.SetFloat("Grip", 1.0f);
+
+        _interfaceCollider = GetComponent<Collider>();
     }
 
     private void Update()
@@ -89,13 +93,20 @@ public class HandInterfaceStateMachine : MonoBehaviour
                 _currentInjector = other.gameObject.GetComponentInParent<NeedleObject>();
                 Debug.Log("Defined the current Injector NeedleObject script.");
 
+                Debug.Log("You loaded the " + _currentInjector.sceneToLink + " scene. Noice.");
+
+                //disable the collider or something so no more collisions can happen until scene transition is done
+                _interfaceCollider.enabled = false;
+
+
+
 
                 //only drop if current injector is not Menu Injector
                 //var name = other.gameObject.name;
                 //Debug.Log("NAME OF CURRENT INJECTOR DOCKED IS " + name);
 
                 //only drop is current injector's Scene To Link string is not "Game"
-                if(_currentInjector.sceneToLink != "Game")
+                if (_currentInjector.sceneToLink != "Game")
                 {
                     _currentInjector.Drop();
                     Debug.Log("Asked NeedleObject to call Drop method.");
@@ -127,16 +138,21 @@ public class HandInterfaceStateMachine : MonoBehaviour
     {
         if (other.CompareTag("MemoryNeedle"))
         {
-            Debug.Log("needle exited collider!");
-
             //define ref to NeedleObject
             _currentInjector = other.gameObject.GetComponentInParent<NeedleObject>();
 
+            Debug.Log("The Injector needle tip linking to " + _currentInjector.sceneToLink + " exited collider!");
+
             //only if this is bringing us back to the station
-            if(_currentInjector.sceneToLink == "Game")
+            if (_currentInjector.sceneToLink == "Game")
             {
                 //call method on NeedleObject to PassName and StartSceneChange
                 //StartCoroutine(UndockingProcedure(_currentInjector));
+
+
+                //turn off collider so nothing can mess up the scene change until it's over
+                _interfaceCollider.enabled = false;
+
 
                 _currentInjector.NameSceneToLoadInGameManager();
                 _currentInjector.TriggerUndockingAnim(); //this isn't happening when a memory time-out

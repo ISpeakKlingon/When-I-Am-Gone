@@ -139,6 +139,10 @@ public class GameManager : MonoBehaviour
         leftDirectInteractor.enabled = false;
 
         memoryNeedle.SetActive(true);
+
+        Rigidbody rb = memoryNeedle.GetComponent<Rigidbody>();
+        rb.isKinematic = true;
+
         //Debug.Log("Reseting memory needle position.");
         
         //reset memory needle so that it appears on hand next time it is activated

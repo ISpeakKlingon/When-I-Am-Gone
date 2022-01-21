@@ -5093,7 +5093,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -5229,6 +5229,7 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 64
+  _hitcolliders: []
 --- !u!114 &2002694517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8589,6 +8590,10 @@ PrefabInstance:
       propertyPath: _leftHandDisplayPrompt
       value: 
       objectReference: {fileID: 1245463416}
+    - target: {fileID: 215900486407696730, guid: d4440ea48e64d50428604126aa81765d, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 215900486407696731, guid: d4440ea48e64d50428604126aa81765d, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
       value: 1
