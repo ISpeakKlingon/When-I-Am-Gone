@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 1930721759}
   - component: {fileID: 1930721758}
   - component: {fileID: 1930721757}
+  - component: {fileID: 70251522}
   m_Layer: 7
   m_Name: PromptCollider
   m_TagString: Untagged
@@ -328,6 +329,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &70251522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930721755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c424d323846ce47a2158b22a748ec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _injector: {fileID: 0}
 --- !u!1 &215900486328294779
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,10 +676,13 @@ MonoBehaviour:
   _needleMesh: {fileID: 4225338123936643913}
   _buttonMesh: {fileID: 8979801305722411264}
   _lockmesh: {fileID: 1500652918996466668}
+  _needleTip: {fileID: 243830468208294136}
   _leftHandDisplayPrompt: {fileID: 0}
   _displayPrompt: {fileID: 0}
   _promptProximity: 0
   _meshesOff: 0
+  _rb: {fileID: 0}
+  _thisJustCollidedWithProxTrigger: {fileID: 0}
 --- !u!95 &215900486407696733
 Animator:
   serializedVersion: 3
