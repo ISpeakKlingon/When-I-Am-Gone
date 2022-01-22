@@ -217,9 +217,11 @@ public class RobotController : MonoBehaviour
 
     private void OnWindowOpen()
     {
+        /*
         StopAllCoroutines();
         playVoiceOversScript.SpeakLines(convoEight);
         playSubtitlesScript.ShowSubtitles(convoEight);
+        */
     }
 
     public float SumArray(AudioClip[] audioClipArray)
