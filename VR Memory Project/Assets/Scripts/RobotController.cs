@@ -122,7 +122,7 @@ public class RobotController : MonoBehaviour
         StopAllCoroutines();
         playVoiceOversScript.SpeakLine(convoSeven, 8);
         playSubtitlesScript.ShowSubtitle(convoSeven, 8);
-        StartCoroutine(NewRobotDestination(convoFive[2].length, lobbyBridge));
+        StartCoroutine(NewRobotDestination(convoSeven[8].length, lobbyBridge));
     }
 
     private void OnSmallTalk()
