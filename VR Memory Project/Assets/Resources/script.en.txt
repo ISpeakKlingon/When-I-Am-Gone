@@ -11,20 +11,68 @@
 			"line": [ "Can you make sure it is working?", "Maybe try hitting it with your fist?", "Just kidding. That would probably hurt your fist.", "I say probably because I would not know.", "Because I do not have hands." ]
 		},
 		{
+			"key": "Robot_WhenYouAreReadyPickUpTheInjectorAndInsertItIntoYourHandInterface",
+			"line": [ "When you are ready, pick up the Injector and insert it into your hand interface." ]
+		},
+		{
+			"key": "Robot_AndRememberTheKeyToAllOfThisMightJustBeInTheBurnedPocketWatch",
+			"line": [ "And remember, the key to all of this might just be in the burned pocket watch." ]
+		},
+		{
+			"key": "Robot_TheOneYeahTheOneRightOverThere",
+			"line": [ "The one... yeah... the one right over there." ]
+		},
+		{
+			"key": "Robot_TheOneSittingOverThereOnTopOfTheMap",
+			"line": [ "The one sitting over there on top of the map." ]
+		},
+		{
+			"key": "Robot_SupposedlyItIsFromTheEarlyNineteenthCentury",
+			"line": [ "Supposedly it is from the early nineteenth century." ]
+		},
+		{
+			"key": "Robot_IfYouCanFindItWeMightJustBeAbleToFixAllThis",
+			"line": [ "If you can find it, we might just be able to fix all this." ]
+		},
+		{
+			"key": "Robot_WhatOtherPocketWatchDidYouThinkIWasTalkingAbout",
+			"line": [ "What other pocket watch did you think I was talking about?" ]
+		},
+		{
 			"key": "Robot_AreYouOkayCanYouOhThereYourAre",
 			"line": [ "Are you okay? Can you...","Oh. There you are." ]
+		},
+		{
+			"key": "Robot_YouWereInThatMemoryForALongTime",
+			"line": [ "You were in that memory for a long time." ]
 		},
 		{
 			"key": "Robot_IfYouWereUnableToFindAContactForDoctorDalquestThenWeMayBeTooLate",
 			"line": [ "If you were unable to find a contact for Doctor Dalquest, then we may be too late." ]
 		},
 		{
+			"key": "Robot_ThoughIfYouWereUnableToFindAContactForDoctorDalquestThenWeMayBeTooLate",
+			"line": [ "Though, if you were unable to find a contact for Doctor Dalquest, then we may be too late."]
+		},
+		{
 			"key": "Robot_LetsCheckTheMemoryExhibitPerhapsSomeOfTheOthersAreStillWorking",
 			"line": [ "Let us check the Memory Exhibit.", "Perhaps some of the others are still working." ]
 		},
 		{
+			"key": "Robot_WeShouldCheckTheMemoryExhibitPerhapsYouWereRightAboutThePocketWatch",
+			"line": [ "We should check the memory exhibit. Perhaps you were right about the pocket watch." ]
+		},
+		{
+			"key": "Robot_IAlsoWishIHadFollowedMyPassionForDance",
+			"line": [ "I also with I had followed my passion for dance." ]
+		},
+		{
 			"key": "Robot_PerhapsYoudLikeToTryLookingForTheCodeInOneOfTheOtherMemories",
 			"line": [ "Perhaps you would like to try looking for the code in one of the other memories." ]
+		},
+		{
+			"key": "Robot_PerhapsYouWouldLikeToTryLookingInOneOfTheOtherMemories",
+			"line": [ "Perhaps you would like to try looking in one of the other memories." ]
 		},
 		{
 			"key": "Robot_PleaseCanYouHearMeTheresOnlyAboutFiveMinutesLeft",
@@ -85,6 +133,30 @@
 		{
 			"key": "Robot_WereYouAbleToAlterTheMemory",
 			"line": [ "Were you able to alter the memory?" ]
+		},
+		{
+			"key": "Robot_DidYouFindThePocketWatch",
+			"line": [ "Did you find the pocket watch?" ]
+		},
+		{
+			"key": "Robot_IfYouWantThereIsStillABitOfTimeBeforeTheEndOfLifeAsWeKnowItIMean",
+			"line": [ "If you want, there is still a bit of time.", "Before the end of life as wek know it, I mean." ]
+		},
+		{
+			"key": "Robot_MaybeYouShouldHopBackIntoTheMemoryAndFindAWayToKeepThePocketWatchSafe",
+			"line": [ "Maybe you should hop back into the Memory and find a way to keep the pocket watch safe?" ]
+		},
+		{
+			"key": "Robot_IfNotIGetIt",
+			"line": [ "If not, I get it." ]
+		},
+		{
+			"key": "Robot_OnlyAMomentLeftNow",
+			"line": [ "Only a moment left now." ]
+		},
+		{
+			"key": "Robot_DoYouMindIfIWatchFromUpHere",
+			"line": [ "Do you mind if I watch from up here?" ]
 		},
 		{
 			"key": "Robot_DidYouFindTheInterNetAndContactTheHumanMemoryProject",
@@ -169,6 +241,42 @@
 		{
 			"key": "Robot_ItWasLonelyHereBeforeYouArrived",
 			"line": [ "It was lonely here before you arrived." ]
+		},
+		{
+			"key": "Robot_OhWowLookYouDidIt",
+			"line": [ "Oh. Wow. Look. You did it." ]
+		},
+		{
+			"key": "Robot_ThePocketWatchItIsNotBurned",
+			"line": [ "The pocket watch. It is not burned." ]
+		},
+		{
+			"key": "Robot_WhateverYouDidInTheMemoryItSomehowAffectedOurReality",
+			"line": [ "Whatever you did in the Memory, it somehow affected our reality." ]
+		},
+		{
+			"key": "Robot_DoYouKnowWhatThisMeans",
+			"line": [ "Do you know what this means?" ]
+		},
+		{
+			"key": "Robot_ItMeansThereMightStillBeHope",
+			"line": [ "It means there might still be hope." ]
+		},
+		{
+			"key": "Robot_ComeOn",
+			"line": [ "Come on." ]
+		},
+		{
+			"key": "Robot_WeHaveJustAnotherMomentBeforeTheEndOfTheWorld",
+			"line": [ "We have just another moment before the end of the world." ]
+		},
+		{
+			"key": "Robot_IfThisMemoryCanMakeChangeThenSoCanTheOthers",
+			"line": [ "If this Memory can make change then so can the others." ]
+		},
+		{
+			"key": "Robot_ThereAreSoManyOtherMemoriesToTry",
+			"line": [ "There are so many other memories to try." ]
 		},
 		{
 			"key": "",
