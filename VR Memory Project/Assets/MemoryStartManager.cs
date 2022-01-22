@@ -17,7 +17,7 @@ public class MemoryStartManager : MonoBehaviour
     private void Awake()
     {
         StartCoroutine(ForceMemoryExit());
-        GameManager.Instance.SetSkyboxToDefault();
+        //GameManager.Instance.SetSkyboxToDefault();
     }
 
     private void Start()

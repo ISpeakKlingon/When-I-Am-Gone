@@ -8,12 +8,18 @@ public class WindowController : MonoBehaviour
     private float openSpeed = 0.5f;
     public AudioClip windowOpening;
     public AudioSource audioSource;
+    public GameObject Window;
 
     // Start is called before the first frame update
     void Start()
     {
         GameEvents.current.onWindowOpen += OnWindowOpen;
         audioSource = GetComponent <AudioSource>();
+        if (GameEvents.current.WindowOpenEventOccurred)
+        {
+            //disable window object
+            Window.SetActive(false);
+        }
     }
 
     private void Update()
@@ -29,7 +35,7 @@ public class WindowController : MonoBehaviour
         //slowly move window up
         isWindowOpening = true;
         audioSource.PlayOneShot(windowOpening, 2);
-        Debug.Log("Window is now opening. Enjoy the view!");
+        //Debug.Log("Window is now opening. Enjoy the view!");
     }
 
     private void OnDestroy()

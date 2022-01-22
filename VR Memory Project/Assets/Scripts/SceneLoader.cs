@@ -60,12 +60,12 @@ public class SceneLoader : Singleton<SceneLoader>
             //GameManager.Instance.GameStart(); //start the game
 
             //set skybox to stars
-            GameManager.Instance.SetSkyboxToStarfield();
+            //GameManager.Instance.SetSkyboxToStarfield();
         }
         else
         {
             //set skybox to black
-            GameManager.Instance.SetSkyboxToBlack();
+            //GameManager.Instance.SetSkyboxToBlack();
 
             //deactivate needle socket "is active"
             GameManager.Instance.TurnOffLeftHandSocket();

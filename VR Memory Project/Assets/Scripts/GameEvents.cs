@@ -24,6 +24,9 @@ public class GameEvents : MonoBehaviour
     private bool _givingUpEventOccurred = false;
     private bool _finalViewEventOccurred = false;
 
+    //getters and setters
+    public bool WindowOpenEventOccurred { get { return windowOpenEventOccurred; } }
+
     private void Awake()
     {
         current = this;
