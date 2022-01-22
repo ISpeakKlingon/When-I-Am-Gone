@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameOverStartManager : MonoBehaviour
 {
+
+    public PromptCanvasController _leftHandDisplayPrompt;
+
     private void Awake()
     {
         GameManager.Instance.isGameStarted = false;
@@ -14,5 +17,12 @@ public class GameOverStartManager : MonoBehaviour
     private void Start()
     {
         GameEvents.current.ResetAllEvents();
+
+        _leftHandDisplayPrompt = GameManager.Instance.leftHandBaseController.GetComponentInChildren<PromptCanvasController>();
+
+        float waitTime = 0f;
+        float fadeDuration = 0.1f;
+        _leftHandDisplayPrompt.FadeOutText(waitTime, fadeDuration);
+
     }
 }
