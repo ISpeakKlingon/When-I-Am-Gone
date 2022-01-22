@@ -21,6 +21,8 @@ public class GameEvents : MonoBehaviour
     private bool isMemory2020Complete = false;
     private bool isMemory1945Complete = false;
     private bool _primaryPressed = false;
+    private bool _givingUpEventOccurred = false;
+    private bool _finalViewEventOccurred = false;
 
     private void Awake()
     {
@@ -145,6 +147,26 @@ public class GameEvents : MonoBehaviour
         }
     }
 
+    public event Action onGivingUp;
+    public void GivingUp()
+    {
+        if(onGivingUp != null && !_givingUpEventOccurred)
+        {
+            onGivingUp();
+            _givingUpEventOccurred = true;
+        }
+    }
+
+    public event Action onFinalView;
+    public void FinalView()
+    {
+        if(onFinalView != null && !_finalViewEventOccurred)
+        {
+            onFinalView();
+            _finalViewEventOccurred = true;
+        }
+    }
+
     public void ResetAllEvents()
     {
         memory2020TriggerEventOccurred = false;
@@ -159,6 +181,8 @@ public class GameEvents : MonoBehaviour
         windowOpenEventOccurred = false;
         isMemory2020Complete = false;
         isMemory1945Complete = false;
+        _givingUpEventOccurred = false;
+        _finalViewEventOccurred = false;
 }
 
     public void TriggerEvent(string passedEvent)

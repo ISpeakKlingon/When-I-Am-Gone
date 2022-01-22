@@ -22,6 +22,9 @@ public class RobotController : MonoBehaviour
     [SerializeField] private Vector3 lowerLobby = new Vector3(-20.65f, -5.472931f, -1.181621f);
     [SerializeField] private Vector3 windowView = new Vector3(-17.45188f, -5.72f, -15.24f);
     [SerializeField] private Vector3 outsideNewtonRoom = new Vector3(-3.69f, 0.55f, -5.1f);
+    [SerializeField] private Vector3 _lobbyBridgeEnd;
+    [SerializeField] private Vector3 _finalLookout;
+    [SerializeField] private Vector3 _dreamOfDance;
 
     public GameObject LobbyBridge;
     public GameObject Memory2020;
@@ -29,6 +32,11 @@ public class RobotController : MonoBehaviour
     public GameObject LowerLobby;
     public GameObject WindowView;
     public GameObject OutSideNewtonRoom;
+    public GameObject FinalView;
+    public GameObject LobbyBridgeEnd;
+    public GameObject FinalLookout;
+    public GameObject GivingUpCollider;
+    public GameObject DreamOfDancePos;
 
     private void Awake()
     {
@@ -49,7 +57,9 @@ public class RobotController : MonoBehaviour
         lowerLobby = LowerLobby.transform.position;
         windowView = WindowView.transform.position;
         outsideNewtonRoom = OutSideNewtonRoom.transform.position;
-
+        _lobbyBridgeEnd = LobbyBridgeEnd.transform.position;
+        _finalLookout = FinalLookout.transform.position;
+        _dreamOfDance = DreamOfDancePos.transform.position;
     }
 
     private void Start()
@@ -63,6 +73,9 @@ public class RobotController : MonoBehaviour
         GameEvents.current.onMemory1945Awaken += OnMemory1945Awaken;
         GameEvents.current.onFinalMinute += OnFinalMinute;
         GameEvents.current.onWindowOpen += OnWindowOpen;
+        GameEvents.current.onGivingUp += OnGivingUp;
+        GameEvents.current.onFinalView += OnFinalView;
+
 
         //do I need to subscribe to events that have already occurred?
 
@@ -107,24 +120,27 @@ public class RobotController : MonoBehaviour
     private void OnPlayerExitStartingRoom()
     {
         StopAllCoroutines();
-        playVoiceOversScript.SpeakLine(convoFive, 2);
-        playSubtitlesScript.ShowSubtitle(convoFive, 2);
+        playVoiceOversScript.SpeakLine(convoSeven, 8);
+        playSubtitlesScript.ShowSubtitle(convoSeven, 8);
         StartCoroutine(NewRobotDestination(convoFive[2].length, lobbyBridge));
     }
 
     private void OnSmallTalk()
     {
         StopAllCoroutines();
-        StartCoroutine(NewRobotDestination(0, memory2020));
+        StartCoroutine(NewRobotDestination(0, _dreamOfDance));
         playVoiceOversScript.SpeakLines(convoTwo);
         playSubtitlesScript.ShowSubtitles(convoTwo);
+        StartCoroutine(NewRobotDestination(SumArray(convoTwo), memory1945));
     }
 
     private void OnMemory2020Proximity()
     {
+        /*
         StopAllCoroutines();
         playVoiceOversScript.SpeakLine(convoThree,0);
         playSubtitlesScript.ShowSubtitle(convoThree, 0);
+        */
     }
 
     private void OnMemory2020Awaken()
@@ -138,24 +154,65 @@ public class RobotController : MonoBehaviour
     private void OnMemory1945Proximity()
     {
         StopAllCoroutines();
-        playVoiceOversScript.SpeakLines(convoFive);
-        playSubtitlesScript.ShowSubtitles(convoFive);
+        playVoiceOversScript.SpeakLines(convoThree);
+        playSubtitlesScript.ShowSubtitles(convoThree);
     }
 
     private void OnMemory1945Awaken()
     {
         StopAllCoroutines();
+        if (!GameManager.Instance.PocketWatchSaved)
+        {
+            playVoiceOversScript.SpeakLines(convoFour);
+            playSubtitlesScript.ShowSubtitles(convoFour);
+            float timeToWait = SumArray(convoFour) + 10f;
+            StartCoroutine(NewRobotDestination(timeToWait, _lobbyBridgeEnd));
+            //eneable the GivingUp Collider
+            GivingUpCollider.SetActive(true);
+        }
+        else
+        {
+            playVoiceOversScript.SpeakLines(convoSeven);
+            playSubtitlesScript.ShowSubtitles(convoSeven);
+            float timeBeforeEnd = SumArray(convoSeven);
+            StartCoroutine(EndVerticalSlice(timeBeforeEnd));
+        }
+    }
+
+    private void OnGivingUp()
+    {
+        StopAllCoroutines();
+        playVoiceOversScript.SpeakLines(convoFive);
+        playSubtitlesScript.ShowSubtitles(convoFive);
+        //enable the Final View Collider
+        FinalView.SetActive(true);
+        StartCoroutine(NewRobotDestination(SumArray(convoFive), _finalLookout));
+    }
+
+    private void OnFinalView()
+    {
+        StopAllCoroutines();
         playVoiceOversScript.SpeakLines(convoSix);
         playSubtitlesScript.ShowSubtitles(convoSix);
-        StartCoroutine(NewRobotDestination(SumArray(convoSix), lowerLobby));
+        float timeBeforeEnd = SumArray(convoSix);
+        StartCoroutine(EndVerticalSlice(timeBeforeEnd));
+    }
+
+    private IEnumerator EndVerticalSlice(float timeBeforeEnd)
+    {
+        //float timeBeforeEnd = SumArray(convoSix);
+        yield return new WaitForSeconds(timeBeforeEnd);
+        GameManager.Instance.GameOver();
     }
 
     private void OnFinalMinute()
     {
+        /*
         StopAllCoroutines();
         playVoiceOversScript.SpeakLines(convoSeven);
         playSubtitlesScript.ShowSubtitles(convoSeven);
         StartCoroutine(NewRobotDestination(SumArray(convoSeven), windowView));
+        */
     }
 
     private void OnWindowOpen()
@@ -199,5 +256,7 @@ public class RobotController : MonoBehaviour
         GameEvents.current.onMemory1945Awaken -= OnMemory1945Awaken;
         GameEvents.current.onFinalMinute -= OnFinalMinute;
         GameEvents.current.onWindowOpen -= OnWindowOpen;
+        GameEvents.current.onGivingUp -= OnGivingUp;
+        GameEvents.current.onFinalView -= OnFinalView;
     }
 }
