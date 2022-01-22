@@ -76,7 +76,7 @@ public class TimerController : MonoBehaviour
     {
         if(timerGraphic.fillAmount <= 0f)
         {
-            GameManager.Instance.GameOver();
+            //GameManager.Instance.GameOver();
             canTimerCountdown = false;
             gameTime = maxgameTime;
 
