@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - MainTex:
-        m_Texture: {fileID: 2800000, guid: bea13aa815e976445b86cf087c1e4e29, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1f040466d664f6d4698a177ddcf0608c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -114,7 +114,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - GradientColor: {r: 1, g: 0.006289184, b: 0.006289184, a: 0.81960785}
+    - GradientColor: {r: 0.5188679, g: 0.12074281, b: 0.12074281, a: 0.5294118}
     - Ripple_Origin: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
