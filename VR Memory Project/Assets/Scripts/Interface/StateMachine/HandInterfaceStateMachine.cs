@@ -71,7 +71,7 @@ public class HandInterfaceStateMachine : MonoBehaviour
     {
         if (other.CompareTag("MemoryNeedle"))
         {
-            Debug.Log("needle collided!");
+            //Debug.Log("needle collided!");
             //get reference to collider object
             var needle = other.gameObject.transform;
 
@@ -83,7 +83,7 @@ public class HandInterfaceStateMachine : MonoBehaviour
             //.707 = 45 degrees
             bool InFront = Dot > 0.85;
 
-            Debug.Log("Needle entered Interface dock collider. Are we aligned? " + InFront + ". That is because the Dot value is currently " + Dot);
+            //Debug.Log("Needle entered Interface dock collider. Are we aligned? " + InFront + ". That is because the Dot value is currently " + Dot);
 
             //let's try how we did it in Hull Breach instead
             //float orientation = Vector3.Dot(endOfDock)
@@ -91,9 +91,9 @@ public class HandInterfaceStateMachine : MonoBehaviour
             if (InFront)
             {
                 _currentInjector = other.gameObject.GetComponentInParent<NeedleObject>();
-                Debug.Log("Defined the current Injector NeedleObject script.");
+                //Debug.Log("Defined the current Injector NeedleObject script.");
 
-                Debug.Log("You loaded the " + _currentInjector.sceneToLink + " scene. Noice.");
+                //Debug.Log("You loaded the " + _currentInjector.sceneToLink + " scene. Noice.");
 
                 //disable the collider or something so no more collisions can happen until scene transition is done
                 _interfaceCollider.enabled = false;
@@ -109,7 +109,7 @@ public class HandInterfaceStateMachine : MonoBehaviour
                 if (_currentInjector.sceneToLink != "Game")
                 {
                     _currentInjector.Drop();
-                    Debug.Log("Asked NeedleObject to call Drop method.");
+                    //Debug.Log("Asked NeedleObject to call Drop method.");
 
                     //set position and rotation of Injector to be angled properly.
                     //or...
