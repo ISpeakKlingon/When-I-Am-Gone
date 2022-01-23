@@ -12,6 +12,7 @@ public class InterfaceAudioController : MonoBehaviour
 
     public AudioClip DockingSound;
     public AudioClip SuccessSFX;
+    public AudioClip DockingReleaseSFX;
 
     private void OnEnable()
     {
@@ -47,7 +48,14 @@ public class InterfaceAudioController : MonoBehaviour
 
     public void PlayDockingSFX()
     {
-        audioSource.PlayOneShot(DockingSound, .4f);
-        audioSource.PlayOneShot(SuccessSFX, .5f);
+        audioSource.PlayOneShot(DockingSound, .6f);
+        audioSource.PlayOneShot(SuccessSFX, .7f);
+    }
+
+    public void PlayUndockingSFX()
+    {
+        audioSource.PlayOneShot(DockingSound, .6f);
+
+        audioSource.PlayOneShot(DockingReleaseSFX, 0.6f);
     }
 }

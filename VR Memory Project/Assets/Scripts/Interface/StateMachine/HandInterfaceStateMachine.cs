@@ -153,6 +153,8 @@ public class HandInterfaceStateMachine : MonoBehaviour
             {
                 //call method on NeedleObject to PassName and StartSceneChange
                 //StartCoroutine(UndockingProcedure(_currentInjector));
+                
+                _interfaceAudio.PlayUndockingSFX();
 
 
                 //turn off collider so nothing can mess up the scene change until it's over
@@ -166,6 +168,7 @@ public class HandInterfaceStateMachine : MonoBehaviour
                 _interfaceAudio.Docked = false; //this isn't happening when a memory time-out
 
                 _isNeedleDocked = false; //moving this to UndockingProcedure //this isn't happening when a memory time-out
+
             }
         }
     }

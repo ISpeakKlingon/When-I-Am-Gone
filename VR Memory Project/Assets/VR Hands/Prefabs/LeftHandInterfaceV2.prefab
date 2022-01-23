@@ -2695,6 +2695,7 @@ MonoBehaviour:
   Docked: 0
   DockingSound: {fileID: 8300000, guid: cfb0da2ba8afc034eab47c0633e0cafd, type: 3}
   SuccessSFX: {fileID: 8300000, guid: 8eefe4c6e3c766944b4002008f8eb56c, type: 3}
+  DockingReleaseSFX: {fileID: 8300000, guid: cf42233ddf14614469b7a2bc93b34e45, type: 3}
 --- !u!114 &1552997316574992988
 MonoBehaviour:
   m_ObjectHideFlags: 0
