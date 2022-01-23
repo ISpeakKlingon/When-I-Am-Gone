@@ -31,6 +31,10 @@ public class NeedleObject : MonoBehaviour
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private Collider _thisJustCollidedWithProxTrigger;
 
+    [SerializeField] private AudioSource _injectorAudioSource;
+    public AudioClip ActivateSound;
+    public AudioClip DeactivateSound;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -38,6 +42,7 @@ public class NeedleObject : MonoBehaviour
         _xRGrabInteractable = GetComponent<XRGrabInteractable>();
         _rb = GetComponent<Rigidbody>();
 
+        _injectorAudioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -162,6 +167,7 @@ public class NeedleObject : MonoBehaviour
             //needleCollider.SetActive(false);
             _animator.SetTrigger("InjectorToggle");
             _activeNeedle = false;
+            _injectorAudioSource.PlayOneShot(DeactivateSound);
 
             if(sceneToLink != "Game" && _injectorGrabbed)
             {
@@ -180,6 +186,7 @@ public class NeedleObject : MonoBehaviour
             //needleCollider.SetActive(true);
             _animator.SetTrigger("InjectorToggle");
             _activeNeedle = true;
+            _injectorAudioSource.PlayOneShot(ActivateSound);
 
             if(sceneToLink != "Game" && _injectorGrabbed)
             {
