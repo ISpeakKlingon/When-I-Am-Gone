@@ -4566,7 +4566,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 2
-  m_Acceleration: 4
+  m_Acceleration: 1
   avoidancePriority: 50
   m_AngularSpeed: 100
   m_StoppingDistance: 0
@@ -6193,6 +6193,10 @@ MonoBehaviour:
   _meshesOff: 0
   _rb: {fileID: 0}
   _thisJustCollidedWithProxTrigger: {fileID: 0}
+  _injectorAudioSource: {fileID: 0}
+  ActivateSound: {fileID: 0}
+  DeactivateSound: {fileID: 0}
+  SuccessDocking: {fileID: 0}
 --- !u!114 &886376353
 MonoBehaviour:
   m_ObjectHideFlags: 0
