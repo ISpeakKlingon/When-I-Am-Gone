@@ -11,6 +11,7 @@ public class InterfaceAudioController : MonoBehaviour
     public bool Docked;
 
     public AudioClip DockingSound;
+    public AudioClip SuccessSFX;
 
     private void OnEnable()
     {
@@ -41,11 +42,12 @@ public class InterfaceAudioController : MonoBehaviour
     private void PlaySFX(AudioClip[] servoSounds, int servoLineNumber)
     {
         StopAllCoroutines();
-        audioSource.PlayOneShot(servoSounds[servoLineNumber], 2);
+        audioSource.PlayOneShot(servoSounds[servoLineNumber], 3f);
     }
 
     public void PlayDockingSFX()
     {
-        audioSource.PlayOneShot(DockingSound, .5f);
+        audioSource.PlayOneShot(DockingSound, .4f);
+        audioSource.PlayOneShot(SuccessSFX, .5f);
     }
 }

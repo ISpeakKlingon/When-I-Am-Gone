@@ -2533,6 +2533,7 @@ GameObject:
   - component: {fileID: 5189724670374295251}
   - component: {fileID: 4979764480361891516}
   - component: {fileID: 6157227969083477105}
+  - component: {fileID: 8382103397786155998}
   m_Layer: 14
   m_Name: Interface_Parent
   m_TagString: HandInterface
@@ -2693,6 +2694,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cc6404ceab3a96c428694b70d3cab285, type: 3}
   Docked: 0
   DockingSound: {fileID: 8300000, guid: cfb0da2ba8afc034eab47c0633e0cafd, type: 3}
+  SuccessSFX: {fileID: 8300000, guid: 8eefe4c6e3c766944b4002008f8eb56c, type: 3}
 --- !u!114 &1552997316574992988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2759,6 +2761,16 @@ CapsuleCollider:
   m_Height: 2.343324
   m_Direction: 1
   m_Center: {x: 5.7875933e-11, y: -4.113378e-11, z: 0.012540088}
+--- !u!165 &8382103397786155998
+AudioHighPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8429169923952871648}
+  m_Enabled: 1
+  m_CutoffFrequency: 4861
+  m_HighpassResonanceQ: 1
 --- !u!1 &8429169923997990857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2990,6 +3002,7 @@ MonoBehaviour:
   _injectorAudioSource: {fileID: 0}
   ActivateSound: {fileID: 0}
   DeactivateSound: {fileID: 0}
+  SuccessDocking: {fileID: 0}
 --- !u!1 &8429169923999989424
 GameObject:
   m_ObjectHideFlags: 0
@@ -7281,14 +7294,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 76ac07cdb140f3143b137fd5232915e9, type: 3}
   m_PrefabInstance: {fileID: 8237085039775393695}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &8492302696177614964 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 76ac07cdb140f3143b137fd5232915e9, type: 3}
-  m_PrefabInstance: {fileID: 8237085039775393695}
-  m_PrefabAsset: {fileID: 0}
 --- !u!23 &7318794226234145563 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 76ac07cdb140f3143b137fd5232915e9, type: 3}
+  m_PrefabInstance: {fileID: 8237085039775393695}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8492302696177614964 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 76ac07cdb140f3143b137fd5232915e9, type: 3}
   m_PrefabInstance: {fileID: 8237085039775393695}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8429169923163106779

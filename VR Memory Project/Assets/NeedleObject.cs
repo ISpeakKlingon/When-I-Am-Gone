@@ -34,6 +34,7 @@ public class NeedleObject : MonoBehaviour
     [SerializeField] private AudioSource _injectorAudioSource;
     public AudioClip ActivateSound;
     public AudioClip DeactivateSound;
+    public AudioClip SuccessDocking;
 
     private void Awake()
     {
@@ -167,7 +168,7 @@ public class NeedleObject : MonoBehaviour
             //needleCollider.SetActive(false);
             _animator.SetTrigger("InjectorToggle");
             _activeNeedle = false;
-            _injectorAudioSource.PlayOneShot(DeactivateSound);
+            _injectorAudioSource.PlayOneShot(DeactivateSound, 0.2f);
 
             if(sceneToLink != "Game" && _injectorGrabbed)
             {
@@ -186,7 +187,7 @@ public class NeedleObject : MonoBehaviour
             //needleCollider.SetActive(true);
             _animator.SetTrigger("InjectorToggle");
             _activeNeedle = true;
-            _injectorAudioSource.PlayOneShot(ActivateSound);
+            _injectorAudioSource.PlayOneShot(ActivateSound, 0.2f);
 
             if(sceneToLink != "Game" && _injectorGrabbed)
             {
@@ -297,17 +298,19 @@ public class NeedleObject : MonoBehaviour
     public void TriggerDockingAnim()
     {
         _animator.SetTrigger("InjectorDocking");
+        //_injectorAudioSource.PlayOneShot(SuccessDocking, 1f);
     }
 
     public void TriggerUndockingAnim()
     {
         _animator.SetTrigger("InjectorUndocking");
-        _injectorAudioSource.PlayOneShot(DeactivateSound);
+        _injectorAudioSource.PlayOneShot(DeactivateSound, 0.2f);
+        Debug.Log("Injector just played deactivate sound.");
     }
 
     public void Drop()
     {
-        Debug.Log("Starting the Drop method call in NeedleObject script.");
+        //Debug.Log("Starting the Drop method call in NeedleObject script.");
         //XRInteractionManager.CancelInteractableSelection(_xRGrabInteractable); //this isn't working right.
         //Debug.Log("Asked XRInteractionManager to CancelInteractableSelection.");
         _xRGrabInteractable.interactionLayerMask = 0;
