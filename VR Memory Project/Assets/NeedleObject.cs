@@ -302,6 +302,7 @@ public class NeedleObject : MonoBehaviour
     public void TriggerUndockingAnim()
     {
         _animator.SetTrigger("InjectorUndocking");
+        _injectorAudioSource.PlayOneShot(DeactivateSound);
     }
 
     public void Drop()

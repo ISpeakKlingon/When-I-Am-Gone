@@ -2591,12 +2591,12 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
+  Spatialize: 1
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 0
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -2692,6 +2692,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b1051ba05773a274b88fc0950b385d2b, type: 3}
   - {fileID: 8300000, guid: cc6404ceab3a96c428694b70d3cab285, type: 3}
   Docked: 0
+  DockingSound: {fileID: 8300000, guid: cfb0da2ba8afc034eab47c0633e0cafd, type: 3}
 --- !u!114 &1552997316574992988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2986,6 +2987,9 @@ MonoBehaviour:
   _meshesOff: 0
   _rb: {fileID: 0}
   _thisJustCollidedWithProxTrigger: {fileID: 0}
+  _injectorAudioSource: {fileID: 0}
+  ActivateSound: {fileID: 0}
+  DeactivateSound: {fileID: 0}
 --- !u!1 &8429169923999989424
 GameObject:
   m_ObjectHideFlags: 0

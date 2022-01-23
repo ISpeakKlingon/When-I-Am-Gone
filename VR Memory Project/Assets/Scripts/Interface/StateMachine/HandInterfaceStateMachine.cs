@@ -129,6 +129,11 @@ public class HandInterfaceStateMachine : MonoBehaviour
 
                 _interfaceAudio.Docked = true;
 
+                if(_currentInjector.sceneToLink != "Game")
+                {
+                    _interfaceAudio.PlayDockingSFX(); //is there a way to not do this at game start?
+                }
+
                 _isNeedleDocked = true;
             }
         }

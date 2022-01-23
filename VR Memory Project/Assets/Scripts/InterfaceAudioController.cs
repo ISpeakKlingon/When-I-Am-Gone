@@ -10,6 +10,8 @@ public class InterfaceAudioController : MonoBehaviour
     private AudioSource audioSource;
     public bool Docked;
 
+    public AudioClip DockingSound;
+
     private void OnEnable()
     {
         gripAction.action.performed += GripAnimation;
@@ -39,7 +41,11 @@ public class InterfaceAudioController : MonoBehaviour
     private void PlaySFX(AudioClip[] servoSounds, int servoLineNumber)
     {
         StopAllCoroutines();
-        audioSource.PlayOneShot(servoSounds[servoLineNumber], 1);
+        audioSource.PlayOneShot(servoSounds[servoLineNumber], 2);
     }
 
+    public void PlayDockingSFX()
+    {
+        audioSource.PlayOneShot(DockingSound, .5f);
+    }
 }
