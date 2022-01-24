@@ -128,7 +128,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.16
+  bundleVersion: 0.17
   preloadedAssets:
   - {fileID: 4214705650331785495, guid: cc34507a56f2d5f4d8227b100531b57a, type: 2}
   - {fileID: 11400000, guid: c3073ae684ce2314e8817c17144fb7c9, type: 2}
