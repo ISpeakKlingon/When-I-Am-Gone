@@ -103,11 +103,21 @@ public class GameEvents : MonoBehaviour
             onMemory1945TriggerEnter();
             memory1945TriggerEventOccurred = true;
         }
+        /*
         else if (onMemory1945TriggerEnter != null && !memory1945AwakenEventOccurred && isMemory1945Complete)
         {
             onMemory1945Awaken();
             memory1945AwakenEventOccurred = true;
         }
+        */
+
+        //the above code doesn't allow the Player to keep trying again. Tyring new code below w/o the memory1945AwakenEventOccurred bool
+        else if (onMemory1945TriggerEnter != null && isMemory1945Complete)
+        {
+            onMemory1945Awaken();
+            memory1945AwakenEventOccurred = true;
+        }
+
     }
 
     public event Action onLobbyBridgeTiggerEnter;

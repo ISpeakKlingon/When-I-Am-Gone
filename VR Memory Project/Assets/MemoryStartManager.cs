@@ -33,9 +33,25 @@ public class MemoryStartManager : MonoBehaviour
         //trigger undocking anim in HandInterfaceStateMachine
         //switch _interfaceAudio.Docked bool to false in  HandInterfaceStateMachine
         //switch _isNeedleDocked bool to false in HandInterfaceStateMachine
-        _handInterface.MemoryTimeOutProcedure();
+        
+        //_handInterface.MemoryTimeOutProcedure(); //this was breaking game as the Game Over scene doesn't  have an Injector
 
         //GameManager.Instance.LoadScene();
+
+        if(nameOfThisScene != "GameOver")
+        {
+            _handInterface.MemoryTimeOutProcedure();
+        }
+        else
+        {
+            //_interfaceCollider.enabled = false; //not sure if disabling this collider is needed for transition back to Menu...
+
+            GameManager.Instance.ActivateMemoryNeedle();
+            GameManager.Instance.sceneName = "Menu";
+            GameManager.Instance.LoadScene();
+
+
+        }
     }
 
     private void OnDestroy()

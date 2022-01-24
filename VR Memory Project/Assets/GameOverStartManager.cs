@@ -18,6 +18,13 @@ public class GameOverStartManager : MonoBehaviour
     {
         GameEvents.current.ResetAllEvents();
 
+        //reset ispocketwatchsaved bool in game manager
+        GameManager.Instance.PocketWatchSaved = false;
+
+        //reset isgamestarted bool in game manager
+        GameManager.Instance.isGameStarted = false;
+
+
         _leftHandDisplayPrompt = GameManager.Instance.leftHandBaseController.GetComponentInChildren<PromptCanvasController>();
 
         float waitTime = 0f;

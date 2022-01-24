@@ -10,7 +10,7 @@ public class RobotController : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     public GameObject robot;
 
-    private float timeBeforeFirstLine = 3f;
+    //private float timeBeforeFirstLine = 3f;
 
     private AudioClip[] convoOne, convoTwo, convoThree, convoFour, convoFive, convoSix, convoSeven, convoEight;
     private PlayVoiceOvers playVoiceOversScript;
@@ -25,6 +25,7 @@ public class RobotController : MonoBehaviour
     [SerializeField] private Vector3 _lobbyBridgeEnd;
     [SerializeField] private Vector3 _finalLookout;
     [SerializeField] private Vector3 _dreamOfDance;
+    [SerializeField] private Vector4 _pocketWatchPos;
 
     public GameObject LobbyBridge;
     public GameObject Memory2020;
@@ -37,6 +38,7 @@ public class RobotController : MonoBehaviour
     public GameObject FinalLookout;
     public GameObject GivingUpCollider;
     public GameObject DreamOfDancePos;
+    public GameObject PocketWatchPos;
 
     private void Awake()
     {
@@ -60,6 +62,7 @@ public class RobotController : MonoBehaviour
         _lobbyBridgeEnd = LobbyBridgeEnd.transform.position;
         _finalLookout = FinalLookout.transform.position;
         _dreamOfDance = DreamOfDancePos.transform.position;
+        _pocketWatchPos = PocketWatchPos.transform.position;
     }
 
     private void Start()
@@ -163,6 +166,9 @@ public class RobotController : MonoBehaviour
         StopAllCoroutines();
         if (!GameManager.Instance.PocketWatchSaved)
         {
+            Debug.Log("On Memory1945 Awaken pocket watched saved.");
+            StartCoroutine(NewRobotDestination(0f, _pocketWatchPos));
+            Debug.Log("New robot destination set to pocket watch.");
             playVoiceOversScript.SpeakLines(convoFour);
             playSubtitlesScript.ShowSubtitles(convoFour);
             float timeToWait = SumArray(convoFour) + 10f;
@@ -172,9 +178,10 @@ public class RobotController : MonoBehaviour
         }
         else
         {
+            StartCoroutine(NewRobotDestination(0f, _pocketWatchPos));
             playVoiceOversScript.SpeakLines(convoSeven);
             playSubtitlesScript.ShowSubtitles(convoSeven);
-            float timeBeforeEnd = SumArray(convoSeven);
+            float timeBeforeEnd = SumArray(convoSeven) + 2f;
             StartCoroutine(EndVerticalSlice(timeBeforeEnd));
         }
     }
@@ -194,7 +201,7 @@ public class RobotController : MonoBehaviour
         StopAllCoroutines();
         playVoiceOversScript.SpeakLines(convoSix);
         playSubtitlesScript.ShowSubtitles(convoSix);
-        float timeBeforeEnd = SumArray(convoSix);
+        float timeBeforeEnd = SumArray(convoSix) + 2f;
         StartCoroutine(EndVerticalSlice(timeBeforeEnd));
     }
 

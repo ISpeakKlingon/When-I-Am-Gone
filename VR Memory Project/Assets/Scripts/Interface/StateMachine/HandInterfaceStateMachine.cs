@@ -178,13 +178,14 @@ public class HandInterfaceStateMachine : MonoBehaviour
         //GameManager.Instance.sceneName = scene;
         _currentInjector = GameManager.Instance.leftHandBaseController.GetComponentInChildren<NeedleObject>();
         //Debug.Break();
-        _currentInjector.NameSceneToLoadInGameManager();
+        _currentInjector.NameSceneToLoadInGameManager(); //this line is breaking Game Over scene as there is no current injector in game over
         _currentInjector.InjectorGrabbed();
         _currentInjector.TriggerUndockingAnim();
         _currentInjector.StartSceneChange();
         _interfaceAudio.Docked = false;
         _isNeedleDocked = false;
     }
+
     /*
     private IEnumerator UndockingProcedure(NeedleObject _currentInjector)
     {

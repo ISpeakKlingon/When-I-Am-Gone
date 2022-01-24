@@ -551,7 +551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoryLength: 30
   sceneToLink: Menu
-  nameOfThisScene: 
+  nameOfThisScene: GameOver
   _handInterface: {fileID: 0}
 --- !u!114 &478418664
 MonoBehaviour:
@@ -565,6 +565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629349e713afc174daed2110344d5147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _leftHandDisplayPrompt: {fileID: 0}
 --- !u!4 &478418665
 Transform:
   m_ObjectHideFlags: 0
