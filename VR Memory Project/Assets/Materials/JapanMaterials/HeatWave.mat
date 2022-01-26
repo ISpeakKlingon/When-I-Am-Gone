@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HeatWaveMat
+  m_Name: HeatWave
   m_Shader: {fileID: -6465566751694194690, guid: dda4412613ce9d0478c6cb9739e011fb, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
