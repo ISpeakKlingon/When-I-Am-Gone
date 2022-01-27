@@ -103,7 +103,7 @@ public class RobotController : MonoBehaviour
 
     public void RobotToZero()
     {
-        robot.transform.position = new Vector3(-2, 0, 0);
+        robot.transform.position = new Vector3(-1.169f, -0.377f, -0.578f);
         robot.transform.eulerAngles = new Vector3(0, 0, 0);
     }
 
