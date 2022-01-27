@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18382505, g: 0.22909857, b: 0.30387792, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000002, guid: bc071141d7fb14648b4641fbccd2eb55, type: 2}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: 59e329e5b41812a4783661a2407f2c48, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 69ee59abef4898743bf1acfe5d50dff4, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 64001907}
   - component: {fileID: 64001906}
   - component: {fileID: 64001905}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: JapanPhoto_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -460,7 +460,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 230276409}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SafeDoor_GrabPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2005,7 +2005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1174081334}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: JapanPhoto_AttachTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2460,6 +2460,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JapanPhoto
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 553567e0e79aeb440bf0026bbfbd4483, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 553567e0e79aeb440bf0026bbfbd4483, type: 3}
 --- !u!4 &1276088037 stripped
@@ -2864,7 +2868,7 @@ GameObject:
   - component: {fileID: 1332904296}
   - component: {fileID: 1332904295}
   - component: {fileID: 1332904294}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: JapanPhoto_Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3793,7 +3797,7 @@ GameObject:
   - component: {fileID: 1748860547}
   - component: {fileID: 1748860546}
   - component: {fileID: 1748860545}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: JapanPhotoKickstand_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4407,6 +4411,10 @@ PrefabInstance:
       value: SafeDoor
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a8f85006448cf4540bc3615228a53724, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a8f85006448cf4540bc3615228a53724, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -4429,7 +4437,7 @@ GameObject:
   - component: {fileID: 1898409529}
   - component: {fileID: 1898409528}
   - component: {fileID: 1898409527}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SafeDoor_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4525,7 +4533,7 @@ GameObject:
   - component: {fileID: 1899967146}
   - component: {fileID: 1899967145}
   - component: {fileID: 1899967147}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SafeDoor_Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
