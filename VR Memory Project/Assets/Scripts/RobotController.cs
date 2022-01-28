@@ -171,7 +171,7 @@ public class RobotController : MonoBehaviour
             Debug.Log("New robot destination set to pocket watch.");
             playVoiceOversScript.SpeakLines(convoFour);
             playSubtitlesScript.ShowSubtitles(convoFour);
-            float timeToWait = SumArray(convoFour) + 10f;
+            float timeToWait = SumArray(convoFour) + 1f;
             StartCoroutine(NewRobotDestination(timeToWait, _lobbyBridgeEnd));
             //eneable the GivingUp Collider
             GivingUpCollider.SetActive(true);
