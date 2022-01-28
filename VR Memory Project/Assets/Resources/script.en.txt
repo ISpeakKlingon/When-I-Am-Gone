@@ -279,6 +279,14 @@
 			"line": [ "There are so many other memories to try." ]
 		},
 		{
+			"key": "Robot_WhenYouAreReadyPickUpTheInjectorAndActivateItByPressingTheAButton",
+			"line": [ "When you are ready, pick up the injector", " and activate it by pressing the A button." ]
+		},
+		{
+			"key": "Robot_ThenMakeAFistWithYourOppositeHandAndInsertTheNeddleIntoYourHandInterface",
+			"line": [ "Then make a fist with your opposite hand ", "and insert the needle into your Hand Interface." ]
+		},
+		{
 			"key": "",
 			"line": [ "" ]
 		}
