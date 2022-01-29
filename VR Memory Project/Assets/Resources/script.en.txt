@@ -287,6 +287,10 @@
 			"line": [ "Then make a fist with your opposite hand ", "and insert the needle into your Hand Interface." ]
 		},
 		{
+			"key": "Robot_YesWhenYouAreReadyGoOnActivateTheNeedleSqueezeTheFistAndInsertItIntoTheInterface",
+			"line": [ "Yes. When you are ready, go on.", " Activate the needle, squeeze the fist,", " and insert it into the interface." ]
+		},
+		{
 			"key": "",
 			"line": [ "" ]
 		}
