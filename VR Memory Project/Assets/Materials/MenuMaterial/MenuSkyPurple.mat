@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MenuSkyMat
+  m_Name: MenuSkyPurple
   m_Shader: {fileID: -6465566751694194690, guid: ddc3f6490b0654746873d06bbc098e56, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
