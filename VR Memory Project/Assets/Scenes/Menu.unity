@@ -830,7 +830,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480153225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.09000003, z: -0.0020000935}
+  m_LocalPosition: {x: 0, y: 0.95, z: 4.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1526499616}
@@ -1029,7 +1029,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294952923
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -11405,12 +11405,12 @@ GameObject:
   - component: {fileID: 902567172}
   - component: {fileID: 902567171}
   - component: {fileID: 902567174}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &902567170
 Transform:
@@ -11506,7 +11506,7 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 4701932744657087565, guid: cfdc04cde6d7ea8449af64916e49cfdb, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -12186,6 +12186,7 @@ GameObject:
   - component: {fileID: 1354440646}
   - component: {fileID: 1354440648}
   - component: {fileID: 1354440647}
+  - component: {fileID: 1354440649}
   m_Layer: 0
   m_Name: TitleText
   m_TagString: Untagged
@@ -12245,7 +12246,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: When I Am Gone
+  m_Text: When I Am gone
 --- !u!222 &1354440648
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12254,6 +12255,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354440645}
   m_CullTransparentMesh: 1
+--- !u!114 &1354440649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354440645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 0, b: 0.8504853, a: 0.5}
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &1442030642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17410,14 +17426,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689828903}
-  m_LocalRotation: {x: -0, y: 0.25260654, z: -0, w: 0.96756905}
-  m_LocalPosition: {x: 1.117, y: 0.841, z: 1.223}
+  m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: 0, y: 0.824, z: 1.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 72683953}
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 29.264, z: 0}
+  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
 --- !u!114 &1689828905
 MonoBehaviour:
   m_ObjectHideFlags: 0
