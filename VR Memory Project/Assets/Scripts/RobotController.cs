@@ -44,6 +44,8 @@ public class RobotController : MonoBehaviour
 
     public GameObject Collider1945;
 
+    [SerializeField] private PromptCanvasController _displayPrompt;
+
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -98,6 +100,9 @@ public class RobotController : MonoBehaviour
         playSubtitlesScript = GetComponent<PlaySubtitles>();
 
         _lightstrip = GetComponentInChildren<LightStripController>();
+
+        _displayPrompt = GetComponentInChildren<PromptCanvasController>();
+
     }
 
     void Update()
@@ -188,6 +193,10 @@ public class RobotController : MonoBehaviour
             StartCoroutine(NewRobotDestination(timeToWait, _lobbyBridgeEnd));
             //eneable the GivingUp Collider
             GivingUpCollider.SetActive(true);
+
+            float waitTime = SumArray(convoFour) - 2;
+            float fadeDuration = 1f;
+            _displayPrompt.FadeInText(waitTime, fadeDuration);
         }
         else
         {
@@ -212,6 +221,10 @@ public class RobotController : MonoBehaviour
         //enable the Final View Collider
         FinalView.SetActive(true);
         StartCoroutine(NewRobotDestination(SumArray(convoFive), _finalLookout));
+
+        float waitTime = 0f;
+        float fadeDuration = 1f;
+        _displayPrompt.FadeOutText(waitTime, fadeDuration);
     }
 
     private void OnFinalView()
