@@ -40,6 +40,8 @@ public class RobotController : MonoBehaviour
     public GameObject DreamOfDancePos;
     public GameObject PocketWatchPos;
 
+    [SerializeField] private LightStripController _lightstrip;
+
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -92,6 +94,8 @@ public class RobotController : MonoBehaviour
         convoSeven = playVoiceOversScript.convoSeven;
         convoEight = playVoiceOversScript.convoEight;
         playSubtitlesScript = GetComponent<PlaySubtitles>();
+
+        _lightstrip = GetComponentInChildren<LightStripController>();
     }
 
     void Update()
@@ -117,6 +121,7 @@ public class RobotController : MonoBehaviour
         StopAllCoroutines();
         playVoiceOversScript.SpeakLines(convoOne);
         playSubtitlesScript.ShowSubtitles(convoOne);
+        _lightstrip.StartStripAnim(SumArray(convoOne));
         StartCoroutine(NewRobotDestination(SumArray(convoOne), outsideNewtonRoom));
     }
 
@@ -125,6 +130,7 @@ public class RobotController : MonoBehaviour
         StopAllCoroutines();
         playVoiceOversScript.SpeakLine(convoSeven, 8);
         playSubtitlesScript.ShowSubtitle(convoSeven, 8);
+        _lightstrip.StartStripAnim(1f);
         StartCoroutine(NewRobotDestination(convoSeven[8].length, lobbyBridge));
     }
 
@@ -134,6 +140,7 @@ public class RobotController : MonoBehaviour
         StartCoroutine(NewRobotDestination(0, _dreamOfDance));
         playVoiceOversScript.SpeakLines(convoTwo);
         playSubtitlesScript.ShowSubtitles(convoTwo);
+        _lightstrip.StartStripAnim(SumArray(convoTwo));
         StartCoroutine(NewRobotDestination(SumArray(convoTwo), memory1945));
     }
 
@@ -151,6 +158,7 @@ public class RobotController : MonoBehaviour
         StopAllCoroutines();
         playVoiceOversScript.SpeakLines(convoFour);
         playSubtitlesScript.ShowSubtitles(convoFour);
+        _lightstrip.StartStripAnim(SumArray(convoFour));
         StartCoroutine(NewRobotDestination(SumArray(convoFour), memory1945));
     }
 
@@ -159,6 +167,7 @@ public class RobotController : MonoBehaviour
         StopAllCoroutines();
         playVoiceOversScript.SpeakLines(convoThree);
         playSubtitlesScript.ShowSubtitles(convoThree);
+        _lightstrip.StartStripAnim(SumArray(convoThree));
     }
 
     private void OnMemory1945Awaken()
@@ -171,6 +180,7 @@ public class RobotController : MonoBehaviour
             Debug.Log("New robot destination set to pocket watch.");
             playVoiceOversScript.SpeakLines(convoFour);
             playSubtitlesScript.ShowSubtitles(convoFour);
+            _lightstrip.StartStripAnim(SumArray(convoFour));
             float timeToWait = SumArray(convoFour) + 1f;
             StartCoroutine(NewRobotDestination(timeToWait, _lobbyBridgeEnd));
             //eneable the GivingUp Collider
@@ -181,6 +191,7 @@ public class RobotController : MonoBehaviour
             StartCoroutine(NewRobotDestination(0f, _pocketWatchPos));
             playVoiceOversScript.SpeakLines(convoSeven);
             playSubtitlesScript.ShowSubtitles(convoSeven);
+            _lightstrip.StartStripAnim(SumArray(convoSeven));
             float timeBeforeEnd = SumArray(convoSeven) + 2f;
             StartCoroutine(EndVerticalSlice(timeBeforeEnd));
         }
@@ -191,6 +202,7 @@ public class RobotController : MonoBehaviour
         StopAllCoroutines();
         playVoiceOversScript.SpeakLines(convoFive);
         playSubtitlesScript.ShowSubtitles(convoFive);
+        _lightstrip.StartStripAnim(SumArray(convoFive));
         //enable the Final View Collider
         FinalView.SetActive(true);
         StartCoroutine(NewRobotDestination(SumArray(convoFive), _finalLookout));
@@ -201,6 +213,7 @@ public class RobotController : MonoBehaviour
         StopAllCoroutines();
         playVoiceOversScript.SpeakLines(convoSix);
         playSubtitlesScript.ShowSubtitles(convoSix);
+        _lightstrip.StartStripAnim(SumArray(convoSix));
         float timeBeforeEnd = SumArray(convoSix) + 2f;
         StartCoroutine(EndVerticalSlice(timeBeforeEnd));
     }
