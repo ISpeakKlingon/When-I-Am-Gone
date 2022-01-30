@@ -167,6 +167,7 @@ public class RobotController : MonoBehaviour
     private void OnMemory1945Proximity()
     {
         StopAllCoroutines();
+        StartCoroutine(NewRobotDestination(0, memory1945));
         playVoiceOversScript.SpeakLines(convoThree);
         playSubtitlesScript.ShowSubtitles(convoThree);
         _lightstrip.StartStripAnim(SumArray(convoThree));
