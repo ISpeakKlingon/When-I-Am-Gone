@@ -37,7 +37,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - HeatDistortion: 0.886
+    - HeatDistortion: 0.318
     m_Colors:
-    - DistortionSpeed: {r: -0.2, g: -0.2, b: -0.2, a: 0}
+    - DistortionSpeed: {r: -0.1, g: -0.1, b: -0.1, a: 0}
   m_BuildTextureStacks: []
