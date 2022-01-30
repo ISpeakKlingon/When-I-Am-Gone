@@ -25,7 +25,16 @@ public class ScreenFader : MonoBehaviour
     private void Start()
     {
         GameEvents.current.onFinalView += OnFinalView;
+        GameEvents.current.onMemory1945Awaken += OnMemory1945Awaken;
 
+    }
+
+    private void OnMemory1945Awaken()
+    {
+        if (GameManager.Instance.PocketWatchSaved)
+        {
+            StartCoroutine(LongFadeOut(18f));
+        }
     }
 
     private void OnFinalView()
@@ -91,6 +100,6 @@ public class ScreenFader : MonoBehaviour
     private void OnDestroy()
     {
         GameEvents.current.onFinalView -= OnFinalView;
-
+        GameEvents.current.onMemory1945Awaken -= OnMemory1945Awaken;
     }
 }
