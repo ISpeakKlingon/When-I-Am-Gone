@@ -17019,6 +17019,7 @@ MonoBehaviour:
   DreamOfDancePos: {fileID: 285653429}
   PocketWatchPos: {fileID: 552835079}
   _lightstrip: {fileID: 0}
+  Collider1945: {fileID: 2069371608}
 --- !u!4 &644462278
 Transform:
   m_ObjectHideFlags: 0

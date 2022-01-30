@@ -42,6 +42,8 @@ public class RobotController : MonoBehaviour
 
     [SerializeField] private LightStripController _lightstrip;
 
+    public GameObject Collider1945;
+
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -194,6 +196,9 @@ public class RobotController : MonoBehaviour
             _lightstrip.StartStripAnim(SumArray(convoSeven));
             float timeBeforeEnd = SumArray(convoSeven) + 2f;
             StartCoroutine(EndVerticalSlice(timeBeforeEnd));
+
+            //turn off 1945 awaken collider. this is not a good place for this but I AM OUT OF TIME!
+            Collider1945.SetActive(false);
         }
     }
 
