@@ -11,6 +11,8 @@ public class ScreenFader : MonoBehaviour
 
     public Animator transition;
 
+    public float TimeToWaitBeforeLongFade = 25f;
+
     /*
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
@@ -19,6 +21,23 @@ public class ScreenFader : MonoBehaviour
         Graphics.Blit(source, destination, _fadeMaterial);
     }
     */
+
+    private void Start()
+    {
+        GameEvents.current.onFinalView += OnFinalView;
+
+    }
+
+    private void OnFinalView()
+    {
+        StartCoroutine(LongFadeOut(TimeToWaitBeforeLongFade));
+    }
+
+    private IEnumerator LongFadeOut(float timeToWait)
+    {
+        yield return new WaitForSeconds(timeToWait);
+        transition.SetTrigger("EndGame");
+    }
 
     public Coroutine StartFadeIn()
     {
@@ -67,5 +86,11 @@ public class ScreenFader : MonoBehaviour
         }
         */
         yield return null;
+    }
+
+    private void OnDestroy()
+    {
+        GameEvents.current.onFinalView -= OnFinalView;
+
     }
 }

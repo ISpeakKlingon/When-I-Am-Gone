@@ -3660,6 +3660,7 @@ MonoBehaviour:
   _color: {r: 0, g: 0, b: 0, a: 1}
   _fadeMaterial: {fileID: 2100000, guid: ac66d537b224f014f8684df571a60627, type: 2}
   transition: {fileID: 376895934}
+  TimeToWaitBeforeLongFade: 25
 --- !u!114 &1364895799
 MonoBehaviour:
   m_ObjectHideFlags: 0

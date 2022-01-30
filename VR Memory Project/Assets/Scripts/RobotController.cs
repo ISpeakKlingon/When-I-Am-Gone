@@ -207,6 +207,9 @@ public class RobotController : MonoBehaviour
 
     private IEnumerator EndVerticalSlice(float timeBeforeEnd)
     {
+        //fade out to black slowly
+
+
         //float timeBeforeEnd = SumArray(convoSix);
         yield return new WaitForSeconds(timeBeforeEnd);
         GameManager.Instance.GameOver();
