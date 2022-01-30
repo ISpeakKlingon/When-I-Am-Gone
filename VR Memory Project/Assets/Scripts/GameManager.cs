@@ -127,9 +127,12 @@ public class GameManager : MonoBehaviour
     {
         SceneLoader.Instance.LoadNewScene(sceneName);
 
-        //if music is playing, fade it out
-        float fadeTime = 5f;
-        MusicManager.StartFadeOutMusic(fadeTime);
+        if(sceneName != "GameOver" && sceneName != "Game")
+        {
+            //if music is playing, fade it out
+            float fadeTime = 5f;
+            MusicManager.StartFadeOutMusic(fadeTime);
+        }
     }
 
     //activate memory needle object

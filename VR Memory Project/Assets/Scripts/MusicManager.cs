@@ -7,15 +7,34 @@ public class MusicManager : MonoBehaviour
     public AudioSource MainCameraAudio;
 
     public AudioClip StationReveal;
+    public AudioClip GivingUp;
+    public AudioClip GameWin;
 
     private void Start()
     {
         GameEvents.current.onExitedStartingRoom += OnExitedStartingRoom;
+        GameEvents.current.onGivingUp += OnGivingUp;
+        GameEvents.current.onMemory1945Awaken += OnMemory1945Awaken;
     }
 
     private void OnExitedStartingRoom()
     {
-        MainCameraAudio.PlayOneShot(StationReveal);
+        MainCameraAudio.PlayOneShot(StationReveal, 0.25f);
+    }
+
+    private void OnGivingUp()
+    {
+        MainCameraAudio.PlayOneShot(GivingUp, 0.25f);
+    }
+
+    private void OnMemory1945Awaken()
+    {
+        Debug.Log("Music Manager heard the onMemory1945Awaken event.");
+        if (GameManager.Instance.PocketWatchSaved)
+        {
+            MainCameraAudio.PlayOneShot(GameWin, 0.25f);
+            Debug.Log("Music Manager played the GameWin cue since PocketWachedSaved is " + GameManager.Instance.PocketWatchSaved);
+        }
     }
 
     public void StartFadeOutMusic(float fadeTime)
@@ -39,6 +58,7 @@ public class MusicManager : MonoBehaviour
     private void OnDestroy()
     {
         GameEvents.current.onExitedStartingRoom -= OnExitedStartingRoom;
-
+        GameEvents.current.onGivingUp -= OnGivingUp;
+        GameEvents.current.onMemory1945Awaken -= OnMemory1945Awaken;
     }
 }
