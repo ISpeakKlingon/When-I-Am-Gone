@@ -209,6 +209,9 @@ public class RobotController : MonoBehaviour
 
             //turn off 1945 awaken collider. this is not a good place for this but I AM OUT OF TIME!
             Collider1945.SetActive(false);
+
+            //give the robot a final move so the end doesn't feel stale
+            StartCoroutine(NewRobotDestination(SumArray(convoSeven) - 5, lowerLobby));
         }
     }
 
