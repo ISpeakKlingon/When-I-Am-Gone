@@ -10,6 +10,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip GivingUp;
     public AudioClip GameWin;
     public AudioClip MemoryTransition;
+    public AudioClip MemoryExit;
 
     private void Start()
     {
@@ -21,6 +22,11 @@ public class MusicManager : MonoBehaviour
     public void Transition()
     {
         MainCameraAudio.PlayOneShot(MemoryTransition, 1f);
+
+        if(GameManager.Instance.sceneName == "Game")
+        {
+            MainCameraAudio.PlayOneShot(MemoryExit, 1f);
+        }
     }
 
     private void OnExitedStartingRoom()
