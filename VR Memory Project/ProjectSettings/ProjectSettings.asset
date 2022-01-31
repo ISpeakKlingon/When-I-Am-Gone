@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: Stanton Nash
   productName: When I Am Gone
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -128,7 +128,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.21
+  bundleVersion: 0.22
   preloadedAssets:
   - {fileID: 4214705650331785495, guid: cc34507a56f2d5f4d8227b100531b57a, type: 2}
   - {fileID: 11400000, guid: c3073ae684ce2314e8817c17144fb7c9, type: 2}
@@ -149,7 +149,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompany.WhenIAmGone
+    Android: com.StantonNash.WhenIAmGone
     Standalone: com.DefaultCompany.VRMemoryProject
   buildNumber:
     Standalone: 0
