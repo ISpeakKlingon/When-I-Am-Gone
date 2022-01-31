@@ -49,7 +49,7 @@ public class ScreenFader : MonoBehaviour
         _longFading = true;
         yield return new WaitForSeconds(timeToWait);
         transition.SetTrigger("EndGame");
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(9.5f);
         _longFading = false;
     }
 
