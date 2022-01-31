@@ -127,6 +127,12 @@ public class GameManager : MonoBehaviour
     {
         SceneLoader.Instance.LoadNewScene(sceneName);
 
+        //play memory transition sfx
+        if(sceneName != "GameOver")
+        {
+            MusicManager.Transition();
+        }
+
         if(sceneName != "GameOver" && sceneName != "Game")
         {
             //if music is playing, fade it out

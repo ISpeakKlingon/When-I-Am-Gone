@@ -5835,6 +5835,7 @@ MonoBehaviour:
   StationReveal: {fileID: 8300000, guid: 8207accd28e0c90488f5548fecb292ef, type: 3}
   GivingUp: {fileID: 8300000, guid: 15f9fd734616eb640ba6a11a9802b048, type: 3}
   GameWin: {fileID: 8300000, guid: 232123dc40c19774882de483630848fa, type: 3}
+  MemoryTransition: {fileID: 8300000, guid: fe6c938501e3aef4ca4cb8814b6c50dd, type: 3}
 --- !u!4 &2112369843
 Transform:
   m_ObjectHideFlags: 0

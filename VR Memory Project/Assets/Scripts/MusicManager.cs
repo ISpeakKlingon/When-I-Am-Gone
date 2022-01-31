@@ -9,12 +9,18 @@ public class MusicManager : MonoBehaviour
     public AudioClip StationReveal;
     public AudioClip GivingUp;
     public AudioClip GameWin;
+    public AudioClip MemoryTransition;
 
     private void Start()
     {
         GameEvents.current.onExitedStartingRoom += OnExitedStartingRoom;
         GameEvents.current.onGivingUp += OnGivingUp;
         GameEvents.current.onMemory1945Awaken += OnMemory1945Awaken;
+    }
+
+    public void Transition()
+    {
+        MainCameraAudio.PlayOneShot(MemoryTransition, 1f);
     }
 
     private void OnExitedStartingRoom()
