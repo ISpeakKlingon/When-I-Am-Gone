@@ -13,6 +13,8 @@ public class ScreenFader : MonoBehaviour
 
     public float TimeToWaitBeforeLongFade = 25f;
 
+    [SerializeField] private bool _longFading = false;
+
     /*
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
@@ -44,14 +46,24 @@ public class ScreenFader : MonoBehaviour
 
     private IEnumerator LongFadeOut(float timeToWait)
     {
+        _longFading = true;
         yield return new WaitForSeconds(timeToWait);
         transition.SetTrigger("EndGame");
+        yield return new WaitForSeconds(10f);
+        _longFading = false;
     }
 
     public Coroutine StartFadeIn()
     {
-        StopAllCoroutines();
-        return StartCoroutine(FadeIn());
+        if (!_longFading)
+        {
+            StopAllCoroutines();
+            return StartCoroutine(FadeIn());
+        }
+        else
+        {
+            return null;
+        }
     }
 
     private IEnumerator FadeIn()
@@ -74,8 +86,17 @@ public class ScreenFader : MonoBehaviour
 
     public Coroutine StartFadeOut()
     {
-        StopAllCoroutines();
-        return StartCoroutine(FadeOut());
+        if (!_longFading)
+        {
+            StopAllCoroutines();
+            return StartCoroutine(FadeOut());
+
+        }
+        else
+        {
+            return null;
+        }
+
     }
 
     private IEnumerator FadeOut()
