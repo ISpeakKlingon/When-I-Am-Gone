@@ -47,6 +47,17 @@ public class ScriptManager : MonoBehaviour
         }
     }
 
+    public void ChangeLanguage()
+    {
+        var json = LoadScriptFile();
+        var voText = JsonUtility.FromJson<VoiceOverText>(json);
+
+        foreach (var t in voText.lines)
+        {
+            lines[t.key] = t.line;
+        }
+    }
+
 
     private string LoadScriptFile()
     {

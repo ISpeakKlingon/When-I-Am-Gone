@@ -15,6 +15,22 @@
 			"line": [ "Est-ce que ça va? Peut tu...","Oh. Te voilà." ]
 		},
 		{
+			"key": "Robot_YouWereInThatMemoryForALongTime",
+			"line": [ "Vous étiez dans ce souvenir depuis longtemps." ]
+		},
+		{
+			"key": "Robot_PerhapsYouWouldLikeToTryLookingInOneOfTheOtherMemories",
+			"line": [ "Peut-être aimeriez-vous essayer de regarder dans l'un des autres souvenirs." ]
+		},
+		{
+			"key": "Robot_ThoughIfYouWereUnableToFindAContactForDoctorDalquestThenWeMayBeTooLate",
+			"line": [ "Cependant, si vous n'avez pas trouvé de contact pour le docteur Dalquest, nous serons peut-être trop tard." ]
+		},
+		{
+			"key": "Robot_WeShouldCheckTheMemoryExhibitPerhapsYouWereRightAboutThePocketWatch",
+			"line": [ "On devrait vérifier l'exposition de mémoire.", "Peut-être aviez-vous raison à propos de la montre de poche." ]
+		},
+		{
 			"key": "Robot_IfYouWereUnableToFindAContactForDoctorDalquestThenWeMayBeTooLate",
 			"line": [ "Si vous n'avez pas trouvé de contact pour le docteur Dalquest, il est peut-être trop tard." ]
 		},
@@ -35,8 +51,180 @@
 			"line": [ "Par ici." ]
 		},
 		{
+			"key": "Robot_WhatAView",
+			"line": [ "Superbe vue!" ]
+		},
+		{
+			"key": "Robot_ISupposeItsNoMartianSunset",
+			"line": [ "Je suppose que ce n'est pas un coucher de soleil martien." ]
+		},
+		{
+			"key": "Robot_ButYouMustAdmitItsPrettyNice",
+			"line": [ "Mais il faut avouer que c'est très beau." ]
+		},
+		{
+			"key": "Robot_IWishICouldHaveSeenItWhenItWasWhole",
+			"line": [ "J'aurais aimé pouvoir le voir quand il était entier." ]
+		},
+		{
+			"key": "Robot_IAlsoWishIHadFollowedMyPassionForDance",
+			"line": [ "J'aurais aussi aimé suivre ma passion pour la danse." ]
+		},
+		{
+			"key": "Robot_AhWellCestLaVieDunRobot",
+			"line": [ "Tant pis. C'est la vie d'un robot." ]
+		},
+		{
+			"key": "Robot_WhenYouAreReadyPickUpTheInjectorAndActivateItByPressingTheAButton",
+			"line": [ "Lorsque vous êtes prêt, prenez l'injecteur et activez-le en appuyant sur le bouton A." ]
+		},
+		{
+			"key": "Robot_ThenMakeAFistWithYourOppositeHandAndInsertTheNeddleIntoYourHandInterface",
+			"line": [ "Fermez ensuite le poing avec votre main opposée ", "et insérez l'aiguille dans l'interface de votre main." ]
+		},
+		{
+			"key": "Robot_AndRememberTheKeyToAllOfThisMightJustBeInTheBurnedPocketWatch",
+			"line": [ "Et rappelez-vous que la clé de tout cela pourrait bien être dans la montre de poche brûlée." ]
+		},
+		{
+			"key": "Robot_TheOneYeahTheOneRightOverThere",
+			"line": [ "Celui, oui, celui juste là-bas." ]
+		},
+		{
+			"key": "Robot_TheOneSittingOverThereOnTopOfTheMap",
+			"line": [ "Celui qui est assis là-bas au-dessus de la carte." ]
+		},
+		{
+			"key": "Robot_SupposedlyItIsFromTheEarlyNineteenthCentury",
+			"line": [ "Soi-disant, il est du début du XIXe siècle." ]
+		},
+		{
+			"key": "Robot_IfYouCanFindItWeMightJustBeAbleToFixAllThis",
+			"line": [ "Si vous pouvez le trouver, nous pourrons peut-être résoudre tout cela." ]
+		},
+		{
+			"key": "Robot_WhatOtherPocketWatchDidYouThinkIWasTalkingAbout",
+			"line": [ "De quelle autre montre de poche pensez-vous que je parlais?" ]
+		},
+		{
+			"key": "Robot_YesWhenYouAreReadyGoOnActivateTheNeedleSqueezeTheFistAndInsertItIntoTheInterface",
+			"line": [ "Oui. Lorsque vous êtes prêt, continuez,", "activez l'aiguille, serrez le poing", "et insérez-le dans l'interface de la main." ]
+		},
+		{
+			"key": "Robot_WereYouAbleToAlterTheMemory",
+			"line": [ "Avez-vous pu modifier la mémoire?" ]
+		},
+		{
+			"key": "Robot_DidYouFindThePocketWatch",
+			"line": [ "Avez-vous trouvé la montre de poche?" ]
+		},
+		{
+			"key": "Robot_IfYouWantThereIsStillABitOfTimeBeforeTheEndOfLifeAsWeKnowItIMean",
+			"line": [ "Si vous voulez, il reste encore un peu de temps", "avant la fin de la vie telle que nous la connaissons, je veux dire." ]
+		},
+		{
+			"key": "Robot_MaybeYouShouldHopBackIntoTheMemoryAndFindAWayToKeepThePocketWatchSafe",
+			"line": [ "Peut-être devriez-vous retourner dans la mémoire", "et trouver un moyen de garder la montre de poche en sécurité." ]
+		},
+		{
+			"key": "Robot_IfNotIGetIt",
+			"line": [ "Sinon, je comprends." ]
+		},
+		{
+			"key": "Robot_OnlyAMomentLeftNow",
+			"line": [ "Il ne reste qu'un instant." ]
+		},
+		{
+			"key": "Robot_DoYouMindIfIWatchFromUpHere",
+			"line": [ "Ça vous dérange si je regarde d'ici?" ]
+		},
+		{
+			"key": "Robot_IWantToSeeItHappen",
+			"line": [ "Je veux que cela se produise." ]
+		},
+		{
 			"key": "Robot_ThoughImNotCertainTheOtherMemoriesWereSourcedFromTheInformationEra",
 			"line": [ "Bien que je ne sois pas certain que les autres souvenirs proviennent de l'ère de l'information." ]
+		},
+		{
+			"key": "Robot_OverInTheScienceExhibitTheresAnInstallationAboutTheUniverse",
+			"line": [ "Dans l'exposition scientifique,", "il y a une installation sur l'univers." ]
+		},
+		{
+			"key": "Robot_ItSaysThatEverythingYouMeAllOfThisItsAllPartOfAConnectedModel",
+			"line": [ "Il dit que tout, vous, moi, tout cela,", "tout cela fait partie d'un modèle connecté." ]
+		},
+		{
+			"key": "Robot_AndEvenJustTheSlightestChangeInSomethingCanAlterThePastTheFutureAndNow",
+			"line": [ "Et même le moindre changement dans quelque chose", "peut modifier le passé, le futur et le présent." ]
+		},
+		{
+			"key": "Robot_ItSureWouldBeNiceToGoBackNow",
+			"line": [ "Ce serait bien d'y retourner maintenant." ]
+		},
+		{
+			"key": "Robot_BackToWhereItAllStarted",
+			"line": [ "Retour là où tout a commencé." ]
+		},
+		{
+			"key": "Robot_ToTryAndFindAWayToChangeAllThis",
+			"line": [ "Pour essayer de trouver un moyen de changer tout cela." ]
+		},
+		{
+			"key": "Robot_ButThatMemoryIsBrokenNowIsntIt",
+			"line": [ "Mais cette mémoire est brisée maintenant, n'est-ce pas?"]
+		},
+		{
+			"key": "Robot_IveEnjoyedWorkingHere",
+			"line": [ "J'ai aimé travailler ici." ]
+		},
+		{
+			"key": "Robot_AndImGladYouShowedUp",
+			"line": [ "Et je suis content que tu sois venu." ]
+		},
+		{
+			"key": "Robot_ItWasLonelyHereBeforeYouArrived",
+			"line": [ "C'était seul ici avant ton arrivée." ]
+		},
+		{
+			"key": "Robot_OhWowLookYouDidIt",
+			"line": [ "Oh wow. Voir. Tu l'as fait." ]
+		},
+		{
+			"key": "Robot_ThePocketWatchItIsNotBurned",
+			"line": [ "La montre de poche n'est pas brûlée." ]
+		},
+		{
+			"key": "Robot_WhateverYouDidInTheMemoryItSomehowAffectedOurReality",
+			"line": [ "Quoi que vous fassiez dans la mémoire,", "cela a en quelque sorte affecté notre réalité." ]
+		},
+		{
+			"key": "Robot_DoYouKnowWhatThisMeans",
+			"line": [ "Savez-vous ce que cela signifie?" ]
+		},
+		{
+			"key": "Robot_ItMeansThereMightStillBeHope",
+			"line": [ "Cela signifie qu'il pourrait encore y avoir de l'espoir." ]
+		},
+		{
+			"key": "Robot_ComeOn",
+			"line": [ "Allez." ]
+		},
+		{
+			"key": "Robot_WeHaveJustAnotherMomentBeforeTheEndOfTheWorld",
+			"line": [ "Nous avons juste un autre moment avant la fin du monde." ]
+		},
+		{
+			"key": "Robot_IfThisMemoryCanMakeChangeThenSoCanTheOthers",
+			"line": [ "Si cette mémoire peut changer les choses, les autres aussi." ]
+		},
+		{
+			"key": "Robot_Hurry",
+			"line": [ "Se presser." ]
+		},
+		{
+			"key": "Robot_ThereAreSoManyOtherMemoriesToTry",
+			"line": [ "Il y a tellement d'autres souvenirs à essayer." ]
 		},
 		{
 			"key": "Robot_WeHaveLessThanFiveMinuesRemaining",

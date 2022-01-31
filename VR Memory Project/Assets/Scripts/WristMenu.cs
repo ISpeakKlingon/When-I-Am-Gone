@@ -18,6 +18,10 @@ public class WristMenu : MonoBehaviour
 
     public XRBaseController uIRaycastController;
 
+    public ScriptManager ScriptManager;
+
+    public GameObject EnglishButton, FrenchButton, RussianButton;
+
     private void Start()
     {
         DisplayWristUI();
@@ -67,6 +71,11 @@ public class WristMenu : MonoBehaviour
         GameEvents.current.SubtitlesOn();
 
         uIRaycastController.SendHapticImpulse(0.5f, 0.2f);
+
+        //turn on language buttons
+        EnglishButton.SetActive(true);
+        FrenchButton.SetActive(true);
+        RussianButton.SetActive(true);
     }
 
     public void SubtitlesOff()
@@ -74,6 +83,32 @@ public class WristMenu : MonoBehaviour
         GameManager.Instance.subtitles = false;
         GameEvents.current.SubtitlesOff();
 
+        uIRaycastController.SendHapticImpulse(0.5f, 0.2f);
+
+        //turn off language buttons
+        EnglishButton.SetActive(false);
+        FrenchButton.SetActive(false);
+        RussianButton.SetActive(false);
+    }
+
+    public void SubtitlesEnglish()
+    {
+        ScriptManager.overrideLanguage = "";
+        ScriptManager.ChangeLanguage();
+        uIRaycastController.SendHapticImpulse(0.5f, 0.2f);
+    }
+
+    public void SubtitlesFrench()
+    {
+        ScriptManager.overrideLanguage = "fr";
+        ScriptManager.ChangeLanguage();
+        uIRaycastController.SendHapticImpulse(0.5f, 0.2f);
+    }
+
+    public void SubtitlesRussian()
+    {
+        ScriptManager.overrideLanguage = "ru";
+        ScriptManager.ChangeLanguage();
         uIRaycastController.SendHapticImpulse(0.5f, 0.2f);
     }
 }
