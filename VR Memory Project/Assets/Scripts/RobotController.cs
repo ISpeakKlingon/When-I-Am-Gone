@@ -233,6 +233,7 @@ public class RobotController : MonoBehaviour
     private void OnFinalView()
     {
         StopAllCoroutines();
+        StartCoroutine(NewRobotDestination(0f, _finalLookout));
         playVoiceOversScript.SpeakLines(convoSix);
         playSubtitlesScript.ShowSubtitles(convoSix);
         _lightstrip.StartStripAnim(SumArray(convoSix));

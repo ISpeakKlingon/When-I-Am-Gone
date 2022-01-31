@@ -3512,7 +3512,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\rP\u0443\u0441\u0441\u043A\u0438\u0439"
+  m_Text: "WIP: \rP\u0443\u0441\u0441\u043A\u0438\u0439"
 --- !u!222 &933697613
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4873,19 +4873,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1323015733}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1411320448}
-        m_TargetAssemblyTypeName: WristMenu, Assembly-CSharp
-        m_MethodName: SubtitlesRussian
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1323015733
 MonoBehaviour:
   m_ObjectHideFlags: 0
