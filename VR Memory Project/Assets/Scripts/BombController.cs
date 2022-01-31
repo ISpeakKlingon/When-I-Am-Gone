@@ -9,6 +9,8 @@ public class BombController : MonoBehaviour
     [SerializeField] private AudioSource _audioSource;
     public AudioClip Explosion;
     [SerializeField] Animator _crossfadeAnim;
+
+    public GameObject RoomLight;
     
     private void Awake()
     {
@@ -27,6 +29,8 @@ public class BombController : MonoBehaviour
         yield return new WaitForSeconds(time);
         _crossfadeAnim.SetTrigger("Flash");
         yield return new WaitForSeconds(0.5f);
+        // turn off room light
+        RoomLight.SetActive(false);
         AtomicBomb.SetActive(true);
         _audioSource.PlayOneShot(Explosion);
     }

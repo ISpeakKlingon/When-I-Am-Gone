@@ -1542,6 +1542,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JapanTable
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a41686ce58cc4a54b8314dc869b5bf4d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a41686ce58cc4a54b8314dc869b5bf4d, type: 3}
 --- !u!1 &315347315
@@ -2413,7 +2417,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.544
+  m_Volume: 0.413
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2987,7 +2991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &690645107
 Transform:
   m_ObjectHideFlags: 0
@@ -3955,13 +3959,14 @@ GameObject:
   m_Component:
   - component: {fileID: 982608249}
   - component: {fileID: 982608250}
+  - component: {fileID: 982608251}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &982608249
 Transform:
   m_ObjectHideFlags: 0
@@ -3988,18 +3993,18 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 10
+  m_Intensity: 4
   m_Range: 6
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
-    m_Resolution: -1
+    m_Resolution: 128
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.02
-    m_NormalBias: 0.1
+    m_Bias: 1
+    m_NormalBias: 1
     m_NearPlane: 0.1
     m_CullingMatrixOverride:
       e00: 1
@@ -4027,7 +4032,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294960383
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -4038,6 +4043,20 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &982608251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982608248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 0
 --- !u!1001 &984376794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4697,6 +4716,7 @@ MonoBehaviour:
   _audioSource: {fileID: 0}
   Explosion: {fileID: 8300000, guid: f28d63f00c3b175438c6c552429ffecf, type: 3}
   _crossfadeAnim: {fileID: 0}
+  RoomLight: {fileID: 982608248}
 --- !u!4 &1182042268
 Transform:
   m_ObjectHideFlags: 0
@@ -6642,7 +6662,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1528103429
 Transform:
   m_ObjectHideFlags: 0
@@ -7363,16 +7383,16 @@ Light:
   m_GameObject: {fileID: 1742957835}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 3
+  m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 10000
+  m_Intensity: 4
   m_Range: 1000
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -7423,13 +7443,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742957835}
-  m_LocalRotation: {x: 0.0084677115, y: -0.24170105, z: -0.002109276, w: -0.9703116}
+  m_LocalRotation: {x: -0.0057766247, y: 0.74950516, z: 0.0065407786, w: 0.66194105}
   m_LocalPosition: {x: 52.7, y: 18.5, z: -7.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: -1, y: -332.025, z: 0}
+  m_LocalEulerAnglesHint: {x: -1, y: -622.9, z: 0}
 --- !u!1 &1748860543
 GameObject:
   m_ObjectHideFlags: 0
