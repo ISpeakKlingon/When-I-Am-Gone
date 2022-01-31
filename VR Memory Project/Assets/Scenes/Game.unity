@@ -17230,7 +17230,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   convoOne:
-  - {fileID: 8300000, guid: 2b7e5446be028a249a92d64d7ec6149e, type: 3}
   - {fileID: 8300000, guid: 6ecb687739a084147900472f2c9aa638, type: 3}
   - {fileID: 8300000, guid: 2851006f0e22ec949bd9d17acbded539, type: 3}
   - {fileID: 8300000, guid: 1deaee7b8eea79049aa624263402a784, type: 3}
